@@ -1,6 +1,6 @@
 # Phase 0 protocol: calling endosymbionts in public AMF sequencing data
 
-**Status:** LOCKED v1 (2026-11-20), git tag `protocol-v1-lock.2`, archived on Zenodo from the GitHub release (concept DOI 10.5281/zenodo.24406915, which resolves to the latest version). The earlier tag `protocol-v1-lock.1` was made from the v0.5 working folder by mistake; see the deviations log (section 10, entry 1).
+**Status:** LOCKED v1 (2026-11-20), git tag `protocol-v1-lock.3`, archived on Zenodo from the GitHub release (concept DOI 10.5281/zenodo.24406915, which resolves to the latest version). The earlier tags `protocol-v1-lock.1` and `protocol-v1-lock.2` were incomplete; see the deviations log (section 10, entries 1 and 2).
 **After locking:** any change goes in the deviations log (section 10), with the date and the reason, before the step it affects runs.
 
 **Changes in v1 (lock):** settings the tools would otherwise leave open are fixed: tool defaults (4.2), SSU placement and marker-gene and SSU lineages (4.1), the spike error model (4.2) and the T2 removal lists, including SILVA (section 5); database releases recorded (`references/DATABASES.md`); environments created and exported (`env/*.lock.yml`).
@@ -166,13 +166,14 @@ For every control: the call, the evidence behind it, the power (N) and the level
 - [x] Reference cleaning (3.4) and read assignment (4.1) agreed (2026-11-20)
 - [x] Environments created from `env/*.yml` on the CSB server (linux-64, conda 26.3.2, 2026-11-20); `env/*.lock.yml` exported; `references/DATABASES.md` filled; seeds fixed (1, 2, 3)
 - [x] Settings the tools would leave open fixed (v1: tool defaults, SSU placement, marker-gene and SSU lineages, spike error model, T2 removal lists)
-- [x] Tag `protocol-v1-lock.2` on this commit; Zenodo archive from the GitHub release (replaces `protocol-v1-lock.1`; section 10, entry 1)
+- [x] Tag `protocol-v1-lock.3` on this commit; Zenodo archive from the GitHub release (replaces `protocol-v1-lock.1` and `protocol-v1-lock.2`; section 10, entries 1 and 2)
 
 Not a lock item: confirm with JGI or the authors that the BEG34 metatranscriptomes are B+ before any write-up (they are reported, not scored).
 
 ## 10. Deviations log
 
 1. **2026-11-20, before any data were analysed: lock tag replaced.** `protocol-v1-lock.1` (commit 6e6ad92; Zenodo doi:10.5281/zenodo.24406916, published 20:54 UTC) was made from the v0.5 working folder by mistake, so its `PROTOCOL.md` is the v0.5 draft and its `references/DATABASES.md` is blank. `protocol-v1-lock.2` holds the intended v1 files. It differs from lock.1 in three files, `PROTOCOL.md` (the v1 changes listed at the top, and this entry), `README.md` and `references/DATABASES.md` (filled in), and adds `inventory/` (the SRA exports and the labelled inventory). The other 23 files, including the reference lists, the controls, the overrides, the environment and lock files and the scripts, are byte-identical in the two tags. Both Zenodo archives are versions of the same record.
+2. **2026-11-20, before any data were analysed: inventory added.** `protocol-v1-lock.2` (commit 01c6c00; Zenodo doi:10.5281/zenodo.24407042, published 21:03 UTC) was committed before the inventory files had been copied into `inventory/`, so, contrary to entry 1, it does not contain them. `protocol-v1-lock.3` adds them: the three SRA Run Selector exports of 2026-11-20, and the labelled inventory made from them with `tag_runs.py` v0.3 and the 10 overrides (4,919 runs, 12 excluded). It also changes, in `PROTOCOL.md` and `README.md`, only the tag named as the lock and this entry. All other files are as in lock.2.
 
 ## 11. Fixed numbers (agreed 2026-11-20)
 

@@ -64,12 +64,12 @@ Two lines describe that machine rather than a tool: `_x86_64-microarch-level=4` 
 
 ## Lock
 
-`PROTOCOL.md` v1 is the locked version, at the tag `protocol-v1-lock.2`, archived on Zenodo under concept DOI 10.5281/zenodo.24406915. (The earlier tag `protocol-v1-lock.1` was made from the v0.5 working folder by mistake; `PROTOCOL.md` section 10, entry 1, says what differs.) The lock was made like this:
+`PROTOCOL.md` v1 is the locked version, at the tag `protocol-v1-lock.3`, archived on Zenodo under concept DOI 10.5281/zenodo.24406915. (The earlier tags `protocol-v1-lock.1` and `protocol-v1-lock.2` were incomplete; `PROTOCOL.md` section 10, entries 1 and 2, says how.) The lock was made like this:
 
 ```bash
-git add -A && git commit -m "Phase 0 protocol v1, lock 2"
-git tag -a protocol-v1-lock.2 -m "Phase 0 protocol locked (replaces lock.1)"
-git push origin main protocol-v1-lock.2
+git add -A && git commit -m "Phase 0 protocol v1, lock 3"
+git tag -a protocol-v1-lock.3 -m "Phase 0 protocol locked, with inventory (replaces lock.2)"
+git push origin main protocol-v1-lock.3
 ```
 
 For the Zenodo archive, the repository is switched on in Zenodo's GitHub settings, and each GitHub release made from a tag becomes a new version of the same Zenodo record, with its own DOI.
