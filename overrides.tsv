@@ -1,0 +1,11 @@
+accession	only_class	field	value	note
+PRJEB45340	-	data_class	single_nucleus_wga	Uppsala single-nucleus genome project, 19 AMF species: about 24 libraries per BioSample, one per sorted nucleus. 438 runs, 3.1 Tbp. Was labelled wgs_short/high.
+PRJEB55531	-	data_class	single_nucleus_wga	Uppsala, Funneliformis geosporum: confirmed single-nucleus. Sahraei et al. 2022 Mycorrhiza 32:361-371 assembled two spores from 19 and 22 individually amplified nuclei, which matches the 41 runs on 2 BioSamples.
+PRJNA1276452	amplicon	amplicon_target	bacterial_16S	AMF Sporosphere Bacteria (William & Mary): 515f-806r 16S amplicons from spore DNA, per the SRA experiment design text (checked 2026-11-20).
+PRJNA754769	-	role	excluded	Stanford School of Medicine sample CHB0028 filed as Oehlia diaphana, with isolate 'pediatric patient'. Not an AMF culture.
+PRJNA1284771	-	role	excluded	Hunan Agricultural University sample UH2-Pardosa pseudoannulata (a wolf spider) filed as Rhizophagus irregularis, with isolate 'gut'. Not AMF data.
+PRJNA1203428	-	data_class	rna	SRA title 'RNA-Seq of bacterium', design 'Transcriptome sequencing of bacteria' (UCLouvain, AMF-bacteria interaction study, R. irregularis MUCL 43194; checked 2026-11-20). Was labelled single_nucleus_wga from free text.
+PRJNA1147075	amplicon	amplicon_target	bacterial_16S	BioProject title: 16S metabarcoding of bacterial communities in a rock phosphate experiment on leek (UM6P; checked 2026-11-20). Root and soil bacteria, not spore-internal.
+PRJNA752715	amplicon	amplicon_target	fungal_marker	BioProject title: LSU Acaulosporaceae spore sequences (University of Kansas; checked 2026-11-20).
+PRJNA1208279	amplicon	amplicon_target	bacterial_16S	BioProject 'Spore-associated bacteria of arbuscular mycorrhizal fungi' (University of Pisa): Racocetra persica and R. fulgida spores, DNeasy PowerSoil Pro, MiSeq (checked 2026-11-20). v0.2 had called these fungal because of the word AMF.
+PRJNA1036787	-	role	excluded	South China Agricultural University: every run is titled 'Fecal microorganism' (about 40 Mbp each); 10 of its 32 runs are filed under the organism Glomus, which is why query A caught them (checked 2026-11-20). Not AMF data.

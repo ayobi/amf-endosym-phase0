@@ -1,0 +1,6 @@
+accession	organism	strain_or_isolate	tax_id	assembly_level	size_bp	gc_percent	release_date	bioproject	refseq_category	checkm_completeness	checkm_contamination	query	note
+GCA_009809945.1	Gigaspora margarita	BEG34	4874	Scaffold	773098546	27.5	2019-12-30	PRJNA575165	reference genome			taxon: Gigaspora margarita (GenBank)	host: Gigaspora margarita; picked from 2 assemblies
+GCA_026210795.1	Rhizophagus irregularis	DAOM-197198	588596	Chromosome	146773001	28	2022-11-16	PRJNA885267	reference genome			taxon: Rhizophagus irregularis (GenBank)	host: Rhizophagus irregularis; picked from 34 assemblies
+GCA_021464375.1	Rhizophagus sp. LPA8_1_AMF	LPA8_1_AMF	2792439	Contig	117195787	27	2022-01-14	PRJNA670049				bioproject: PRJNA670049 (GenBank)	host: Rhizophagus sp. LPA8; picked from 3 assemblies
+GCA_003547095.1	Diversispora epigaea	IT104	1348612	Scaffold	156576535	27	2018-09-12	PRJNA431769	reference genome			taxon: Diversispora epigaea (GenBank)	host: Diversispora epigaea; picked from 1 assemblies
+GCA_036320915.1	Linnemannia elongata	NVP64	310910	Contig	51153770	48	2024-01-31	PRJNA568270	reference genome			taxon: Linnemannia elongata (GenBank)	host: Linnemannia elongata (T5 only); picked from 10 assemblies

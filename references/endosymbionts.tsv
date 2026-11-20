@@ -1,0 +1,34 @@
+accession	organism	strain_or_isolate	tax_id	assembly_level	size_bp	gc_percent	release_date	bioproject	refseq_category	checkm_completeness	checkm_contamination	query	note
+GCA_021409705.1	Candidatus Moeniiplasma glomeromycotorum	A2_WG	1822367	Contig	500669	33	2022-01-10	PRJNA670049				taxon: Candidatus Moeniiplasma (GenBank)	held_out_in_T2
+GCA_021409685.1	Candidatus Moeniiplasma glomeromycotorum	A2_6	1822367	Contig	555875	33	2022-01-10	PRJNA670049				taxon: Candidatus Moeniiplasma (GenBank)	held_out_in_T2
+GCA_021409725.1	Candidatus Moeniiplasma glomeromycotorum	A2_3	1822367	Contig	565759	33	2022-01-10	PRJNA670049				taxon: Candidatus Moeniiplasma (GenBank)	held_out_in_T2
+GCA_021409745.1	Candidatus Moeniiplasma glomeromycotorum	A2_4	1822367	Contig	507735	33	2022-01-10	PRJNA670049				taxon: Candidatus Moeniiplasma (GenBank)	held_out_in_T2
+GCA_021409605.1	Candidatus Moeniiplasma glomeromycotorum	LPA8_4	1822367	Contig	1506637	32.5	2022-01-10	PRJNA670049				taxon: Candidatus Moeniiplasma (GenBank)	held_out_in_T2
+GCA_021409665.1	Candidatus Moeniiplasma glomeromycotorum	LPA8_1	1822367	Contig	1544581	32.5	2022-01-10	PRJNA670049				taxon: Candidatus Moeniiplasma (GenBank)	held_out_in_T2
+GCA_021409645.1	Candidatus Moeniiplasma glomeromycotorum	LPA8_3	1822367	Contig	1512906	32.5	2022-01-10	PRJNA670049				taxon: Candidatus Moeniiplasma (GenBank)	held_out_in_T2
+GCA_000227585.1	Candidatus Glomeribacter gigasporarum BEG34	BEG34	1070319	Scaffold	1726950	55	2011-09-27	PRJEA69997	reference genome	58.64	0.15	taxon: Candidatus Glomeribacter (GenBank)	
+GCA_001684025.1	Candidatus Glomeribacter gigasporarum	BEG1	132144	Contig	2355846	49.5	2016-07-12	PRJNA276133				taxon: Candidatus Glomeribacter (GenBank)	
+GCA_001684175.1	Candidatus Glomeribacter gigasporarum	IN211	132144	Scaffold	1339701	51	2016-07-12	PRJNA276133				taxon: Candidatus Glomeribacter (GenBank)	
+GCA_001684155.1	Candidatus Glomeribacter gigasporarum	JA201A	132144	Scaffold	1621371	50.5	2016-07-12	PRJNA276133				taxon: Candidatus Glomeribacter (GenBank)	
+GCA_026501145.1	Candidatus Glomeribacter sp. 1016415	1016415	1286373	Contig	2638116	49	2022-11-29	PRJNA346817				taxon: Candidatus Glomeribacter (GenBank)	
+GCA_003966915.1	Mycoavidus cysteinexigens	B1-EB	1553431	Complete Genome	2795004	49	2018-05-16	PRJDB5716	reference genome	86.97	1.02	taxon: Mycoavidus (GenBank)	
+GCA_020023735.2	Mycoavidus sp. HKI	HKI	2840467	Complete Genome	2254889	50.5	2022-07-22	PRJNA733818		83.01	0.67	taxon: Mycoavidus (GenBank)	
+GCA_024582735.1	Mycoavidus sp. SF9855	SF9855	2968475	Complete Genome	2227690	50.5	2022-08-07	PRJNA733818		82.53	0.45	taxon: Mycoavidus (GenBank)	
+GCA_014218255.1	Mycoavidus sp. B2-EB	B2-EB	2651972	Complete Genome	1876900	49	2020-07-08	PRJDB8845		85.95	0.67	taxon: Mycoavidus (GenBank)	
+GCA_030160335.1	Mycoavidus cysteinexigens	NBRC 110909	1553431	Scaffold	2723919	49	2023-02-15	PRJDB10346		86.97	1.02	taxon: Mycoavidus (GenBank)	
+GCA_031963415.1	Mycoavidus cysteinexigens	BRE-AV005	1553431	Contig	3109557	46.5	2023-09-26	PRJNA937752				taxon: Mycoavidus (GenBank)	
+GCA_031963445.1	Mycoavidus cysteinexigens	BRE-AD051	1553431	Contig	2930739	45.5	2023-09-26	PRJNA937759				taxon: Mycoavidus (GenBank)	
+GCA_031963405.1	Mycoavidus cysteinexigens	BRE-AD266	1553431	Contig	2444062	46.5	2023-09-26	PRJNA937751				taxon: Mycoavidus (GenBank)	
+GCA_031963465.1	Mycoavidus cysteinexigens	BRE-AD073	1553431	Contig	2600454	50.5	2023-09-26	PRJNA937766		83.59	0.22	taxon: Mycoavidus (GenBank)	
+GCA_031963005.1	Mycoavidus cysteinexigens	BRE-AD086	1553431	Contig	2197055	45	2023-09-26	PRJNA365031				taxon: Mycoavidus (GenBank)	
+GCA_031963255.1	Mycoavidus cysteinexigens	BRE-TTC192	1553431	Contig	2268958	50	2023-09-26	PRJNA410574		84.16		taxon: Mycoavidus (GenBank)	
+GCA_031963045.1	Mycoavidus cysteinexigens	BRE-REB-025A	1553431	Contig	2486271	46	2023-09-26	PRJNA364923				taxon: Mycoavidus (GenBank)	
+GCA_031963245.1	Mycoavidus cysteinexigens	BRE-AD045	1553431	Contig	2348814	50	2023-09-26	PRJNA340843				taxon: Mycoavidus (GenBank)	
+GCA_031963055.1	Mycoavidus cysteinexigens	BRE-AD003	1553431	Contig	2135961	50	2023-09-26	PRJNA365030		82.79	0.67	taxon: Mycoavidus (GenBank)	
+GCA_031963205.1	Mycoavidus cysteinexigens	BRE-NVP60	1553431	Contig	2373912	50	2023-09-26	PRJNA340844				taxon: Mycoavidus (GenBank)	
+GCA_031963025.1	Mycoavidus cysteinexigens	BRE-AM980	1553431	Contig	2567687	50	2023-09-26	PRJNA340833				taxon: Mycoavidus (GenBank)	
+GCA_031963035.1	Mycoavidus cysteinexigens	BRE-AD022	1553431	Contig	2653606	50	2023-09-26	PRJNA367465				taxon: Mycoavidus (GenBank)	
+GCA_031963225.1	Mycoavidus cysteinexigens	BRE-AD058	1553431	Contig	2847681	46.5	2023-09-26	PRJNA340839				taxon: Mycoavidus (GenBank)	
+GCA_031963365.1	Mycoavidus cysteinexigens	BRE-AM1000	1553431	Contig	2445479	45.5	2023-09-26	PRJNA340828				taxon: Mycoavidus (GenBank)	
+GCA_003546845.1	endosymbiont GvMRE of Glomus versiforme	GvMRE	2039283	Scaffold	2487246	31.5	2018-09-11	PRJNA407498	reference genome	59.17	113.69	bioproject: PRJNA407498 (GenBank)	held_out_in_T2
+GCA_031675535.1	Mycoplasmataceae bacterium	MRE	2685873	Complete Genome	486155	30.5	2023-09-19	PRJNA924830				MRE cross-check (NCBI Assembly search)	held_out_in_T2

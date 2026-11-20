@@ -1,0 +1,13 @@
+# Assembly and genome checks, only for runs with signal.
+# Create:  conda env create -f env/phase0-assembly.yml
+# Pin:     conda env export -n phase0-assembly --no-builds | grep -v "^prefix:" > env/phase0-assembly.lock.yml
+name: phase0-assembly
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - spades
+  - flye
+  - checkm2
+  - gtdbtk

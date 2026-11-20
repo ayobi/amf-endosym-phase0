@@ -1,0 +1,11 @@
+plant	organelle	accession	title	length_bp	source	query
+Daucus carota	chloroplast	NC_008325.1	Daucus carota chloroplast, complete genome	155911	RefSeq	"""Daucus carota""[Organism] AND refseq[filter] AND chloroplast[filter]"
+Daucus carota	mitochondrion	NC_087060.1	Daucus carota subsp. sativus mitochondrion, complete sequence	250368	RefSeq	"""Daucus carota""[Organism] AND refseq[filter] AND mitochondrion[filter]"
+Lotus japonicus	chloroplast	NC_002694.1	Lotus japonicus chloroplast, complete genome	150519	RefSeq	"""Lotus japonicus""[Organism] AND refseq[filter] AND chloroplast[filter]"
+Lotus japonicus	mitochondrion	NC_016743.2	Lotus japonicus mitochondrion, complete genome	380861	RefSeq	"""Lotus japonicus""[Organism] AND refseq[filter] AND mitochondrion[filter]"
+Medicago truncatula	chloroplast	NC_003119.8	Medicago truncatula chloroplast, complete genome	124033	RefSeq	"""Medicago truncatula""[Organism] AND refseq[filter] AND chloroplast[filter]"
+Medicago truncatula	mitochondrion	NC_029641.1	Medicago truncatula mitochondrion, complete genome	271618	RefSeq	"""Medicago truncatula""[Organism] AND refseq[filter] AND mitochondrion[filter]"
+Trifolium repens	chloroplast	CP125853.1	Trifolium repens isolate ACLI19 chloroplast, complete genome	126579	GenBank	"""Trifolium repens""[Organism] AND chloroplast[filter] AND ""complete genome""[Title]"
+Trifolium repens	chloroplast	MT120812.1	Trifolium repens voucher IBSC:L.Duan 2018002 chloroplast, complete genome	132328	GenBank	"""Trifolium repens""[Organism] AND chloroplast[filter] AND ""complete genome""[Title]"
+Trifolium repens	chloroplast	MT506238.1	Trifolium repens chloroplast, complete genome	132429	GenBank	"""Trifolium repens""[Organism] AND chloroplast[filter] AND ""complete genome""[Title]"
+Trifolium repens	chloroplast	OQ694001.1	Trifolium repens chloroplast, complete genome	132344	GenBank	"""Trifolium repens""[Organism] AND chloroplast[filter] AND ""complete genome""[Title]"

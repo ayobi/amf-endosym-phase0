@@ -1,0 +1,9 @@
+# Only if stage 0a shows that SSUplex misses short-read SSU in the positives.
+# Create:  conda env create -f env/phase0-ssu-fallback.yml
+name: phase0-ssu-fallback
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - phyloflash

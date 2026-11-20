@@ -1,0 +1,10 @@
+# Marker-gene profiling (kept apart: SingleM pins its own dependencies).
+# Create:  conda env create -f env/phase0-markers.yml
+# Pin:     conda env export -n phase0-markers --no-builds | grep -v "^prefix:" > env/phase0-markers.lock.yml
+name: phase0-markers
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - singlem

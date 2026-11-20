@@ -1,0 +1,7 @@
+# Test outputs and Python caches
+__pycache__/
+*.pyc
+tests/out_*
+
+# macOS
+.DS_Store

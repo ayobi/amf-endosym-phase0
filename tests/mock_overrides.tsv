@@ -1,0 +1,6 @@
+accession	only_class	field	value	note
+PRJNA999008	amplicon	amplicon_target	bacterial_16S	spore 16S amplicons (test)
+PRJNA999007	-	data_class	single_nucleus_wga	one BioSample, one library per nucleus (test)
+SRR0000029	-	role	excluded	human sample (test)
+PRJNA000000	-	role	excluded	accession not in inputs (test: should warn)
+SRR0000016	-	screen_value	check	manual screen value (test)

@@ -1,0 +1,19 @@
+# Reads, mapping, k-mer profiling, SSU sorting and spike simulation.
+# Create:  conda env create -f env/phase0-reads.yml
+# Pin:     conda env export -n phase0-reads --no-builds | grep -v "^prefix:" > env/phase0-reads.lock.yml
+name: phase0-reads
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pandas
+  - sra-tools
+  - seqkit
+  - minimap2
+  - samtools
+  - sylph
+  - vsearch
+  - ssuplex
+  - insilicoseq

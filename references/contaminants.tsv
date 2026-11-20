@@ -1,0 +1,8 @@
+accession	organism	strain_or_isolate	tax_id	assembly_level	size_bp	gc_percent	release_date	bioproject	refseq_category	checkm_completeness	checkm_contamination	query	note
+GCF_014142625.1	Ralstonia pickettii	s8	329	Contig	5430218	63.5	2020-08-10	PRJNA493516	reference genome	91.28	6.63	taxon: Ralstonia pickettii (RefSeq reference genome)	type species of Ralstonia
+GCF_030584785.1	Bradyrhizobium japonicum	S06K-Bj	375	Complete Genome	9677243	63.5	2023-08-02	PRJNA962173	reference genome	99.56	0.46	taxon: Bradyrhizobium japonicum (RefSeq reference genome)	type species of Bradyrhizobium
+GCF_009586235.1	Burkholderia cepacia	BC16	292	Complete Genome	8366868	67	2019-10-29	PRJNA561256	reference genome	99.57	2.06	taxon: Burkholderia cepacia (RefSeq reference genome)	type species of Burkholderia
+GCF_001040945.1	Herbaspirillum seropedicae	Z67	964	Complete Genome	5509723	63.5	2015-06-26	PRJNA287245	reference genome	99.52	0.44	taxon: Herbaspirillum seropedicae (RefSeq reference genome)	type species of Herbaspirillum
+GCF_000006765.1	Pseudomonas aeruginosa PAO1	PAO1	208964	Complete Genome	6264404	66.5	2006-07-07	PRJNA331	reference genome	99.61	0.49	taxon: Pseudomonas aeruginosa (RefSeq reference genome)	type species of Pseudomonas
+GCF_016027095.1	Sphingomonas paucimobilis	FDAARGOS_908	13689	Complete Genome	4367078	65.5	2020-12-14	PRJNA231221	reference genome	99.52	2.4	taxon: Sphingomonas paucimobilis (RefSeq reference genome)	type species of Sphingomonas
+GCF_020641395.2	Stenotrophomonas maltophilia	ACYCa.6E	40324	Complete Genome	4646175	66.5	2022-09-22	PRJNA759338	reference genome	99.07	0.88	taxon: Stenotrophomonas maltophilia (RefSeq reference genome)	type species of Stenotrophomonas
