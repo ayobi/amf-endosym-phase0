@@ -10,9 +10,10 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `inventory/` | The three SRA Run Selector exports of 2026-11-20 and the labelled inventory made from them (`runs_tagged.tsv`, `inventory_summary.md`). |
 | `scripts/tag_runs.py` | Labels SRA runs from metadata and writes the inventory. |
 | `scripts/make_reference_lists.py` | Makes the reference genome lists from NCBI (run on the lock date). |
+| `scripts/clean_references.py` | Stage 0: downloads the reference genomes and cleans them (`PROTOCOL.md` 3.4). |
 | `references/` | The reference lists, `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
 | `env/` | Conda environments for the toolchain. |
-| `tests/` | Offline tests for both scripts. |
+| `tests/` | Tests for the scripts (`check_clean.py` needs minimap2). |
 
 ## Make the inventory
 
@@ -36,6 +37,18 @@ python scripts/make_reference_lists.py -o references
 ```
 
 It prints how many entries each list has and writes `references/QUERIES.md`, which records the date and the NCBI Datasets version. If NCBI can't be reached or any query fails, it writes nothing and exits non-zero, so a bad run never leaves short lists behind. Just run it again. If it says your computer could not look up a host name, the problem is your network's DNS, not NCBI: switch networks, or set your DNS servers to 1.1.1.1 and 8.8.8.8.
+
+## Clean the references (stage 0, before stage 0a)
+
+The settings are in `PROTOCOL.md` section 10, entry 3, which must be committed before this runs. Needs the `phase0-reads` environment (for minimap2), internet access to NCBI, and about 4 GB of disk for the work folder. Keep the work folder outside the repository.
+
+```bash
+conda activate phase0-reads
+python tests/check_clean.py                       # synthetic genomes, real minimap2
+python scripts/clean_references.py --workdir ~/phase0-data --threads 16
+```
+
+It writes `references/overlaps.tsv` (every removed contig and every shared stretch), `references/genome_files.tsv` (every downloaded and cleaned file, with md5) and `references/CLEANING.md` (versions, commands, counts). Commit those three before stage 0a. The cleaned genomes stay in `~/phase0-data/clean/`; every later step uses them. If a download fails, nothing is written to `references/`; run the same command again and it fetches only what is missing.
 
 ## Software environments
 
@@ -81,4 +94,5 @@ After the lock, any change to the protocol, the controls, the reference lists or
 ```bash
 python tests/check_tags.py
 python tests/check_refs.py
+python tests/check_clean.py    # needs minimap2: activate phase0-reads first
 ```
