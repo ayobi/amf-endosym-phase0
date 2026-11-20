@@ -1,0 +1,56 @@
+accession	role	organism	downloaded_sequences	downloaded_bp	downloaded_md5	ncbi_md5_checked	removed_sequences	removed_bp	clean_sequences	clean_bp	clean_md5
+GCA_009809945.1	host	Gigaspora margarita	6489	773098546	db9eb7b9344919a5ac9a981a0993502b	yes	5	17316	6484	773081230	25f7aee60945a76970dcd36e0783f691
+GCA_026210795.1	host	Rhizophagus irregularis	32	146773001	a19990687964716f6b870143bb8fb1de	yes	0	0	32	146773001	a19990687964716f6b870143bb8fb1de
+GCA_021464375.1	host	Rhizophagus sp. LPA8_1_AMF	15685	117195787	c5295b3b91501bbd812406a42049cedf	yes	32	228341	15653	116967446	c2a351feaf1ac5afac161c7c4f5055fe
+GCA_003547095.1	host	Diversispora epigaea	731	156576535	75e2a1b8537372ef878a8ab5093e8c7c	yes	0	0	731	156576535	75e2a1b8537372ef878a8ab5093e8c7c
+GCA_036320915.1	host	Linnemannia elongata	33	51153770	93dd3ff5d3b4c62972abb13a64158927	yes	0	0	33	51153770	93dd3ff5d3b4c62972abb13a64158927
+GCA_021409705.1	endosymbiont	Candidatus Moeniiplasma glomeromycotorum	7	500669	2cb879eddb4e3cd414de561ccc2c981a	yes	0	0	7	500669	2cb879eddb4e3cd414de561ccc2c981a
+GCA_021409685.1	endosymbiont	Candidatus Moeniiplasma glomeromycotorum	5	555875	4ba2b458f08986540d2457a8846ed17d	yes	0	0	5	555875	4ba2b458f08986540d2457a8846ed17d
+GCA_021409725.1	endosymbiont	Candidatus Moeniiplasma glomeromycotorum	7	565759	cff08a19979ec8fd1776ca80b06038f4	yes	0	0	7	565759	cff08a19979ec8fd1776ca80b06038f4
+GCA_021409745.1	endosymbiont	Candidatus Moeniiplasma glomeromycotorum	6	507735	a2a2c23808f32946c947081dbd1b5871	yes	0	0	6	507735	a2a2c23808f32946c947081dbd1b5871
+GCA_021409605.1	endosymbiont	Candidatus Moeniiplasma glomeromycotorum	53	1506637	fcd9cb93d499638a5c70b01f5240b6ac	yes	2	8673	51	1497964	d30c30dc7491f587afc66efd149c95c2
+GCA_021409665.1	endosymbiont	Candidatus Moeniiplasma glomeromycotorum	50	1544581	0cb0327f127f885789092956ab0ef37c	yes	0	0	50	1544581	0cb0327f127f885789092956ab0ef37c
+GCA_021409645.1	endosymbiont	Candidatus Moeniiplasma glomeromycotorum	54	1512906	bbaf94d35d283357d00a6a46792516de	yes	1	4581	53	1508325	5e9606da9f13b25b7e4334cd29a7c7c9
+GCA_000227585.1	endosymbiont	Candidatus Glomeribacter gigasporarum BEG34	124	1726950	1ec6db807a4dbacdf1ad4b5372ead761	yes	0	0	124	1726950	1ec6db807a4dbacdf1ad4b5372ead761
+GCA_001684025.1	endosymbiont	Candidatus Glomeribacter gigasporarum	851	2355846	5a89d2786aae0284673a1856ee407a45	yes	0	0	851	2355846	5a89d2786aae0284673a1856ee407a45
+GCA_001684175.1	endosymbiont	Candidatus Glomeribacter gigasporarum	607	1339701	4f5135593c98bbda7439c2157af9b488	yes	0	0	607	1339701	4f5135593c98bbda7439c2157af9b488
+GCA_001684155.1	endosymbiont	Candidatus Glomeribacter gigasporarum	1172	1621371	806561114c62761d4630abe4ff6655a9	yes	0	0	1172	1621371	806561114c62761d4630abe4ff6655a9
+GCA_026501145.1	endosymbiont	Candidatus Glomeribacter sp. 1016415	1	2638116	5c0416da3dd27ad2d621fc64e1deb4d4	yes	0	0	1	2638116	5c0416da3dd27ad2d621fc64e1deb4d4
+GCA_003966915.1	endosymbiont	Mycoavidus cysteinexigens	1	2795004	8a430be9bcdee3d17d2d8b6331a69ac2	yes	0	0	1	2795004	8a430be9bcdee3d17d2d8b6331a69ac2
+GCA_020023735.2	endosymbiont	Mycoavidus sp. HKI	1	2254889	78d597e31189bc1114e6d717e1016d3b	yes	0	0	1	2254889	78d597e31189bc1114e6d717e1016d3b
+GCA_024582735.1	endosymbiont	Mycoavidus sp. SF9855	1	2227690	a7a61db2094a0579650dd3329255398c	yes	0	0	1	2227690	a7a61db2094a0579650dd3329255398c
+GCA_014218255.1	endosymbiont	Mycoavidus sp. B2-EB	1	1876900	ca388b9a3953a79c1e26c45087ec31d7	yes	0	0	1	1876900	ca388b9a3953a79c1e26c45087ec31d7
+GCA_030160335.1	endosymbiont	Mycoavidus cysteinexigens	85	2723919	96a899257a0a252d619dbd7b4985e7a0	yes	0	0	85	2723919	96a899257a0a252d619dbd7b4985e7a0
+GCA_031963415.1	endosymbiont	Mycoavidus cysteinexigens	3	3109557	a2b4f98f24440998ad5186a1c1ccccdd	yes	0	0	3	3109557	a2b4f98f24440998ad5186a1c1ccccdd
+GCA_031963445.1	endosymbiont	Mycoavidus cysteinexigens	5	2930739	cf1e77754583c2da29f2b51aad68e96f	yes	0	0	5	2930739	cf1e77754583c2da29f2b51aad68e96f
+GCA_031963405.1	endosymbiont	Mycoavidus cysteinexigens	1	2444062	1f3d5f60bf623c7ed7cfad720091cb1b	yes	0	0	1	2444062	1f3d5f60bf623c7ed7cfad720091cb1b
+GCA_031963465.1	endosymbiont	Mycoavidus cysteinexigens	16	2600454	9c48e473a53392b6aec2561729900833	yes	0	0	16	2600454	9c48e473a53392b6aec2561729900833
+GCA_031963005.1	endosymbiont	Mycoavidus cysteinexigens	28	2197055	173cef147fa89e930e723f10c5085d85	yes	0	0	28	2197055	173cef147fa89e930e723f10c5085d85
+GCA_031963255.1	endosymbiont	Mycoavidus cysteinexigens	42	2268958	076e5b14c321d713cbc57dee807dba56	yes	0	0	42	2268958	076e5b14c321d713cbc57dee807dba56
+GCA_031963045.1	endosymbiont	Mycoavidus cysteinexigens	56	2486271	2a5407cc6b81b9f45cae19916822f20f	yes	0	0	56	2486271	2a5407cc6b81b9f45cae19916822f20f
+GCA_031963245.1	endosymbiont	Mycoavidus cysteinexigens	79	2348814	67a9797694a38ab7583d844341832b13	yes	0	0	79	2348814	67a9797694a38ab7583d844341832b13
+GCA_031963055.1	endosymbiont	Mycoavidus cysteinexigens	87	2135961	893c0dc5b32ab9992395a9e39ef081aa	yes	0	0	87	2135961	893c0dc5b32ab9992395a9e39ef081aa
+GCA_031963205.1	endosymbiont	Mycoavidus cysteinexigens	95	2373912	fc32360cd912b4f9b04a910a40e5016f	yes	0	0	95	2373912	fc32360cd912b4f9b04a910a40e5016f
+GCA_031963025.1	endosymbiont	Mycoavidus cysteinexigens	132	2567687	e4b64d48164d2ced2f82fe42a175608c	yes	0	0	132	2567687	e4b64d48164d2ced2f82fe42a175608c
+GCA_031963035.1	endosymbiont	Mycoavidus cysteinexigens	151	2653606	1c6db9f19a5434b7621f413994420b7f	yes	0	0	151	2653606	1c6db9f19a5434b7621f413994420b7f
+GCA_031963225.1	endosymbiont	Mycoavidus cysteinexigens	134	2847681	27577d31071cef8b6f35151b771d70e9	yes	0	0	134	2847681	27577d31071cef8b6f35151b771d70e9
+GCA_031963365.1	endosymbiont	Mycoavidus cysteinexigens	235	2445479	4b8af83d044c0285c7c0838eb72c7062	yes	0	0	235	2445479	4b8af83d044c0285c7c0838eb72c7062
+GCA_003546845.1	endosymbiont	endosymbiont GvMRE of Glomus versiforme	9	2487246	ca9b2194957ef12de91e84838be494c3	yes	0	0	9	2487246	ca9b2194957ef12de91e84838be494c3
+GCA_031675535.1	endosymbiont	Mycoplasmataceae bacterium	1	486155	a55b388e30778da488b1c53e43298187	yes	0	0	1	486155	a55b388e30778da488b1c53e43298187
+GCF_014142625.1	contaminant	Ralstonia pickettii	52	5430218	9f5c57fd3a2e508a64e50e4d0c14fa29	yes	0	0	52	5430218	9f5c57fd3a2e508a64e50e4d0c14fa29
+GCF_030584785.1	contaminant	Bradyrhizobium japonicum	1	9677243	d4f8e612933dc1da4e581a5a1b0c1d99	yes	0	0	1	9677243	d4f8e612933dc1da4e581a5a1b0c1d99
+GCF_009586235.1	contaminant	Burkholderia cepacia	3	8366868	3cd312e79a2ff0fed97ebaaed0ec15ba	yes	0	0	3	8366868	3cd312e79a2ff0fed97ebaaed0ec15ba
+GCF_001040945.1	contaminant	Herbaspirillum seropedicae	1	5509723	871af5f71b1f7f8bf977f1347e891c2e	yes	0	0	1	5509723	871af5f71b1f7f8bf977f1347e891c2e
+GCF_000006765.1	contaminant	Pseudomonas aeruginosa PAO1	1	6264404	2b114057efa063a76f97460d2a98fe1f	yes	0	0	1	6264404	2b114057efa063a76f97460d2a98fe1f
+GCF_016027095.1	contaminant	Sphingomonas paucimobilis	4	4367078	84c1863c9119a602ecf8949ed086b699	yes	0	0	4	4367078	84c1863c9119a602ecf8949ed086b699
+GCF_020641395.2	contaminant	Stenotrophomonas maltophilia	2	4646175	1a529c882343e3b7ad56b64a0b7c89f8	yes	0	0	2	4646175	1a529c882343e3b7ad56b64a0b7c89f8
+NC_008325.1	organelle	Daucus carota chloroplast	1	155911	e7d49bedee97145fccae8b6f965f0105	length checked	0	0	1	155911	e7d49bedee97145fccae8b6f965f0105
+NC_087060.1	organelle	Daucus carota mitochondrion	1	250368	b92bc27e72662a46aa21a07cc9dda389	length checked	0	0	1	250368	b92bc27e72662a46aa21a07cc9dda389
+NC_002694.1	organelle	Lotus japonicus chloroplast	1	150519	b28eb839f3941eac8b9600d8c6cad8bf	length checked	0	0	1	150519	b28eb839f3941eac8b9600d8c6cad8bf
+NC_016743.2	organelle	Lotus japonicus mitochondrion	1	380861	cd1be6b91eaad7b3e0b458ecfcd88221	length checked	0	0	1	380861	cd1be6b91eaad7b3e0b458ecfcd88221
+NC_003119.8	organelle	Medicago truncatula chloroplast	1	124033	adf41a93b6f50db0fcd5c08135fe6175	length checked	0	0	1	124033	adf41a93b6f50db0fcd5c08135fe6175
+NC_029641.1	organelle	Medicago truncatula mitochondrion	1	271618	84e814e4ce33f7bdcdcb62dd2ce1e386	length checked	0	0	1	271618	84e814e4ce33f7bdcdcb62dd2ce1e386
+CP125853.1	organelle	Trifolium repens chloroplast	1	126579	f17c407ec9b90e4991c81e2d4956febe	length checked	0	0	1	126579	f17c407ec9b90e4991c81e2d4956febe
+MT120812.1	organelle	Trifolium repens chloroplast	1	132328	5c7a463a653e6a0bd4d0d52038eae934	length checked	0	0	1	132328	5c7a463a653e6a0bd4d0d52038eae934
+MT506238.1	organelle	Trifolium repens chloroplast	1	132429	57916e0567f614ebe2119ef2299efac6	length checked	0	0	1	132429	57916e0567f614ebe2119ef2299efac6
+OQ694001.1	organelle	Trifolium repens chloroplast	1	132344	906d4ffe5f51ffc6e1d84cc30e0d85ad	length checked	0	0	1	132344	906d4ffe5f51ffc6e1d84cc30e0d85ad
