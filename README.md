@@ -11,9 +11,11 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `scripts/tag_runs.py` | Labels SRA runs from metadata and writes the inventory. |
 | `scripts/make_reference_lists.py` | Makes the reference genome lists from NCBI (run on the lock date). |
 | `scripts/clean_references.py` | Stage 0: downloads the reference genomes and cleans them (`PROTOCOL.md` 3.4). |
+| `scripts/make_index.py` | Stage 0: builds the lineage table, the minimap2 indexes and the sylph database from the cleaned genomes (full and T2). |
+| `scripts/assign_reads.py` | Counts the reads of one run per lineage (`PROTOCOL.md` 4.1) and writes the reads that go on to SingleM and SSUplex. |
 | `references/` | The reference lists, `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
 | `env/` | Conda environments for the toolchain. |
-| `tests/` | Tests for the scripts (`check_clean.py` needs minimap2). |
+| `tests/` | Tests for the scripts (`check_clean.py` and `check_assign.py` need minimap2). |
 
 ## Make the inventory
 
@@ -49,6 +51,27 @@ python scripts/clean_references.py --workdir ~/phase0-data --threads 16
 ```
 
 It writes `references/overlaps.tsv` (every removed contig and every shared stretch), `references/genome_files.tsv` (every downloaded and cleaned file, with md5) and `references/CLEANING.md` (versions, commands, counts). Commit those three before stage 0a. The cleaned genomes stay in `~/phase0-data/clean/`; every later step uses them. If a download fails, nothing is written to `references/`; run the same command again and it fetches only what is missing.
+
+## Build the index (stage 0, after cleaning, before stage 0a)
+
+The settings are in `PROTOCOL.md` section 10, entry 4, which must be committed before this runs. Needs the `phase0-reads` environment (minimap2 and sylph) and about 15 GB more in the work folder.
+
+```bash
+conda activate phase0-reads
+python tests/check_assign.py                      # synthetic genomes and reads, real minimap2
+python scripts/make_index.py --workdir ~/phase0-data --threads 16
+```
+
+It writes `references/lineages.tsv` (every genome and its lineage) and `references/INDEX.md` (versions, commands, md5s). Commit both before stage 0a. The indexes go to `~/phase0-data/index/full/` and `~/phase0-data/index/t2/` (the T2 set leaves out the 9 held-out MRE genomes).
+
+Reads are then assigned one run at a time; give both files of a paired run, and each mate is counted on its own:
+
+```bash
+python scripts/assign_reads.py --index ~/phase0-data/index/full --platform short \
+    --reads SRR123_1.fastq.gz SRR123_2.fastq.gz --out ~/phase0-data/runs/SRR123/full --threads 16
+```
+
+This writes `counts.tsv` (reads per lineage, the fungal read count for E2, and the reads counted for none or routed, by reason), `routed.fastq.gz` (the reads that go on to SingleM and SSUplex) and `assign.json`. Use `--platform hifi` for HiFi runs and `--index ~/phase0-data/index/t2` for T2.
 
 ## Software environments
 
@@ -95,4 +118,5 @@ After the lock, any change to the protocol, the controls, the reference lists or
 python tests/check_tags.py
 python tests/check_refs.py
 python tests/check_clean.py    # needs minimap2: activate phase0-reads first
+python tests/check_assign.py   # needs minimap2 too
 ```
