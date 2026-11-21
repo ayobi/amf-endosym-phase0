@@ -13,11 +13,13 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `scripts/clean_references.py` | Stage 0: downloads the reference genomes and cleans them (`PROTOCOL.md` 3.4). |
 | `scripts/make_index.py` | Stage 0: builds the lineage table, the minimap2 indexes and the sylph database from the cleaned genomes (full and T2). |
 | `scripts/run_stage0a.py` | Stage 0a, step 1: fetches the first 20 million spots of each positive run, assigns them and works out the reference titer t. |
+| `scripts/get_marker_databases.py` | Stage 0a, step 2: downloads and checks the SingleM metapackage and SSUplex's profile files. |
+| `scripts/run_stage0a_m.py` | Stage 0a, step 2: runs SSUplex and SingleM on the step 1 reads and works out the marker share m. |
 | `scripts/assign_reads.py` | Counts the reads of one run per lineage (`PROTOCOL.md` 4.1) and writes the reads that go on to SingleM and SSUplex. |
 | `references/` | The reference lists, `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
 | `env/` | Conda environments for the toolchain. |
-| `stage0a/` | Stage 0a: the positive runs (`runs.tsv`), and after it runs, the fractions and t. |
-| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py` and `check_stage0a.py` need minimap2). |
+| `stage0a/` | Stage 0a: the positive runs (`runs.tsv`), the fractions and t (step 1), and the marker shares and m (step 2). |
+| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2). |
 
 ## Make the inventory
 
@@ -92,6 +94,25 @@ nohup python scripts/run_stage0a.py --workdir ~/phase0-data --threads 16 > ~/sta
 tail -f ~/stage0a.log      # Ctrl-C stops watching, not the run
 ```
 
+## Stage 0a, step 2: marker share m
+
+The settings are in `PROTOCOL.md` section 10, entry 6, which must be committed before this runs. First get the databases: the SingleM metapackage (about 2.2 GB, from Zenodo) and Metaxa2 2.2.3 for SSUplex's profile files (from microbiology.se).
+
+```bash
+conda activate phase0-reads
+python tests/check_stage0a_m.py
+python scripts/get_marker_databases.py --workdir ~/phase0-data
+```
+
+It checks the tool versions against the lock files, the metapackage against the md5 in `references/DATABASES.md`, and SSUplex's quick start against its README. Only if all of that passes does it write `~/phase0-data/db/manifest.json`, which step 2 needs. Then run step 2 on the reads kept from step 1:
+
+```bash
+nohup python scripts/run_stage0a_m.py --workdir ~/phase0-data --threads 16 > ~/stage0a_m.log 2>&1 &
+tail -f ~/stage0a_m.log
+```
+
+It runs SSUplex and SingleM on every read of the 31 runs, DNA positives first, and aligns the reads they find again, exactly as in step 1. Expect about an hour per run with 16 threads, so a day or two in all. SSUplex holds one mate file in memory (around 10 GB), and a run needs about 10 GB of temporary disk in `~/phase0-data/stage0a/route/`. If it stops, run the same command again: finished work is skipped. When every run is done it writes `stage0a/marker_share.tsv` and `stage0a/STAGE0A_M.md`; commit both.
+
 ## Software environments
 
 Create them on the Linux machine that will run Phase 0, not on a laptop: lock files are specific to one platform, and some of the tools (GTDB-Tk among them) don't install on macOS.
@@ -139,4 +160,5 @@ python tests/check_refs.py
 python tests/check_clean.py    # needs minimap2: activate phase0-reads first
 python tests/check_assign.py   # needs minimap2 too
 python tests/check_stage0a.py  # needs minimap2 too
+python tests/check_stage0a_m.py  # needs minimap2 too
 ```
