@@ -12,10 +12,12 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `scripts/make_reference_lists.py` | Makes the reference genome lists from NCBI (run on the lock date). |
 | `scripts/clean_references.py` | Stage 0: downloads the reference genomes and cleans them (`PROTOCOL.md` 3.4). |
 | `scripts/make_index.py` | Stage 0: builds the lineage table, the minimap2 indexes and the sylph database from the cleaned genomes (full and T2). |
+| `scripts/run_stage0a.py` | Stage 0a, step 1: fetches the first 20 million spots of each positive run, assigns them and works out the reference titer t. |
 | `scripts/assign_reads.py` | Counts the reads of one run per lineage (`PROTOCOL.md` 4.1) and writes the reads that go on to SingleM and SSUplex. |
 | `references/` | The reference lists, `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
 | `env/` | Conda environments for the toolchain. |
-| `tests/` | Tests for the scripts (`check_clean.py` and `check_assign.py` need minimap2). |
+| `stage0a/` | Stage 0a: the positive runs (`runs.tsv`), and after it runs, the fractions and t. |
+| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py` and `check_stage0a.py` need minimap2). |
 
 ## Make the inventory
 
@@ -73,6 +75,23 @@ python scripts/assign_reads.py --index ~/phase0-data/index/full --platform short
 
 This writes `counts.tsv` (reads per lineage, the fungal read count for E2, and the reads counted for none or routed, by reason), `routed.fastq.gz` (the reads that go on to SingleM and SSUplex) and `assign.json`. Use `--platform hifi` for HiFi runs and `--index ~/phase0-data/index/t2` for T2.
 
+## Stage 0a, step 1: reference titer t
+
+The settings are in `PROTOCOL.md` section 10, entry 5, which must be committed before this runs. It fetches the first 20 million spots of each of the 31 runs in `stage0a/runs.tsv` (3 at a time), assigns them against the full index, and works out t. It keeps the reads for step 2, about 80 GB in `~/phase0-data/stage0a/reads/`, and needs internet access to SRA.
+
+```bash
+conda activate phase0-reads
+python tests/check_stage0a.py
+python scripts/run_stage0a.py --workdir ~/phase0-data --threads 16
+```
+
+It takes many hours, so run it inside `tmux` or `screen`, or with `nohup` (see below). If it stops, or a run fails to download, run the same command again: finished runs are skipped. When every run is done it writes `stage0a/fractions.tsv` and `stage0a/STAGE0A.md`; commit both before step 2.
+
+```bash
+nohup python scripts/run_stage0a.py --workdir ~/phase0-data --threads 16 > ~/stage0a.log 2>&1 &
+tail -f ~/stage0a.log      # Ctrl-C stops watching, not the run
+```
+
 ## Software environments
 
 Create them on the Linux machine that will run Phase 0, not on a laptop: lock files are specific to one platform, and some of the tools (GTDB-Tk among them) don't install on macOS.
@@ -119,4 +138,5 @@ python tests/check_tags.py
 python tests/check_refs.py
 python tests/check_clean.py    # needs minimap2: activate phase0-reads first
 python tests/check_assign.py   # needs minimap2 too
+python tests/check_stage0a.py  # needs minimap2 too
 ```
