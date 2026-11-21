@@ -1,0 +1,56 @@
+accession	organism	kind	lineage	held_out_in_T2	in_full	in_t2	sequences	bp
+GCA_009809945.1	Gigaspora margarita	host fungus	Gigaspora margarita	no	yes	yes	6484	773081230
+GCA_026210795.1	Rhizophagus irregularis	host fungus	Rhizophagus irregularis	no	yes	yes	32	146773001
+GCA_021464375.1	Rhizophagus sp. LPA8_1_AMF	host fungus	Rhizophagus sp. LPA8_1_AMF	no	yes	yes	15653	116967446
+GCA_003547095.1	Diversispora epigaea	host fungus	Diversispora epigaea	no	yes	yes	731	156576535
+GCA_036320915.1	Linnemannia elongata	host fungus	Linnemannia elongata	no	yes	yes	33	51153770
+GCA_021409705.1	Candidatus Moeniiplasma glomeromycotorum	endosymbiont	CaMg/MRE	yes	yes	no	7	500669
+GCA_021409685.1	Candidatus Moeniiplasma glomeromycotorum	endosymbiont	CaMg/MRE	yes	yes	no	5	555875
+GCA_021409725.1	Candidatus Moeniiplasma glomeromycotorum	endosymbiont	CaMg/MRE	yes	yes	no	7	565759
+GCA_021409745.1	Candidatus Moeniiplasma glomeromycotorum	endosymbiont	CaMg/MRE	yes	yes	no	6	507735
+GCA_021409605.1	Candidatus Moeniiplasma glomeromycotorum	endosymbiont	CaMg/MRE	yes	yes	no	51	1497964
+GCA_021409665.1	Candidatus Moeniiplasma glomeromycotorum	endosymbiont	CaMg/MRE	yes	yes	no	50	1544581
+GCA_021409645.1	Candidatus Moeniiplasma glomeromycotorum	endosymbiont	CaMg/MRE	yes	yes	no	53	1508325
+GCA_000227585.1	Candidatus Glomeribacter gigasporarum BEG34	endosymbiont	CaGg	no	yes	yes	124	1726950
+GCA_001684025.1	Candidatus Glomeribacter gigasporarum	endosymbiont	CaGg	no	yes	yes	851	2355846
+GCA_001684175.1	Candidatus Glomeribacter gigasporarum	endosymbiont	CaGg	no	yes	yes	607	1339701
+GCA_001684155.1	Candidatus Glomeribacter gigasporarum	endosymbiont	CaGg	no	yes	yes	1172	1621371
+GCA_026501145.1	Candidatus Glomeribacter sp. 1016415	endosymbiont	CaGg	no	yes	yes	1	2638116
+GCA_003966915.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	1	2795004
+GCA_020023735.2	Mycoavidus sp. HKI	endosymbiont	Mycoavidus	no	yes	yes	1	2254889
+GCA_024582735.1	Mycoavidus sp. SF9855	endosymbiont	Mycoavidus	no	yes	yes	1	2227690
+GCA_014218255.1	Mycoavidus sp. B2-EB	endosymbiont	Mycoavidus	no	yes	yes	1	1876900
+GCA_030160335.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	85	2723919
+GCA_031963415.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	3	3109557
+GCA_031963445.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	5	2930739
+GCA_031963405.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	1	2444062
+GCA_031963465.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	16	2600454
+GCA_031963005.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	28	2197055
+GCA_031963255.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	42	2268958
+GCA_031963045.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	56	2486271
+GCA_031963245.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	79	2348814
+GCA_031963055.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	87	2135961
+GCA_031963205.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	95	2373912
+GCA_031963025.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	132	2567687
+GCA_031963035.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	151	2653606
+GCA_031963225.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	134	2847681
+GCA_031963365.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	235	2445479
+GCA_003546845.1	endosymbiont GvMRE of Glomus versiforme	endosymbiont	CaMg/MRE	yes	yes	no	9	2487246
+GCA_031675535.1	Mycoplasmataceae bacterium	endosymbiont	CaMg/MRE	yes	yes	no	1	486155
+GCF_014142625.1	Ralstonia pickettii	contaminant	Ralstonia	no	yes	yes	52	5430218
+GCF_030584785.1	Bradyrhizobium japonicum	contaminant	Bradyrhizobium	no	yes	yes	1	9677243
+GCF_009586235.1	Burkholderia cepacia	contaminant	Burkholderia	no	yes	yes	3	8366868
+GCF_001040945.1	Herbaspirillum seropedicae	contaminant	Herbaspirillum	no	yes	yes	1	5509723
+GCF_000006765.1	Pseudomonas aeruginosa PAO1	contaminant	Pseudomonas	no	yes	yes	1	6264404
+GCF_016027095.1	Sphingomonas paucimobilis	contaminant	Sphingomonas	no	yes	yes	4	4367078
+GCF_020641395.2	Stenotrophomonas maltophilia	contaminant	Stenotrophomonas	no	yes	yes	2	4646175
+NC_008325.1	Daucus carota chloroplast	organelle	plant organelles	no	yes	yes	1	155911
+NC_087060.1	Daucus carota mitochondrion	organelle	plant organelles	no	yes	yes	1	250368
+NC_002694.1	Lotus japonicus chloroplast	organelle	plant organelles	no	yes	yes	1	150519
+NC_016743.2	Lotus japonicus mitochondrion	organelle	plant organelles	no	yes	yes	1	380861
+NC_003119.8	Medicago truncatula chloroplast	organelle	plant organelles	no	yes	yes	1	124033
+NC_029641.1	Medicago truncatula mitochondrion	organelle	plant organelles	no	yes	yes	1	271618
+CP125853.1	Trifolium repens chloroplast	organelle	plant organelles	no	yes	yes	1	126579
+MT120812.1	Trifolium repens chloroplast	organelle	plant organelles	no	yes	yes	1	132328
+MT506238.1	Trifolium repens chloroplast	organelle	plant organelles	no	yes	yes	1	132429
+OQ694001.1	Trifolium repens chloroplast	organelle	plant organelles	no	yes	yes	1	132344
