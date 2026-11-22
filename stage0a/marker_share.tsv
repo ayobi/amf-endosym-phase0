@@ -1,0 +1,32 @@
+run	test	kind	line	symbiont_lineage	sets_m	symbiont_reads	ssu_reads	ssu_symbiont	singlem_reads	singlem_symbiont	both_symbiont	route_symbiont	share	note
+SRR36098601	T1	DNA	G. margarita BEG34 B+	CaGg	yes	2150922	2527	811	4614	3122	0	3933	0.001828518189	Hi-C, B+ line (HiC_Bplus)
+SRR10215375	T1	DNA	G. margarita BEG34 B+	CaGg	yes	402536	801	196	1296	653	0	849	0.002109128128	genome reads, B+ line, mate-pair 8 kb (GMAR_GDNA-2-MP-8kb)
+SRR10215376	T1	DNA	G. margarita BEG34 B+	CaGg	yes	409195	985	205	1218	570	0	775	0.001893962536	genome reads, B+ line, mate-pair 3 kb (GMAR_GDNA-2-MP-3kb)
+SRR10215377	T1	DNA	G. margarita BEG34 B+	CaGg	yes	524606	658	196	1531	921	0	1117	0.002129216974	genome reads, B+ line, paired-end (GMAR_GDNA-2-PE)
+SRR1659836	T1	RNA	G. margarita BEG34 B+	CaGg	no	104278	3967	1848	5837	5	0	1853	0.01776980763	spores, GMARBEG34_B+NG; RNA prep not stated in SRA
+SRR1659837	T1	RNA	G. margarita BEG34 B+	CaGg	no	44941	1625	722	6325	0	0	722	0.01606550811	spores, GMARBEG34_B+G; RNA prep not stated in SRA
+SRR1659838	T1	RNA	G. margarita BEG34 B+	CaGg	no	64218	4369	1289	8813	0	0	1289	0.02007225389	spores, GMARBEG34_B+BF; RNA prep not stated in SRA
+SRR1659839	T1	RNA	G. margarita BEG34 B+	CaGg	no	26630	1189	89	6558	0	0	89	0.003342095381	spores, GMARBEG34_B+ME; RNA prep not stated in SRA
+SRR1659840	T1	RNA	G. margarita BEG34 B+	CaGg	no	9986	2661	2061	11138	0	0	2061	0.2063889445	spores, GMARBEG34_B+G_1; RNA prep not stated in SRA
+SRR1659841	T1	RNA	G. margarita BEG34 B+	CaGg	no	11821	3381	2314	10898	0	0	2314	0.1957533204	spores, GMARBEG34_B+G_2; RNA prep not stated in SRA
+SRR1659842	T1	RNA	G. margarita BEG34 B+	CaGg	no	23923	5618	4761	11494	0	0	4761	0.1990135017	spores, GMARBEG34_B+G_3; RNA prep not stated in SRA
+SRR1659846	T1	RNA	G. margarita BEG34 B+	CaGg	no	12864	3813	2582	13597	1	0	2583	0.2007929104	spores, GMARBEG34_B+BF_1; RNA prep not stated in SRA
+SRR1659847	T1	RNA	G. margarita BEG34 B+	CaGg	no	22484	17772	4589	11195	0	0	4589	0.2041006938	spores, GMARBEG34_B+BF_2; RNA prep not stated in SRA
+SRR1659850	T1	RNA	G. margarita BEG34 B+	CaGg	no	98	797	3	11159	1	0	4	0.04081632653	in planta (symbiotic stage), GMARBEG34_B+MYC_1; RNA prep not stated in SRA
+SRR1659851	T1	RNA	G. margarita BEG34 B+	CaGg	no	125	593	6	9613	0	0	6	0.048	in planta (symbiotic stage), GMARBEG34_B+MYC_2; RNA prep not stated in SRA
+SRR15311774	T1	RNA	G. margarita BEG34 B+	CaGg	no	755	5891	77	20668	0	0	77	0.101986755	Lotus japonicus roots with the B+ line, B+Myc7; poly-A
+SRR15311775	T1	RNA	G. margarita BEG34 B+	CaGg	no	273	2769	36	20249	0	0	36	0.1318681319	Lotus japonicus roots with the B+ line, B+Myc5; poly-A
+SRR15311776	T1	RNA	G. margarita BEG34 B+	CaGg	no	2576	19356	352	26483	0	0	352	0.1366459627	Lotus japonicus roots with the B+ line, B+Myc1; poly-A
+SRR6039993	T2	DNA	D. epigaea S1	CaMg/MRE	yes	3413552	1141	782	5105	4630	0	5412	0.001585445307	genome reads, mate-pair 3 kb (MP2_3K)
+SRR6039994	T2	DNA	D. epigaea S1	CaMg/MRE	yes	1853554	5519	2888	10724	7424	0	10312	0.005563366376	genome reads, mate-pair 5 kb (MP3_5K)
+SRR6039995	T2	DNA	D. epigaea S1	CaMg/MRE	yes	3132448	5142	3675	30940	24794	0	28469	0.009088419026	genome reads, paired-end (PEBTI)
+SRR6039996	T2	DNA	D. epigaea S1	CaMg/MRE	yes	2995465	3472	2821	5156	4346	0	7167	0.002392616839	genome reads, paired-end (PENCGR)
+SRR6039997	T2	DNA	D. epigaea S1	CaMg/MRE	yes	2182016	5772	3117	12689	8826	0	11943	0.005473378747	genome reads, mate-pair 5-7 kb (MP5-7K)
+SRR6039998	T2	DNA	D. epigaea S1	CaMg/MRE	yes	2591996	7452	4112	14753	10525	0	14637	0.005646999455	genome reads, mate-pair 7-12 kb (MP7-12K)
+SRR12881897	T2	DNA	Rhizophagus sp. LPA8	CaMg/MRE	yes	489398	729	336	1219	759	0	1095	0.002237442736	plate LPA8_4, metagenome
+SRR12881898	T2	DNA	Rhizophagus sp. LPA8	CaMg/MRE	yes	503527	667	328	1113	707	0	1035	0.002055500499	plate LPA8_3, metagenome
+SRR12881899	T2	DNA	Rhizophagus sp. LPA8	CaMg/MRE	yes	393098	630	264	1006	573	0	837	0.002129240037	plate LPA8_1, metagenome
+SRR12881900	T2	DNA	R. irregularis A2	CaMg/MRE	yes	972422	1523	546	1885	1489	0	2035	0.002092712835	plate A2_WG, metagenome
+SRR12881901	T2	DNA	R. irregularis A2	CaMg/MRE	yes	972034	1363	548	1797	1419	0	1967	0.002023591767	plate A2_6, metagenome
+SRR12881902	T2	DNA	R. irregularis A2	CaMg/MRE	yes	681857	1149	346	1406	981	0	1327	0.001946155866	plate A2_4, metagenome
+SRR12881903	T2	DNA	R. irregularis A2	CaMg/MRE	yes	1708551	2036	858	2961	2533	0	3391	0.001984722727	plate A2_3, metagenome
