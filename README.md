@@ -15,11 +15,13 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `scripts/run_stage0a.py` | Stage 0a, step 1: fetches the first 20 million spots of each positive run, assigns them and works out the reference titer t. |
 | `scripts/get_marker_databases.py` | Stage 0a, step 2: downloads and checks the SingleM metapackage and SSUplex's profile files. |
 | `scripts/run_stage0a_m.py` | Stage 0a, step 2: runs SSUplex and SingleM on the step 1 reads and works out the marker share m. |
+| `scripts/get_silva.py` | Downloads and checks SILVA 144 SSU Ref NR99 for SSU placement. |
+| `scripts/rescore_stage0a_m.py` | Stage 0a, step 2 rescored under entry 7's route rules: places the symbiont's SSU reads with VSEARCH and works out m again. |
 | `scripts/assign_reads.py` | Counts the reads of one run per lineage (`PROTOCOL.md` 4.1) and writes the reads that go on to SingleM and SSUplex. |
 | `references/` | The reference lists, `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
 | `env/` | Conda environments for the toolchain. |
 | `stage0a/` | Stage 0a: the positive runs (`runs.tsv`), the fractions and t (step 1), and the marker shares and m (step 2). |
-| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2). |
+| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH). |
 
 ## Make the inventory
 
@@ -113,6 +115,20 @@ tail -f ~/stage0a_m.log
 
 It runs SSUplex and SingleM on every read of the 31 runs, DNA positives first, and aligns the reads they find again, exactly as in step 1. Expect about an hour per run with 16 threads, so a day or two in all. SSUplex holds one mate file in memory (around 10 GB), and a run needs about 10 GB of temporary disk in `~/phase0-data/stage0a/route/`. If it stops, run the same command again: finished work is skipped. When every run is done it writes `stage0a/marker_share.tsv` and `stage0a/STAGE0A_M.md`; commit both.
 
+## Stage 0a, step 2 rescored under entry 7
+
+Entry 7 (`PROTOCOL.md` section 10) narrows what the route counts as found, and m is worked out again from step 2's work files, without running SSUplex or SingleM again. Commit entry 7 first. Then get SILVA (about 310 MB) and run the rescore:
+
+```bash
+conda activate phase0-reads
+python tests/check_rescore.py
+python scripts/get_silva.py --workdir ~/phase0-data
+nohup python scripts/rescore_stage0a_m.py --workdir ~/phase0-data --threads 30 > ~/rescore.log 2>&1 &
+tail -f ~/rescore.log
+```
+
+The search against SILVA is exhaustive (section 4.1), so it is slow: expect a day or more for the roughly 27,000 SSU reads. Use as many threads as the server can spare. The log prints a time estimate after each batch of 500 reads, and gives m as soon as the DNA runs are done. If it stops, run the same command again: finished batches are kept. When it is done it writes `stage0a/marker_share_entry7.tsv` and `stage0a/STAGE0A_M_ENTRY7.md`; commit both.
+
 ## Software environments
 
 Create them on the Linux machine that will run Phase 0, not on a laptop: lock files are specific to one platform, and some of the tools (GTDB-Tk among them) don't install on macOS.
@@ -161,4 +177,5 @@ python tests/check_clean.py    # needs minimap2: activate phase0-reads first
 python tests/check_assign.py   # needs minimap2 too
 python tests/check_stage0a.py  # needs minimap2 too
 python tests/check_stage0a_m.py  # needs minimap2 too
+python tests/check_rescore.py   # needs VSEARCH
 ```
