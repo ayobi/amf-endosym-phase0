@@ -1,0 +1,1308 @@
+unit	scored	lineage	source	category	call	basis	signal	informative_runs	present_runs	low_runs	e1	e2	e5	members	placements
+BEG34 B+	yes	CaGg	mapped	known endosymbiont clade	resident	known endosymbiont clade, present in 9 runs	yes	4	9	4	yes	yes	yes		
+BEG34 B-	yes	CaGg	mapped	known endosymbiont clade	unresolved	signal, but no rule above applies	yes	1	1	0	no	yes	yes		
+Lotus plant-only roots	yes	CaGg	mapped	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 HiFi	no	CaGg	mapped	known endosymbiont clade	unresolved	signal, but no rule above applies	yes	1	0	1	no	no	yes		
+BEG34 JGI MT	no	CaGg	mapped	known endosymbiont clade	resident	known endosymbiont clade, present in 4 runs	yes	0	4	2	no	no	yes		
+BEG34 JGI EM	no	CaGg	mapped	known endosymbiont clade	resident	known endosymbiont clade, present in 2 runs	yes	0	2	1	no	no	yes		
+BEG34 B+	yes	CaMg/MRE	mapped	known endosymbiont clade	absent	all 4 informative runs absent	no	4	0	0	no	no	yes		
+BEG34 B-	yes	CaMg/MRE	mapped	known endosymbiont clade	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+Lotus plant-only roots	yes	CaMg/MRE	mapped	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 HiFi	no	CaMg/MRE	mapped	known endosymbiont clade	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+BEG34 JGI MT	no	CaMg/MRE	mapped	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 JGI EM	no	CaMg/MRE	mapped	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 B+	yes	Mycoavidus	mapped	known endosymbiont clade	absent	all 4 informative runs absent	no	4	0	0	no	no	yes		
+BEG34 B-	yes	Mycoavidus	mapped	known endosymbiont clade	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+Lotus plant-only roots	yes	Mycoavidus	mapped	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 HiFi	no	Mycoavidus	mapped	known endosymbiont clade	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+BEG34 JGI MT	no	Mycoavidus	mapped	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 JGI EM	no	Mycoavidus	mapped	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 B+	yes	Bradyrhizobium	mapped	kit-contaminant genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes		
+BEG34 B-	yes	Bradyrhizobium	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+Lotus plant-only roots	yes	Bradyrhizobium	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 HiFi	no	Bradyrhizobium	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+BEG34 JGI MT	no	Bradyrhizobium	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 JGI EM	no	Bradyrhizobium	mapped	kit-contaminant genus	contaminant	kit-contaminant genus without both E1 and E2	yes	0	0	1	no	no	yes		
+BEG34 B+	yes	Burkholderia	mapped	kit-contaminant genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes		
+BEG34 B-	yes	Burkholderia	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+Lotus plant-only roots	yes	Burkholderia	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 HiFi	no	Burkholderia	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+BEG34 JGI MT	no	Burkholderia	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 JGI EM	no	Burkholderia	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 B+	yes	Herbaspirillum	mapped	kit-contaminant genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes		
+BEG34 B-	yes	Herbaspirillum	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+Lotus plant-only roots	yes	Herbaspirillum	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 HiFi	no	Herbaspirillum	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+BEG34 JGI MT	no	Herbaspirillum	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 JGI EM	no	Herbaspirillum	mapped	kit-contaminant genus	contaminant	kit-contaminant genus without both E1 and E2	yes	0	0	1	no	no	yes		
+BEG34 B+	yes	Pseudomonas	mapped	kit-contaminant genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes		
+BEG34 B-	yes	Pseudomonas	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+Lotus plant-only roots	yes	Pseudomonas	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 HiFi	no	Pseudomonas	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+BEG34 JGI MT	no	Pseudomonas	mapped	kit-contaminant genus	contaminant	kit-contaminant genus without both E1 and E2	yes	0	1	2	no	no	yes		
+BEG34 JGI EM	no	Pseudomonas	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 B+	yes	Ralstonia	mapped	kit-contaminant genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes		
+BEG34 B-	yes	Ralstonia	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+Lotus plant-only roots	yes	Ralstonia	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 HiFi	no	Ralstonia	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+BEG34 JGI MT	no	Ralstonia	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 JGI EM	no	Ralstonia	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 B+	yes	Sphingomonas	mapped	kit-contaminant genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes		
+BEG34 B-	yes	Sphingomonas	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+Lotus plant-only roots	yes	Sphingomonas	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 HiFi	no	Sphingomonas	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+BEG34 JGI MT	no	Sphingomonas	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 JGI EM	no	Sphingomonas	mapped	kit-contaminant genus	contaminant	kit-contaminant genus without both E1 and E2	yes	0	0	1	no	no	yes		
+BEG34 B+	yes	Stenotrophomonas	mapped	kit-contaminant genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes		
+BEG34 B-	yes	Stenotrophomonas	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+Lotus plant-only roots	yes	Stenotrophomonas	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 HiFi	no	Stenotrophomonas	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+BEG34 JGI MT	no	Stenotrophomonas	mapped	kit-contaminant genus	contaminant	kit-contaminant genus without both E1 and E2	yes	0	0	3	no	no	yes		
+BEG34 JGI EM	no	Stenotrophomonas	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+BEG34 B+	yes	21-14-all-37-9 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	21-14-all-37-9	
+BEG34 B-	yes	21-14-all-37-9 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	21-14-all-37-9	
+Lotus plant-only roots	yes	21-14-all-37-9 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	21-14-all-37-9	
+BEG34 B+	yes	AWTP1-13 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	AWTP1-13	
+BEG34 B-	yes	AWTP1-13 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	AWTP1-13	
+Lotus plant-only roots	yes	AWTP1-13 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	AWTP1-13	
+BEG34 B+	yes	Abditibacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Abditibacterium	
+BEG34 B-	yes	Abditibacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Abditibacterium	
+Lotus plant-only roots	yes	Abditibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Abditibacterium	
+BEG34 B+	yes	Accumulibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Accumulibacter	
+BEG34 B-	yes	Accumulibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Accumulibacter	
+Lotus plant-only roots	yes	Accumulibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Accumulibacter	
+BEG34 B+	yes	Achromobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Achromobacter	
+BEG34 B-	yes	Achromobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Achromobacter	
+Lotus plant-only roots	yes	Achromobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Achromobacter	
+BEG34 B+	yes	Acidiluteibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Acidiluteibacter	
+BEG34 B-	yes	Acidiluteibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Acidiluteibacter	
+Lotus plant-only roots	yes	Acidiluteibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Acidiluteibacter	
+BEG34 B+	yes	Acidipropionibacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Acidipropionibacterium	
+BEG34 B-	yes	Acidipropionibacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Acidipropionibacterium	
+Lotus plant-only roots	yes	Acidipropionibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Acidipropionibacterium	
+BEG34 B+	yes	Acidovorax (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Acidovorax	
+BEG34 B-	yes	Acidovorax (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Acidovorax	
+Lotus plant-only roots	yes	Acidovorax (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Acidovorax	
+BEG34 B+	yes	Acinetobacter (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	1	0	no	no	yes	Acinetobacter	
+BEG34 B-	yes	Acinetobacter (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Acinetobacter	
+Lotus plant-only roots	yes	Acinetobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Acinetobacter	
+BEG34 B+	yes	Actinomyces (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Actinomyces	
+BEG34 B-	yes	Actinomyces (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Actinomyces	
+Lotus plant-only roots	yes	Actinomyces (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Actinomyces	
+BEG34 B+	yes	Actinomycetospora (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Actinomycetospora	
+BEG34 B-	yes	Actinomycetospora (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Actinomycetospora	
+Lotus plant-only roots	yes	Actinomycetospora (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Actinomycetospora	
+BEG34 B+	yes	Advenella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Advenella	
+BEG34 B-	yes	Advenella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Advenella	
+Lotus plant-only roots	yes	Advenella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Advenella	
+BEG34 B+	yes	Aegiribacteria (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Aegiribacteria	
+BEG34 B-	yes	Aegiribacteria (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aegiribacteria	
+Lotus plant-only roots	yes	Aegiribacteria (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aegiribacteria	
+BEG34 B+	yes	Aeromonas (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Aeromonas	
+BEG34 B-	yes	Aeromonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aeromonas	
+Lotus plant-only roots	yes	Aeromonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aeromonas	
+BEG34 B+	yes	Aestuariimicrobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Aestuariimicrobium	
+BEG34 B-	yes	Aestuariimicrobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aestuariimicrobium	
+Lotus plant-only roots	yes	Aestuariimicrobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aestuariimicrobium	
+BEG34 B+	yes	Aestuariivirga (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Aestuariivirga	
+BEG34 B-	yes	Aestuariivirga (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aestuariivirga	
+Lotus plant-only roots	yes	Aestuariivirga (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aestuariivirga	
+BEG34 B+	yes	Affinirhizobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Affinirhizobium	
+BEG34 B-	yes	Affinirhizobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Affinirhizobium	
+Lotus plant-only roots	yes	Affinirhizobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Affinirhizobium	
+BEG34 B+	yes	Afipia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Afipia	
+BEG34 B-	yes	Afipia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Afipia	
+Lotus plant-only roots	yes	Afipia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Afipia	
+BEG34 B+	yes	Agrobacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Agrobacterium	
+BEG34 B-	yes	Agrobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Agrobacterium	
+Lotus plant-only roots	yes	Agrobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Agrobacterium	
+BEG34 B+	yes	Albidovulum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Albidovulum	
+BEG34 B-	yes	Albidovulum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Albidovulum	
+Lotus plant-only roots	yes	Albidovulum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Albidovulum	
+BEG34 B+	yes	Albimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Albimonas	
+BEG34 B-	yes	Albimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Albimonas	
+Lotus plant-only roots	yes	Albimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Albimonas	
+BEG34 B+	yes	Alcaligenes (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Alcaligenes	
+BEG34 B-	yes	Alcaligenes (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Alcaligenes	
+Lotus plant-only roots	yes	Alcaligenes (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Alcaligenes	
+BEG34 B+	yes	Alcanivorax (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Alcanivorax	
+BEG34 B-	yes	Alcanivorax (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Alcanivorax	
+Lotus plant-only roots	yes	Alcanivorax (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Alcanivorax	
+BEG34 B+	yes	Alicyclobacillus (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Alicyclobacillus	
+BEG34 B-	yes	Alicyclobacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Alicyclobacillus	
+Lotus plant-only roots	yes	Alicyclobacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Alicyclobacillus	
+BEG34 B+	yes	Alienimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Alienimonas	
+BEG34 B-	yes	Alienimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Alienimonas	
+Lotus plant-only roots	yes	Alienimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Alienimonas	
+BEG34 B+	yes	Aliineobacillus (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	4	0	8	no	no	yes	Aliineobacillus	
+BEG34 B-	yes	Aliineobacillus (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	1	0	1	no	no	yes	Aliineobacillus	
+Lotus plant-only roots	yes	Aliineobacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aliineobacillus	
+BEG34 B+	yes	Alishewanella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Alishewanella	
+BEG34 B-	yes	Alishewanella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Alishewanella	
+Lotus plant-only roots	yes	Alishewanella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Alishewanella	
+BEG34 B+	yes	Allobosea (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Allobosea	
+BEG34 B-	yes	Allobosea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Allobosea	
+Lotus plant-only roots	yes	Allobosea (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Allobosea	
+BEG34 B+	yes	Allofontibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Allofontibacter	
+BEG34 B-	yes	Allofontibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Allofontibacter	
+Lotus plant-only roots	yes	Allofontibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Allofontibacter	
+BEG34 B+	yes	Alteraurantiacibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Alteraurantiacibacter	
+BEG34 B-	yes	Alteraurantiacibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Alteraurantiacibacter	
+Lotus plant-only roots	yes	Alteraurantiacibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Alteraurantiacibacter	
+BEG34 B+	yes	Amaricoccus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Amaricoccus	
+BEG34 B-	yes	Amaricoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Amaricoccus	
+Lotus plant-only roots	yes	Amaricoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Amaricoccus	
+BEG34 B+	yes	Anaerococcus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Anaerococcus	
+BEG34 B-	yes	Anaerococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Anaerococcus	
+Lotus plant-only roots	yes	Anaerococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Anaerococcus	
+BEG34 B+	yes	Anaeromyxobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Anaeromyxobacter	
+BEG34 B-	yes	Anaeromyxobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Anaeromyxobacter	
+Lotus plant-only roots	yes	Anaeromyxobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Anaeromyxobacter	
+BEG34 B+	yes	Anatilimnocola (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Anatilimnocola	
+BEG34 B-	yes	Anatilimnocola (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Anatilimnocola	
+Lotus plant-only roots	yes	Anatilimnocola (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Anatilimnocola	
+BEG34 B+	yes	Aquabacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Aquabacterium	
+BEG34 B-	yes	Aquabacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aquabacterium	
+Lotus plant-only roots	yes	Aquabacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aquabacterium	
+BEG34 B+	yes	Aquella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Aquella	
+BEG34 B-	yes	Aquella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aquella	
+Lotus plant-only roots	yes	Aquella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aquella	
+BEG34 B+	yes	Aquibaculum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Aquibaculum	
+BEG34 B-	yes	Aquibaculum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aquibaculum	
+Lotus plant-only roots	yes	Aquibaculum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aquibaculum	
+BEG34 B+	yes	Aquipseudomonas (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	4	0	2	no	no	yes	Aquipseudomonas	
+BEG34 B-	yes	Aquipseudomonas (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	1	0	1	no	no	yes	Aquipseudomonas	
+Lotus plant-only roots	yes	Aquipseudomonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aquipseudomonas	
+BEG34 B+	yes	Arenimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Arenimonas	
+BEG34 B-	yes	Arenimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Arenimonas	
+Lotus plant-only roots	yes	Arenimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Arenimonas	
+BEG34 B+	yes	Aristaeella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Aristaeella	
+BEG34 B-	yes	Aristaeella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aristaeella	
+Lotus plant-only roots	yes	Aristaeella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aristaeella	
+BEG34 B+	yes	Aromatoleum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Aromatoleum	
+BEG34 B-	yes	Aromatoleum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aromatoleum	
+Lotus plant-only roots	yes	Aromatoleum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aromatoleum	
+BEG34 B+	yes	Asticcacaulis (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Asticcacaulis	
+BEG34 B-	yes	Asticcacaulis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Asticcacaulis	
+Lotus plant-only roots	yes	Asticcacaulis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Asticcacaulis	
+BEG34 B+	yes	Azosocius (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Azosocius	
+BEG34 B-	yes	Azosocius (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Azosocius	
+Lotus plant-only roots	yes	Azosocius (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Azosocius	
+BEG34 B+	yes	Azospirillum (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Azospirillum	
+BEG34 B-	yes	Azospirillum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Azospirillum	
+Lotus plant-only roots	yes	Azospirillum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Azospirillum	
+BEG34 B+	yes	B26-G2 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	B26-G2	
+BEG34 B-	yes	B26-G2 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	B26-G2	
+Lotus plant-only roots	yes	B26-G2 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	B26-G2	
+BEG34 B+	yes	B3T1B10 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	B3T1B10	
+BEG34 B-	yes	B3T1B10 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	B3T1B10	
+Lotus plant-only roots	yes	B3T1B10 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	B3T1B10	
+BEG34 B+	yes	Bacillus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Bacillus	
+BEG34 B-	yes	Bacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Bacillus	
+Lotus plant-only roots	yes	Bacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Bacillus	
+BEG34 B+	yes	Bacteroides (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Bacteroides	
+BEG34 B-	yes	Bacteroides (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Bacteroides	
+Lotus plant-only roots	yes	Bacteroides (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Bacteroides	
+BEG34 B+	yes	Bartonella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Bartonella	
+BEG34 B-	yes	Bartonella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Bartonella	
+Lotus plant-only roots	yes	Bartonella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Bartonella	
+BEG34 B+	yes	Bdellovibrio (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Bdellovibrio	
+BEG34 B-	yes	Bdellovibrio (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Bdellovibrio	
+Lotus plant-only roots	yes	Bdellovibrio (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Bdellovibrio	
+BEG34 B+	yes	Berkiella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Berkiella	
+BEG34 B-	yes	Berkiella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Berkiella	
+Lotus plant-only roots	yes	Berkiella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Berkiella	
+BEG34 B+	yes	Bosea (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Bosea	
+BEG34 B-	yes	Bosea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Bosea	
+Lotus plant-only roots	yes	Bosea (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Bosea	
+BEG34 B+	yes	Brachybacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Brachybacterium	
+BEG34 B-	yes	Brachybacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Brachybacterium	
+Lotus plant-only roots	yes	Brachybacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Brachybacterium	
+BEG34 B+	yes	Brachymonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Brachymonas	
+BEG34 B-	yes	Brachymonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Brachymonas	
+Lotus plant-only roots	yes	Brachymonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Brachymonas	
+BEG34 B+	yes	Bradyrhizobium (route)	route	kit-contaminant genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Bradyrhizobium	
+BEG34 B-	yes	Bradyrhizobium (route)	route	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Bradyrhizobium	
+Lotus plant-only roots	yes	Bradyrhizobium (route)	route	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Bradyrhizobium	
+BEG34 B+	yes	Brevibacillus (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Brevibacillus	
+BEG34 B-	yes	Brevibacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Brevibacillus	
+Lotus plant-only roots	yes	Brevibacillus (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	0	1	no	no	yes	Brevibacillus	
+BEG34 B+	yes	Brevibacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Brevibacterium	
+BEG34 B-	yes	Brevibacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Brevibacterium	
+Lotus plant-only roots	yes	Brevibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Brevibacterium	
+BEG34 B+	yes	Brevifilum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Brevifilum	
+BEG34 B-	yes	Brevifilum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Brevifilum	
+Lotus plant-only roots	yes	Brevifilum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Brevifilum	
+BEG34 B+	yes	Brevundimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Brevundimonas	
+BEG34 B-	yes	Brevundimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Brevundimonas	
+Lotus plant-only roots	yes	Brevundimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Brevundimonas	
+BEG34 B+	yes	Bryobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Bryobacter	
+BEG34 B-	yes	Bryobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Bryobacter	
+Lotus plant-only roots	yes	Bryobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Bryobacter	
+BEG34 B+	yes	Burkholderia-Caballeronia-Paraburkholderia (route)	route	kit-contaminant genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Burkholderia, Burkholderia-Caballeronia-Paraburkholderia	
+BEG34 B-	yes	Burkholderia-Caballeronia-Paraburkholderia (route)	route	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Burkholderia, Burkholderia-Caballeronia-Paraburkholderia	
+Lotus plant-only roots	yes	Burkholderia-Caballeronia-Paraburkholderia (route)	route	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Burkholderia, Burkholderia-Caballeronia-Paraburkholderia	
+BEG34 B+	yes	Butyribacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Butyribacter	
+BEG34 B-	yes	Butyribacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Butyribacter	
+Lotus plant-only roots	yes	Butyribacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Butyribacter	
+BEG34 B+	yes	CADCVQ01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CADCVQ01	
+BEG34 B-	yes	CADCVQ01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CADCVQ01	
+Lotus plant-only roots	yes	CADCVQ01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CADCVQ01	
+BEG34 B+	yes	CAHJXF01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CAHJXF01	
+BEG34 B-	yes	CAHJXF01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAHJXF01	
+Lotus plant-only roots	yes	CAHJXF01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAHJXF01	
+BEG34 B+	yes	CAKZKQ01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CAKZKQ01	
+BEG34 B-	yes	CAKZKQ01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAKZKQ01	
+Lotus plant-only roots	yes	CAKZKQ01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAKZKQ01	
+BEG34 B+	yes	CALXSC01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CALXSC01	
+BEG34 B-	yes	CALXSC01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CALXSC01	
+Lotus plant-only roots	yes	CALXSC01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CALXSC01	
+BEG34 B+	yes	CAYJWH01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CAYJWH01	
+BEG34 B-	yes	CAYJWH01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAYJWH01	
+Lotus plant-only roots	yes	CAYJWH01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAYJWH01	
+BEG34 B+	yes	CAYVXE01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CAYVXE01	
+BEG34 B-	yes	CAYVXE01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAYVXE01	
+Lotus plant-only roots	yes	CAYVXE01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAYVXE01	
+BEG34 B+	yes	CAZBGL01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CAZBGL01	
+BEG34 B-	yes	CAZBGL01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAZBGL01	
+Lotus plant-only roots	yes	CAZBGL01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAZBGL01	
+BEG34 B+	yes	CAZSRL01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CAZSRL01	
+BEG34 B-	yes	CAZSRL01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAZSRL01	
+Lotus plant-only roots	yes	CAZSRL01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAZSRL01	
+BEG34 B+	yes	CAZTUH01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CAZTUH01	
+BEG34 B-	yes	CAZTUH01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAZTUH01	
+Lotus plant-only roots	yes	CAZTUH01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAZTUH01	
+BEG34 B+	yes	CAZXNF01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CAZXNF01	
+BEG34 B-	yes	CAZXNF01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAZXNF01	
+Lotus plant-only roots	yes	CAZXNF01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAZXNF01	
+BEG34 B+	yes	CGIF01 (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	4	0	2	no	no	yes	CGIF01	
+BEG34 B-	yes	CGIF01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CGIF01	
+Lotus plant-only roots	yes	CGIF01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CGIF01	
+BEG34 B+	yes	CL500-29 marine group (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CL500-29 marine group	
+BEG34 B-	yes	CL500-29 marine group (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CL500-29 marine group	
+Lotus plant-only roots	yes	CL500-29 marine group (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CL500-29 marine group	
+BEG34 B+	yes	CL500-3 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	CL500-3	
+BEG34 B-	yes	CL500-3 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CL500-3	
+Lotus plant-only roots	yes	CL500-3 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CL500-3	
+BEG34 B+	yes	Catonella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Catonella	
+BEG34 B-	yes	Catonella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Catonella	
+Lotus plant-only roots	yes	Catonella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Catonella	
+BEG34 B+	yes	Caulifigura (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Caulifigura	
+BEG34 B-	yes	Caulifigura (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Caulifigura	
+Lotus plant-only roots	yes	Caulifigura (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Caulifigura	
+BEG34 B+	yes	Caulobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Caulobacter	
+BEG34 B-	yes	Caulobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Caulobacter	
+Lotus plant-only roots	yes	Caulobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Caulobacter	
+BEG34 B+	yes	Cellulomonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Cellulomonas	
+BEG34 B-	yes	Cellulomonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cellulomonas	
+Lotus plant-only roots	yes	Cellulomonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Cellulomonas	
+BEG34 B+	yes	Centipeda (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Centipeda	
+BEG34 B-	yes	Centipeda (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Centipeda	
+Lotus plant-only roots	yes	Centipeda (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Centipeda	
+BEG34 B+	yes	Cephaloticoccus (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Cephaloticoccus	
+BEG34 B-	yes	Cephaloticoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cephaloticoccus	
+Lotus plant-only roots	yes	Cephaloticoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Cephaloticoccus	
+BEG34 B+	yes	Chitinimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Chitinimonas	
+BEG34 B-	yes	Chitinimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Chitinimonas	
+Lotus plant-only roots	yes	Chitinimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Chitinimonas	
+BEG34 B+	yes	Chitinivibrio (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Chitinivibrio	
+BEG34 B-	yes	Chitinivibrio (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Chitinivibrio	
+Lotus plant-only roots	yes	Chitinivibrio (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Chitinivibrio	
+BEG34 B+	yes	Chromobacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Chromobacterium	
+BEG34 B-	yes	Chromobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Chromobacterium	
+Lotus plant-only roots	yes	Chromobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Chromobacterium	
+BEG34 B+	yes	Chryseobacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Chryseobacterium	
+BEG34 B-	yes	Chryseobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Chryseobacterium	
+Lotus plant-only roots	yes	Chryseobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Chryseobacterium	
+BEG34 B+	yes	Chryseotalea (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Chryseotalea	
+BEG34 B-	yes	Chryseotalea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Chryseotalea	
+Lotus plant-only roots	yes	Chryseotalea (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Chryseotalea	
+BEG34 B+	yes	Cloacimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Cloacimonas	
+BEG34 B-	yes	Cloacimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cloacimonas	
+Lotus plant-only roots	yes	Cloacimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Cloacimonas	
+BEG34 B+	yes	Clostridioides (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Clostridioides	
+BEG34 B-	yes	Clostridioides (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Clostridioides	
+Lotus plant-only roots	yes	Clostridioides (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Clostridioides	
+BEG34 B+	yes	Cobetia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Cobetia	
+BEG34 B-	yes	Cobetia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cobetia	
+Lotus plant-only roots	yes	Cobetia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Cobetia	
+BEG34 B+	yes	Cohaesibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Cohaesibacter	
+BEG34 B-	yes	Cohaesibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cohaesibacter	
+Lotus plant-only roots	yes	Cohaesibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Cohaesibacter	
+BEG34 B+	yes	Cohnella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Cohnella	
+BEG34 B-	yes	Cohnella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cohnella	
+Lotus plant-only roots	yes	Cohnella (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	0	3	no	no	yes	Cohnella	
+BEG34 B+	yes	Coldseepensis (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Coldseepensis	
+BEG34 B-	yes	Coldseepensis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Coldseepensis	
+Lotus plant-only roots	yes	Coldseepensis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Coldseepensis	
+BEG34 B+	yes	Collinsella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Collinsella	
+BEG34 B-	yes	Collinsella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Collinsella	
+Lotus plant-only roots	yes	Collinsella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Collinsella	
+BEG34 B+	yes	Comamonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Comamonas	
+BEG34 B-	yes	Comamonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Comamonas	
+Lotus plant-only roots	yes	Comamonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Comamonas	
+BEG34 B+	yes	Coprococcus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Coprococcus	
+BEG34 B-	yes	Coprococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Coprococcus	
+Lotus plant-only roots	yes	Coprococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Coprococcus	
+BEG34 B+	yes	Corynebacterium (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	1	1	no	no	yes	Corynebacterium	
+BEG34 B-	yes	Corynebacterium (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Corynebacterium	
+Lotus plant-only roots	yes	Corynebacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Corynebacterium	
+BEG34 B+	yes	Cupriavidus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Cupriavidus	
+BEG34 B-	yes	Cupriavidus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cupriavidus	
+Lotus plant-only roots	yes	Cupriavidus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Cupriavidus	
+BEG34 B+	yes	Curtobacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Curtobacterium	
+BEG34 B-	yes	Curtobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Curtobacterium	
+Lotus plant-only roots	yes	Curtobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Curtobacterium	
+BEG34 B+	yes	Curvibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Curvibacter	
+BEG34 B-	yes	Curvibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Curvibacter	
+Lotus plant-only roots	yes	Curvibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Curvibacter	
+BEG34 B+	yes	Cutibacterium (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	5	no	no	yes	Cutibacterium	
+BEG34 B-	yes	Cutibacterium (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Cutibacterium	
+Lotus plant-only roots	yes	Cutibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Cutibacterium	
+BEG34 B+	yes	Cylindrospermopsis CRJ1 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Cylindrospermopsis CRJ1	
+BEG34 B-	yes	Cylindrospermopsis CRJ1 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cylindrospermopsis CRJ1	
+Lotus plant-only roots	yes	Cylindrospermopsis CRJ1 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Cylindrospermopsis CRJ1	
+BEG34 B+	yes	Cytobacillus-Niallia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Cytobacillus-Niallia	
+BEG34 B-	yes	Cytobacillus-Niallia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cytobacillus-Niallia	
+Lotus plant-only roots	yes	Cytobacillus-Niallia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Cytobacillus-Niallia	
+BEG34 B+	yes	DEV114 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	DEV114	
+BEG34 B-	yes	DEV114 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	DEV114	
+Lotus plant-only roots	yes	DEV114 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	DEV114	
+BEG34 B+	yes	Dechloromonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Dechloromonas	
+BEG34 B-	yes	Dechloromonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Dechloromonas	
+Lotus plant-only roots	yes	Dechloromonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Dechloromonas	
+BEG34 B+	yes	Deinococcus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Deinococcus	
+BEG34 B-	yes	Deinococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Deinococcus	
+Lotus plant-only roots	yes	Deinococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Deinococcus	
+BEG34 B+	yes	Delftia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Delftia	
+BEG34 B-	yes	Delftia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Delftia	
+Lotus plant-only roots	yes	Delftia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Delftia	
+BEG34 B+	yes	Denitratimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Denitratimonas	
+BEG34 B-	yes	Denitratimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Denitratimonas	
+Lotus plant-only roots	yes	Denitratimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Denitratimonas	
+BEG34 B+	yes	Denitromonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Denitromonas	
+BEG34 B-	yes	Denitromonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Denitromonas	
+Lotus plant-only roots	yes	Denitromonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Denitromonas	
+BEG34 B+	yes	Desertibaculum (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Desertibaculum	
+BEG34 B-	yes	Desertibaculum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Desertibaculum	
+Lotus plant-only roots	yes	Desertibaculum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Desertibaculum	
+BEG34 B+	yes	Desulfatiglans (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Desulfatiglans	
+BEG34 B-	yes	Desulfatiglans (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Desulfatiglans	
+Lotus plant-only roots	yes	Desulfatiglans (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Desulfatiglans	
+BEG34 B+	yes	Desulfocapsa (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Desulfocapsa	
+BEG34 B-	yes	Desulfocapsa (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Desulfocapsa	
+Lotus plant-only roots	yes	Desulfocapsa (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Desulfocapsa	
+BEG34 B+	yes	Desulfofarcimen (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Desulfofarcimen	
+BEG34 B-	yes	Desulfofarcimen (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Desulfofarcimen	
+Lotus plant-only roots	yes	Desulfofarcimen (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Desulfofarcimen	
+BEG34 B+	yes	Desulfosporosinus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Desulfosporosinus	
+BEG34 B-	yes	Desulfosporosinus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Desulfosporosinus	
+Lotus plant-only roots	yes	Desulfosporosinus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Desulfosporosinus	
+BEG34 B+	yes	Desulfosudis (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Desulfosudis	
+BEG34 B-	yes	Desulfosudis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Desulfosudis	
+Lotus plant-only roots	yes	Desulfosudis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Desulfosudis	
+BEG34 B+	yes	Devosia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Devosia	
+BEG34 B-	yes	Devosia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Devosia	
+Lotus plant-only roots	yes	Devosia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Devosia	
+BEG34 B+	yes	Diaphorobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Diaphorobacter	
+BEG34 B-	yes	Diaphorobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Diaphorobacter	
+Lotus plant-only roots	yes	Diaphorobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Diaphorobacter	
+BEG34 B+	yes	Dolosigranulum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Dolosigranulum	
+BEG34 B-	yes	Dolosigranulum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Dolosigranulum	
+Lotus plant-only roots	yes	Dolosigranulum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Dolosigranulum	
+BEG34 B+	yes	Dongia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Dongia	
+BEG34 B-	yes	Dongia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Dongia	
+Lotus plant-only roots	yes	Dongia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Dongia	
+BEG34 B+	yes	Dulcicalothrix (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Dulcicalothrix	
+BEG34 B-	yes	Dulcicalothrix (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Dulcicalothrix	
+Lotus plant-only roots	yes	Dulcicalothrix (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Dulcicalothrix	
+BEG34 B+	yes	Dyadobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Dyadobacter	
+BEG34 B-	yes	Dyadobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Dyadobacter	
+Lotus plant-only roots	yes	Dyadobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Dyadobacter	
+BEG34 B+	yes	Dyella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Dyella	
+BEG34 B-	yes	Dyella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Dyella	
+Lotus plant-only roots	yes	Dyella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Dyella	
+BEG34 B+	yes	Effusibacillus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Effusibacillus	
+BEG34 B-	yes	Effusibacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Effusibacillus	
+Lotus plant-only roots	yes	Effusibacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Effusibacillus	
+BEG34 B+	yes	Emticicia (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Emticicia	
+BEG34 B-	yes	Emticicia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Emticicia	
+Lotus plant-only roots	yes	Emticicia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Emticicia	
+BEG34 B+	yes	Enhygromyxa (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Enhygromyxa	
+BEG34 B-	yes	Enhygromyxa (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Enhygromyxa	
+Lotus plant-only roots	yes	Enhygromyxa (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Enhygromyxa	
+BEG34 B+	yes	Ensifer-Sinorhizobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ensifer-Sinorhizobium	
+BEG34 B-	yes	Ensifer-Sinorhizobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ensifer-Sinorhizobium	
+Lotus plant-only roots	yes	Ensifer-Sinorhizobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ensifer-Sinorhizobium	
+BEG34 B+	yes	Enterococcus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Enterococcus	
+BEG34 B-	yes	Enterococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Enterococcus	
+Lotus plant-only roots	yes	Enterococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Enterococcus	
+BEG34 B+	yes	Entotheonella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Entotheonella	
+BEG34 B-	yes	Entotheonella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Entotheonella	
+Lotus plant-only roots	yes	Entotheonella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Entotheonella	
+BEG34 B+	yes	Ephemeroptericola (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ephemeroptericola	
+BEG34 B-	yes	Ephemeroptericola (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ephemeroptericola	
+Lotus plant-only roots	yes	Ephemeroptericola (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ephemeroptericola	
+BEG34 B+	yes	Escherichia-Shigella (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Escherichia-Shigella	
+BEG34 B-	yes	Escherichia-Shigella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Escherichia-Shigella	
+Lotus plant-only roots	yes	Escherichia-Shigella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Escherichia-Shigella	
+BEG34 B+	yes	Exiguobacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Exiguobacterium	
+BEG34 B-	yes	Exiguobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Exiguobacterium	
+Lotus plant-only roots	yes	Exiguobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Exiguobacterium	
+BEG34 B+	yes	Faecalitalea (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Faecalitalea	
+BEG34 B-	yes	Faecalitalea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Faecalitalea	
+Lotus plant-only roots	yes	Faecalitalea (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Faecalitalea	
+BEG34 B+	yes	Faucicola (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Faucicola	
+BEG34 B-	yes	Faucicola (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Faucicola	
+Lotus plant-only roots	yes	Faucicola (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Faucicola	
+BEG34 B+	yes	Ferranicluibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ferranicluibacter	
+BEG34 B-	yes	Ferranicluibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ferranicluibacter	
+Lotus plant-only roots	yes	Ferranicluibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ferranicluibacter	
+BEG34 B+	yes	Ferriphaselus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ferriphaselus	
+BEG34 B-	yes	Ferriphaselus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ferriphaselus	
+Lotus plant-only roots	yes	Ferriphaselus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ferriphaselus	
+BEG34 B+	yes	Ferrovibrio (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ferrovibrio	
+BEG34 B-	yes	Ferrovibrio (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ferrovibrio	
+Lotus plant-only roots	yes	Ferrovibrio (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ferrovibrio	
+BEG34 B+	yes	Ferrovum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ferrovum	
+BEG34 B-	yes	Ferrovum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ferrovum	
+Lotus plant-only roots	yes	Ferrovum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ferrovum	
+BEG34 B+	yes	Ferruginibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ferruginibacter	
+BEG34 B-	yes	Ferruginibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ferruginibacter	
+Lotus plant-only roots	yes	Ferruginibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ferruginibacter	
+BEG34 B+	yes	Filomicrobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Filomicrobium	
+BEG34 B-	yes	Filomicrobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Filomicrobium	
+Lotus plant-only roots	yes	Filomicrobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Filomicrobium	
+BEG34 B+	yes	Finegoldia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Finegoldia	
+BEG34 B-	yes	Finegoldia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Finegoldia	
+Lotus plant-only roots	yes	Finegoldia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Finegoldia	
+BEG34 B+	yes	Flavitalea (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Flavitalea	
+BEG34 B-	yes	Flavitalea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Flavitalea	
+Lotus plant-only roots	yes	Flavitalea (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Flavitalea	
+BEG34 B+	yes	Flavobacterium (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Flavobacterium	
+BEG34 B-	yes	Flavobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Flavobacterium	
+Lotus plant-only roots	yes	Flavobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Flavobacterium	
+BEG34 B+	yes	Flavonifractor (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Flavonifractor	
+BEG34 B-	yes	Flavonifractor (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Flavonifractor	
+Lotus plant-only roots	yes	Flavonifractor (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Flavonifractor	
+BEG34 B+	yes	Formosa (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Formosa	
+BEG34 B-	yes	Formosa (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Formosa	
+Lotus plant-only roots	yes	Formosa (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Formosa	
+BEG34 B+	yes	Frankia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Frankia	
+BEG34 B-	yes	Frankia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Frankia	
+Lotus plant-only roots	yes	Frankia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Frankia	
+BEG34 B+	yes	Frigoriglobus (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Frigoriglobus	
+BEG34 B-	yes	Frigoriglobus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Frigoriglobus	
+Lotus plant-only roots	yes	Frigoriglobus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Frigoriglobus	
+BEG34 B+	yes	Frischella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Frischella	
+BEG34 B-	yes	Frischella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Frischella	
+Lotus plant-only roots	yes	Frischella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Frischella	
+BEG34 B+	yes	Fusicatenibacter (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	4	0	2	no	no	yes	Fusicatenibacter	
+BEG34 B-	yes	Fusicatenibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Fusicatenibacter	
+Lotus plant-only roots	yes	Fusicatenibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Fusicatenibacter	
+BEG34 B+	yes	Gaetbulicola (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Gaetbulicola	
+BEG34 B-	yes	Gaetbulicola (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Gaetbulicola	
+Lotus plant-only roots	yes	Gaetbulicola (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Gaetbulicola	
+BEG34 B+	yes	Gaiella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Gaiella	
+BEG34 B-	yes	Gaiella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Gaiella	
+Lotus plant-only roots	yes	Gaiella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Gaiella	
+BEG34 B+	yes	Gallionella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Gallionella	
+BEG34 B-	yes	Gallionella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Gallionella	
+Lotus plant-only roots	yes	Gallionella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Gallionella	
+BEG34 B+	yes	Gemmata (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Gemmata	
+BEG34 B-	yes	Gemmata (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Gemmata	
+Lotus plant-only roots	yes	Gemmata (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Gemmata	
+BEG34 B+	yes	Georhizobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Georhizobium	
+BEG34 B-	yes	Georhizobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Georhizobium	
+Lotus plant-only roots	yes	Georhizobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Georhizobium	
+BEG34 B+	yes	Glomeribacter (route)	route	known endosymbiont clade	resident	known endosymbiont clade, present in 4 runs	yes	4	4	4	yes	yes	yes	Glomeribacter	
+BEG34 B-	yes	Glomeribacter (route)	route	known endosymbiont clade	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Glomeribacter	
+Lotus plant-only roots	yes	Glomeribacter (route)	route	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes	Glomeribacter	
+BEG34 B+	yes	Gordonia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Gordonia	
+BEG34 B-	yes	Gordonia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Gordonia	
+Lotus plant-only roots	yes	Gordonia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Gordonia	
+BEG34 B+	yes	Gordoniibacillus (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	1	0	no	no	yes	Gordoniibacillus	
+BEG34 B-	yes	Gordoniibacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Gordoniibacillus	
+Lotus plant-only roots	yes	Gordoniibacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Gordoniibacillus	
+BEG34 B+	yes	Granulicatella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Granulicatella	
+BEG34 B-	yes	Granulicatella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Granulicatella	
+Lotus plant-only roots	yes	Granulicatella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Granulicatella	
+BEG34 B+	yes	Gromoviella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Gromoviella	
+BEG34 B-	yes	Gromoviella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Gromoviella	
+Lotus plant-only roots	yes	Gromoviella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Gromoviella	
+BEG34 B+	yes	HRBIN39 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	HRBIN39	
+BEG34 B-	yes	HRBIN39 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	HRBIN39	
+Lotus plant-only roots	yes	HRBIN39 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	HRBIN39	
+BEG34 B+	yes	Halomonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Halomonas	
+BEG34 B-	yes	Halomonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Halomonas	
+Lotus plant-only roots	yes	Halomonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Halomonas	
+BEG34 B+	yes	Helicobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Helicobacter	
+BEG34 B-	yes	Helicobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Helicobacter	
+Lotus plant-only roots	yes	Helicobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Helicobacter	
+BEG34 B+	yes	Heliimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Heliimonas	
+BEG34 B-	yes	Heliimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Heliimonas	
+Lotus plant-only roots	yes	Heliimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Heliimonas	
+BEG34 B+	yes	Heyndrickxia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Heyndrickxia	
+BEG34 B-	yes	Heyndrickxia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Heyndrickxia	
+Lotus plant-only roots	yes	Heyndrickxia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Heyndrickxia	
+BEG34 B+	yes	Horticoccus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Horticoccus	
+BEG34 B-	yes	Horticoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Horticoccus	
+Lotus plant-only roots	yes	Horticoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Horticoccus	
+BEG34 B+	yes	Huakuichenia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Huakuichenia	
+BEG34 B-	yes	Huakuichenia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Huakuichenia	
+Lotus plant-only roots	yes	Huakuichenia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Huakuichenia	
+BEG34 B+	yes	HyVt-429 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	HyVt-429	
+BEG34 B-	yes	HyVt-429 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	HyVt-429	
+Lotus plant-only roots	yes	HyVt-429 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	HyVt-429	
+BEG34 B+	yes	Hydrogenoanaerobacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Hydrogenoanaerobacterium	
+BEG34 B-	yes	Hydrogenoanaerobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Hydrogenoanaerobacterium	
+Lotus plant-only roots	yes	Hydrogenoanaerobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Hydrogenoanaerobacterium	
+BEG34 B+	yes	Hydrogenophaga (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Hydrogenophaga	
+BEG34 B-	yes	Hydrogenophaga (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Hydrogenophaga	
+Lotus plant-only roots	yes	Hydrogenophaga (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Hydrogenophaga	
+BEG34 B+	yes	Hymenobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Hymenobacter	
+BEG34 B-	yes	Hymenobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Hymenobacter	
+Lotus plant-only roots	yes	Hymenobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Hymenobacter	
+BEG34 B+	yes	Hypericibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Hypericibacter	
+BEG34 B-	yes	Hypericibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Hypericibacter	
+Lotus plant-only roots	yes	Hypericibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Hypericibacter	
+BEG34 B+	yes	Ignatzschineria (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ignatzschineria	
+BEG34 B-	yes	Ignatzschineria (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ignatzschineria	
+Lotus plant-only roots	yes	Ignatzschineria (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ignatzschineria	
+BEG34 B+	yes	Intestinibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Intestinibacter	
+BEG34 B-	yes	Intestinibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Intestinibacter	
+Lotus plant-only roots	yes	Intestinibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Intestinibacter	
+BEG34 B+	yes	JAADGP01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JAADGP01	
+BEG34 B-	yes	JAADGP01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAADGP01	
+Lotus plant-only roots	yes	JAADGP01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAADGP01	
+BEG34 B+	yes	JACREF01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JACREF01	
+BEG34 B-	yes	JACREF01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JACREF01	
+Lotus plant-only roots	yes	JACREF01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JACREF01	
+BEG34 B+	yes	JADFXL01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JADFXL01	
+BEG34 B-	yes	JADFXL01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JADFXL01	
+Lotus plant-only roots	yes	JADFXL01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JADFXL01	
+BEG34 B+	yes	JADKHX01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JADKHX01	
+BEG34 B-	yes	JADKHX01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JADKHX01	
+Lotus plant-only roots	yes	JADKHX01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JADKHX01	
+BEG34 B+	yes	JAEUOS01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JAEUOS01	
+BEG34 B-	yes	JAEUOS01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAEUOS01	
+Lotus plant-only roots	yes	JAEUOS01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAEUOS01	
+BEG34 B+	yes	JAGOGO01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JAGOGO01	
+BEG34 B-	yes	JAGOGO01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAGOGO01	
+Lotus plant-only roots	yes	JAGOGO01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAGOGO01	
+BEG34 B+	yes	JAIBAM01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JAIBAM01	
+BEG34 B-	yes	JAIBAM01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAIBAM01	
+Lotus plant-only roots	yes	JAIBAM01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAIBAM01	
+BEG34 B+	yes	JAIVHC01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JAIVHC01	
+BEG34 B-	yes	JAIVHC01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAIVHC01	
+Lotus plant-only roots	yes	JAIVHC01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAIVHC01	
+BEG34 B+	yes	JALUUA01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JALUUA01	
+BEG34 B-	yes	JALUUA01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JALUUA01	
+Lotus plant-only roots	yes	JALUUA01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JALUUA01	
+BEG34 B+	yes	JANYCG01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JANYCG01	
+BEG34 B-	yes	JANYCG01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JANYCG01	
+Lotus plant-only roots	yes	JANYCG01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JANYCG01	
+BEG34 B+	yes	JAWOCH01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JAWOCH01	
+BEG34 B-	yes	JAWOCH01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAWOCH01	
+Lotus plant-only roots	yes	JAWOCH01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAWOCH01	
+BEG34 B+	yes	JAWXCH01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JAWXCH01	
+BEG34 B-	yes	JAWXCH01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAWXCH01	
+Lotus plant-only roots	yes	JAWXCH01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAWXCH01	
+BEG34 B+	yes	JAXGPF01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JAXGPF01	
+BEG34 B-	yes	JAXGPF01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAXGPF01	
+Lotus plant-only roots	yes	JAXGPF01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAXGPF01	
+BEG34 B+	yes	JBDSKH01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JBDSKH01	
+BEG34 B-	yes	JBDSKH01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JBDSKH01	
+Lotus plant-only roots	yes	JBDSKH01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JBDSKH01	
+BEG34 B+	yes	JBEIGE01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JBEIGE01	
+BEG34 B-	yes	JBEIGE01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JBEIGE01	
+Lotus plant-only roots	yes	JBEIGE01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JBEIGE01	
+BEG34 B+	yes	JBEIOV01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JBEIOV01	
+BEG34 B-	yes	JBEIOV01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JBEIOV01	
+Lotus plant-only roots	yes	JBEIOV01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JBEIOV01	
+BEG34 B+	yes	JBFMCE01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	JBFMCE01	
+BEG34 B-	yes	JBFMCE01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JBFMCE01	
+Lotus plant-only roots	yes	JBFMCE01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JBFMCE01	
+BEG34 B+	yes	Jeotgalibaca (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Jeotgalibaca	
+BEG34 B-	yes	Jeotgalibaca (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Jeotgalibaca	
+Lotus plant-only roots	yes	Jeotgalibaca (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Jeotgalibaca	
+BEG34 B+	yes	Jeotgalicoccus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Jeotgalicoccus	
+BEG34 B-	yes	Jeotgalicoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Jeotgalicoccus	
+Lotus plant-only roots	yes	Jeotgalicoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Jeotgalicoccus	
+BEG34 B+	yes	Johnsonella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Johnsonella	
+BEG34 B-	yes	Johnsonella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Johnsonella	
+Lotus plant-only roots	yes	Johnsonella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Johnsonella	
+BEG34 B+	yes	Kaistella (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Kaistella	
+BEG34 B-	yes	Kaistella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Kaistella	
+Lotus plant-only roots	yes	Kaistella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Kaistella	
+BEG34 B+	yes	Kallotenue (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Kallotenue	
+BEG34 B-	yes	Kallotenue (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Kallotenue	
+Lotus plant-only roots	yes	Kallotenue (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Kallotenue	
+BEG34 B+	yes	Kaytiofontadaptatus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Kaytiofontadaptatus	
+BEG34 B-	yes	Kaytiofontadaptatus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Kaytiofontadaptatus	
+Lotus plant-only roots	yes	Kaytiofontadaptatus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Kaytiofontadaptatus	
+BEG34 B+	yes	Klebsiella (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Klebsiella	
+BEG34 B-	yes	Klebsiella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Klebsiella	
+Lotus plant-only roots	yes	Klebsiella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Klebsiella	
+BEG34 B+	yes	Kolteria (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Kolteria	
+BEG34 B-	yes	Kolteria (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Kolteria	
+Lotus plant-only roots	yes	Kolteria (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Kolteria	
+BEG34 B+	yes	Kosakonia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Kosakonia	
+BEG34 B-	yes	Kosakonia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Kosakonia	
+Lotus plant-only roots	yes	Kosakonia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Kosakonia	
+BEG34 B+	yes	Kotejella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Kotejella	
+BEG34 B-	yes	Kotejella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Kotejella	
+Lotus plant-only roots	yes	Kotejella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Kotejella	
+BEG34 B+	yes	Kuafuhalomonas (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Kuafuhalomonas	
+BEG34 B-	yes	Kuafuhalomonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Kuafuhalomonas	
+Lotus plant-only roots	yes	Kuafuhalomonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Kuafuhalomonas	
+BEG34 B+	yes	LMUX01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	LMUX01	
+BEG34 B-	yes	LMUX01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	LMUX01	
+Lotus plant-only roots	yes	LMUX01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	LMUX01	
+BEG34 B+	yes	Lacipirellula (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Lacipirellula	
+BEG34 B-	yes	Lacipirellula (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lacipirellula	
+Lotus plant-only roots	yes	Lacipirellula (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lacipirellula	
+BEG34 B+	yes	Lactiplantibacillus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Lactiplantibacillus	
+BEG34 B-	yes	Lactiplantibacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lactiplantibacillus	
+Lotus plant-only roots	yes	Lactiplantibacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lactiplantibacillus	
+BEG34 B+	yes	Lactococcus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Lactococcus	
+BEG34 B-	yes	Lactococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lactococcus	
+Lotus plant-only roots	yes	Lactococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lactococcus	
+BEG34 B+	yes	Lacunisphaera (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Lacunisphaera	
+BEG34 B-	yes	Lacunisphaera (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lacunisphaera	
+Lotus plant-only roots	yes	Lacunisphaera (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lacunisphaera	
+BEG34 B+	yes	Lautropia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Lautropia	
+BEG34 B-	yes	Lautropia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lautropia	
+Lotus plant-only roots	yes	Lautropia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lautropia	
+BEG34 B+	yes	Legionella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Legionella	
+BEG34 B-	yes	Legionella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Legionella	
+Lotus plant-only roots	yes	Legionella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Legionella	
+BEG34 B+	yes	Lentimicrobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Lentimicrobium	
+BEG34 B-	yes	Lentimicrobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lentimicrobium	
+Lotus plant-only roots	yes	Lentimicrobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lentimicrobium	
+BEG34 B+	yes	Lentzea (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	4	0	1	no	no	yes	Lentzea	
+BEG34 B-	yes	Lentzea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lentzea	
+Lotus plant-only roots	yes	Lentzea (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lentzea	
+BEG34 B+	yes	Leptospirillum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Leptospirillum	
+BEG34 B-	yes	Leptospirillum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Leptospirillum	
+Lotus plant-only roots	yes	Leptospirillum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Leptospirillum	
+BEG34 B+	yes	Leptotrichia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Leptotrichia	
+BEG34 B-	yes	Leptotrichia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Leptotrichia	
+Lotus plant-only roots	yes	Leptotrichia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Leptotrichia	
+BEG34 B+	yes	Leucothrix (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Leucothrix	
+BEG34 B-	yes	Leucothrix (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Leucothrix	
+Lotus plant-only roots	yes	Leucothrix (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Leucothrix	
+BEG34 B+	yes	Lichenibacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Lichenibacterium	
+BEG34 B-	yes	Lichenibacterium (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Lichenibacterium	
+Lotus plant-only roots	yes	Lichenibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lichenibacterium	
+BEG34 B+	yes	Ligilactobacillus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ligilactobacillus	
+BEG34 B-	yes	Ligilactobacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ligilactobacillus	
+Lotus plant-only roots	yes	Ligilactobacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ligilactobacillus	
+BEG34 B+	yes	Limimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Limimonas	
+BEG34 B-	yes	Limimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Limimonas	
+Lotus plant-only roots	yes	Limimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Limimonas	
+BEG34 B+	yes	Limnoglobus (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	1	0	no	no	yes	Limnoglobus	
+BEG34 B-	yes	Limnoglobus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Limnoglobus	
+Lotus plant-only roots	yes	Limnoglobus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Limnoglobus	
+BEG34 B+	yes	Limnohabitans (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Limnohabitans	
+BEG34 B-	yes	Limnohabitans (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Limnohabitans	
+Lotus plant-only roots	yes	Limnohabitans (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Limnohabitans	
+BEG34 B+	yes	Luteolibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Luteolibacter	
+BEG34 B-	yes	Luteolibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Luteolibacter	
+Lotus plant-only roots	yes	Luteolibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Luteolibacter	
+BEG34 B+	yes	Luteovulum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Luteovulum	
+BEG34 B-	yes	Luteovulum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Luteovulum	
+Lotus plant-only roots	yes	Luteovulum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Luteovulum	
+BEG34 B+	yes	Lysinimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Lysinimonas	
+BEG34 B-	yes	Lysinimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lysinimonas	
+Lotus plant-only roots	yes	Lysinimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lysinimonas	
+BEG34 B+	yes	Lysobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Lysobacter	
+BEG34 B-	yes	Lysobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lysobacter	
+Lotus plant-only roots	yes	Lysobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lysobacter	
+BEG34 B+	yes	M2PT2-76 termite group (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	M2PT2-76 termite group	
+BEG34 B-	yes	M2PT2-76 termite group (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	M2PT2-76 termite group	
+Lotus plant-only roots	yes	M2PT2-76 termite group (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	M2PT2-76 termite group	
+BEG34 B+	yes	Magnetovibrio (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Magnetovibrio	
+BEG34 B-	yes	Magnetovibrio (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Magnetovibrio	
+Lotus plant-only roots	yes	Magnetovibrio (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Magnetovibrio	
+BEG34 B+	yes	Maledivibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Maledivibacter	
+BEG34 B-	yes	Maledivibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Maledivibacter	
+Lotus plant-only roots	yes	Maledivibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Maledivibacter	
+BEG34 B+	yes	Maribrevibacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Maribrevibacterium	
+BEG34 B-	yes	Maribrevibacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Maribrevibacterium	
+Lotus plant-only roots	yes	Maribrevibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Maribrevibacterium	
+BEG34 B+	yes	Marinicellulosiphila (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Marinicellulosiphila	
+BEG34 B-	yes	Marinicellulosiphila (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Marinicellulosiphila	
+Lotus plant-only roots	yes	Marinicellulosiphila (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Marinicellulosiphila	
+BEG34 B+	yes	Marinicrinis (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Marinicrinis	
+BEG34 B-	yes	Marinicrinis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Marinicrinis	
+Lotus plant-only roots	yes	Marinicrinis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Marinicrinis	
+BEG34 B+	yes	Mariniphaga (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Mariniphaga	
+BEG34 B-	yes	Mariniphaga (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Mariniphaga	
+Lotus plant-only roots	yes	Mariniphaga (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Mariniphaga	
+BEG34 B+	yes	Megaera (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Megaera	
+BEG34 B-	yes	Megaera (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Megaera	
+Lotus plant-only roots	yes	Megaera (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Megaera	
+BEG34 B+	yes	Megasphaera (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Megasphaera	
+BEG34 B-	yes	Megasphaera (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Megasphaera	
+Lotus plant-only roots	yes	Megasphaera (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Megasphaera	
+BEG34 B+	yes	Meiothermus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Meiothermus	
+BEG34 B-	yes	Meiothermus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Meiothermus	
+Lotus plant-only roots	yes	Meiothermus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Meiothermus	
+BEG34 B+	yes	Mesorhizobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Mesorhizobium	
+BEG34 B-	yes	Mesorhizobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Mesorhizobium	
+Lotus plant-only roots	yes	Mesorhizobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Mesorhizobium	
+BEG34 B+	yes	Metabacillus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Metabacillus	
+BEG34 B-	yes	Metabacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Metabacillus	
+Lotus plant-only roots	yes	Metabacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Metabacillus	
+BEG34 B+	yes	Methylobacillus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Methylobacillus	
+BEG34 B-	yes	Methylobacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Methylobacillus	
+Lotus plant-only roots	yes	Methylobacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Methylobacillus	
+BEG34 B+	yes	Methylobacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Methylobacterium	
+BEG34 B-	yes	Methylobacterium (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Methylobacterium	
+Lotus plant-only roots	yes	Methylobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Methylobacterium	
+BEG34 B+	yes	Methylocapsa (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Methylocapsa	
+BEG34 B-	yes	Methylocapsa (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Methylocapsa	
+Lotus plant-only roots	yes	Methylocapsa (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Methylocapsa	
+BEG34 B+	yes	Methylophaga (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Methylophaga	
+BEG34 B-	yes	Methylophaga (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Methylophaga	
+Lotus plant-only roots	yes	Methylophaga (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Methylophaga	
+BEG34 B+	yes	Methylophilus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Methylophilus	
+BEG34 B-	yes	Methylophilus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Methylophilus	
+Lotus plant-only roots	yes	Methylophilus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Methylophilus	
+BEG34 B+	yes	Methylorubrum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Methylorubrum	
+BEG34 B-	yes	Methylorubrum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Methylorubrum	
+Lotus plant-only roots	yes	Methylorubrum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Methylorubrum	
+BEG34 B+	yes	Methyloversatilis (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Methyloversatilis	
+BEG34 B-	yes	Methyloversatilis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Methyloversatilis	
+Lotus plant-only roots	yes	Methyloversatilis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Methyloversatilis	
+BEG34 B+	yes	Microbacterium (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Microbacterium	
+BEG34 B-	yes	Microbacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Microbacterium	
+Lotus plant-only roots	yes	Microbacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Microbacterium	
+BEG34 B+	yes	Micrococcus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Micrococcus	
+BEG34 B-	yes	Micrococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Micrococcus	
+Lotus plant-only roots	yes	Micrococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Micrococcus	
+BEG34 B+	yes	Microvirga (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Microvirga	
+BEG34 B-	yes	Microvirga (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Microvirga	
+Lotus plant-only roots	yes	Microvirga (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Microvirga	
+BEG34 B+	yes	Minwuia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Minwuia	
+BEG34 B-	yes	Minwuia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Minwuia	
+Lotus plant-only roots	yes	Minwuia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Minwuia	
+BEG34 B+	yes	Mycobacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Mycobacterium	
+BEG34 B-	yes	Mycobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Mycobacterium	
+Lotus plant-only roots	yes	Mycobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Mycobacterium	
+BEG34 B+	yes	Mycoplasmopsis (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Mycoplasmopsis	
+BEG34 B-	yes	Mycoplasmopsis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Mycoplasmopsis	
+Lotus plant-only roots	yes	Mycoplasmopsis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Mycoplasmopsis	
+BEG34 B+	yes	Myroides (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Myroides	
+BEG34 B-	yes	Myroides (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Myroides	
+Lotus plant-only roots	yes	Myroides (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Myroides	
+BEG34 B+	yes	Nannocystis (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Nannocystis	
+BEG34 B-	yes	Nannocystis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Nannocystis	
+Lotus plant-only roots	yes	Nannocystis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Nannocystis	
+BEG34 B+	yes	Neisseria (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Neisseria	
+BEG34 B-	yes	Neisseria (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Neisseria	
+Lotus plant-only roots	yes	Neisseria (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Neisseria	
+BEG34 B+	yes	Neobacillus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Neobacillus	
+BEG34 B-	yes	Neobacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Neobacillus	
+Lotus plant-only roots	yes	Neobacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Neobacillus	
+BEG34 B+	yes	Neoroseomonas (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Neoroseomonas	
+BEG34 B-	yes	Neoroseomonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Neoroseomonas	
+Lotus plant-only roots	yes	Neoroseomonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Neoroseomonas	
+BEG34 B+	yes	Nevskia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Nevskia	
+BEG34 B-	yes	Nevskia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Nevskia	
+Lotus plant-only roots	yes	Nevskia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Nevskia	
+BEG34 B+	yes	Niastella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Niastella	
+BEG34 B-	yes	Niastella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Niastella	
+Lotus plant-only roots	yes	Niastella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Niastella	
+BEG34 B+	yes	Nitratidesulfovibrio (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Nitratidesulfovibrio	
+BEG34 B-	yes	Nitratidesulfovibrio (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Nitratidesulfovibrio	
+Lotus plant-only roots	yes	Nitratidesulfovibrio (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Nitratidesulfovibrio	
+BEG34 B+	yes	Nitrosomonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Nitrosomonas	
+BEG34 B-	yes	Nitrosomonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Nitrosomonas	
+Lotus plant-only roots	yes	Nitrosomonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Nitrosomonas	
+BEG34 B+	yes	Nitrospira (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Nitrospira	
+BEG34 B-	yes	Nitrospira (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Nitrospira	
+Lotus plant-only roots	yes	Nitrospira (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Nitrospira	
+BEG34 B+	yes	Niveispirillum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Niveispirillum	
+BEG34 B-	yes	Niveispirillum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Niveispirillum	
+Lotus plant-only roots	yes	Niveispirillum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Niveispirillum	
+BEG34 B+	yes	Nocardioides (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Nocardioides	
+BEG34 B-	yes	Nocardioides (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Nocardioides	
+Lotus plant-only roots	yes	Nocardioides (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Nocardioides	
+BEG34 B+	yes	Nodosilinea (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Nodosilinea	
+BEG34 B-	yes	Nodosilinea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Nodosilinea	
+Lotus plant-only roots	yes	Nodosilinea (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Nodosilinea	
+BEG34 B+	yes	Nostocoides (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Nostocoides	
+BEG34 B-	yes	Nostocoides (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Nostocoides	
+Lotus plant-only roots	yes	Nostocoides (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Nostocoides	
+BEG34 B+	yes	Nunduva (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Nunduva	
+BEG34 B-	yes	Nunduva (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Nunduva	
+Lotus plant-only roots	yes	Nunduva (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Nunduva	
+BEG34 B+	yes	OM27 clade (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	OM27 clade	
+BEG34 B-	yes	OM27 clade (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	OM27 clade	
+Lotus plant-only roots	yes	OM27 clade (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	OM27 clade	
+BEG34 B+	yes	Obscuribacter (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	1	0	no	no	yes	Obscuribacter	
+BEG34 B-	yes	Obscuribacter (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Obscuribacter	
+Lotus plant-only roots	yes	Obscuribacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Obscuribacter	
+BEG34 B+	yes	Oceanibulbus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Oceanibulbus	
+BEG34 B-	yes	Oceanibulbus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Oceanibulbus	
+Lotus plant-only roots	yes	Oceanibulbus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Oceanibulbus	
+BEG34 B+	yes	Ohtaekwangia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ohtaekwangia	
+BEG34 B-	yes	Ohtaekwangia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ohtaekwangia	
+Lotus plant-only roots	yes	Ohtaekwangia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ohtaekwangia	
+BEG34 B+	yes	Olsenella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Olsenella	
+BEG34 B-	yes	Olsenella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Olsenella	
+Lotus plant-only roots	yes	Olsenella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Olsenella	
+BEG34 B+	yes	Onobrychidicola (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Onobrychidicola	
+BEG34 B-	yes	Onobrychidicola (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Onobrychidicola	
+Lotus plant-only roots	yes	Onobrychidicola (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Onobrychidicola	
+BEG34 B+	yes	Oribaculum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Oribaculum	
+BEG34 B-	yes	Oribaculum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Oribaculum	
+Lotus plant-only roots	yes	Oribaculum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Oribaculum	
+BEG34 B+	yes	Ottowia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ottowia	
+BEG34 B-	yes	Ottowia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ottowia	
+Lotus plant-only roots	yes	Ottowia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ottowia	
+BEG34 B+	yes	PMMR1 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	PMMR1	
+BEG34 B-	yes	PMMR1 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	PMMR1	
+Lotus plant-only roots	yes	PMMR1 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	PMMR1	
+BEG34 B+	yes	Paenacidovorax (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Paenacidovorax	
+BEG34 B-	yes	Paenacidovorax (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Paenacidovorax	
+Lotus plant-only roots	yes	Paenacidovorax (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Paenacidovorax	
+BEG34 B+	yes	Paenibacillus (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Paenibacillus	
+BEG34 B-	yes	Paenibacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Paenibacillus	
+Lotus plant-only roots	yes	Paenibacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Paenibacillus	
+BEG34 B+	yes	Paenicardinium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Paenicardinium	
+BEG34 B-	yes	Paenicardinium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Paenicardinium	
+Lotus plant-only roots	yes	Paenicardinium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Paenicardinium	
+BEG34 B+	yes	Paenimyroides (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Paenimyroides	
+BEG34 B-	yes	Paenimyroides (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Paenimyroides	
+Lotus plant-only roots	yes	Paenimyroides (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Paenimyroides	
+BEG34 B+	yes	Paenirhizobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Paenirhizobium	
+BEG34 B-	yes	Paenirhizobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Paenirhizobium	
+Lotus plant-only roots	yes	Paenirhizobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Paenirhizobium	
+BEG34 B+	yes	Palsa-1150 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Palsa-1150	
+BEG34 B-	yes	Palsa-1150 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Palsa-1150	
+Lotus plant-only roots	yes	Palsa-1150 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Palsa-1150	
+BEG34 B+	yes	Paludibacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Paludibacterium	
+BEG34 B-	yes	Paludibacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Paludibacterium	
+Lotus plant-only roots	yes	Paludibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Paludibacterium	
+BEG34 B+	yes	Paludibaculum (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Paludibaculum	
+BEG34 B-	yes	Paludibaculum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Paludibaculum	
+Lotus plant-only roots	yes	Paludibaculum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Paludibaculum	
+BEG34 B+	yes	Panacibacter (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Panacibacter	
+BEG34 B-	yes	Panacibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Panacibacter	
+Lotus plant-only roots	yes	Panacibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Panacibacter	
+BEG34 B+	yes	Pantoea (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Pantoea	
+BEG34 B-	yes	Pantoea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pantoea	
+Lotus plant-only roots	yes	Pantoea (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pantoea	
+BEG34 B+	yes	Parachlamydia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Parachlamydia	
+BEG34 B-	yes	Parachlamydia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Parachlamydia	
+Lotus plant-only roots	yes	Parachlamydia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Parachlamydia	
+BEG34 B+	yes	Paracoccus (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Paracoccus	
+BEG34 B-	yes	Paracoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Paracoccus	
+Lotus plant-only roots	yes	Paracoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Paracoccus	
+BEG34 B+	yes	Pararhizobium (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Pararhizobium	
+BEG34 B-	yes	Pararhizobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pararhizobium	
+Lotus plant-only roots	yes	Pararhizobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pararhizobium	
+BEG34 B+	yes	Pedobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Pedobacter	
+BEG34 B-	yes	Pedobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pedobacter	
+Lotus plant-only roots	yes	Pedobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pedobacter	
+BEG34 B+	yes	Pedomicrobium (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Pedomicrobium	
+BEG34 B-	yes	Pedomicrobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pedomicrobium	
+Lotus plant-only roots	yes	Pedomicrobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pedomicrobium	
+BEG34 B+	yes	Pelomicrobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Pelomicrobium	
+BEG34 B-	yes	Pelomicrobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pelomicrobium	
+Lotus plant-only roots	yes	Pelomicrobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pelomicrobium	
+BEG34 B+	yes	Pelotalea (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Pelotalea	
+BEG34 B-	yes	Pelotalea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pelotalea	
+Lotus plant-only roots	yes	Pelotalea (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pelotalea	
+BEG34 B+	yes	Peribacillus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Peribacillus	
+BEG34 B-	yes	Peribacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Peribacillus	
+Lotus plant-only roots	yes	Peribacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Peribacillus	
+BEG34 B+	yes	Permianibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Permianibacter	
+BEG34 B-	yes	Permianibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Permianibacter	
+Lotus plant-only roots	yes	Permianibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Permianibacter	
+BEG34 B+	yes	Peteryoungia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Peteryoungia	
+BEG34 B-	yes	Peteryoungia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Peteryoungia	
+Lotus plant-only roots	yes	Peteryoungia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Peteryoungia	
+BEG34 B+	yes	Phaeodactylibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Phaeodactylibacter	
+BEG34 B-	yes	Phaeodactylibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Phaeodactylibacter	
+Lotus plant-only roots	yes	Phaeodactylibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Phaeodactylibacter	
+BEG34 B+	yes	Phaselicystis (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Phaselicystis	
+BEG34 B-	yes	Phaselicystis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Phaselicystis	
+Lotus plant-only roots	yes	Phaselicystis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Phaselicystis	
+BEG34 B+	yes	Phenylobacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Phenylobacterium	
+BEG34 B-	yes	Phenylobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Phenylobacterium	
+Lotus plant-only roots	yes	Phenylobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Phenylobacterium	
+BEG34 B+	yes	Phosphitispora (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Phosphitispora	
+BEG34 B-	yes	Phosphitispora (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Phosphitispora	
+Lotus plant-only roots	yes	Phosphitispora (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Phosphitispora	
+BEG34 B+	yes	Phosphitivorax (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Phosphitivorax	
+BEG34 B-	yes	Phosphitivorax (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Phosphitivorax	
+Lotus plant-only roots	yes	Phosphitivorax (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Phosphitivorax	
+BEG34 B+	yes	Phototrophicus (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Phototrophicus	
+BEG34 B-	yes	Phototrophicus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Phototrophicus	
+Lotus plant-only roots	yes	Phototrophicus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Phototrophicus	
+BEG34 B+	yes	Phragmitibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Phragmitibacter	
+BEG34 B-	yes	Phragmitibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Phragmitibacter	
+Lotus plant-only roots	yes	Phragmitibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Phragmitibacter	
+BEG34 B+	yes	Phyllobacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Phyllobacterium	
+BEG34 B-	yes	Phyllobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Phyllobacterium	
+Lotus plant-only roots	yes	Phyllobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Phyllobacterium	
+BEG34 B+	yes	Phytoplasma (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Phytoplasma	
+BEG34 B-	yes	Phytoplasma (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Phytoplasma	
+Lotus plant-only roots	yes	Phytoplasma (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Phytoplasma	
+BEG34 B+	yes	Pirellula (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Pirellula	
+BEG34 B-	yes	Pirellula (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pirellula	
+Lotus plant-only roots	yes	Pirellula (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pirellula	
+BEG34 B+	yes	Piscinibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Piscinibacter	
+BEG34 B-	yes	Piscinibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Piscinibacter	
+Lotus plant-only roots	yes	Piscinibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Piscinibacter	
+BEG34 B+	yes	Planctopirus (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Planctopirus	
+BEG34 B-	yes	Planctopirus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Planctopirus	
+Lotus plant-only roots	yes	Planctopirus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Planctopirus	
+BEG34 B+	yes	Planococcus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Planococcus	
+BEG34 B-	yes	Planococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Planococcus	
+Lotus plant-only roots	yes	Planococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Planococcus	
+BEG34 B+	yes	Planosporangium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Planosporangium	
+BEG34 B-	yes	Planosporangium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Planosporangium	
+Lotus plant-only roots	yes	Planosporangium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Planosporangium	
+BEG34 B+	yes	Polaribacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Polaribacter	
+BEG34 B-	yes	Polaribacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Polaribacter	
+Lotus plant-only roots	yes	Polaribacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Polaribacter	
+BEG34 B+	yes	Polynucleobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Polynucleobacter	
+BEG34 B-	yes	Polynucleobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Polynucleobacter	
+Lotus plant-only roots	yes	Polynucleobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Polynucleobacter	
+BEG34 B+	yes	Poriferisphaera (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Poriferisphaera	
+BEG34 B-	yes	Poriferisphaera (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Poriferisphaera	
+Lotus plant-only roots	yes	Poriferisphaera (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Poriferisphaera	
+BEG34 B+	yes	Porphyromonas (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Porphyromonas	
+BEG34 B-	yes	Porphyromonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Porphyromonas	
+Lotus plant-only roots	yes	Porphyromonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Porphyromonas	
+BEG34 B+	yes	Porticoccus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Porticoccus	
+BEG34 B-	yes	Porticoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Porticoccus	
+Lotus plant-only roots	yes	Porticoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Porticoccus	
+BEG34 B+	yes	Priestia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Priestia	
+BEG34 B-	yes	Priestia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Priestia	
+Lotus plant-only roots	yes	Priestia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Priestia	
+BEG34 B+	yes	Protochlamydia (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Protochlamydia	
+BEG34 B-	yes	Protochlamydia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Protochlamydia	
+Lotus plant-only roots	yes	Protochlamydia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Protochlamydia	
+BEG34 B+	yes	Protofrankia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Protofrankia	
+BEG34 B-	yes	Protofrankia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Protofrankia	
+Lotus plant-only roots	yes	Protofrankia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Protofrankia	
+BEG34 B+	yes	Pseudoaliinostoc (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Pseudoaliinostoc	
+BEG34 B-	yes	Pseudoaliinostoc (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pseudoaliinostoc	
+Lotus plant-only roots	yes	Pseudoaliinostoc (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pseudoaliinostoc	
+BEG34 B+	yes	Pseudoclavibacter (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Pseudoclavibacter	
+BEG34 B-	yes	Pseudoclavibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pseudoclavibacter	
+Lotus plant-only roots	yes	Pseudoclavibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pseudoclavibacter	
+BEG34 B+	yes	Pseudohongiella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Pseudohongiella	
+BEG34 B-	yes	Pseudohongiella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pseudohongiella	
+Lotus plant-only roots	yes	Pseudohongiella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pseudohongiella	
+BEG34 B+	yes	Pseudokineococcus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Pseudokineococcus	
+BEG34 B-	yes	Pseudokineococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pseudokineococcus	
+Lotus plant-only roots	yes	Pseudokineococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pseudokineococcus	
+BEG34 B+	yes	Pseudolabrys (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Pseudolabrys	
+BEG34 B-	yes	Pseudolabrys (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pseudolabrys	
+Lotus plant-only roots	yes	Pseudolabrys (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pseudolabrys	
+BEG34 B+	yes	Pseudomonas (route)	route	kit-contaminant genus	absent	all 4 informative runs absent	yes	4	1	2	no	no	yes	Pseudomonas	
+BEG34 B-	yes	Pseudomonas (route)	route	kit-contaminant genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Pseudomonas	
+Lotus plant-only roots	yes	Pseudomonas (route)	route	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pseudomonas	
+BEG34 B+	yes	Pseudonocardia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Pseudonocardia	
+BEG34 B-	yes	Pseudonocardia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pseudonocardia	
+Lotus plant-only roots	yes	Pseudonocardia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pseudonocardia	
+BEG34 B+	yes	Pseudorhodoplanes (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Pseudorhodoplanes	
+BEG34 B-	yes	Pseudorhodoplanes (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pseudorhodoplanes	
+Lotus plant-only roots	yes	Pseudorhodoplanes (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pseudorhodoplanes	
+BEG34 B+	yes	Psychrobacter (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Psychrobacter	
+BEG34 B-	yes	Psychrobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Psychrobacter	
+Lotus plant-only roots	yes	Psychrobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Psychrobacter	
+BEG34 B+	yes	Psychrosphaera (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Psychrosphaera	
+BEG34 B-	yes	Psychrosphaera (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Psychrosphaera	
+Lotus plant-only roots	yes	Psychrosphaera (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Psychrosphaera	
+BEG34 B+	yes	QFNR01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	QFNR01	
+BEG34 B-	yes	QFNR01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	QFNR01	
+Lotus plant-only roots	yes	QFNR01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	QFNR01	
+BEG34 B+	yes	Quisquiliibacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Quisquiliibacterium	
+BEG34 B-	yes	Quisquiliibacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Quisquiliibacterium	
+Lotus plant-only roots	yes	Quisquiliibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Quisquiliibacterium	
+BEG34 B+	yes	RFTU01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	RFTU01	
+BEG34 B-	yes	RFTU01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	RFTU01	
+Lotus plant-only roots	yes	RFTU01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	RFTU01	
+BEG34 B+	yes	Ralstonia (route)	route	kit-contaminant genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ralstonia	
+BEG34 B-	yes	Ralstonia (route)	route	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ralstonia	
+Lotus plant-only roots	yes	Ralstonia (route)	route	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ralstonia	
+BEG34 B+	yes	Ramlibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ramlibacter	
+BEG34 B-	yes	Ramlibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ramlibacter	
+Lotus plant-only roots	yes	Ramlibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ramlibacter	
+BEG34 B+	yes	Reyranella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Reyranella	
+BEG34 B-	yes	Reyranella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Reyranella	
+Lotus plant-only roots	yes	Reyranella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Reyranella	
+BEG34 B+	yes	Rhabdothermincola (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Rhabdothermincola	
+BEG34 B-	yes	Rhabdothermincola (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rhabdothermincola	
+Lotus plant-only roots	yes	Rhabdothermincola (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rhabdothermincola	
+BEG34 B+	yes	Rhizobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Rhizobium	
+BEG34 B-	yes	Rhizobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rhizobium	
+Lotus plant-only roots	yes	Rhizobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rhizobium	
+BEG34 B+	yes	Rhodanobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Rhodanobacter	
+BEG34 B-	yes	Rhodanobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rhodanobacter	
+Lotus plant-only roots	yes	Rhodanobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rhodanobacter	
+BEG34 B+	yes	Rhodococcus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Rhodococcus	
+BEG34 B-	yes	Rhodococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rhodococcus	
+Lotus plant-only roots	yes	Rhodococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rhodococcus	
+BEG34 B+	yes	Rhodoferax (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Rhodoferax	
+BEG34 B-	yes	Rhodoferax (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rhodoferax	
+Lotus plant-only roots	yes	Rhodoferax (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rhodoferax	
+BEG34 B+	yes	Rhodoplanes (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Rhodoplanes	
+BEG34 B-	yes	Rhodoplanes (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rhodoplanes	
+Lotus plant-only roots	yes	Rhodoplanes (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rhodoplanes	
+BEG34 B+	yes	Rhodovibrio (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Rhodovibrio	
+BEG34 B-	yes	Rhodovibrio (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rhodovibrio	
+Lotus plant-only roots	yes	Rhodovibrio (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rhodovibrio	
+BEG34 B+	yes	Rodentibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Rodentibacter	
+BEG34 B-	yes	Rodentibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rodentibacter	
+Lotus plant-only roots	yes	Rodentibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rodentibacter	
+BEG34 B+	yes	Roseateles (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Roseateles	
+BEG34 B-	yes	Roseateles (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Roseateles	
+Lotus plant-only roots	yes	Roseateles (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Roseateles	
+BEG34 B+	yes	Rossellomorea (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Rossellomorea	
+BEG34 B-	yes	Rossellomorea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rossellomorea	
+Lotus plant-only roots	yes	Rossellomorea (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rossellomorea	
+BEG34 B+	yes	Rothia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Rothia	
+BEG34 B-	yes	Rothia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rothia	
+Lotus plant-only roots	yes	Rothia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rothia	
+BEG34 B+	yes	Rubellimicrobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Rubellimicrobium	
+BEG34 B-	yes	Rubellimicrobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rubellimicrobium	
+Lotus plant-only roots	yes	Rubellimicrobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rubellimicrobium	
+BEG34 B+	yes	SH3-11 (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	SH3-11	
+BEG34 B-	yes	SH3-11 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	SH3-11	
+Lotus plant-only roots	yes	SH3-11 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	SH3-11	
+BEG34 B+	yes	SKWO01 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	SKWO01	
+BEG34 B-	yes	SKWO01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	SKWO01	
+Lotus plant-only roots	yes	SKWO01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	SKWO01	
+BEG34 B+	yes	SM1A02 (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	SM1A02	
+BEG34 B-	yes	SM1A02 (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	SM1A02	
+Lotus plant-only roots	yes	SM1A02 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	SM1A02	
+BEG34 B+	yes	SP197 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	SP197	
+BEG34 B-	yes	SP197 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	SP197	
+Lotus plant-only roots	yes	SP197 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	SP197	
+BEG34 B+	yes	SZUA-47 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	SZUA-47	
+BEG34 B-	yes	SZUA-47 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	SZUA-47	
+Lotus plant-only roots	yes	SZUA-47 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	SZUA-47	
+BEG34 B+	yes	Saccharothrix (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Saccharothrix	
+BEG34 B-	yes	Saccharothrix (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Saccharothrix	
+Lotus plant-only roots	yes	Saccharothrix (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Saccharothrix	
+BEG34 B+	yes	Salaquimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Salaquimonas	
+BEG34 B-	yes	Salaquimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Salaquimonas	
+Lotus plant-only roots	yes	Salaquimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Salaquimonas	
+BEG34 B+	yes	Salinibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Salinibacter	
+BEG34 B-	yes	Salinibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Salinibacter	
+Lotus plant-only roots	yes	Salinibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Salinibacter	
+BEG34 B+	yes	Salinicoccus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Salinicoccus	
+BEG34 B-	yes	Salinicoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Salinicoccus	
+Lotus plant-only roots	yes	Salinicoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Salinicoccus	
+BEG34 B+	yes	Salinimicrobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Salinimicrobium	
+BEG34 B-	yes	Salinimicrobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Salinimicrobium	
+Lotus plant-only roots	yes	Salinimicrobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Salinimicrobium	
+BEG34 B+	yes	Salmonella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Salmonella	
+BEG34 B-	yes	Salmonella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Salmonella	
+Lotus plant-only roots	yes	Salmonella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Salmonella	
+BEG34 B+	yes	Sandaracinus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Sandaracinus	
+BEG34 B-	yes	Sandaracinus (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Sandaracinus	
+Lotus plant-only roots	yes	Sandaracinus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sandaracinus	
+BEG34 B+	yes	Sanyastnella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Sanyastnella	
+BEG34 B-	yes	Sanyastnella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sanyastnella	
+Lotus plant-only roots	yes	Sanyastnella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sanyastnella	
+BEG34 B+	yes	Scleromatobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Scleromatobacter	
+BEG34 B-	yes	Scleromatobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Scleromatobacter	
+Lotus plant-only roots	yes	Scleromatobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Scleromatobacter	
+BEG34 B+	yes	Selenomonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Selenomonas	
+BEG34 B-	yes	Selenomonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Selenomonas	
+Lotus plant-only roots	yes	Selenomonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Selenomonas	
+BEG34 B+	yes	Seminibacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Seminibacterium	
+BEG34 B-	yes	Seminibacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Seminibacterium	
+Lotus plant-only roots	yes	Seminibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Seminibacterium	
+BEG34 B+	yes	Serratia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Serratia	
+BEG34 B-	yes	Serratia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Serratia	
+Lotus plant-only roots	yes	Serratia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Serratia	
+BEG34 B+	yes	Shinella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Shinella	
+BEG34 B-	yes	Shinella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Shinella	
+Lotus plant-only roots	yes	Shinella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Shinella	
+BEG34 B+	yes	Simplicispira (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Simplicispira	
+BEG34 B-	yes	Simplicispira (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Simplicispira	
+Lotus plant-only roots	yes	Simplicispira (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Simplicispira	
+BEG34 B+	yes	Solibacter (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Solibacter	
+BEG34 B-	yes	Solibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Solibacter	
+Lotus plant-only roots	yes	Solibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Solibacter	
+BEG34 B+	yes	Solimicrobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Solimicrobium	
+BEG34 B-	yes	Solimicrobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Solimicrobium	
+Lotus plant-only roots	yes	Solimicrobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Solimicrobium	
+BEG34 B+	yes	Solirubrobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Solirubrobacter	
+BEG34 B-	yes	Solirubrobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Solirubrobacter	
+Lotus plant-only roots	yes	Solirubrobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Solirubrobacter	
+BEG34 B+	yes	Spencerbrownia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Spencerbrownia	
+BEG34 B-	yes	Spencerbrownia (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Spencerbrownia	
+Lotus plant-only roots	yes	Spencerbrownia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Spencerbrownia	
+BEG34 B+	yes	Sphaerotilus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Sphaerotilus	
+BEG34 B-	yes	Sphaerotilus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sphaerotilus	
+Lotus plant-only roots	yes	Sphaerotilus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sphaerotilus	
+BEG34 B+	yes	Sphingobium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Sphingobium	
+BEG34 B-	yes	Sphingobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sphingobium	
+Lotus plant-only roots	yes	Sphingobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sphingobium	
+BEG34 B+	yes	Sphingomonas (route)	route	kit-contaminant genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Sphingomonas	
+BEG34 B-	yes	Sphingomonas (route)	route	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sphingomonas	
+Lotus plant-only roots	yes	Sphingomonas (route)	route	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sphingomonas	
+BEG34 B+	yes	Sphingopyxis (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Sphingopyxis	
+BEG34 B-	yes	Sphingopyxis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sphingopyxis	
+Lotus plant-only roots	yes	Sphingopyxis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sphingopyxis	
+BEG34 B+	yes	Splendidivirga (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Splendidivirga	
+BEG34 B-	yes	Splendidivirga (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Splendidivirga	
+Lotus plant-only roots	yes	Splendidivirga (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Splendidivirga	
+BEG34 B+	yes	Sporocytophaga (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Sporocytophaga	
+BEG34 B-	yes	Sporocytophaga (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sporocytophaga	
+Lotus plant-only roots	yes	Sporocytophaga (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sporocytophaga	
+BEG34 B+	yes	Staphylococcus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Staphylococcus	
+BEG34 B-	yes	Staphylococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Staphylococcus	
+Lotus plant-only roots	yes	Staphylococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Staphylococcus	
+BEG34 B+	yes	Streptococcus (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	5	no	no	yes	Streptococcus	
+BEG34 B-	yes	Streptococcus (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	3	no	no	yes	Streptococcus	
+Lotus plant-only roots	yes	Streptococcus (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	0	1	no	no	yes	Streptococcus	
+BEG34 B+	yes	Streptomyces (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Streptomyces	
+BEG34 B-	yes	Streptomyces (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Streptomyces	
+Lotus plant-only roots	yes	Streptomyces (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Streptomyces	
+BEG34 B+	yes	Sulfurifustis (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Sulfurifustis	
+BEG34 B-	yes	Sulfurifustis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sulfurifustis	
+Lotus plant-only roots	yes	Sulfurifustis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sulfurifustis	
+BEG34 B+	yes	Sva0081 sediment group (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Sva0081 sediment group	
+BEG34 B-	yes	Sva0081 sediment group (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sva0081 sediment group	
+Lotus plant-only roots	yes	Sva0081 sediment group (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sva0081 sediment group	
+BEG34 B+	yes	Symbiobacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Symbiobacterium	
+BEG34 B-	yes	Symbiobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Symbiobacterium	
+Lotus plant-only roots	yes	Symbiobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Symbiobacterium	
+BEG34 B+	yes	Symmachiella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Symmachiella	
+BEG34 B-	yes	Symmachiella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Symmachiella	
+Lotus plant-only roots	yes	Symmachiella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Symmachiella	
+BEG34 B+	yes	Taonella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Taonella	
+BEG34 B-	yes	Taonella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Taonella	
+Lotus plant-only roots	yes	Taonella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Taonella	
+BEG34 B+	yes	Telluria (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Telluria	
+BEG34 B-	yes	Telluria (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Telluria	
+Lotus plant-only roots	yes	Telluria (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Telluria	
+BEG34 B+	yes	Tepidiforma (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Tepidiforma	
+BEG34 B-	yes	Tepidiforma (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Tepidiforma	
+Lotus plant-only roots	yes	Tepidiforma (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Tepidiforma	
+BEG34 B+	yes	Tepidimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Tepidimonas	
+BEG34 B-	yes	Tepidimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Tepidimonas	
+Lotus plant-only roots	yes	Tepidimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Tepidimonas	
+BEG34 B+	yes	Terricaulis (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Terricaulis	
+BEG34 B-	yes	Terricaulis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Terricaulis	
+Lotus plant-only roots	yes	Terricaulis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Terricaulis	
+BEG34 B+	yes	Terrimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Terrimonas	
+BEG34 B-	yes	Terrimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Terrimonas	
+Lotus plant-only roots	yes	Terrimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Terrimonas	
+BEG34 B+	yes	Tessaracoccus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Tessaracoccus	
+BEG34 B-	yes	Tessaracoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Tessaracoccus	
+Lotus plant-only roots	yes	Tessaracoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Tessaracoccus	
+BEG34 B+	yes	Thauera (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	4	1	0	no	yes	yes	Thauera	
+BEG34 B-	yes	Thauera (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thauera	
+Lotus plant-only roots	yes	Thauera (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thauera	
+BEG34 B+	yes	Thermoclostridium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Thermoclostridium	
+BEG34 B-	yes	Thermoclostridium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thermoclostridium	
+Lotus plant-only roots	yes	Thermoclostridium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thermoclostridium	
+BEG34 B+	yes	Thermomarinilinea (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Thermomarinilinea	
+BEG34 B-	yes	Thermomarinilinea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thermomarinilinea	
+Lotus plant-only roots	yes	Thermomarinilinea (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thermomarinilinea	
+BEG34 B+	yes	Thermomonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Thermomonas	
+BEG34 B-	yes	Thermomonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thermomonas	
+Lotus plant-only roots	yes	Thermomonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thermomonas	
+BEG34 B+	yes	Thiobius (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Thiobius	
+BEG34 B-	yes	Thiobius (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thiobius	
+Lotus plant-only roots	yes	Thiobius (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thiobius	
+BEG34 B+	yes	Thiocapsa (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Thiocapsa	
+BEG34 B-	yes	Thiocapsa (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thiocapsa	
+Lotus plant-only roots	yes	Thiocapsa (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thiocapsa	
+BEG34 B+	yes	Thiodictyon (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Thiodictyon	
+BEG34 B-	yes	Thiodictyon (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thiodictyon	
+Lotus plant-only roots	yes	Thiodictyon (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thiodictyon	
+BEG34 B+	yes	Thiomicrolovo (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Thiomicrolovo	
+BEG34 B-	yes	Thiomicrolovo (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thiomicrolovo	
+Lotus plant-only roots	yes	Thiomicrolovo (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thiomicrolovo	
+BEG34 B+	yes	Tokpelaia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Tokpelaia	
+BEG34 B-	yes	Tokpelaia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Tokpelaia	
+Lotus plant-only roots	yes	Tokpelaia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Tokpelaia	
+BEG34 B+	yes	Trebonia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Trebonia	
+BEG34 B-	yes	Trebonia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Trebonia	
+Lotus plant-only roots	yes	Trebonia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Trebonia	
+BEG34 B+	yes	Truepera (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Truepera	
+BEG34 B-	yes	Truepera (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Truepera	
+Lotus plant-only roots	yes	Truepera (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Truepera	
+BEG34 B+	yes	UBA1424 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	UBA1424	
+BEG34 B-	yes	UBA1424 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	UBA1424	
+Lotus plant-only roots	yes	UBA1424 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	UBA1424	
+BEG34 B+	yes	UBA2353 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	UBA2353	
+BEG34 B-	yes	UBA2353 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	UBA2353	
+Lotus plant-only roots	yes	UBA2353 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	UBA2353	
+BEG34 B+	yes	UBA3073 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	UBA3073	
+BEG34 B-	yes	UBA3073 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	UBA3073	
+Lotus plant-only roots	yes	UBA3073 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	UBA3073	
+BEG34 B+	yes	UBA4615 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	UBA4615	
+BEG34 B-	yes	UBA4615 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	UBA4615	
+Lotus plant-only roots	yes	UBA4615 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	UBA4615	
+BEG34 B+	yes	UKL13-2 (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	UKL13-2	
+BEG34 B-	yes	UKL13-2 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	UKL13-2	
+Lotus plant-only roots	yes	UKL13-2 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	UKL13-2	
+BEG34 B+	yes	Undibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Undibacter	
+BEG34 B-	yes	Undibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Undibacter	
+Lotus plant-only roots	yes	Undibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Undibacter	
+BEG34 B+	yes	Undibacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Undibacterium	
+BEG34 B-	yes	Undibacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Undibacterium	
+Lotus plant-only roots	yes	Undibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Undibacterium	
+BEG34 B+	yes	Urbifossiella (route)	route	other known genus	absent	all 4 informative runs absent	yes	4	0	1	no	no	yes	Urbifossiella	
+BEG34 B-	yes	Urbifossiella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Urbifossiella	
+Lotus plant-only roots	yes	Urbifossiella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Urbifossiella	
+BEG34 B+	yes	Ureaplasma (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Ureaplasma	
+BEG34 B-	yes	Ureaplasma (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ureaplasma	
+Lotus plant-only roots	yes	Ureaplasma (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ureaplasma	
+BEG34 B+	yes	Usitatibacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Usitatibacter	
+BEG34 B-	yes	Usitatibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Usitatibacter	
+Lotus plant-only roots	yes	Usitatibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Usitatibacter	
+BEG34 B+	yes	Variovorax (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Variovorax	
+BEG34 B-	yes	Variovorax (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Variovorax	
+Lotus plant-only roots	yes	Variovorax (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Variovorax	
+BEG34 B+	yes	Veillonella (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Veillonella	
+BEG34 B-	yes	Veillonella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Veillonella	
+Lotus plant-only roots	yes	Veillonella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Veillonella	
+BEG34 B+	yes	Velamenicoccus (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Velamenicoccus	
+BEG34 B-	yes	Velamenicoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Velamenicoccus	
+Lotus plant-only roots	yes	Velamenicoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Velamenicoccus	
+BEG34 B+	yes	Verminephrobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Verminephrobacter	
+BEG34 B-	yes	Verminephrobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Verminephrobacter	
+Lotus plant-only roots	yes	Verminephrobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Verminephrobacter	
+BEG34 B+	yes	Vibrio (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Vibrio	
+BEG34 B-	yes	Vibrio (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Vibrio	
+Lotus plant-only roots	yes	Vibrio (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Vibrio	
+BEG34 B+	yes	Viridibacterium (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Viridibacterium	
+BEG34 B-	yes	Viridibacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Viridibacterium	
+Lotus plant-only roots	yes	Viridibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Viridibacterium	
+BEG34 B+	yes	Vitreimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Vitreimonas	
+BEG34 B-	yes	Vitreimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Vitreimonas	
+Lotus plant-only roots	yes	Vitreimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Vitreimonas	
+BEG34 B+	yes	Winkia (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Winkia	
+BEG34 B-	yes	Winkia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Winkia	
+Lotus plant-only roots	yes	Winkia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Winkia	
+BEG34 B+	yes	Zeimonas (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Zeimonas	
+BEG34 B-	yes	Zeimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Zeimonas	
+Lotus plant-only roots	yes	Zeimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Zeimonas	
+BEG34 B+	yes	Zipacnadum (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Zipacnadum	
+BEG34 B-	yes	Zipacnadum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Zipacnadum	
+Lotus plant-only roots	yes	Zipacnadum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Zipacnadum	
+BEG34 B+	yes	Zymobacter (route)	route	other known genus	absent	all 4 informative runs absent	no	4	0	0	no	no	yes	Zymobacter	
+BEG34 B-	yes	Zymobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Zymobacter	
+Lotus plant-only roots	yes	Zymobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Zymobacter	
+BEG34 B+	yes	novel (SSU)	route	novel	resident	E1 and E2 (DNA runs)	yes	4	18	0	yes	yes	yes		domain Bacteria (11907); class Alphaproteobacteria (2647); family Nostocaceae (2425); class Gammaproteobacteria (883); class Bacilli (672)
+BEG34 B-	yes	novel (SSU)	route	novel	unresolved	signal, but no rule above applies	yes	1	10	1	no	yes	yes		domain Bacteria (1773); class Alphaproteobacteria (675); family Nostocaceae (104); class Gammaproteobacteria (98); kingdom Bacillati (95)
+Lotus plant-only roots	yes	novel (SSU)	route	novel	unresolved	signal, but no rule above applies	yes	0	2	1	no	no	yes		domain Bacteria (340); kingdom Bacillati (190); class Bacilli (60); family Alicyclobacillaceae (7); family Paenibacillaceae (5)
+BEG34 B+	yes	novel (SingleM)	route	novel	unresolved	signal, but no rule above applies	yes	4	1	3	no	yes	yes		order Burkholderiales (124); domain Bacteria (8); class Actinomycetes (5); family Burkholderiaceae_C (4); class Gammaproteobacteria (2)
+BEG34 B-	yes	novel (SingleM)	route	novel	unresolved	signal, but no rule above applies	yes	1	0	1	no	no	yes		family Burkholderiaceae_C (6); phylum Pseudomonadota (2); class Alphaproteobacteria (1); order Saccharimonadales (1); family Magnetospirillaceae (1)
