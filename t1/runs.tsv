@@ -1,0 +1,44 @@
+run	unit	control_id	scored	kind	platform	prep	layout	bioproject	year	lab	isolate	route	reuse	note
+SRR36098601	BEG34 B+	GMAR_BEG34_HIC_Bplus	yes	DNA	short	dna	PAIRED	PRJNA1364746		Ottawa	BEG34	ssu+singlem	stage0a	Hi-C (HiC_Bplus)
+SRR10215375	BEG34 B+	GMAR_BEG34_GENOME	yes	DNA	short	dna	PAIRED	PRJNA575165		Torino	BEG34	ssu+singlem	stage0a	genome reads
+SRR10215376	BEG34 B+	GMAR_BEG34_GENOME	yes	DNA	short	dna	PAIRED	PRJNA575165		Torino	BEG34	ssu+singlem	stage0a	genome reads
+SRR10215377	BEG34 B+	GMAR_BEG34_GENOME	yes	DNA	short	dna	PAIRED	PRJNA575165		Torino	BEG34	ssu+singlem	stage0a	genome reads
+SRR1659836	BEG34 B+	GMAR_BEG34_RNA_Bplus	yes	RNA	short	poly-A	PAIRED	PRJNA267628		Torino	BEG34	ssu	stage0a	Data Set 1: SMARTer oligo(dT) cDNA, normalized
+SRR1659837	BEG34 B+	GMAR_BEG34_RNA_Bplus	yes	RNA	short	poly-A	PAIRED	PRJNA267628		Torino	BEG34	ssu	stage0a	Data Set 1: SMARTer oligo(dT) cDNA, normalized
+SRR1659838	BEG34 B+	GMAR_BEG34_RNA_Bplus	yes	RNA	short	poly-A	PAIRED	PRJNA267628		Torino	BEG34	ssu	stage0a	Data Set 1: SMARTer oligo(dT) cDNA, normalized
+SRR1659839	BEG34 B+	GMAR_BEG34_RNA_Bplus	yes	RNA	short	poly-A	PAIRED	PRJNA267628		Torino	BEG34	ssu	stage0a	Data Set 1: SMARTer oligo(dT) cDNA, normalized
+SRR1659840	BEG34 B+	GMAR_BEG34_RNA_Bplus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu	stage0a	Data Set 2, germinating spores; rRNA removed (entry 9)
+SRR1659841	BEG34 B+	GMAR_BEG34_RNA_Bplus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu	stage0a	Data Set 2, germinating spores; rRNA removed (entry 9)
+SRR1659842	BEG34 B+	GMAR_BEG34_RNA_Bplus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu	stage0a	Data Set 2, germinating spores; rRNA removed (entry 9)
+SRR1659846	BEG34 B+	GMAR_BEG34_RNA_Bplus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu	stage0a	Data Set 2, spores with strigolactone; rRNA removed (entry 9)
+SRR1659847	BEG34 B+	GMAR_BEG34_RNA_Bplus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu	stage0a	Data Set 2, spores with strigolactone; rRNA removed (entry 9)
+SRR1659850	BEG34 B+	GMAR_BEG34_RNA_Bplus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu	stage0a	Data Set 2, mycorrhizal roots; rRNA removed (entry 9)
+SRR1659851	BEG34 B+	GMAR_BEG34_RNA_Bplus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu	stage0a	Data Set 2, mycorrhizal roots; rRNA removed (entry 9)
+SRR15311774	BEG34 B+	GMAR_BEG34_LOTUS_Bplus	yes	RNA	short	poly-A	PAIRED	PRJNA751155		Torino	BEG34	ssu	stage0a	Lotus roots
+SRR15311775	BEG34 B+	GMAR_BEG34_LOTUS_Bplus	yes	RNA	short	poly-A	PAIRED	PRJNA751155		Torino	BEG34	ssu	stage0a	Lotus roots
+SRR15311776	BEG34 B+	GMAR_BEG34_LOTUS_Bplus	yes	RNA	short	poly-A	PAIRED	PRJNA751155		Torino	BEG34	ssu	stage0a	Lotus roots
+SRR36103000	BEG34 B-	GMAR_BEG34_HIC_Bminus	yes	DNA	short	dna	PAIRED	PRJNA1364746		Ottawa	BEG34	ssu+singlem		Hi-C (HiC_Bminus)
+SRR1659843	BEG34 B-	GMAR_BEG34_RNA_Bminus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu		Data Set 2, germinating spores; same library batch as the B+ runs
+SRR1659844	BEG34 B-	GMAR_BEG34_RNA_Bminus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu		Data Set 2, germinating spores; same library batch as the B+ runs
+SRR1659845	BEG34 B-	GMAR_BEG34_RNA_Bminus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu		Data Set 2, germinating spores; same library batch as the B+ runs
+SRR1659848	BEG34 B-	GMAR_BEG34_RNA_Bminus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu		Data Set 2, spores with strigolactone; same library batch as the B+ runs
+SRR1659849	BEG34 B-	GMAR_BEG34_RNA_Bminus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu		Data Set 2, spores with strigolactone; same library batch as the B+ runs
+SRR1659852	BEG34 B-	GMAR_BEG34_RNA_Bminus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu		Data Set 2, mycorrhizal roots; same library batch as the B+ runs
+SRR1659853	BEG34 B-	GMAR_BEG34_RNA_Bminus	yes	RNA	short	poly-A	SINGLE	PRJNA267628		Torino	BEG34	ssu		Data Set 2, mycorrhizal roots; same library batch as the B+ runs
+SRR15311773	BEG34 B-	GMAR_BEG34_LOTUS_Bminus	yes	RNA	short	poly-A	PAIRED	PRJNA751155		Torino	BEG34	ssu		Lotus roots (SRX11616388)
+SRR15311772	BEG34 B-	GMAR_BEG34_LOTUS_Bminus	yes	RNA	short	poly-A	PAIRED	PRJNA751155		Torino	BEG34	ssu		Lotus roots (SRX11616389)
+SRR15311771	BEG34 B-	GMAR_BEG34_LOTUS_Bminus	yes	RNA	short	poly-A	PAIRED	PRJNA751155		Torino	BEG34	ssu		Lotus roots (SRX11616390)
+SRR15311779	Lotus plant-only roots	LOTUS_NM_ROOTS	yes	RNA	short	poly-A	PAIRED	PRJNA751155		Torino	none	ssu		non-mycorrhizal Lotus roots (SRX11616382)
+SRR15311778	Lotus plant-only roots	LOTUS_NM_ROOTS	yes	RNA	short	poly-A	PAIRED	PRJNA751155		Torino	none	ssu		non-mycorrhizal Lotus roots (SRX11616383)
+SRR15311777	Lotus plant-only roots	LOTUS_NM_ROOTS	yes	RNA	short	poly-A	PAIRED	PRJNA751155		Torino	none	ssu		non-mycorrhizal Lotus roots (SRX11616384)
+SRR36031820	BEG34 HiFi	GMAR_BEG34_HIFI	no	DNA	hifi	dna	SINGLE	PRJNA1364746		Ottawa	BEG34	none		HiFi, line not stated: blind call
+SRR6249698	BEG34 JGI MT	GMAR_BEG34_JGI_MT	no	RNA	short	unstated	PAIRED	PRJNA368395		JGI	BEG34	none		JGI metatranscriptome, line not stated; Low Input (RNA)
+SRR6249699	BEG34 JGI MT	GMAR_BEG34_JGI_MT	no	RNA	short	unstated	PAIRED	PRJNA368422		JGI	BEG34	none		JGI metatranscriptome, line not stated; Low Input (RNA)
+SRR6249700	BEG34 JGI MT	GMAR_BEG34_JGI_MT	no	RNA	short	unstated	PAIRED	PRJNA368420		JGI	BEG34	none		JGI metatranscriptome, line not stated; Low Input (RNA)
+SRR6249701	BEG34 JGI MT	GMAR_BEG34_JGI_MT	no	RNA	short	unstated	PAIRED	PRJNA368421		JGI	BEG34	none		JGI metatranscriptome, line not stated; Low Input (RNA)
+SRR9002094	BEG34 JGI MT	GMAR_BEG34_JGI_MT	no	RNA	short	unstated	PAIRED	PRJNA368422		JGI	BEG34	none		JGI metatranscriptome, line not stated; Low Input (RNA)
+SRR9002095	BEG34 JGI MT	GMAR_BEG34_JGI_MT	no	RNA	short	unstated	PAIRED	PRJNA368421		JGI	BEG34	none		JGI metatranscriptome, line not stated; Low Input (RNA)
+SRR9002098	BEG34 JGI MT	GMAR_BEG34_JGI_MT	no	RNA	short	unstated	PAIRED	PRJNA368420		JGI	BEG34	none		JGI metatranscriptome, line not stated; Low Input (RNA)
+SRR9002096	BEG34 JGI EM	GMAR_BEG34_JGI_EM	no	RNA	short	unstated	PAIRED	PRJNA535322		JGI	BEG34	none		JGI metatranscriptome, line not stated; Low Input (RNA)
+SRR9002097	BEG34 JGI EM	GMAR_BEG34_JGI_EM	no	RNA	short	unstated	PAIRED	PRJNA535319		JGI	BEG34	none		JGI metatranscriptome, line not stated; Low Input (RNA)
+SRR9002099	BEG34 JGI EM	GMAR_BEG34_JGI_EM	no	RNA	short	unstated	PAIRED	PRJNA535324		JGI	BEG34	none		JGI metatranscriptome, line not stated; Low Input (RNA)

@@ -18,10 +18,13 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `scripts/get_silva.py` | Downloads and checks SILVA 144 SSU Ref NR99 for SSU placement. |
 | `scripts/rescore_stage0a_m.py` | Stage 0a, step 2 rescored under the route rules of entries 7 and 8: places the symbiont's SSU reads with VSEARCH and works out m again. |
 | `scripts/assign_reads.py` | Counts the reads of one run per lineage (`PROTOCOL.md` 4.1) and writes the reads that go on to SingleM and SSUplex. |
+| `scripts/call_lineages.py` | The caller: route-read labels and lineages, levels, cross-talk, evidence and calls (`PROTOCOL.md` 4.1, entries 7 to 9). |
+| `scripts/run_t1.py` | Test T1: fetches and assigns the runs, runs the route, places the SSU reads, runs sylph, makes the calls and checks K1. |
 | `references/` | The reference lists, `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
 | `env/` | Conda environments for the toolchain. |
 | `stage0a/` | Stage 0a: the positive runs (`runs.tsv`), the fractions and t (step 1), and the marker shares and m (step 2). |
-| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH). |
+| `t1/` | Test T1: the runs (`runs.tsv`) and, once T1 has run, the levels, the calls and `T1.md`. |
+| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH; `check_caller.py` needs both). |
 
 ## Make the inventory
 
@@ -128,6 +131,20 @@ tail -f ~/rescore8.log
 
 The search against SILVA is exhaustive (section 4.1). Under entry 7 it took about 1.7 hours with 30 threads for the 5,269 distinct SSU sequences. The log prints a time estimate after each batch of 500, and gives m as soon as the DNA runs are done. Work files go to `~/phase0-data/stage0a/rescore_entry8/`, so nothing from version 0.1 is reused. If it stops, run the same command again: finished batches are kept. When it is done it writes `stage0a/marker_share_entry8.tsv` and `stage0a/STAGE0A_M_ENTRY8.md`; commit both.
 
+## Test T1 (entry 9)
+
+T1 needs entry 8's m, so commit `stage0a/marker_share_entry8.tsv` and `stage0a/STAGE0A_M_ENTRY8.md` first, then entry 9 with `t1/runs.tsv`. The 18 B+ runs reuse stage 0a's reads, counts and route; the other 25 runs are fetched (the first 20 million spots; the HiFi run, its first million reads), which takes about 80 to 100 GB of disk in `~/phase0-data/t1/`. Check the free space first:
+
+```bash
+conda activate phase0-reads
+python tests/check_caller.py
+df -h ~/phase0-data
+nohup python scripts/run_t1.py --workdir ~/phase0-data --threads 30 > ~/t1.log 2>&1 &
+tail -f ~/t1.log
+```
+
+It fetches and assigns the new runs, runs SSUplex (and SingleM, for the B− Hi-C run) on the 14 new scored runs, about an hour each, then places every routed SSU read with VSEARCH (the log prints a time estimate after each batch of 500) and runs sylph on all 43 runs. Expect a day or two. The reported runs (HiFi and JGI) are mapped only. If it stops, run the same command again: finished work is kept. When every run is done it writes `t1/levels.tsv`, `t1/calls.tsv` and `t1/T1.md`, with K1 at the top of `T1.md`; commit all three.
+
 ## Software environments
 
 Create them on the Linux machine that will run Phase 0, not on a laptop: lock files are specific to one platform, and some of the tools (GTDB-Tk among them) don't install on macOS.
@@ -177,4 +194,5 @@ python tests/check_assign.py   # needs minimap2 too
 python tests/check_stage0a.py  # needs minimap2 too
 python tests/check_stage0a_m.py  # needs minimap2 too
 python tests/check_rescore.py   # needs VSEARCH
+python tests/check_caller.py    # needs minimap2 and VSEARCH
 ```
