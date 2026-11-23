@@ -7,7 +7,9 @@ The database holds two bacterial sequences (stand-ins for CaGg and an MRE relati
 share a stretch with one of them: a chloroplast, a mitochondrion, a fungus and an archaeon. Symbiont
 reads are cut from the bacterial sequences: unique stretches (kept, on the plus or the minus strand),
 stretches shared with an organelle (dropped), stretches shared with a fungus or an archaeon (dropped),
-and random sequence with no hit (kept).
+and random sequence with no hit (kept). Two more records, a foraminifer and an archaeon, end or start
+with the first or last 25-30 bases of some reads: under VSEARCH's default identity these short overlaps
+score 100% and the reads were dropped; with --iddef 0 (entry 8) they are kept.
 
 get_silva.py: the release folder is tried before the "current" one; the md5 and the sequence count are
 checked; a wrong md5, a wrong count or an unlocked VSEARCH writes no manifest; a rerun downloads nothing.
@@ -73,13 +75,18 @@ SILVA = [("BAC1.1.1500", "Bacteria;Pseudomonadota;Gammaproteobacteria;Burkholder
          ("ARC1.1.1500", "Archaea;Thermoproteota;Nitrososphaeria;Nitrososphaerales;Nitrososphaeraceae;Nitrososphaera;"
           "Nitrososphaera sp.", rand(300) + B[300:450] + rand(1050)),
          ("EUK2.1.1800", "Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Metazoa;Homo sapiens", rand(1800))]
+SILVA += [("EUK3.1.1325", "Eukaryota;SAR;Rhizaria;Retaria;Foraminifera;Globothalamea;Rotaliida;Cibicidoides sp.",
+           rand(1300) + A[900:925]),                # ends with the first 25 bases of A's overlap reads
+          ("ARC2.1.1230", "Archaea;Methanobacteriati--other;Halobacteriota;Methanosarcinia;Methanosarcinales;"
+           "Methanosarcinaceae;Methanosarcina;metagenome", B[200:230] + rand(1200))]   # starts with B's reads' last 30
 
 # Where each kind of segment starts (the stretch a segment comes from is shared with nothing, or with exactly
 # the record named), and the verdict it should get. A: unique 600-1200; B: unique 0-300 and 450-800.
+# "overlap" reads start at A[900] or end at B[230], where EUK3 ends or ARC2 starts (see segment()).
 STARTS = {"keep+": {"A": 700, "B": 480}, "keep-": {"A": 1000, "B": 500},
           "organelle": {"A": 100, "B": 900}, "outside": {"A": 1250, "B": 300}}
 VERDICT = {"keep+": "Bacteria", "keep-": "Bacteria", "organelle": "organelle", "organelle-": "organelle",
-           "outside": "outside Bacteria", "outside-": "outside Bacteria", "nohit": "no hit"}
+           "outside": "outside Bacteria", "outside-": "outside Bacteria", "nohit": "no hit", "overlap": "Bacteria"}
 KEEP = ("Bacteria", "no hit")      # entry 7; deliberately not taken from the script
 
 
@@ -88,6 +95,8 @@ def segment(src, kind, length):
     two runs share a sequence."""
     if kind == "nohit":
         return rand(length)
+    if kind == "overlap":            # the read's first 25 bases end EUK3, or its last 30 start ARC2
+        return A[900:900 + length] if src is A else B[230 - length:230]
     key, base = ("A" if src is A else "B"), kind.rstrip("-") if kind != "keep-" else kind
     start = STARTS[base][key] + (0 if (base, key) == ("outside", "B") else rng.randint(0, 40))
     seq = src[start:start + length]
@@ -122,13 +131,13 @@ os.execv(real, [real] + a)
 
 RUNS = [  # run, test, kind, lineage, sets, n (step 1), source, SSU kinds, SingleM domains
     ("SRRA", "T1", "DNA", "CaGg", "yes", 10000, A,
-     {"keep+": 12, "keep-": 6, "organelle": 4, "organelle-": 2, "outside": 3, "outside-": 2, "nohit": 2},
+     {"keep+": 12, "keep-": 6, "organelle": 4, "organelle-": 2, "outside": 3, "outside-": 2, "nohit": 2, "overlap": 3},
      {"d__Bacteria": 40, "d__Archaea": 5, "d__Eukaryota": 3, "": 2}),
     ("SRRB", "T2", "DNA", "CaMg/MRE", "yes", 20000, B,
-     {"keep+": 15, "organelle": 5, "organelle-": 3, "outside": 4},
+     {"keep+": 15, "organelle": 5, "organelle-": 3, "outside": 4, "overlap": 3},
      {"d__Bacteria": 30, "d__Archaea": 4, "": 1}),
     ("SRRC", "T1", "RNA", "CaGg", "no", 500, A,
-     {"keep+": 20, "keep-": 10, "organelle": 10, "outside": 5, "nohit": 5},
+     {"keep+": 20, "keep-": 10, "organelle": 10, "outside": 5, "nohit": 5, "overlap": 4},
      {"d__Bacteria": 3}),
 ]
 RUN_COLS = ["run", "test", "kind", "line", "symbiont_lineage", "sets_t", "bioproject", "layout", "note"]
@@ -280,10 +289,12 @@ with tempfile.TemporaryDirectory() as tmp:
                               "--rna-sample", str(SAMPLE), *extra])
 
     def results(s):
-        return {x["run"]: x for x in csv.DictReader(open(s / "marker_share_entry7.tsv"), delimiter="\t")}
+        return {x["run"]: x for x in csv.DictReader(open(s / R.OUT_TSV), delimiter="\t")}
 
     sd = tmp / "stage0a"
     expect = build_route(work, sd, RUNS)
+    (sd / "marker_share_entry7.tsv").write_text("run\tsets_m\tshare\nSRRA\tyes\t0.0123\nSRRB\tyes\t0.0042\n"
+                                                "SRRC\tno\t0.0001\n")
     n0 = len(calls())
     code, err = rescore(work, sd)
     check(code == 0, f"rescore failed: {err}")
@@ -295,14 +306,15 @@ with tempfile.TemporaryDirectory() as tmp:
                 ok = abs(float(have) - want) < 1e-9 if col.startswith("share") else have == str(want)
                 check(ok, f"{run} {col}: {have}, want {want}")
         m = min(expect[r]["share"] for r in ("SRRA", "SRRB"))
-        md = (sd / "STAGE0A_M_ENTRY7.md").read_text()
+        md = (sd / R.OUT_MD).read_text()
         check(f"**m = {m:.4g}**" in md and "in SRRB " in md and "SSUplex finds CaGg and MRE SSU: **passed**" in md
-              and "SingleM sees MRE: **yes**" in md and "SRRC" in md.split("random sample")[0][-200:],
-              "STAGE0A_M_ENTRY7.md: m, the checks or the RNA sampling note")
+              and "SingleM sees MRE: **yes**" in md and "SRRC" in md.split("random sample")[0][-200:]
+              and "entry 7: 0.0042)" in md and "--iddef 0" in md,
+              f"{R.OUT_MD}: m, entry 7's m, the rule, the checks or the RNA sampling note")
         check(calls()[n0:] == ["batch_0001.fa", "batch_0002.fa"], f"VSEARCH calls {calls()[n0:]} (DNA, then RNA)")
-        before, n1 = (sd / "marker_share_entry7.tsv").read_bytes(), len(calls())
+        before, n1 = (sd / R.OUT_TSV).read_bytes(), len(calls())
         code, err = rescore(work, sd)                                # rerun: no VSEARCH
-        check(code == 0 and len(calls()) == n1 and (sd / "marker_share_entry7.tsv").read_bytes() == before,
+        check(code == 0 and len(calls()) == n1 and (sd / R.OUT_TSV).read_bytes() == before,
               f"rerun: exit {code}, {err!r}")
 
     def scenario(name, runs):
@@ -315,7 +327,7 @@ with tempfile.TemporaryDirectory() as tmp:
     runs[1][7] = {"organelle": 6, "outside": 6}
     wC, sC, eC = scenario("C", [tuple(x) for x in runs])
     code, err = rescore(wC, sC)
-    md = (sC / "STAGE0A_M_ENTRY7.md").read_text() if code == 0 else ""
+    md = (sC / R.OUT_MD).read_text() if code == 0 else ""
     check(code == 0 and "**failed**" in md and "**m is not set**" in md, f"SSUplex failing its check: {err!r}")
 
     # SingleM does not see MRE: every MRE SingleM read is placed outside Bacteria.
@@ -323,7 +335,7 @@ with tempfile.TemporaryDirectory() as tmp:
     runs[1][8] = {"d__Archaea": 20, "": 5}
     wD, sD, eD = scenario("D", [tuple(x) for x in runs])
     code, err = rescore(wD, sD)
-    md = (sD / "STAGE0A_M_ENTRY7.md").read_text() if code == 0 else ""
+    md = (sD / R.OUT_MD).read_text() if code == 0 else ""
     m = min(eD[r]["share"] for r in ("SRRA", "SRRB"))
     check(code == 0 and "no, so MRE rest on SSU" in md and f"**m = {m:.4g}**" in md, f"SingleM not seeing MRE: {err!r}")
 
@@ -332,12 +344,12 @@ with tempfile.TemporaryDirectory() as tmp:
     os.environ["FAKE_VSEARCH_FAIL"] = "batch_0002"
     code, err = rescore(wE, sE)
     os.environ.pop("FAKE_VSEARCH_FAIL")
-    bd = wE / "stage0a" / "rescore" / "batches"
-    check(code == 1 and "VSEARCH failed" in err and not (sE / "marker_share_entry7.tsv").exists()
+    bd = wE / "stage0a" / "rescore_entry8" / "batches"
+    check(code == 1 and "VSEARCH failed" in err and not (sE / R.OUT_TSV).exists()
           and (bd / "batch_0001.tsv").exists() and not (bd / "batch_0002.fa").exists(), f"VSEARCH failure: {err!r}")
     n2 = len(calls())
     code, err = rescore(wE, sE)
-    check(code == 0 and calls()[n2:] == ["batch_0002.fa"] and (sE / "marker_share_entry7.tsv").exists(),
+    check(code == 0 and calls()[n2:] == ["batch_0002.fa"] and (sE / R.OUT_TSV).exists(),
           f"rerun after a failure: exit {code}, calls {calls()[n2:]}, {err!r}")
 
     # Refused at the start.
@@ -361,6 +373,6 @@ if fails:
     print("FAIL\n" + "\n".join(fails))
     sys.exit(1)
 print("PASS: get_silva (release folder first, md5 and sequence count checked, failures write no manifest, reruns "
-      "download nothing); rescore (SSU reads kept and dropped by reason, SingleM Bacteria only and none in RNA, "
-      "minus-strand reads found, RNA sampling, shares and m, both 4.2 checks passing and failing, rerun runs no "
-      "VSEARCH, a VSEARCH failure writes nothing and the rerun finishes, refusals)")
+      "download nothing); rescore (SSU reads kept and dropped by reason, short end overlaps no longer tie, SingleM "
+      "Bacteria only and none in RNA, minus-strand reads found, RNA sampling, shares and m, both 4.2 checks passing "
+      "and failing, rerun runs no VSEARCH, a VSEARCH failure writes nothing and the rerun finishes, refusals)")

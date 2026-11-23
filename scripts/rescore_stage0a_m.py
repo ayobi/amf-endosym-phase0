@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Stage 0a, step 2 rescored under entry 7's route rules: the marker share m again, from step 2's work
-files (PROTOCOL.md section 10, entry 7).
+"""Stage 0a, step 2 rescored under the route rules of entries 7 and 8: the marker share m again, from
+step 2's work files (PROTOCOL.md section 10, entries 7 and 8).
 
 Step 2 counted a read as found by the route if SSUplex called it bacterial or it was in SingleM's OTU
 table. Entry 7 narrows that:
@@ -8,13 +8,17 @@ table. Entry 7 narrows that:
   - SSU: the reads SSUplex calls bacterial are placed with VSEARCH against SILVA 144 SSU Ref NR99
     (PROTOCOL.md 4.1, plus --strand both). A read is dropped if one of its top hits lies outside
     Bacteria or in chloroplasts or mitochondria. Reads with no hit at 75% or more stay.
+Entry 8 adds --iddef 0 to the VSEARCH command: identity is the matching bases divided by the length of
+the shorter sequence, which is always the read's SSU piece. VSEARCH's default leaves unaligned ends out,
+so a SILVA sequence that starts or ends inside a piece scored 100% on a short overlap.
 The reads and their mapping outcomes are step 2's (found.tsv.gz); only the found sets get smaller. Only
 the symbiont's reads are placed, since m counts only those. In RNA runs, which are reported only, at
 most --rna-sample of them are placed (a random sample, seed 1), and the share they keep is applied.
 
 DNA runs are placed first; the log gives m as soon as they are done. When everything is done, writes
-to stage0a/ in the repository (commit these): marker_share_entry7.tsv and STAGE0A_M_ENTRY7.md.
-Work files go to WORKDIR/stage0a/rescore/; a rerun skips finished VSEARCH batches.
+to stage0a/ in the repository (commit these): marker_share_entry8.tsv and STAGE0A_M_ENTRY8.md.
+Work files go to WORKDIR/stage0a/rescore_entry8/, so v0.1's batches (WORKDIR/stage0a/rescore/) are not
+reused; a rerun skips finished VSEARCH batches.
 
 Usage (phase0-reads environment; needs step 2's work files and get_silva.py's database):
   conda activate phase0-reads
@@ -40,11 +44,14 @@ SCRIPTS = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS))
 import get_silva as GS  # noqa: E402  vsearch_version
 
-__version__ = "0.1"
+__version__ = "0.2"
 
 FOUND_MIN = 10                     # section 10, entry 6 (the checks in 4.2)
 VSEARCH_ARGS = ["--id", "0.75", "--maxaccepts", "0", "--maxrejects", "0", "--top_hits_only",  # 4.1
-                "--strand", "both"]                                                            # entry 7
+                "--strand", "both",                                                            # entry 7
+                "--iddef", "0"]                                                                # entry 8
+WORK_NAME = "rescore_entry8"
+OUT_TSV, OUT_MD = "marker_share_entry8.tsv", "STAGE0A_M_ENTRY8.md"
 BATCH = 500
 ORGANELLE = re.compile(r"^(chloroplast|mitochondri)", re.IGNORECASE)
 KEEP = ("Bacteria", "no hit")
@@ -234,7 +241,7 @@ def fmt(v, spec=".4g"):
 
 
 def write_outputs(stage_dir, rows, s, meta):
-    tmp = stage_dir / "marker_share_entry7.tsv.part"
+    tmp = stage_dir / (OUT_TSV + ".part")
     with open(tmp, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=COLS, delimiter="\t", lineterminator="\n")
         w.writeheader()
@@ -243,18 +250,19 @@ def write_outputs(stage_dir, rows, s, meta):
                         "share_step2": f"{x['share_step2']:.10g}"})
     lo, lssu, lsm, sil = s["lowest"], s["lowest_ssu"], s["lowest_sm"], meta["silva"]
     sampled = [x["run"] for x in rows if x["kind"] != "DNA" and x["ssu_placed"] < x["ssu_step2"]]
-    md = ["# Stage 0a, step 2 rescored under entry 7: marker share m", "",
+    md = ["# Stage 0a, step 2 rescored under entries 7 and 8: marker share m", "",
           f"Made by rescore_stage0a_m.py v{__version__} on {meta['made']}, from step 2's work files (run_stage0a_m.py "
           f"v0.1), with VSEARCH {meta['vsearch']} against SILVA `{sil['file']}` (md5 {sil['md5']}, "
           f"{sil['sequences']:,} sequences).", "",
-          "Rule: PROTOCOL.md 4.1 and 4.2, with section 10, entries 6 and 7. A symbiont read counts as found by the route "
-          "if SingleM places it in Bacteria (DNA runs only), or if SSUplex calls it bacterial and none of its top SILVA "
-          "hits lies outside Bacteria or in chloroplasts or mitochondria (reads with no hit at 75% or more stay). The "
-          "reads and their mapping outcomes are step 2's. m is the lowest share among the DNA positives, and it "
-          "replaces step 2's m.", ""]
+          "Rule: PROTOCOL.md 4.1 and 4.2, with section 10, entries 6, 7 and 8. A symbiont read counts as found by "
+          "the route if SingleM places it in Bacteria (DNA runs only), or if SSUplex calls it bacterial and none of "
+          "its top SILVA hits lies outside Bacteria or in chloroplasts or mitochondria (reads with no hit at 75% or "
+          "more stay). Identity is the matching bases divided by the length of the read's SSU piece (VSEARCH "
+          "`--iddef 0`, entry 8). The reads and their mapping outcomes are step 2's. m is the lowest share among the "
+          "DNA positives, and it replaces entry 7's m.", ""]
     if s["m"] is not None:
-        md.append(f"**m = {s['m']:.4g}** (step 2: {meta['m_step2']:.4g}): the lowest DNA-positive share, in "
-                  f"{lo['run']} ({lo['line']}, {lo['note']}).")
+        md.append(f"**m = {s['m']:.4g}** (step 2: {meta['m_step2']:.4g}; entry 7: {fmt(meta['m_entry7'])}): the "
+                  f"lowest DNA-positive share, in {lo['run']} ({lo['line']}, {lo['note']}).")
     else:
         md.append("**m is not set**, because SSUplex failed its check (below). Under section 4.2, phyloFlash replaces "
                   "SSUplex; m has to be measured again with it, after a new deviations entry.")
@@ -276,15 +284,15 @@ def write_outputs(stage_dir, rows, s, meta):
     no_hit = sum(x["ssu_no_hit"] for x in rows)
     md += ["", f"Of the symbiont SSU reads placed, {out_b} had a top hit outside Bacteria and {org} a top hit in "
                f"chloroplasts or mitochondria (dropped), and {no_hit} had no hit at 75% or more (kept); "
-               "`marker_share_entry7.tsv` gives them per run. SingleM is not used in RNA runs (n/a)."]
+               f"`{OUT_TSV}` gives them per run. SingleM is not used in RNA runs (n/a)."]
     if sampled:
         md.append(f"RNA runs with more symbiont SSU reads than --rna-sample ({meta['rna_sample']}): "
                   f"{', '.join(sampled)}. There a random sample was placed (seed 1), and SSU kept applies its kept share "
                   "to all of the run's symbiont SSU reads. RNA runs are reported only.")
-    tmp_md = stage_dir / "STAGE0A_M_ENTRY7.md.part"
+    tmp_md = stage_dir / (OUT_MD + ".part")
     tmp_md.write_text("\n".join(md) + "\n", encoding="utf-8")
-    os.replace(tmp, stage_dir / "marker_share_entry7.tsv")
-    os.replace(tmp_md, stage_dir / "STAGE0A_M_ENTRY7.md")
+    os.replace(tmp, stage_dir / OUT_TSV)
+    os.replace(tmp_md, stage_dir / OUT_MD)
 
 
 def main(argv=None):
@@ -313,7 +321,7 @@ def main(argv=None):
         print(f"Cannot start: {e} (get_silva.py writes db/silva/manifest.json)", file=sys.stderr)
         return 1
 
-    rdir = work / "stage0a" / "rescore"
+    rdir = work / "stage0a" / WORK_NAME
     rdir.mkdir(parents=True, exist_ok=True)
     log = rdir / "vsearch.log"
     verdicts, rows = {}, {}
@@ -346,15 +354,19 @@ def main(argv=None):
     ordered = [rows[r["run"]] for r in runs]
     s = summarize(ordered)
     low2 = min((x for x in step2.values() if x["sets_m"] == "yes"), key=lambda x: float(x["share"]))
+    e7 = stage_dir / "marker_share_entry7.tsv"
+    m7 = min((float(x["share"]) for x in read_tsv(e7) if x["sets_m"] == "yes" and x["share"]), default=None) \
+        if e7.exists() else None
     meta = {"made": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"), "vsearch": vsearch,
-            "silva": silva, "rna_sample": args.rna_sample, "m_step2": float(low2["share"])}
+            "silva": silva, "rna_sample": args.rna_sample, "m_step2": float(low2["share"]), "m_entry7": m7}
     write_outputs(stage_dir, ordered, s, meta)
     print()
-    print(f"m = {s['m']:.4g} (step 2: {meta['m_step2']:.4g})" if s["m"] is not None else
+    print(f"m = {s['m']:.4g} (step 2: {meta['m_step2']:.4g}; entry 7: {fmt(meta['m_entry7'])})"
+          if s["m"] is not None else
           "SSUplex failed its check, so m is not set (section 4.2: phyloFlash replaces SSUplex).")
     print(f"SSUplex finds CaGg and MRE SSU: {'passed' if s['ssuplex_ok'] else 'failed'}; SingleM sees MRE: "
           f"{'yes' if s['singlem_sees_mre'] else 'no (MRE rest on SSU)'}")
-    print(f"-> {stage_dir}/marker_share_entry7.tsv, {stage_dir}/STAGE0A_M_ENTRY7.md")
+    print(f"-> {stage_dir}/{OUT_TSV}, {stage_dir}/{OUT_MD}")
     return 0
 
 
