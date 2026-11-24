@@ -1,0 +1,14 @@
+run	unit	control_id	scored	kind	platform	prep	layout	bioproject	year	lab	isolate	route	reuse	note
+SRR6039993	D. epigaea S1	DEPI_IT104	yes	DNA	short	dna	PAIRED	PRJNA407335	2013	Ithaca	D. epigaea S1	ssu+singlem	stage0a	genome reads, mate-pair, 2-3 kb inserts (MP2_3K)
+SRR6039994	D. epigaea S1	DEPI_IT104	yes	DNA	short	dna	PAIRED	PRJNA407335	2013	Ithaca	D. epigaea S1	ssu+singlem	stage0a	genome reads, mate-pair, 3-5 kb inserts (MP3_5K)
+SRR6039995	D. epigaea S1	DEPI_IT104	yes	DNA	short	dna	PAIRED	PRJNA407335	2013	Ithaca	D. epigaea S1	ssu+singlem	stage0a	genome reads, paired-end, 180 bp inserts (PEBTI)
+SRR6039996	D. epigaea S1	DEPI_IT104	yes	DNA	short	dna	PAIRED	PRJNA407335	2013	Ithaca	D. epigaea S1	ssu+singlem	stage0a	genome reads, paired-end, 400 bp inserts (PENCGR)
+SRR6039997	D. epigaea S1	DEPI_IT104	yes	DNA	short	dna	PAIRED	PRJNA407335	2013	Ithaca	D. epigaea S1	ssu+singlem	stage0a	genome reads, mate-pair, 5-7 kb inserts (MP5-7K)
+SRR6039998	D. epigaea S1	DEPI_IT104	yes	DNA	short	dna	PAIRED	PRJNA407335	2013	Ithaca	D. epigaea S1	ssu+singlem	stage0a	genome reads, mate-pair, 7-12 kb inserts (MP7-12K)
+SRR12881900	R. irregularis A2	RIRR_A2	yes	DNA	short	dna	PAIRED	PRJNA670049	2017	Lausanne	A2	ssu+singlem	stage0a	plate A2_WG, metagenome
+SRR12881901	R. irregularis A2	RIRR_A2	yes	DNA	short	dna	PAIRED	PRJNA670049	2017	Lausanne	A2	ssu+singlem	stage0a	plate A2_6, metagenome
+SRR12881902	R. irregularis A2	RIRR_A2	yes	DNA	short	dna	PAIRED	PRJNA670049	2017	Lausanne	A2	ssu+singlem	stage0a	plate A2_4, metagenome
+SRR12881903	R. irregularis A2	RIRR_A2	yes	DNA	short	dna	PAIRED	PRJNA670049	2017	Lausanne	A2	ssu+singlem	stage0a	plate A2_3, metagenome
+SRR12881899	Rhizophagus sp. LPA8	RSP_LPA8	yes	DNA	short	dna	PAIRED	PRJNA670049	2017	Lausanne	LPA8	ssu+singlem	stage0a	plate LPA8_1, metagenome
+SRR12881898	Rhizophagus sp. LPA8	RSP_LPA8	yes	DNA	short	dna	PAIRED	PRJNA670049	2017	Lausanne	LPA8	ssu+singlem	stage0a	plate LPA8_3, metagenome
+SRR12881897	Rhizophagus sp. LPA8	RSP_LPA8	yes	DNA	short	dna	PAIRED	PRJNA670049	2017	Lausanne	LPA8	ssu+singlem	stage0a	plate LPA8_4, metagenome

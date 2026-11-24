@@ -21,11 +21,14 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `scripts/assign_reads.py` | Counts the reads of one run per lineage (`PROTOCOL.md` 4.1), writes the reads that go on to SingleM and SSUplex, and (from v0.2) how the mapped reads spread over each bacterial genome. |
 | `scripts/call_lineages.py` | The caller: route-read labels and lineages, levels, cross-talk and the spread check, evidence and calls (`PROTOCOL.md` 4.1, entries 7 to 10). |
 | `scripts/run_t1.py` | Test T1: fetches and assigns the runs, runs the route, places the SSU reads, runs sylph, makes the calls and checks K1 (v0.2: again under entry 10). |
+| `scripts/make_t2_silva.py` | Test T2: makes the SILVA removal list and the copy of SILVA without those sequences (entry 11). |
+| `scripts/run_t2.py` | Test T2: calls the MRE positives with the MRE references held out and kept in, and checks K2 (entry 11). |
 | `references/` | The reference lists (with the fungal mitochondria of entry 10 in `fungal_mitochondria.tsv`), `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
 | `env/` | Conda environments for the toolchain. |
 | `stage0a/` | Stage 0a: the positive runs (`runs.tsv`), the fractions and t (step 1), and the marker shares and m (step 2); each measured again under later entries (`_entry7`, `_entry8`, `_entry10`). |
 | `t1/` | Test T1: the runs (`runs.tsv`) and, once T1 has run, the levels, the calls and `T1.md`; under entry 10, `levels_entry10.tsv`, `calls_entry10.tsv` and `T1_ENTRY10.md`. |
-| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH; `check_caller.py` and `check_rescore_entry10.py` need both). |
+| `t2/` | Test T2: the runs (`runs.tsv`), the SILVA removal list (`silva_removed.tsv`, `SILVA_T2.md`) and, once T2 has run, the levels, the calls and `T2.md`. |
+| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH; `check_caller.py`, `check_rescore_entry10.py` and `check_t2.py` need both). |
 
 ## Make the inventory
 
@@ -179,6 +182,26 @@ nohup python scripts/run_t1.py --workdir ~/phase0-data --threads 30 > ~/t1_e10.l
 
 It reuses the reads in `~/phase0-data/t1/reads/` and the outputs of SSUplex and SingleM (linked, not copied). The 18 B+ runs take stage 0a's new counts; the others are assigned again, and sylph runs again on all of them. Expect most of a day. Work files go to `~/phase0-data/t1_entry10/`. It writes `t1/levels_entry10.tsv`, `t1/calls_entry10.tsv` and `t1/T1_ENTRY10.md`; the entry 9 results stay. Commit all three. Each script can be run again if it stops: finished work is kept.
 
+## Test T2 (entry 11)
+
+Entry 11 (`PROTOCOL.md` section 10) sets how T2 runs: two arms, the SILVA removal list as applied, and K2 per isolate. Commit entry 11, `t2/runs.tsv` and the code first. Then, in the `phase0-reads` environment, check the scripts and make the removal list:
+
+```bash
+conda activate phase0-reads
+python tests/check_t2.py
+python scripts/make_t2_silva.py --workdir ~/phase0-data
+```
+
+It reads SILVA in `~/phase0-data/db/silva/`, writes a copy without the removed sequences to `~/phase0-data/db/silva_t2/` (not committed), and writes `t2/silva_removed.tsv` and `t2/SILVA_T2.md`. Read the last part of `SILVA_T2.md` first, the check for Mollicutes genera left in. If it lists any sequence, stop: entry 11 says a new entry decides on them. Otherwise commit both files. T2 must not run before they are committed.
+
+When T1 under entry 10 is done and committed, run T2:
+
+```bash
+nohup python scripts/run_t2.py --workdir ~/phase0-data --threads 30 > ~/t2.log 2>&1 &
+```
+
+It uses stage 0a's reads and SSUplex and SingleM outputs (linked, not copied), the entry 10 counts in `~/phase0-data/stage0a_entry10/assign/`, and t and m from entry 10. It assigns the 13 runs again with the T2 index, aligns the found reads again for each arm, and places only the SSU pieces that were not placed before. Work files go to `~/phase0-data/t2/`. It writes `t2/levels.tsv`, `t2/calls.tsv` and `t2/T2.md`; commit all three. If it stops, run the same command again: finished work is kept.
+
 ## Software environments
 
 Create them on the Linux machine that will run Phase 0, not on a laptop: lock files are specific to one platform, and some of the tools (GTDB-Tk among them) don't install on macOS.
@@ -230,4 +253,5 @@ python tests/check_stage0a_m.py  # needs minimap2 too
 python tests/check_rescore.py   # needs VSEARCH
 python tests/check_caller.py    # needs minimap2 and VSEARCH
 python tests/check_rescore_entry10.py  # needs minimap2 and VSEARCH
+python tests/check_t2.py        # needs minimap2 and VSEARCH
 ```

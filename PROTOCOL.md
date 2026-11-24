@@ -263,6 +263,43 @@ Not a lock item: confirm with JGI or the authors that the BEG34 metatranscriptom
    - *Why this departs from section 5.* This entry comes after T1 ran, and from what T1 showed. K1 had passed, and nothing here is tuned to pass a test. The rules stop organelle DNA and conserved SSU pieces from being taken for bacteria, and the spread check guards against the same error in references nobody has checked yet. T1's entry 9 results stay in the repository (`t1/levels.tsv`, `t1/calls.tsv`, `t1/T1.md`). T1 runs again under this entry, and both are reported. T2 and the later tests run under this entry.
    - *Seen, no change.* novel (SingleM) was unresolved in B+ (present only in the Hi-C run, 78 reads) and low in B− (11 reads). Rules 4 and 5 do not touch SingleM; rule 3 applies to its reads too.
    - All of this is `scripts/clean_references.py` v0.3, `scripts/make_index.py` v0.2, `scripts/assign_reads.py` v0.2, `scripts/call_lineages.py` v0.2, `scripts/run_stage0a.py` v0.2, `scripts/rescore_m_entry10.py` v0.1 and `scripts/run_t1.py` v0.2, checked on synthetic data (`tests/check_clean.py`, `tests/check_assign.py`, `tests/check_stage0a.py`, `tests/check_rescore_entry10.py` and `tests/check_caller.py`, with real minimap2 and VSEARCH). They write the cleaning and index records in `references/`, then `stage0a/fractions_entry10.tsv` and `stage0a/STAGE0A_ENTRY10.md` (t), `stage0a/marker_share_entry10.tsv` and `stage0a/STAGE0A_M_ENTRY10.md` (m), and `t1/levels_entry10.tsv`, `t1/calls_entry10.tsv` and `t1/T1_ENTRY10.md`. Each is committed before the next step runs.
+11. **2026-11-24, before T2 runs: settings for T2 (sections 5 and 6) that the protocol leaves open.**
+   - *Runs and units.* The 13 T2 runs of stage 0a (entry 5), listed in `t2/runs.tsv`, which is committed with this entry. Each isolate is one unit and is called on its own:
+     - *D. epigaea* S1: SRR6039993–SRR6039998, in PRJNA407335 (BioSample SAMN07646446, collected 2013; Boyce Thompson Institute and Cornell, Ithaca).
+     - *R. irregularis* A2: SRR12881900–SRR12881903.
+     - *Rhizophagus* sp. LPA8: SRR12881897–SRR12881899.
+     - A2 and LPA8 are both in PRJNA670049, collected in 2017, in Lausanne.
+   - *What this allows.*
+     - Each isolate's runs share one BioProject and one collection year, so E1 cannot hold within an isolate, and the best call T2 can give is "unresolved" (4.1).
+     - A2 and LPA8 share a lab, but E5 needs 2 or more unrelated isolates from the lab, so E5 cannot fail in T2.
+     - They also share a BioProject, so cross-talk is judged across all 7 plates. It can only lower "present" to "low".
+   - *Reads.* The same reads as stage 0a: the first 20,000,000 spots. T2 also uses stage 0a's SSUplex and SingleM outputs, as T1 does, because each read is judged on its own (entry 9).
+   - *Two arms.*
+     - *Held out (scored).* Uses the T2 index and the T2 sylph database, which leave out the 9 genomes marked `held_out_in_T2` (entry 4; rebuilt under entry 10), and SILVA without the removal list. Every run is assigned again with the T2 index. With the MRE genomes out, there is no CaMg/MRE lineage, so MRE reads can reach a call only through the route.
+     - *Kept in (reported, not counted).* Uses the full index, with stage 0a's counts under entry 10, and all of SILVA.
+     - In both arms, the found reads are aligned again with that arm's index. The route rules (entries 7–10), the organelle check, the split check and the spread check then apply as in T1.
+   - *The SILVA removal list, as applied.* A sequence is removed if its header (the seven ranks and the organism name, after the sequence id) holds any of these:
+     - one of the eight taxon names in section 5, ignoring case;
+     - *Moeniiplasma*, or "Mycoplasma-related" (with a hyphen or a space) followed by any word, ignoring case;
+     - "MRE" in capitals, not inside a longer word in capitals ("GvMRE" counts, "AMRE1" and "MREB1" do not).
+   - *Why the list is wider than section 5's words.* Section 5 names "Mycoplasma-related endobacteria". Taking any word after "Mycoplasma-related", and searching the ranks for the names as well, only removes more, so T2 gets harder, never easier.
+   - *Where the list goes.* `scripts/make_t2_silva.py` writes the list (`t2/silva_removed.tsv`) and a report (`t2/SILVA_T2.md`). Both are committed before T2 runs. It also writes the T2 database to the work folder (not committed). That database records the md5 of the list, and `run_t2.py` refuses a database made from another list.
+   - *A check of the rule's reach.* The report also lists the kept sequences whose genus or organism name is one of 16 Mollicutes genera. This check removes nothing. If it lists any sequence, a new entry decides on them before T2 runs.
+   - *SSU placement.*
+     - Every routed SSU piece of either arm is placed against all of SILVA with entry 8's command. Placements already made with that command are used again (stage 0a under entries 8 and 10, and T1).
+     - Entry 8's search is exhaustive (section 11): each SILVA sequence is scored on its own, so removing some sequences cannot change how another one scores. So a held-out piece's top hits are its full-SILVA top hits that were not removed, or none if it had none.
+     - Only pieces whose top hits were all removed are searched again, against the T2 database.
+     - As a check, 300 of the derived placements (all of them if there are fewer; seed 1) are also searched directly against the T2 database. Any difference stops the run, and nothing is written.
+   - *K2, as applied.* For each isolate:
+     - The held-out MRE's reads are the reads SSUplex or SingleM found that the full index counts for CaMg/MRE (stage 0a under entry 10).
+     - "The lineage where the MRE should be" is the held-out route lineage that holds the most of these reads over the isolate's runs.
+     - K2 fails for the isolate if no route lineage holds any of these reads (a miss), or if that lineage is called "absent". "No call" also fails, which is stricter than section 6.
+     - Other lineages that hold MRE reads are reported. Reads that the T2 index assigns to another lineage, or that the organelle or split checks remove, are counted in the report but are not "where the MRE is".
+   - *Expected.* "Unresolved" for all three isolates (4.1), never "absent". The kept-in arm should call CaMg/MRE "resident" in all three (`controls.tsv`), but it does not count.
+   - *t and m.* Entry 10's values (`stage0a/fractions_entry10.tsv`, `stage0a/marker_share_entry10.tsv`).
+   - *Reported.* K2 per isolate, as above. For both arms: the calls with their evidence, the levels per run, the route per run, and the runs the spread check lowered. Also the SSU placement counts: pieces placed, derived, searched again and checked.
+   - *Why this is not a departure.* These settings fill in what sections 5 and 6 leave open. Each one either follows them or makes T2 stricter: the removal list removes more than the rule's minimum, "no call" fails K2, and the derived placements are checked. T2 has not run.
+   - All of this is `scripts/make_t2_silva.py` v0.1 and `scripts/run_t2.py` v0.1, checked on synthetic data (`tests/check_t2.py`, with real minimap2 and VSEARCH). They write `t2/silva_removed.tsv` and `t2/SILVA_T2.md`, then `t2/levels.tsv`, `t2/calls.tsv` and `t2/T2.md`. Each is committed before the next step runs.
 
 ## 11. Fixed numbers (agreed 2026-11-20)
 
