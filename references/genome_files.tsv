@@ -12,9 +12,9 @@ GCA_021409605.1	endosymbiont	Candidatus Moeniiplasma glomeromycotorum	53	1506637
 GCA_021409665.1	endosymbiont	Candidatus Moeniiplasma glomeromycotorum	50	1544581	0cb0327f127f885789092956ab0ef37c	yes	0	0	50	1544581	0cb0327f127f885789092956ab0ef37c
 GCA_021409645.1	endosymbiont	Candidatus Moeniiplasma glomeromycotorum	54	1512906	bbaf94d35d283357d00a6a46792516de	yes	1	4581	53	1508325	5e9606da9f13b25b7e4334cd29a7c7c9
 GCA_000227585.1	endosymbiont	Candidatus Glomeribacter gigasporarum BEG34	124	1726950	1ec6db807a4dbacdf1ad4b5372ead761	yes	0	0	124	1726950	1ec6db807a4dbacdf1ad4b5372ead761
-GCA_001684025.1	endosymbiont	Candidatus Glomeribacter gigasporarum	851	2355846	5a89d2786aae0284673a1856ee407a45	yes	0	0	851	2355846	5a89d2786aae0284673a1856ee407a45
+GCA_001684025.1	endosymbiont	Candidatus Glomeribacter gigasporarum	851	2355846	5a89d2786aae0284673a1856ee407a45	yes	29	50946	822	2304900	ed3c9f30cd45d223c0b57e5e077567d6
 GCA_001684175.1	endosymbiont	Candidatus Glomeribacter gigasporarum	607	1339701	4f5135593c98bbda7439c2157af9b488	yes	0	0	607	1339701	4f5135593c98bbda7439c2157af9b488
-GCA_001684155.1	endosymbiont	Candidatus Glomeribacter gigasporarum	1172	1621371	806561114c62761d4630abe4ff6655a9	yes	0	0	1172	1621371	806561114c62761d4630abe4ff6655a9
+GCA_001684155.1	endosymbiont	Candidatus Glomeribacter gigasporarum	1172	1621371	806561114c62761d4630abe4ff6655a9	yes	1	968	1171	1620403	588aa8954739e1e4427d5dbdd75e272f
 GCA_026501145.1	endosymbiont	Candidatus Glomeribacter sp. 1016415	1	2638116	5c0416da3dd27ad2d621fc64e1deb4d4	yes	0	0	1	2638116	5c0416da3dd27ad2d621fc64e1deb4d4
 GCA_003966915.1	endosymbiont	Mycoavidus cysteinexigens	1	2795004	8a430be9bcdee3d17d2d8b6331a69ac2	yes	0	0	1	2795004	8a430be9bcdee3d17d2d8b6331a69ac2
 GCA_020023735.2	endosymbiont	Mycoavidus sp. HKI	1	2254889	78d597e31189bc1114e6d717e1016d3b	yes	0	0	1	2254889	78d597e31189bc1114e6d717e1016d3b
@@ -54,3 +54,28 @@ CP125853.1	organelle	Trifolium repens chloroplast	1	126579	f17c407ec9b90e4991c81
 MT120812.1	organelle	Trifolium repens chloroplast	1	132328	5c7a463a653e6a0bd4d0d52038eae934	length checked	0	0	1	132328	5c7a463a653e6a0bd4d0d52038eae934
 MT506238.1	organelle	Trifolium repens chloroplast	1	132429	57916e0567f614ebe2119ef2299efac6	length checked	0	0	1	132429	57916e0567f614ebe2119ef2299efac6
 OQ694001.1	organelle	Trifolium repens chloroplast	1	132344	906d4ffe5f51ffc6e1d84cc30e0d85ad	length checked	0	0	1	132344	906d4ffe5f51ffc6e1d84cc30e0d85ad
+MN857242.1	organelle	Gigaspora margarita mitochondrion	1	97138	11ec8cc89cc1899013fc97654db19bf7	length checked	0	0	1	97138	11ec8cc89cc1899013fc97654db19bf7
+JQ041882.1	organelle	Gigaspora margarita mitochondrion	1	96998	6d4966a35b38e0cdf4c17be3eba18738	length checked	0	0	1	96998	6d4966a35b38e0cdf4c17be3eba18738
+JQ693395.1	organelle	Gigaspora rosea mitochondrion	1	97350	3da90f43d258626ab3e3dabc7b407a30	length checked	0	0	1	97350	3da90f43d258626ab3e3dabc7b407a30
+HQ189519.1	organelle	Rhizophagus irregularis mitochondrion	1	70800	35cd2dac484acefc4d6739f7bddf7939	length checked	0	0	1	70800	35cd2dac484acefc4d6739f7bddf7939
+JQ514223.2	organelle	Rhizophagus irregularis mitochondrion	1	70820	0f93e32ed7e9b5d43f5b9e4a3cc1cace	length checked	0	0	1	70820	0f93e32ed7e9b5d43f5b9e4a3cc1cace
+JQ514224.2	organelle	Rhizophagus irregularis mitochondrion	1	87755	7e8b4c7d769bacd169e8a7cfdccbf9b6	length checked	0	0	1	87755	7e8b4c7d769bacd169e8a7cfdccbf9b6
+JQ514225.2	organelle	Rhizophagus irregularis mitochondrion	1	74798	79c97a11004172e75ee120e8ef22a862	length checked	0	0	1	74798	79c97a11004172e75ee120e8ef22a862
+KU162859.1	organelle	Rhizophagus irregularis mitochondrion	1	77539	c5e311651180b7852477ae8e7385a3a9	length checked	0	0	1	77539	c5e311651180b7852477ae8e7385a3a9
+KU127234.1	organelle	Rhizophagus irregularis mitochondrion	1	73979	aed260b90987bf831c5f55406ce01451	length checked	0	0	1	73979	aed260b90987bf831c5f55406ce01451
+KU127233.1	organelle	Rhizophagus irregularis mitochondrion	1	70604	d9912312763718da86c31e52762aff7d	length checked	0	0	1	70604	d9912312763718da86c31e52762aff7d
+KU127232.1	organelle	Rhizophagus irregularis mitochondrion	1	70646	9609d87e0b6842af3392ba385c60b9f2	length checked	0	0	1	70646	9609d87e0b6842af3392ba385c60b9f2
+KU127231.1	organelle	Rhizophagus irregularis mitochondrion	1	70604	d5ca4ec33b52e13aa4b95585778f75de	length checked	0	0	1	70604	d5ca4ec33b52e13aa4b95585778f75de
+JX993114.1	organelle	Rhizophagus irregularis mitochondrion	1	68994	723bb4578186e0793b227395c5e13a2e	length checked	0	0	1	68994	723bb4578186e0793b227395c5e13a2e
+JX993113.1	organelle	Rhizophagus irregularis mitochondrion	1	70781	08032128f0c06c9605f2315a57ab792d	length checked	0	0	1	70781	08032128f0c06c9605f2315a57ab792d
+KC164354.1	organelle	Rhizophagus irregularis mitochondrion	1	75075	60fc3c0358f0140372f8d339e25c69a6	length checked	0	0	1	75075	60fc3c0358f0140372f8d339e25c69a6
+FJ648425.1	organelle	Rhizophagus intraradices mitochondrion	1	70606	5b063190defb199357050b7092d675f1	length checked	0	0	1	70606	5b063190defb199357050b7092d675f1
+KM586389.1	organelle	Rhizophagus fasciculatus mitochondrion	1	72251	40f146d5bbade58b5a953d5e97f7b601	length checked	0	0	1	72251	40f146d5bbade58b5a953d5e97f7b601
+LC506577.1	organelle	Rhizophagus clarus mitochondrion	1	50449	a871bf52bae0e21aa3cb01a5519b1328	length checked	0	0	1	50449	a871bf52bae0e21aa3cb01a5519b1328
+MN878008.1	organelle	Rhizophagus sp. (in: glomeromycetes) mitochondrion	1	50449	33b7ba5782a155312ed044a0885718bb	length checked	0	0	1	50449	33b7ba5782a155312ed044a0885718bb
+KC164356.1	organelle	Glomus cerebriforme mitochondrion	1	59633	bb8a588be101fe49d8277e935ee89ccb	length checked	0	0	1	59633	bb8a588be101fe49d8277e935ee89ccb
+KC164355.1	organelle	Glomus sp. DAOM 240422 mitochondrion	1	86170	8ed1107c74fe5f8bb10b94f47d14d87c	length checked	0	0	1	86170	8ed1107c74fe5f8bb10b94f47d14d87c
+JX065416.1	organelle	Glomus sp. DAOM 229456 mitochondrion	1	87763	c624809c106ad23a6c228c3e69063986	length checked	0	0	1	87763	c624809c106ad23a6c228c3e69063986
+AY863211.1	organelle	Podila verticillata mitochondrion	1	58745	8af4cbd3675f619ff69320ec72fdda0d	length checked	0	0	1	58745	8af4cbd3675f619ff69320ec72fdda0d
+MZ411570.1	organelle	Linnemannia amoeboidea mitochondrion	1	49702	57d81c6a756a52862ebca780855ee2ce	length checked	0	0	1	49702	57d81c6a756a52862ebca780855ee2ce
+LC659289.1	organelle	Entomortierella parvispora mitochondrion	1	66033	7141138d634bfa02cba9dec1768ac9dc	length checked	0	0	1	66033	7141138d634bfa02cba9dec1768ac9dc

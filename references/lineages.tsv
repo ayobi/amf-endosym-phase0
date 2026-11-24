@@ -12,9 +12,9 @@ GCA_021409605.1	Candidatus Moeniiplasma glomeromycotorum	endosymbiont	CaMg/MRE	y
 GCA_021409665.1	Candidatus Moeniiplasma glomeromycotorum	endosymbiont	CaMg/MRE	yes	yes	no	50	1544581
 GCA_021409645.1	Candidatus Moeniiplasma glomeromycotorum	endosymbiont	CaMg/MRE	yes	yes	no	53	1508325
 GCA_000227585.1	Candidatus Glomeribacter gigasporarum BEG34	endosymbiont	CaGg	no	yes	yes	124	1726950
-GCA_001684025.1	Candidatus Glomeribacter gigasporarum	endosymbiont	CaGg	no	yes	yes	851	2355846
+GCA_001684025.1	Candidatus Glomeribacter gigasporarum	endosymbiont	CaGg	no	yes	yes	822	2304900
 GCA_001684175.1	Candidatus Glomeribacter gigasporarum	endosymbiont	CaGg	no	yes	yes	607	1339701
-GCA_001684155.1	Candidatus Glomeribacter gigasporarum	endosymbiont	CaGg	no	yes	yes	1172	1621371
+GCA_001684155.1	Candidatus Glomeribacter gigasporarum	endosymbiont	CaGg	no	yes	yes	1171	1620403
 GCA_026501145.1	Candidatus Glomeribacter sp. 1016415	endosymbiont	CaGg	no	yes	yes	1	2638116
 GCA_003966915.1	Mycoavidus cysteinexigens	endosymbiont	Mycoavidus	no	yes	yes	1	2795004
 GCA_020023735.2	Mycoavidus sp. HKI	endosymbiont	Mycoavidus	no	yes	yes	1	2254889
@@ -44,13 +44,38 @@ GCF_001040945.1	Herbaspirillum seropedicae	contaminant	Herbaspirillum	no	yes	yes
 GCF_000006765.1	Pseudomonas aeruginosa PAO1	contaminant	Pseudomonas	no	yes	yes	1	6264404
 GCF_016027095.1	Sphingomonas paucimobilis	contaminant	Sphingomonas	no	yes	yes	4	4367078
 GCF_020641395.2	Stenotrophomonas maltophilia	contaminant	Stenotrophomonas	no	yes	yes	2	4646175
-NC_008325.1	Daucus carota chloroplast	organelle	plant organelles	no	yes	yes	1	155911
-NC_087060.1	Daucus carota mitochondrion	organelle	plant organelles	no	yes	yes	1	250368
-NC_002694.1	Lotus japonicus chloroplast	organelle	plant organelles	no	yes	yes	1	150519
-NC_016743.2	Lotus japonicus mitochondrion	organelle	plant organelles	no	yes	yes	1	380861
-NC_003119.8	Medicago truncatula chloroplast	organelle	plant organelles	no	yes	yes	1	124033
-NC_029641.1	Medicago truncatula mitochondrion	organelle	plant organelles	no	yes	yes	1	271618
-CP125853.1	Trifolium repens chloroplast	organelle	plant organelles	no	yes	yes	1	126579
-MT120812.1	Trifolium repens chloroplast	organelle	plant organelles	no	yes	yes	1	132328
-MT506238.1	Trifolium repens chloroplast	organelle	plant organelles	no	yes	yes	1	132429
-OQ694001.1	Trifolium repens chloroplast	organelle	plant organelles	no	yes	yes	1	132344
+NC_008325.1	Daucus carota chloroplast	organelle	organelles	no	yes	yes	1	155911
+NC_087060.1	Daucus carota mitochondrion	organelle	organelles	no	yes	yes	1	250368
+NC_002694.1	Lotus japonicus chloroplast	organelle	organelles	no	yes	yes	1	150519
+NC_016743.2	Lotus japonicus mitochondrion	organelle	organelles	no	yes	yes	1	380861
+NC_003119.8	Medicago truncatula chloroplast	organelle	organelles	no	yes	yes	1	124033
+NC_029641.1	Medicago truncatula mitochondrion	organelle	organelles	no	yes	yes	1	271618
+CP125853.1	Trifolium repens chloroplast	organelle	organelles	no	yes	yes	1	126579
+MT120812.1	Trifolium repens chloroplast	organelle	organelles	no	yes	yes	1	132328
+MT506238.1	Trifolium repens chloroplast	organelle	organelles	no	yes	yes	1	132429
+OQ694001.1	Trifolium repens chloroplast	organelle	organelles	no	yes	yes	1	132344
+MN857242.1	Gigaspora margarita mitochondrion	organelle	organelles	no	yes	yes	1	97138
+JQ041882.1	Gigaspora margarita mitochondrion	organelle	organelles	no	yes	yes	1	96998
+JQ693395.1	Gigaspora rosea mitochondrion	organelle	organelles	no	yes	yes	1	97350
+HQ189519.1	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	70800
+JQ514223.2	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	70820
+JQ514224.2	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	87755
+JQ514225.2	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	74798
+KU162859.1	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	77539
+KU127234.1	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	73979
+KU127233.1	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	70604
+KU127232.1	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	70646
+KU127231.1	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	70604
+JX993114.1	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	68994
+JX993113.1	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	70781
+KC164354.1	Rhizophagus irregularis mitochondrion	organelle	organelles	no	yes	yes	1	75075
+FJ648425.1	Rhizophagus intraradices mitochondrion	organelle	organelles	no	yes	yes	1	70606
+KM586389.1	Rhizophagus fasciculatus mitochondrion	organelle	organelles	no	yes	yes	1	72251
+LC506577.1	Rhizophagus clarus mitochondrion	organelle	organelles	no	yes	yes	1	50449
+MN878008.1	Rhizophagus sp. (in: glomeromycetes) mitochondrion	organelle	organelles	no	yes	yes	1	50449
+KC164356.1	Glomus cerebriforme mitochondrion	organelle	organelles	no	yes	yes	1	59633
+KC164355.1	Glomus sp. DAOM 240422 mitochondrion	organelle	organelles	no	yes	yes	1	86170
+JX065416.1	Glomus sp. DAOM 229456 mitochondrion	organelle	organelles	no	yes	yes	1	87763
+AY863211.1	Podila verticillata mitochondrion	organelle	organelles	no	yes	yes	1	58745
+MZ411570.1	Linnemannia amoeboidea mitochondrion	organelle	organelles	no	yes	yes	1	49702
+LC659289.1	Entomortierella parvispora mitochondrion	organelle	organelles	no	yes	yes	1	66033

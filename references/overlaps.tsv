@@ -63,3 +63,36 @@ shared_stretch	GCA_021464375.1	Rhizophagus sp. LPA8_1_AMF	GCA_021464375.1|JADRCM
 shared_stretch	GCA_021464375.1	Rhizophagus sp. LPA8_1_AMF	GCA_021464375.1|JADRCM010006807.1	4509	2559	4509	0.486	GCA_021409605.1	Candidatus Moeniiplasma glomeromycotorum	GCA_021409605.1|JADQCO010000023.1	16444	0	1950	0.119	0.9610	1951	
 shared_stretch	GCA_021464375.1	Rhizophagus sp. LPA8_1_AMF	GCA_021464375.1|JADRCM010007376.1	4063	0	1148	0.283	GCA_021409645.1	Candidatus Moeniiplasma glomeromycotorum	GCA_021409645.1|JADQCN010000020.1	19984	0	1148	0.057	1.0000	1148	
 shared_stretch	GCA_026210795.1	Rhizophagus irregularis	GCA_026210795.1|CP110698.1	5258217	1346213	1355877	0.002	GCA_021409725.1	Candidatus Moeniiplasma glomeromycotorum	GCA_021409725.1|JADQCI010000005.1	44308	145	9921	0.221	0.9669	9828	
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000107.1	5097			0.990			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000112.1	4737			0.975			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000132.1	3692			0.766			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000161.1	2930			0.972			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000165.1	2871			0.961			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000171.1	2820			0.911			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000186.1	2512			0.875			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000192.1	2436			0.994			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000202.1	962			0.582			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000205.1	2178			0.982			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000215.1	2049			0.958			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000229.1	1870			0.958			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000252.1	1608			0.996			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000263.1	1452			1.000			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000264.1	1425			1.000			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000285.1	1254			0.636			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000305.1	1131			0.996			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000318.1	1051			0.987			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000321.1	1039			0.872			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000333.1	976			1.000			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000346.1	918			0.980			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000353.1	868			0.571			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000354.1	857			1.000			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000381.1	766			1.000			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000384.1	762			0.963			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000394.1	633			0.856			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000411.1	693			1.000			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000416.1	684			0.728			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000419.1	675			0.938			JQ041882.1,JQ693395.1,MN857242.1
+removed_as_organelle								GCA_001684155.1	Candidatus Glomeribacter gigasporarum	GCA_001684155.1|LXRH01000378.1	968			0.821			JQ041882.1,JQ693395.1,MN857242.1
+organelle_stretch	JQ041882.1	Gigaspora margarita mitochondrion	JQ041882.1|JQ041882.1	96998	19214	19780		GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000109.1	4406	2468	3040	0.130	0.9581	573	
+organelle_stretch	JQ693395.1	Gigaspora rosea mitochondrion	JQ693395.1|JQ693395.1	97350	26043	26610		GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000109.1	4406	2468	3040	0.130	0.9564	574	
+organelle_stretch	MN857242.1	Gigaspora margarita mitochondrion	MN857242.1|MN857242.1	97138	19214	19780		GCA_001684025.1	Candidatus Glomeribacter gigasporarum	GCA_001684025.1|LXRJ01000109.1	4406	2468	3040	0.130	0.9581	573	
