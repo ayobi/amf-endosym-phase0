@@ -28,6 +28,9 @@ Writes in --out:
                       windows G, the windows S starts would hit if spread evenly, E = G(1 - e^(-S/G)),
                       and the ratio of windows hit to E. A read whose best alignments fall on several
                       genomes of its lineage counts for each.
+  spread_bits.json.gz the start positions and windows behind spread.tsv, as bit sets (v0.3; section 10,
+                      entry 13), so that the spread of two read sets taken together can be worked out
+                      exactly (combined_spread), as T3 does for its spikes
   assign.json         versions, command, index, input files and counts
 
 Usage (paired runs: give both files; each mate is counted on its own):
@@ -37,6 +40,7 @@ Usage (paired runs: give both files; each mate is counted on its own):
 """
 
 import argparse
+import base64
 import csv
 import datetime as dt
 import gzip
@@ -50,7 +54,7 @@ import threading
 from collections import Counter
 from pathlib import Path
 
-__version__ = "0.2"
+__version__ = "0.3"
 
 MINIMAP2_ARGS = {   # PROTOCOL.md 4.1; -c, --frag=no and --paf-no-hit: section 10, entry 4
     "short": ["-x", "sr", "--secondary=yes", "-N", "50", "-c", "--frag=no", "--paf-no-hit"],
@@ -274,6 +278,14 @@ class Spread:
         for acc in seen:
             self.reads[acc] += 1
 
+    def bits(self):
+        """The bit sets behind rows(), per genome, for spread_bits.json.gz (entry 13)."""
+        return [{"genome": acc, "lineage": self.lineage[acc], "reads": self.reads[acc],
+                 "genome_windows": self.windows[acc],
+                 "starts": base64.b64encode(bytes(self.starts[acc].b).rstrip(b"\0")).decode("ascii"),
+                 "windows": base64.b64encode(bytes(self.hit[acc].b).rstrip(b"\0")).decode("ascii")}
+                for acc in sorted(self.reads, key=lambda x: (self.lineage[x], x))]
+
     def rows(self):
         out = []
         for acc in sorted(self.reads, key=lambda x: (self.lineage[x], x)):
@@ -289,6 +301,37 @@ def expected_windows(starts, genome_windows):
     """Windows that this many distinct start positions would hit if spread evenly: G(1 - e^(-S/G))."""
     g = genome_windows
     return g * (1 - math.exp(-starts / g)) if g else 0.0
+
+
+def read_bits(path):
+    """(index refs_md5, rows) from a spread_bits.json.gz, with the bit sets as integers."""
+    with gzip.open(path, "rt", encoding="utf-8") as fh:
+        doc = json.load(fh)
+    for r in doc["genomes"]:
+        r["starts"] = int.from_bytes(base64.b64decode(r["starts"]), "little")
+        r["windows"] = int.from_bytes(base64.b64decode(r["windows"]), "little")
+    return doc["refs_md5"], doc["genomes"]
+
+
+def combined_spread(parts):
+    """The spread check (entry 10) for read sets taken together (entry 13): {lineage: highest ratio among its
+    genomes}, as read_spread gives for one set. parts: read_bits() results, all from the same index."""
+    if len({md5 for md5, _ in parts}) > 1:
+        raise ValueError("the spread bit sets come from different indexes")
+    merged = {}
+    for _, rows in parts:
+        for r in rows:
+            m = merged.setdefault(r["genome"], {"lineage": r["lineage"], "g": r["genome_windows"], "s": 0, "w": 0})
+            if (m["lineage"], m["g"]) != (r["lineage"], r["genome_windows"]):
+                raise ValueError(f"{r['genome']} differs between the spread bit sets")
+            m["s"] |= r["starts"]
+            m["w"] |= r["windows"]
+    best = {}
+    for m in merged.values():
+        e = expected_windows(m["s"].bit_count(), m["g"])
+        ratio = float(f"{m['w'].bit_count() / e:.4f}") if e else 0.0
+        best[m["lineage"]] = max(ratio, best.get(m["lineage"], 0.0))
+    return best
 
 
 def read_spread(path):
@@ -494,9 +537,14 @@ def main(argv=None):
         w = csv.DictWriter(fh, fieldnames=SPREAD_COLS, delimiter="\t", lineterminator="\n")
         w.writeheader()
         w.writerows(spread.rows())
+    tmp_bits = out / "spread_bits.json.gz.part"
+    with gzip.open(tmp_bits, "wt", encoding="utf-8") as fh:
+        json.dump({"made_by": meta["made_by"], "refs_md5": info["refs_md5"], "window": WINDOW,
+                   "genomes": spread.bits()}, fh)
     tmp_json = out / "assign.json.part"
     tmp_json.write_text(json.dumps(meta, indent=1) + "\n")
     os.replace(tmp_spread, out / "spread.tsv")
+    os.replace(tmp_bits, out / "spread_bits.json.gz")
     os.replace(tmp, out / "counts.tsv")
     os.replace(routed_tmp, out / routed_name)
     os.replace(tmp_json, out / "assign.json")
@@ -506,7 +554,7 @@ def main(argv=None):
     for lin in order:
         if tally["lineage"][lin]:
             print(f"  {lin}: {tally['lineage'][lin]}")
-    print(f"-> {out}/counts.tsv, {routed_name}, spread.tsv, assign.json")
+    print(f"-> {out}/counts.tsv, {routed_name}, spread.tsv, spread_bits.json.gz, assign.json")
     return 0
 
 

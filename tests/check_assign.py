@@ -401,6 +401,29 @@ with tempfile.TemporaryDirectory() as tmp:
                   f"full: spread.tsv {sp_rows}")
             check(A.read_spread(out / "spread.tsv")["CaGg"] == float(sp_rows[B1]["ratio"]),
                   "full: read_spread gives the lineage's highest ratio")
+            # spread_bits.json.gz (v0.3, entry 13): one part gives spread.tsv's ratios; two halves assigned
+            # apart and combined give the ratios of the whole; bit sets of another index are refused.
+            bits_full = A.read_bits(out / "spread_bits.json.gz")
+            check(A.combined_spread([bits_full]) == A.read_spread(out / "spread.tsv"),
+                  f"spread bits, one part: {A.combined_spread([bits_full])} vs {A.read_spread(out / 'spread.tsv')}")
+            ra, rb = tmp / "half_a.fq.gz", tmp / "half_b.fq.gz"
+            write_fastq(ra, reads[0::2])
+            write_fastq(rb, reads[1::2])
+            parts = []
+            for nm, f in (("a", ra), ("b", rb)):
+                c2, e2 = assign("full", "short", [f], tmp / f"out_half_{nm}")
+                check(c2 == 0, f"assign (half {nm}) failed: {e2}")
+                if c2 == 0:
+                    parts.append(A.read_bits(tmp / f"out_half_{nm}" / "spread_bits.json.gz"))
+            if len(parts) == 2:
+                half = A.read_spread(tmp / "out_half_a" / "spread.tsv")
+                check(A.combined_spread(parts) == A.read_spread(out / "spread.tsv") and half != A.read_spread(
+                      out / "spread.tsv"), f"spread bits, two halves: {A.combined_spread(parts)}, one half {half}")
+                try:
+                    A.combined_spread([parts[0], ("other", parts[1][1])])
+                    check(False, "spread bits from another index should be refused")
+                except ValueError:
+                    pass
 
             # The organelle check, end to end: mitochondrial reads and the MIs reads (98% to it) are organelle
             # DNA; CaGg, random and host reads are not.
@@ -507,6 +530,7 @@ if fails:
     sys.exit(1)
 print(f"PASS: {len(unit)} rule checks, PAF parsing, the spread check and organelle check on their own, cleaning -> "
       "index (lineages, full and T2, organelles.fna, sylph stand-in), short reads (every planted case, entry 10's "
-      "included), spread.tsv (mate 1 only), organelle check end to end, T2 index, paired and interleaved mates, "
+      "included), spread.tsv (mate 1 only), spread bit sets combined across read sets, organelle check end to "
+      "end, T2 index, paired and interleaved mates, "
       "HiFi, routed reads, missing output lines, version check, cut-short FASTQ, unknown endosymbiont stops the "
       "index build")
