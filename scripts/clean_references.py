@@ -12,6 +12,14 @@ host assembly with minimap2, and applies the protocol's rule:
      contigs that remain is fungal: it is removed from its genome;
   4. anything else that is shared stays in both, and is listed.
 
+Then, from v0.3 (PROTOCOL.md section 10, entry 10), organelle DNA: all bacterial
+genomes are aligned to the organelle genomes (the plant ones in organelles.tsv
+and the fungal mitochondria in fungal_mitochondria.tsv) with minimap2 -x asm20,
+and alignments of at least 500 bp at 80% identity or more are kept. A bacterial
+contig at least half covered by them is organelle DNA: it is removed from its
+genome. Shorter organelle stretches in other bacterial contigs are listed, and
+reads from them count for no lineage, as for shared stretches.
+
 The settings the protocol leaves open are fixed in PROTOCOL.md section 10,
 entry 3: minimap2 runs with -x asm5 -c -p 0 (-c for exact identity, -p 0 so
 that no secondary alignment is hidden); identity is matching bases divided by
@@ -28,9 +36,11 @@ Writes under --workdir (large files, not committed):
   paf/<host accession>.paf         minimap2 output, one file per host assembly
   clean/hosts/<accession>.fna      cleaned host assemblies
   clean/bacteria/<accession>.fna   cleaned bacterial genomes
-  clean/organelles.fna             organelle genomes (not part of the cleaning; copied as they are)
+  paf/organelles.paf               the bacterial genomes against the organelle genomes (entry 10)
+  clean/organelles.fna             organelle genomes, plant and fungal (copied as they are)
 and in --refdir (default references/; small files, committed before stage 0a):
-  overlaps.tsv       every removed contig and every remaining shared stretch
+  overlaps.tsv       every removed contig, every remaining shared stretch and organelle stretch (in the
+                     organelle rows, the host columns hold the organelle genome)
   genome_files.tsv   sequences, length and md5 of every downloaded and cleaned file
   CLEANING.md        date, versions, commands and counts
 
@@ -63,7 +73,7 @@ import zipfile
 from collections import defaultdict
 from pathlib import Path
 
-__version__ = "0.2"
+__version__ = "0.3"
 
 DATASETS = "https://api.ncbi.nlm.nih.gov/datasets/v2"
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
@@ -73,6 +83,8 @@ MINIMAP2_ARGS = ["-x", "asm5", "-c", "-p", "0"]   # PROTOCOL.md 3.4 step 1; -c a
 MIN_BLOCK = 500                         # bp, PAF column 11
 MIN_IDENTITY_PCT = 95                   # PAF column 10 / column 11
 MIN_COVERED = 0.5                       # half of the contig
+ORGANELLE_ARGS = ["-x", "asm20", "-c", "-p", "0"]   # section 10, entry 10: contigs from related species
+ORGANELLE_MIN_ID_PCT = 80               # entry 10
 
 OVERLAP_COLS = ["kind", "host_assembly", "host_organism", "host_contig", "host_length", "host_start", "host_end",
                 "host_covered", "bacterial_genome", "bacterial_organism", "bacterial_contig", "bacterial_length",
@@ -179,8 +191,8 @@ def parse_fasta_text(text):
     return seqs
 
 
-def download_organelles(rows, outdir):
-    """Fetch the organelle genomes with E-utilities efetch; check each length against organelles.tsv."""
+def download_organelles(rows, outdir, listed_in="organelles.tsv"):
+    """Fetch organelle genomes with E-utilities efetch; check each length against its list."""
     outdir.mkdir(parents=True, exist_ok=True)
     todo = [r for r in rows if not (outdir / f"{r['accession']}.fna").exists()]
     if not todo:
@@ -194,7 +206,7 @@ def download_organelles(rows, outdir):
         if seq is None:
             raise RuntimeError(f"{acc}: efetch did not return this organelle genome")
         if r.get("length_bp") and len(seq) != int(r["length_bp"]):
-            raise RuntimeError(f"{acc}: efetch returned {len(seq)} bp, organelles.tsv says {r['length_bp']}")
+            raise RuntimeError(f"{acc}: efetch returned {len(seq)} bp, {listed_in} says {r['length_bp']}")
         tmp = outdir / f"{acc}.fna.part"
         with open(tmp, "w", encoding="ascii", newline="\n") as out:
             out.write(f">{acc}|{acc}\n")
@@ -286,6 +298,26 @@ def union_length(intervals):
     return total
 
 
+def passes_organelle(hit):
+    """Entry 10: at least 500 bp (alignment block) at 80% identity or more."""
+    return hit["block"] >= MIN_BLOCK and hit["match"] * 100 >= ORGANELLE_MIN_ID_PCT * hit["block"]
+
+
+def organelle_rule(hits, skip):
+    """Entry 10. hits: bacterial contigs (query) against organelle genomes (target); skip: contigs already
+    removed. Returns kept hits, coverage per bacterial contig, the contigs removed as organelle DNA and the
+    organelle stretches that stay listed."""
+    kept = [h for h in hits if passes_organelle(h) and h["q"] not in skip]
+    iv, length = defaultdict(list), {}
+    for h in kept:
+        iv[h["q"]].append((h["qs"], h["qe"]))
+        length[h["q"]] = h["qlen"]
+    cov = {q: union_length(v) / length[q] for q, v in iv.items()}
+    removed = {q for q, c in cov.items() if c >= MIN_COVERED}
+    stretches = [h for h in kept if h["q"] not in removed]
+    return kept, cov, removed, stretches
+
+
 def apply_rule(hits):
     """Steps 1-4. Returns kept hits, host coverage, removed host contigs, bacterial coverage,
     removed bacterial contigs and the shared stretches that stay in both."""
@@ -312,6 +344,23 @@ def apply_rule(hits):
 
 def genome_of(name):
     return name.split("|", 1)[0]
+
+
+def removed_table(bacteria, removed, gdir, label):
+    """CLEANING.md lines: the bacterial genomes that lost contigs in one step."""
+    per = defaultdict(list)
+    for n in removed:
+        per[genome_of(n)].append(n)
+    rows = []
+    for r, _ in bacteria:
+        acc = r["accession"]
+        if acc in per:
+            lengths = fasta_lengths(gdir / f"{acc}.fna")
+            rows.append(f"| {acc} | {r['organism']} | {len(lengths)} | {len(per[acc])} | "
+                        f"{sum(lengths[n] for n in per[acc])} |")
+    if not rows:
+        return ["None."]
+    return [f"| Genome | Organism | Contigs | {label} | Removed bp |", "|---|---|---|---|---|"] + rows
 
 
 # ------------------------------------------------------------------- main ---
@@ -349,12 +398,16 @@ def main(argv=None):
         cont = read_tsv(refdir / "contaminants.tsv")
         hosts = read_tsv(refdir / "hosts.tsv")
         orgs = read_tsv(refdir / "organelles.tsv")
+        fmito = read_tsv(refdir / "fungal_mitochondria.tsv")              # entry 10
     except FileNotFoundError as e:
         print(f"Missing reference list: {e.filename}. Run this from the repository folder.", file=sys.stderr)
         return 1
     bacteria = [(r, "endosymbiont") for r in endo] + [(r, "contaminant") for r in cont]
     organism = {r["accession"]: r["organism"] for r, _ in bacteria}
     organism.update({r["accession"]: r["organism"] for r in hosts})
+    organelles = [(r, f"{r['plant']} {r['organelle']}") for r in orgs] + \
+                 [(r, f"{r['fungus']} {r['organelle']}") for r in fmito]
+    organism.update({r["accession"]: name for r, name in organelles})
 
     try:
         mm2_version = tool_version(args.minimap2)
@@ -371,8 +424,9 @@ def main(argv=None):
         for i, acc in enumerate(todo, 1):
             print(f"[{i}/{len(todo)}] {acc}", flush=True)
             md5_checked[acc] = download_genome(acc, gdir / f"{acc}.fna")
-        print(f"organelle genomes ({len(orgs)})", flush=True)
+        print(f"organelle genomes ({len(orgs)} plant, {len(fmito)} fungal mitochondria)", flush=True)
         download_organelles(orgs, odir)
+        download_organelles(fmito, odir, "fungal_mitochondria.tsv")
     except (RuntimeError, OSError, zipfile.BadZipFile, json.JSONDecodeError) as e:
         print(f"Download failed, nothing was written to {refdir}/: {e}", file=sys.stderr)
         print("Downloads that finished are kept; run the same command again.", file=sys.stderr)
@@ -408,6 +462,32 @@ def main(argv=None):
 
     kept, host_cov, removed_hosts, bact_cov, removed_bact, shared = apply_rule(hits)
 
+    # Organelle genomes, plant and fungal, together: copied as they are, then the bacterial genomes are aligned
+    # to them (entry 10).
+    cdir = work / "clean"
+    cdir.mkdir(exist_ok=True)
+    org_fna = cdir / "organelles.fna"
+    with open(cdir / "organelles.fna.part", "wb") as out:
+        for r, _ in organelles:
+            with open(odir / f"{r['accession']}.fna", "rb") as fh:
+                shutil.copyfileobj(fh, out)
+    os.replace(cdir / "organelles.fna.part", org_fna)
+    paf = pdir / "organelles.paf"
+    cmd = [args.minimap2, *ORGANELLE_ARGS, "-t", str(args.threads), str(org_fna), str(bact_fna)]
+    print(f"aligning bacterial genomes to the {len(organelles)} organelle genomes", flush=True)
+    try:
+        with open(paf.with_name(paf.name + ".part"), "w") as out, open(work / "minimap2.log", "a") as err:
+            subprocess.run(cmd, stdout=out, stderr=err, check=True)
+    except (OSError, subprocess.CalledProcessError) as e:
+        print(f"minimap2 failed for the organelle genomes ({e}); see {work / 'minimap2.log'}. Nothing was written "
+              f"to {refdir}/.", file=sys.stderr)
+        return 1
+    os.replace(paf.with_name(paf.name + ".part"), paf)
+    commands.append(" ".join(["minimap2", *ORGANELLE_ARGS, "-t", str(args.threads), "clean/organelles.fna",
+                              "bacteria.fna", ">", "paf/organelles.paf"]))
+    org_hits = read_paf(paf)
+    org_kept, org_cov, removed_org, org_stretches = organelle_rule(org_hits, removed_bact)
+
     # overlaps.tsv
     rows = []
     for t in sorted(removed_hosts):
@@ -432,11 +512,24 @@ def main(argv=None):
                      "bacterial_length": h["qlen"], "bacterial_start": h["qs"], "bacterial_end": h["qe"],
                      "bacterial_covered": f"{bact_cov.get(h['q'], 0):.3f}",
                      "identity": f"{h['match'] / h['block']:.4f}", "aligned_bp": h["block"]})
+    for q in sorted(removed_org):
+        rows.append({"kind": "removed_as_organelle", "bacterial_genome": genome_of(q),
+                     "bacterial_organism": organism.get(genome_of(q), ""), "bacterial_contig": q,
+                     "bacterial_length": next(h["qlen"] for h in org_kept if h["q"] == q),
+                     "bacterial_covered": f"{org_cov[q]:.3f}",
+                     "matched": ",".join(sorted({genome_of(h["t"]) for h in org_kept if h["q"] == q}))})
+    for h in sorted(org_stretches, key=lambda x: (x["q"], x["qs"], x["t"], x["ts"])):
+        rows.append({"kind": "organelle_stretch", "host_assembly": genome_of(h["t"]),
+                     "host_organism": organism.get(genome_of(h["t"]), ""), "host_contig": h["t"],
+                     "host_length": h["tlen"], "host_start": h["ts"], "host_end": h["te"],
+                     "bacterial_genome": genome_of(h["q"]), "bacterial_organism": organism.get(genome_of(h["q"]), ""),
+                     "bacterial_contig": h["q"], "bacterial_length": h["qlen"], "bacterial_start": h["qs"],
+                     "bacterial_end": h["qe"], "bacterial_covered": f"{org_cov.get(h['q'], 0):.3f}",
+                     "identity": f"{h['match'] / h['block']:.4f}", "aligned_bp": h["block"]})
 
     # Cleaned files and their stats.
-    cdir = work / "clean"
     files = []
-    removed = removed_hosts | removed_bact
+    removed = removed_hosts | removed_bact | removed_org
     for (r, role) in [(h, "host") for h in hosts] + bacteria:
         acc = r["accession"]
         src = gdir / f"{acc}.fna"
@@ -450,19 +543,12 @@ def main(argv=None):
                       "downloaded_bp": bp0, "downloaded_md5": md0, "ncbi_md5_checked": "yes" if md5_checked[acc] else "no",
                       "removed_sequences": len(drop), "removed_bp": sum(lengths[n] for n in drop),
                       "clean_sequences": n1, "clean_bp": bp1, "clean_md5": md1})
-    (cdir).mkdir(exist_ok=True)
-    with open(cdir / "organelles.fna.part", "wb") as out:
-        for r in orgs:
-            src = odir / f"{r['accession']}.fna"
-            with open(src, "rb") as fh:
-                shutil.copyfileobj(fh, out)
-            n, bp, md = fasta_stats(src)
-            files.append({"accession": r["accession"], "role": "organelle",
-                          "organism": f"{r['plant']} {r['organelle']}", "downloaded_sequences": n,
-                          "downloaded_bp": bp, "downloaded_md5": md, "ncbi_md5_checked": "length checked",
-                          "removed_sequences": 0, "removed_bp": 0, "clean_sequences": n, "clean_bp": bp,
-                          "clean_md5": md})
-    os.replace(cdir / "organelles.fna.part", cdir / "organelles.fna")
+    for r, name in organelles:
+        n, bp, md = fasta_stats(odir / f"{r['accession']}.fna")
+        files.append({"accession": r["accession"], "role": "organelle", "organism": name, "downloaded_sequences": n,
+                      "downloaded_bp": bp, "downloaded_md5": md, "ncbi_md5_checked": "length checked",
+                      "removed_sequences": 0, "removed_bp": 0, "clean_sequences": n, "clean_bp": bp,
+                      "clean_md5": md})
 
     # CLEANING.md
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
@@ -481,20 +567,25 @@ def main(argv=None):
         md.append(f"| {f['accession']} | {f['organism']} | {f['downloaded_sequences']} | {f['removed_sequences']} | "
                   f"{f['removed_bp']} |")
     md += ["", "## Bacterial genomes with contigs removed as fungal", ""]
-    changed = [by_acc[r["accession"]] for r, _ in bacteria if by_acc[r["accession"]]["removed_sequences"]]
-    if changed:
-        md += ["| Genome | Organism | Contigs | Removed as fungal | Removed bp |", "|---|---|---|---|---|"]
-        md += [f"| {f['accession']} | {f['organism']} | {f['downloaded_sequences']} | {f['removed_sequences']} | "
-               f"{f['removed_bp']} |" for f in changed]
-    else:
-        md.append("None.")
+    md += removed_table(bacteria, removed_bact, gdir, "Removed as fungal")
     md += ["", f"Shared stretches left in both (reads from them count for neither): {len(shared)}, "
                f"{sum(h['block'] for h in shared)} bp in all.", "",
+           "## Organelle DNA in the bacterial genomes (section 10, entry 10)", "",
+           f"The bacterial genomes against the {len(organelles)} organelle genomes ({len(orgs)} plant, from "
+           f"`organelles.tsv`; {len(fmito)} fungal mitochondria, from `fungal_mitochondria.tsv`), with minimap2 "
+           f"{' '.join(ORGANELLE_ARGS)}. Alignments found: {len(org_hits)}; of these, "
+           f"{sum(1 for h in org_hits if passes_organelle(h))} have at least {MIN_BLOCK} bp at "
+           f"{ORGANELLE_MIN_ID_PCT}% identity or more. A contig at least half covered by them is organelle DNA and "
+           "is removed (contigs already removed as fungal are left out of this).", ""]
+    md += removed_table(bacteria, removed_org, gdir, "Removed as organelle DNA")
+    md += ["", f"Organelle stretches left in the bacterial genomes (reads from them count for no lineage): "
+               f"{len(org_stretches)}, {sum(h['block'] for h in org_stretches)} bp in all.", "",
            "The held-out MRE genomes took part in all of this, as section 3.4 says.", "",
            f"Downloads: {len(todo)} genomes, {sum(1 for a in todo if md5_checked[a])} of them checked against "
-           f"the md5 in NCBI's own download; {len(orgs)} organelle genomes, each checked against its length "
-           "in organelles.tsv.", "", "Details: `overlaps.tsv` (every removed contig and every shared stretch) and "
-           "`genome_files.tsv` (every file, with md5)."]
+           f"the md5 in NCBI's own download; {len(organelles)} organelle genomes, each checked against its length "
+           "in `organelles.tsv` or `fungal_mitochondria.tsv`.", "",
+           "Details: `overlaps.tsv` (every removed contig, every shared stretch and every organelle stretch; in the "
+           "organelle rows the host columns hold the organelle genome) and `genome_files.tsv` (every file, with md5)."]
 
     # Everything worked: now write the outputs to commit.
     parts = [write_tsv(refdir / "overlaps.tsv", OVERLAP_COLS, rows),
@@ -508,6 +599,8 @@ def main(argv=None):
     print(f"host contigs removed as bacterial: {len(removed_hosts)}")
     print(f"bacterial contigs removed as fungal: {len(removed_bact)}")
     print(f"shared stretches left in both: {len(shared)}")
+    print(f"bacterial contigs removed as organelle DNA: {len(removed_org)}")
+    print(f"organelle stretches left in bacterial genomes: {len(org_stretches)}")
     print(f"-> {refdir}/overlaps.tsv, genome_files.tsv, CLEANING.md; cleaned genomes in {cdir}/")
     return 0
 

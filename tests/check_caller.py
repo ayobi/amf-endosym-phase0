@@ -1,18 +1,23 @@
-"""Check call_lineages.py and run_t1.py (PROTOCOL.md section 10, entry 9).
+"""Check call_lineages.py and run_t1.py (PROTOCOL.md section 10, entries 9 and 10).
 
 Part 1, the caller on hand-made inputs: genus names (Candidatus, GTDB and SILVA suffixes, names that
 are not genera, hyphenated SILVA names), SSU labels (no hit, outside Bacteria, organelle, genus at and
-below 94.5%, placement), SingleM labels, one count per read with SSU first, joining route lineages,
-levels, cross-talk (lowers present, never raises absent), and every step of the call: no call, absent,
-contaminant by E5 (one-sided) and by kit genus, resident by known clade (RNA runs count) and by E1 and
-E2, unresolved; E1 and E2 on DNA runs only; collection years; then K1.
+below 94.5%, placement; entry 10: unplaced when the best hits at 94.5% or more lie in several genera, or
+a novel piece is under 60 bp, while a genus match of any length stays), SingleM labels, one count per
+read with SSU first, joining route lineages, levels, cross-talk and the spread check (both lower present
+to low, never raise absent), and every step of the call: no call, absent, contaminant by E5 (one-sided)
+and by kit genus, resident by known clade (RNA runs count) and by E1 and E2, unresolved; E1 and E2 on
+DNA runs only; collection years; then K1.
 
-Part 2, run_t1.py end to end on synthetic genomes. minimap2, assign_reads.py, make_index.py and VSEARCH
-are real; stand-ins play fastq-dump, SSUplex, nhmmer, SingleM (through conda) and sylph. Expected numbers
-are worked out here from the planted reads: mapped counts, route counts per lineage, levels and the
-cross-talk cap, the split reads of a Hi-C-like chimera, SSU reads dropped as organelle or outside
-Bacteria, SingleM reads dropped as not Bacteria, every call, sylph, K1. A run marked reuse=stage0a calls
-no tool but sylph; a rerun calls none; refusals (no entry 8 m, a bad runs.tsv, another sylph).
+Part 2, run_t1.py v0.2 end to end on synthetic genomes. minimap2, assign_reads.py, make_index.py and
+VSEARCH are real; stand-ins play fastq-dump, SSUplex (which cuts out the SSU piece), nhmmer, SingleM
+(through conda) and sylph. Expected numbers are worked out here from the planted reads: mapped counts,
+route counts per lineage, levels with the cross-talk and spread caps, the split reads of a Hi-C-like
+chimera, SSU reads dropped as organelle or outside Bacteria, SSU reads unplaced (several genera, a short
+piece), routed reads that are organelle DNA (part of a fungal mitochondrion in the index), SingleM reads
+dropped as not Bacteria, every call, sylph, K1. A run marked reuse=stage0a calls no tool but sylph; a
+rerun calls none; with the entry 9 route folders in place, a new run calls no SSUplex or SingleM and
+gives the same tables; refusals (no entry 10 m, a bad runs.tsv, another sylph).
 
 Needs minimap2 and VSEARCH (activate phase0-reads, or set MINIMAP2= and VSEARCH=).
 """
@@ -86,11 +91,24 @@ check(C.ssu_label([("G1", 99.0), ("G2", 99.0)], TAX) == ("kept", "Glomeribacter"
       "SSU: one genus at 99%")
 check(C.ssu_label([("G1", 94.5)], TAX)[1] == "Glomeribacter" and C.ssu_label([("G1", 94.4)], TAX) ==
       ("kept", None, "family Burkholderiaceae"), "SSU: 94.5% is the genus threshold; below it, the family")
-check(C.ssu_label([("G1", 99.0), ("M1", 99.0)], TAX) == ("kept", None, "family Burkholderiaceae"),
-      "SSU: two genera give the family")
+check(C.ssu_label([("G1", 90.0), ("M1", 90.0)], TAX) == ("kept", None, "family Burkholderiaceae"),
+      "SSU: two genera below 94.5% give the family")
+check(C.ssu_label([("G1", 99.0), ("M1", 99.0)], TAX) == ("unplaced", None, "best hits in several genera"),
+      "SSU: two genera at 94.5% or more are unplaced (entry 10)")
 check(C.ssu_label([("I1", 99.0)], TAX) == ("kept", None, "family Burkholderiaceae"), "SSU: Incertae Sedis genus")
-check(C.ssu_label([("O1", 99.0), ("O2", 99.0)], TAX) == ("kept", None, "order Burkholderiales"),
+check(C.ssu_label([("O1", 90.0), ("O2", 90.0)], TAX) == ("kept", None, "order Burkholderiales"),
       "SSU: --other dropped from the placement name")
+check(C.ssu_label([("G1", 100.0)], TAX, 30) == ("kept", "Glomeribacter", "genus Glomeribacter") and
+      C.ssu_label([("I1", 99.0)], TAX, 59) == ("unplaced", None, "piece under 60 bp") and
+      C.ssu_label([("I1", 99.0)], TAX, 60) == ("kept", None, "family Burkholderiaceae") and
+      C.ssu_label([], TAX, 59) == ("unplaced", None, "piece under 60 bp") and
+      C.ssu_label([], TAX, 60) == ("kept", None, "no hit") and
+      C.ssu_label([("G1", 90.0), ("M1", 90.0)], TAX, 59)[0] == "unplaced" and
+      C.ssu_label([("G1", 99.0), ("EU", 99.0)], TAX, 30)[0] == "outside Bacteria",
+      "SSU: a novel piece needs 60 bp, a genus match any length (entry 10)")
+check(C.read_label(("unplaced", None, "piece under 60 bp"), ("kept", None, "c")) == ("novel", "SingleM") and
+      C.read_label(("unplaced", None, "best hits in several genera"), None) is None,
+      "an unplaced SSU piece gives no SSU label")
 check(C.ssu_label([("BCP", 100.0)], TAX)[1] == "Burkholderia-Caballeronia-Paraburkholderia", "SSU: hyphenated genus")
 
 GT = "Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria"
@@ -125,6 +143,11 @@ check(lv == {"A": ("present", False), "B": ("low", True), "D": ("absent", False)
       f"cross-talk lowers present only, within one BioProject: {lv}")
 xs = C.run_levels([rec("A", "P1", 50, N=5), rec("B", "P1", 50, N=5, absent_ok=False)])
 check([x["informative"] for x in xs] == [False, False], "informative needs N >= 10 and a library that can show absence")
+xs = C.run_levels([{**rec("A", "P1", 400), "spread": 0.49}, {**rec("B", "P2", 400), "spread": 0.5},
+                   {**rec("D", "P3", 20), "spread": 0.1}, {**rec("E", "P4", 400), "spread": None}, rec("F", "P5", 400)])
+lv = {x["run"]: (x["level"], x["spread_cap"]) for x in xs}
+check(lv == {"A": ("low", True), "B": ("present", False), "D": ("low", False), "E": ("present", False),
+             "F": ("present", False)}, f"the spread check lowers present to low below 0.5 only (entry 10): {lv}")
 
 
 def call(recs, category="other known genus", background=None):
@@ -230,8 +253,16 @@ G = {"host": rand(60000),
      "chl": rand(500) + S_O2 + rand(3050),                                  # no reference; SSU at 500-950
      "eux": motifs(rand(500) + S_X + rand(3050), [(2050, "KE")]),           # no reference
      "plant": rand(30000)}                                                  # no reference, nothing to find
-ACC = {"host": "GCA_900000301.1", "cagg": "GCA_800000301.1", "cont": "GCF_700000301.1", "org": "NC_900301.1"}
-SSU = [[S_C, "bacteria"], [S_N, "bacteria"], [S_P, "bacteria"], [S_O2, "bacteria"], [S_X, "bacteria"]]
+S_M, S_T, S_V = rand(60), rand(450), rand(450)                             # entry 10's planted cases
+G["mito"] = rand(6000)                                                      # a fungal mitochondrion, in the index
+G["mch"] = G["mito"][1000:1090] + S_M + rand(400)     # no reference: 90 bp of it, then 60 bp the tools call SSU
+G["tie"] = rand(1000) + S_T + rand(1000)              # no reference; SSU in two SILVA genera
+G["shp"] = rand(1000) + S_V + rand(1000)              # no reference; reads at 900 hold 50 bp of its SSU
+G["pile"] = G["cont"][4000:5500]                      # contaminant reads from 1.5 kb of its 10 kb
+ACC = {"host": "GCA_900000301.1", "cagg": "GCA_800000301.1", "cont": "GCF_700000301.1", "org": "NC_900301.1",
+       "mito": "MN900301.1"}
+SSU = [[S_C, "bacteria"], [S_N, "bacteria"], [S_P, "bacteria"], [S_O2, "bacteria"], [S_X, "bacteria"],
+       [S_M, "bacteria"], [S_T, "bacteria"], [S_V, "bacteria"]]
 SM_TAX = {"K1": "Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria; o__Burkholderiales; "
                 "f__Burkholderiaceae; g__Glomeribacter",
           "K4": "Root; d__Bacteria; p__Pseudomonadota; c__Gammaproteobacteria",
@@ -245,7 +276,9 @@ SILVA = [("CAGG16S.1.450", ";".join(TAX["G1"][:7]) + ";Candidatus Glomeribacter 
          ("PSEB.1.450", "Bacteria;Pseudomonadati;Pseudomonadota;Gammaproteobacteria;Pseudomonadales;"
                         "Pseudomonadaceae;Pseudomonas;Pseudomonas putida", mutate(S_P, 0.02)),
          ("CHL1.1.450", ";".join(TAX["CH"]), S_O2),
-         ("EUKX.1.450", ";".join(TAX["EU"]), S_X)] + \
+         ("EUKX.1.450", ";".join(TAX["EU"]), S_X),
+         ("TIE1.1.450", ";".join(TAX["M1"][:7]) + ";Mycoavidus sp.", S_T),
+         ("TIE2.1.450", ";".join(TAX["O2"][:7]) + ";Massilia sp.", S_T)] + \
         [(f"DEC{i}.1.1200", ";".join(TAX["M1"][:7]) + f";decoy {i}", rand(1200)) for i in range(5)]
 
 
@@ -258,9 +291,10 @@ def spots(*groups):
 CHIM = "cagg@5000+host@30000"
 RUNS = {"SRRP1": ("PAIRED", spots(("cagg", 1200), ("host", 700), ("nov@2000", 20), ("nov@5950", 15), ("dug@2950", 30),
                                   ("pse@1000", 10), ("chl@500", 5), ("eux@500", 5), ("eux@2000", 5), (CHIM, 10))),
-        "SRRP2": ("PAIRED", spots(("cagg", 1000), ("host", 960), ("dug@2950", 30), ("nov@2000", 10))),
+        "SRRP2": ("PAIRED", spots(("cagg", 1000), ("host", 941), ("dug@2950", 30), ("nov@2000", 10),
+                                  ("mch@0", 8), ("tie@1000", 6), ("shp@900", 5))),
         "SRRP3": ("SINGLE", spots(("cagg", 2400), ("host", 1580), ("pse@1000", 20))),
-        "SRRM1": ("PAIRED", spots(("cagg", 22), ("host", 1978))),
+        "SRRM1": ("PAIRED", spots(("cagg", 22), ("pile", 40), ("host", 1938))),
         "SRRM2": ("SINGLE", spots(("cagg", 45), ("host", 3955))),
         "SRRN1": ("PAIRED", spots(("org", 800), ("nov@2000", 20), ("pse@1000", 15), ("plant", 1165))),
         "SRRH1": ("SINGLE", spots(("cagg", 300), ("host", 200)), 3000)}     # HiFi: 3 kb reads
@@ -349,12 +383,14 @@ for line in open(inp):
     else:
         reads[-1][1] += line
 for rid, seq in reads:
-    origin = next((kmers[seq[i:i + 25]] for i in range(len(seq) - 24) if seq[i:i + 25] in kmers), "unclassified")
+    at = [i for i in range(len(seq) - 24) if seq[i:i + 25] in kmers]
+    origin = kmers[seq[at[0]:at[0] + 25]] if at else "unclassified"
+    lo, hi = (at[0], at[-1] + 25) if at else (0, len(seq))
     counts[origin] += 1
     fh = fhs.get(origin) or fhs.setdefault(origin, open(f"{prefix}.{origin}.fasta", "w"))
-    fh.write(f">{rid} origin={origin} score=50.0 coords=1-{len(seq)}\\n")
-    for i in range(0, len(seq), 80):
-        fh.write(seq[i:i + 80] + "\\n")
+    fh.write(f">{rid} origin={origin} score=50.0 coords={lo + 1}-{hi}\\n")
+    for i in range(lo, hi, 80):
+        fh.write(seq[i:min(i + 80, hi)] + "\\n")
 for fh in fhs.values():
     fh.close()
 open(f"{prefix}.extraction.tsv", "w").write("read_id\\n")
@@ -437,13 +473,17 @@ def build(tmp):
     (work / "clean" / "hosts" / f"{ACC['host']}.fna").write_text(f">{ACC['host']}|c1\n{G['host']}\n")
     for k in ("cagg", "cont"):
         (work / "clean" / "bacteria" / f"{ACC[k]}.fna").write_text(f">{ACC[k]}|c1\n{G[k]}\n")
-    (work / "clean" / "organelles.fna").write_text(f">{ACC['org']}|{ACC['org']}\n{G['org']}\n")
+    (work / "clean" / "organelles.fna").write_text(f">{ACC['org']}|{ACC['org']}\n{G['org']}\n"
+                                                   f">{ACC['mito']}|{ACC['mito']}\n{G['mito']}\n")
     write_tsv(refdir / "hosts.tsv", ["accession", "organism", "note"], [[ACC["host"], "Gigaspora testii", "host"]])
     write_tsv(refdir / "endosymbionts.tsv", ["accession", "organism", "note"],
               [[ACC["cagg"], "Candidatus Glomeribacter testii", ""]])
     write_tsv(refdir / "contaminants.tsv", ["accession", "organism", "note"], [[ACC["cont"], "Ralstonia testii", ""]])
     write_tsv(refdir / "organelles.tsv", ["plant", "organelle", "accession", "title", "length_bp"],
               [["Lotus testii", "chloroplast", ACC["org"], "x", 5000]])
+    write_tsv(refdir / "fungal_mitochondria.tsv", ["fungus", "organelle", "accession", "title", "length_bp",
+                                                   "source", "query"],
+              [["Gigaspora testii", "mitochondrion", ACC["mito"], "x", 6000, "GenBank", "q"]])
     (refdir / "overlaps.tsv").write_text("\t".join(["kind", "host_assembly", "host_organism", "host_contig",
                                                     "host_length", "host_start", "host_end", "host_covered",
                                                     "bacterial_genome", "bacterial_organism", "bacterial_contig",
@@ -475,8 +515,11 @@ def build(tmp):
         "ssuplex_hmm_dir": str(work / "db" / "hmm"), "singlem_metapackage": str(work / "db" / "mp")}))
     stage = tmp / "stage0a"
     stage.mkdir()
-    write_tsv(stage / "fractions.tsv", ["run", "sets_t", "fraction"], [["X1", "yes", T_ * 10], ["X2", "no", 0.0001]])
-    write_tsv(stage / "marker_share_entry8.tsv", ["run", "sets_m", "share"], [["X1", "yes", M_], ["X2", "no", 0.01]])
+    write_tsv(stage / "fractions.tsv", ["run", "sets_t", "fraction"], [["X1", "yes", 1.0], ["X2", "no", 0.0001]])
+    write_tsv(stage / "marker_share_entry8.tsv", ["run", "sets_m", "share"], [["X1", "yes", 0.9], ["X2", "no", 0.01]])
+    write_tsv(stage / "fractions_entry10.tsv", ["run", "sets_t", "fraction"],
+              [["X1", "yes", T_ * 10], ["X2", "no", 0.0001]])
+    write_tsv(stage / "marker_share_entry10.tsv", ["run", "sets_m", "share"], [["X1", "yes", M_], ["X2", "no", 0.01]])
     write_tsv(tmp / "controls.tsv", ["control_id", "expected_call"], list(CONTROLS.items()))
     return refdir, work, stage, tools
 
@@ -501,10 +544,10 @@ with tempfile.TemporaryDirectory() as td:
 
     # refusals
     write_tsv(t1 / "runs.tsv", COLS, ROWS)
-    (stage / "marker_share_entry8.tsv").rename(stage / "hidden.tsv")
+    (stage / "marker_share_entry10.tsv").rename(stage / "hidden.tsv")
     code, err = quiet(T.main, args_for(tmp, refdir, work, stage, t1, tools))
-    check(code == 1 and "entry 8" in err, f"no entry 8 m: refused ({err.strip()[:120]})")
-    (stage / "hidden.tsv").rename(stage / "marker_share_entry8.tsv")
+    check(code == 1 and "rescore_m_entry10.py" in err, f"no entry 10 m: refused ({err.strip()[:120]})")
+    (stage / "hidden.tsv").rename(stage / "marker_share_entry10.tsv")
     write_tsv(t1 / "runs.tsv", COLS, [ROWS[2][:12] + ["ssu+singlem"] + ROWS[2][13:]])
     code, err = quiet(T.main, args_for(tmp, refdir, work, stage, t1, tools))
     check(code == 1 and "route must be" in err, f"RNA run with SingleM: refused ({err.strip()[:120]})")
@@ -521,12 +564,14 @@ with tempfile.TemporaryDirectory() as td:
     write_tsv(pre / "runs.tsv", COLS, [ROWS[0][:13] + [""] + ROWS[0][14:]])
     code, err = quiet(T.main, args_for(tmp, refdir, work, stage, pre, tools))
     check(code == 0, f"making SRRP1's stage 0a files: {err[-300:]}")
-    for sub in ("reads", "assign", "route"):
-        (work / "stage0a" / sub).mkdir(parents=True)
-        shutil.move(str(work / "t1" / sub / "SRRP1"), str(work / "stage0a" / sub / "SRRP1"))
-    aj = work / "stage0a" / "assign" / "SRRP1" / "assign.json"
+    for src, dest in (("t1/reads", "stage0a/reads"), ("t1_entry10/assign", "stage0a_entry10/assign"),
+                      ("t1_entry10/route", "stage0a/route")):
+        (work / dest).mkdir(parents=True)
+        shutil.move(str(work / src / "SRRP1"), str(work / dest / "SRRP1"))
+    aj = work / "stage0a_entry10" / "assign" / "SRRP1" / "assign.json"
     aj.write_text(aj.read_text().replace(f"{work}/t1/reads/", f"{work}/stage0a/reads/"))
     shutil.rmtree(work / "t1")
+    shutil.rmtree(work / "t1_entry10")
     (tmp / "tools.log").unlink()
 
     # the T1 run
@@ -541,9 +586,11 @@ with tempfile.TemporaryDirectory() as td:
     check(not [x for x in first_log if ("ssuplex" in x or "singlem" in x) and "SRRH1" in x],
           "the HiFi run (route none) is mapped only")
     if code == 0:
-        lv = {(x["run"], x["lineage"]): x for x in read_tsv(t1 / "levels.tsv")}
-        calls = {(x["unit"], x["lineage"]): x for x in read_tsv(t1 / "calls.tsv")}
-        md = (t1 / "T1.md").read_text()
+        check(not any((t1 / n).exists() for n in ("levels.tsv", "calls.tsv", "T1.md")),
+              "v0.2 writes only the entry 10 outputs")
+        lv = {(x["run"], x["lineage"]): x for x in read_tsv(t1 / "levels_entry10.tsv")}
+        calls = {(x["unit"], x["lineage"]): x for x in read_tsv(t1 / "calls_entry10.tsv")}
+        md = (t1 / "T1_ENTRY10.md").read_text()
 
         def reads_of(run):
             layout, sp = RUNS[run][:2]
@@ -571,9 +618,21 @@ with tempfile.TemporaryDirectory() as td:
         check(lv[("SRRM1", "CaGg")]["informative"] == "yes" and lv[("SRRM2", "CaGg")]["informative"] == "no" and
               lv[("SRRN1", "CaGg")]["informative"] == "no", "informative: DNA yes, poly-A RNA no")
 
+        # the spread check (entry 10): the contaminant reads piled in 1.5 kb of SRRM1 are capped at low
+        x = lv[("SRRM1", "Ralstonia")]
+        check(int(x["n"]) == 2 * k("SRRM1", "pile") and float(x["N"]) <= int(x["n"]) and x["level"] == "low" and
+              x["spread_cap"] == "yes" and float(x["spread"]) < 0.5 and x["cross_talk"] == "no",
+              f"spread cap: SRRM1 Ralstonia {x}")
+        check(all(float(lv[(r, "CaGg")]["spread"]) >= 0.5 and lv[(r, "CaGg")]["spread_cap"] == "no"
+                  for r in ("SRRP1", "SRRP2", "SRRM1", "SRRH1")) and
+              lv[("SRRP3", "CaGg")]["spread"] == "" and lv[("SRRP1", "novel (SSU)")]["spread"] == "",
+              "spread: real genomes pass; no spread for RNA runs or route lineages")
+        check("- SRRM1 (BEG34 B-): Ralstonia, n = 80, spread 0." in md and "present lowered to low" in md,
+              "T1_ENTRY10.md lists the spread cap")
+
         # route lineages: counts worked out from the planted reads
         want_route = {("SRRP1", "novel (SSU)"): 2 * k("SRRP1", "nov@2000"),
-                      ("SRRP2", "novel (SSU)"): 2 * k("SRRP2", "nov@2000"),
+                      ("SRRP2", "novel (SSU)"): 2 * k("SRRP2", "nov@2000") + k("SRRP2", "shp@900"),
                       ("SRRN1", "novel (SSU)"): 2 * k("SRRN1", "nov@2000"),
                       ("SRRP1", "novel (SingleM)"): k("SRRP1", "nov@5950"),
                       ("SRRP1", "Duganella (route)"): k("SRRP1", "dug@2950"),
@@ -582,7 +641,7 @@ with tempfile.TemporaryDirectory() as td:
                       ("SRRP3", "Pseudomonas (route)"): k("SRRP3", "pse@1000"),
                       ("SRRN1", "Pseudomonas (route)"): 2 * k("SRRN1", "pse@1000")}
         route_lins = {"novel (SSU)", "novel (SingleM)", "Duganella (route)", "Pseudomonas (route)"}
-        got_lins = {x["lineage"] for x in read_tsv(t1 / "levels.tsv") if x["source"] == "route"}
+        got_lins = {x["lineage"] for x in read_tsv(t1 / "levels_entry10.tsv") if x["source"] == "route"}
         check(got_lins == route_lins, f"route lineages {sorted(got_lins)}")
         for (run, lin), x in lv.items():
             if lin in route_lins:
@@ -603,6 +662,7 @@ with tempfile.TemporaryDirectory() as td:
                       (T.B_PLUS, "novel (SingleM)"): "unresolved", (T.B_PLUS, "Pseudomonas (route)"): "contaminant",
                       (T.PLANT, "Pseudomonas (route)"): "contaminant", (T.PLANT, "novel (SSU)"): "unresolved",
                       (T.B_MINUS, "novel (SSU)"): "absent", (T.B_MINUS, "Pseudomonas (route)"): "absent",
+                      (T.B_MINUS, "Ralstonia"): "contaminant",
                       ("BEG34 HiFi", "CaGg"): "unresolved"}
         got_calls = {key: calls[key]["call"] if key in calls else "missing" for key in want_calls}
         check(got_calls == want_calls, "calls: " + str({a: b for a, b in got_calls.items() if want_calls[a] != b}))
@@ -616,28 +676,58 @@ with tempfile.TemporaryDirectory() as td:
               "no call row where a lineage is not measured")
 
         # the route table, K1, the confusion table
-        p1 = next(x for x in md.splitlines() if x.startswith("| SRRP1 |") and x.count("|") == 7)
+        p1 = next(x for x in md.splitlines() if x.startswith("| SRRP1 |") and x.count("|") == 9)
         ssu_found = 2 * sum(k("SRRP1", s) for s in ("nov@2000", "pse@1000", "chl@500", "eux@500")) + k("SRRP1", CHIM)
         sm_found = sum(k("SRRP1", s) for s in ("nov@5950", "dug@2950", "eux@2000"))
-        want_p1 = (f"| SRRP1 | {ssu_found + sm_found} | {ssu_found - 4 * 5} | 10 / 10 | "
-                   f"{k('SRRP1', 'nov@5950') + k('SRRP1', 'dug@2950')} | {k('SRRP1', CHIM)} / 0 |")
+        want_p1 = (f"| SRRP1 | {ssu_found + sm_found} | {ssu_found - 4 * 5} | 10 / 10 | 0 / 0 | "
+                   f"{k('SRRP1', 'nov@5950') + k('SRRP1', 'dug@2950')} | 0 | {k('SRRP1', CHIM)} / 0 |")
         check(p1 == want_p1, f"route table for SRRP1: {p1}, want {want_p1}")
+        # SRRP2 (entry 10): the mitochondrial reads leave as organelle DNA; the tied SSU and the 50 bp pieces
+        # are unplaced; the mates of the short pieces hold 150 bp of the SSU and count as novel (SSU).
+        p2 = next(x for x in md.splitlines() if x.startswith("| SRRP2 |") and x.count("|") == 9)
+        ssu2 = 2 * k("SRRP2", "nov@2000") + k("SRRP2", "mch@0") + 2 * k("SRRP2", "tie@1000") + 2 * k("SRRP2", "shp@900")
+        want_p2 = (f"| SRRP2 | {ssu2 + k('SRRP2', 'dug@2950')} | "
+                   f"{2 * k('SRRP2', 'nov@2000') + k('SRRP2', 'mch@0') + k('SRRP2', 'shp@900')} | 0 / 0 | "
+                   f"{2 * k('SRRP2', 'tie@1000')} / {k('SRRP2', 'shp@900')} | {k('SRRP2', 'dug@2950')} | "
+                   f"{k('SRRP2', 'mch@0')} | 0 / 0 |")
+        check(p2 == want_p2, f"route table for SRRP2: {p2}, want {want_p2}")
         check("## K1: passed" in md, "K1 passes")
         check("| BEG34 B- | yes | absent | unresolved |" in md, "confusion table row for the B- line")
 
         # a rerun calls no tool and gives the same tables
-        before = {n: (t1 / n).read_text() for n in ("levels.tsv", "calls.tsv", "T1.md")}
+        outs = ("levels_entry10.tsv", "calls_entry10.tsv", "T1_ENTRY10.md")
+        before = {n: (t1 / n).read_text() for n in outs}
         code, err = quiet(T.main, args_for(tmp, refdir, work, stage, t1, tools))
         check(code == 0 and log_lines(tmp) == first_log, "a rerun calls no tool")
         after = {n: (t1 / n).read_text() for n in before}
-        check(after["levels.tsv"] == before["levels.tsv"] and after["calls.tsv"] == before["calls.tsv"] and
-              after["T1.md"].split("\n", 3)[3] == before["T1.md"].split("\n", 3)[3], "a rerun gives the same tables")
+        check(after[outs[0]] == before[outs[0]] and after[outs[1]] == before[outs[1]] and
+              after[outs[2]].split("\n", 3)[3] == before[outs[2]].split("\n", 3)[3], "a rerun gives the same tables")
+
+        # The entry 9 route folders in place (here, this run's, moved where entry 9 kept them) and nothing in
+        # the entry 10 work folder: the tools' outputs are used again, so no SSUplex or SingleM runs, and the
+        # tables come out the same.
+        (work / "t1" / "route").mkdir(parents=True)
+        for r in ROWS:
+            if r[12] != "none" and not r[13]:
+                shutil.move(str(work / "t1_entry10" / "route" / r[0]), str(work / "t1" / "route" / r[0]))
+        shutil.rmtree(work / "t1_entry10")
+        (tmp / "tools.log").unlink()
+        code, err = quiet(T.main, args_for(tmp, refdir, work, stage, t1, tools))
+        check(code == 0 and all(x.startswith("sylph ") for x in log_lines(tmp)),
+              f"with the entry 9 route folders: exit {code}, tools {[x for x in log_lines(tmp) if 'sylph' not in x]}")
+        view = work / "t1_entry10" / "route" / "SRRP2"
+        check((view / "SRRP2_1.ssuplex.json").is_symlink() and not (view / "found.tsv.gz").is_symlink(),
+              "the route view links the tools' outputs and makes found.tsv.gz again")
+        again = {n: (t1 / n).read_text() for n in outs}
+        check(code == 0 and again[outs[0]] == before[outs[0]] and again[outs[1]] == before[outs[1]],
+              "with the entry 9 route folders, the same tables")
 
 if fails:
     print("FAIL\n" + "\n".join(fails))
     sys.exit(1)
-print("PASS: caller rules (names, SSU and SingleM labels, one count per read, joining, levels, cross-talk, no call, "
-      "absent, contaminant by E5 and kit genus, resident by known clade and by E1 and E2, DNA-only E1 and E2, "
-      "years, K1); run_t1 end to end (mapped and route counts, N, cross-talk cap, split reads, SSU and SingleM "
-      "drops, every call, placements, sylph, K1, the stage 0a run reused, no SingleM on RNA, HiFi mapped only, "
-      "rerun calls no tool, refusals)")
+print("PASS: caller rules (names, SSU and SingleM labels with entry 10's unplaced pieces, one count per read, "
+      "joining, levels, cross-talk and spread caps, no call, absent, contaminant by E5 and kit genus, resident by "
+      "known clade and by E1 and E2, DNA-only E1 and E2, years, K1); run_t1 v0.2 end to end (mapped and route "
+      "counts, N, cross-talk and spread caps, split reads, organelle DNA, SSU and SingleM drops, unplaced SSU, "
+      "every call, placements, sylph, K1, the stage 0a run reused, no SingleM on RNA, HiFi mapped only, rerun "
+      "calls no tool, the entry 9 route folders used again, refusals)")

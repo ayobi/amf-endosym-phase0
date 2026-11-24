@@ -12,6 +12,13 @@ Planted cases, and what the rule in PROTOCOL.md 3.4 must do with them:
   - a 3 kb piece copied into a host at 12% divergence      -> ignored (below 95% identity)
 A control run with minimap2's default -p must miss the two "needs -p 0" cases, which shows
 that the test can tell the settings apart.
+Organelle DNA (PROTOCOL.md section 10, entry 10; minimap2 -x asm20, 500 bp at 80% identity):
+  - a bacterial contig that is a fungal mitochondrion at 10% divergence -> removed as organelle DNA
+  - a contaminant contig that is a plant chloroplast at 15% divergence  -> removed as organelle DNA
+  - a 1.5 kb mitochondrial piece at 4% divergence in a 20 kb contig     -> contig kept, stretch listed
+  - a 1.5 kb mitochondrial piece at 30% divergence                       -> ignored (below 80% identity)
+  - the fungal contig removed as fungal, half of it also mitochondrial   -> listed once, as fungal
+  - a fungal mitochondrion whose length is not the one listed            -> exit 1, nothing written
 """
 import contextlib
 import csv
@@ -83,6 +90,12 @@ GENOMES = {
     "GCF_700000001.1": [("C1c1.1", C1_c1), ("C1c2.1", C1_c2)],
 }
 ORGANELLES = {"NC_900001.1": rand(5000), "NC_900002.1": rand(4000)}
+MITO = rand(4000) + H1_c1[21000:26000] + rand(3000)          # a fungal mitochondrion, with a host piece in it
+ORGANELLES["MN900001.1"] = MITO
+GENOMES["GCA_800000001.1"].append(("B1c3.1", mutate(MITO[1000:7000], 0.10)))               # 90%: organelle DNA
+GENOMES["GCF_700000001.1"].append(("C1c3.1", mutate(ORGANELLES["NC_900001.1"][500:3500], 0.15)))  # 85%: chloroplast
+GENOMES["GCA_800000002.1"].append(("B2c4.1", rand(9000) + mutate(MITO[2000:3500], 0.04) + rand(9500)))  # stretch
+GENOMES["GCA_800000003.1"].append(("B3c2.1", rand(4000) + mutate(MITO[9500:11000], 0.30) + rand(4000)))  # 70%
 H1, H2, B1, B2, B3, C1 = ("GCA_900000001.1", "GCA_900000002.1", "GCA_800000001.1", "GCA_800000002.1",
                           "GCA_800000003.1", "GCF_700000001.1")
 
@@ -134,6 +147,9 @@ def write_lists(refdir):
     (refdir / "organelles.tsv").write_text(
         f"plant{t}organelle{t}accession{t}title{t}length_bp\n"
         f"Plantago testii{t}chloroplast{t}NC_900001.1{t}x{t}5000\nPlantago testii{t}mitochondrion{t}NC_900002.1{t}x{t}4000\n")
+    (refdir / "fungal_mitochondria.tsv").write_text(
+        f"fungus{t}organelle{t}accession{t}title{t}length_bp{t}source{t}query\n"
+        f"Testomyces alpha{t}mitochondrion{t}MN900001.1{t}x{t}{len(MITO)}{t}GenBank{t}q\n")
 
 
 def read(path):
@@ -192,24 +208,54 @@ with tempfile.TemporaryDirectory() as tmp:
 
         if names(work / "clean/hosts" / f"{H1}.fna") != [f"{H1}|H1c1.1", f"{H1}|H1c3.1", f"{H1}|H1c4.1", f"{H1}|H1c6.1"]:
             fails.append(f"cleaned host H1: {names(work / 'clean/hosts' / f'{H1}.fna')}")
-        if names(work / "clean/bacteria" / f"{B2}.fna") != [f"{B2}|B2c1.1", f"{B2}|B2c2.1"]:
+        if names(work / "clean/bacteria" / f"{B2}.fna") != [f"{B2}|B2c1.1", f"{B2}|B2c2.1", f"{B2}|B2c4.1"]:
             fails.append(f"cleaned genome B2: {names(work / 'clean/bacteria' / f'{B2}.fna')}")
         if names(work / "clean/bacteria" / f"{B1}.fna") != [f"{B1}|B1c1.1", f"{B1}|B1c2.1"]:
             fails.append("cleaned genome B1 should be unchanged")
-        if names(work / "clean/organelles.fna") != ["NC_900001.1|NC_900001.1", "NC_900002.1|NC_900002.1"]:
+        if names(work / "clean/organelles.fna") != ["NC_900001.1|NC_900001.1", "NC_900002.1|NC_900002.1",
+                                                    "MN900001.1|MN900001.1"]:
             fails.append(f"organelles: {names(work / 'clean/organelles.fna')}")
 
+        # Organelle DNA (entry 10).
+        got = sorted((r["bacterial_contig"], r["matched"]) for r in kinds.get("removed_as_organelle", []))
+        if got != [(f"{B1}|B1c3.1", "MN900001.1"), (f"{C1}|C1c3.1", "NC_900001.1")]:
+            fails.append(f"contigs removed as organelle DNA: got {got}")
+        cov = {r["bacterial_contig"]: float(r["bacterial_covered"]) for r in kinds.get("removed_as_organelle", [])}
+        if not all(v >= 0.9 for v in cov.values()):
+            fails.append(f"contigs removed as organelle DNA should be nearly all covered: {cov}")
+        st = kinds.get("organelle_stretch", [])
+        if [(r["bacterial_contig"], r["host_assembly"], r["host_organism"]) for r in st] != \
+                [(f"{B2}|B2c4.1", "MN900001.1", "Testomyces alpha mitochondrion")]:
+            fails.append(f"organelle stretches: got {[(r['bacterial_contig'], r['host_contig']) for r in st]}")
+        elif not (abs(int(st[0]["bacterial_start"]) - 9000) <= 30 and 1400 <= int(st[0]["aligned_bp"]) <= 1560
+                  and abs(int(st[0]["host_start"]) - 2000) <= 30 and float(st[0]["identity"]) >= 0.94):
+            fails.append(f"organelle stretch coordinates off: {st[0]}")
+        if any("B3c2.1" in r["bacterial_contig"] for r in rows):
+            fails.append("the 30% divergent mitochondrial piece should not pass the 80% identity step")
+        if [r["kind"] for r in rows if r["bacterial_contig"] == f"{B2}|B2c3.1"] != ["removed_bacterial_contig"]:
+            fails.append("B2c3.1 should be listed once, as removed for being fungal")
+        if names(work / "clean/bacteria" / f"{C1}.fna") != [f"{C1}|C1c1.1", f"{C1}|C1c2.1"]:
+            fails.append(f"cleaned genome C1: {names(work / 'clean/bacteria' / f'{C1}.fna')}")
+
         files = {r["accession"]: r for r in read(refdir / "genome_files.tsv")}
-        if len(files) != 8:
-            fails.append(f"genome_files.tsv: expected 8 rows, got {len(files)}")
+        if len(files) != 9:
+            fails.append(f"genome_files.tsv: expected 9 rows, got {len(files)}")
         if (files[H1]["removed_sequences"], files[H1]["removed_bp"]) != ("2", "24000"):
             fails.append(f"genome_files.tsv H1 removed: {files[H1]['removed_sequences']}, {files[H1]['removed_bp']}")
         if (files[B2]["removed_sequences"], files[B2]["removed_bp"]) != ("1", "9000"):
             fails.append(f"genome_files.tsv B2 removed: {files[B2]['removed_sequences']}, {files[B2]['removed_bp']}")
+        if (files[B1]["removed_sequences"], files[B1]["removed_bp"]) != ("1", "6000"):
+            fails.append(f"genome_files.tsv B1 removed: {files[B1]['removed_sequences']}, {files[B1]['removed_bp']}")
+        if (files["MN900001.1"]["role"], files["MN900001.1"]["organism"]) != ("organelle",
+                                                                               "Testomyces alpha mitochondrion"):
+            fails.append(f"genome_files.tsv fungal mitochondrion: {files['MN900001.1']}")
         if any(files[a]["ncbi_md5_checked"] != "yes" for a in GENOMES):
             fails.append("every synthetic download carries an md5 and should be checked")
         cleaning = (refdir / "CLEANING.md").read_text()
-        for want in ("minimap2 2.31", "-x asm5 -c -p 0", "NCBI Datasets API 18.41.1", "section 10, entry 3"):
+        for want in ("minimap2 2.31", "-x asm5 -c -p 0", "NCBI Datasets API 18.41.1", "section 10, entry 3",
+                     "section 10, entry 10", "minimap2 -x asm20 -c -p 0", "paf/organelles.paf",
+                     "| GCA_800000001.1 | Candidatus Glomeribacter testii | 3 | 1 | 6000 |",
+                     "Organelle stretches left in the bacterial genomes (reads from them count for no lineage): 1,"):
             if want not in cleaning:
                 fails.append(f"CLEANING.md does not mention {want!r}")
 
@@ -235,6 +281,18 @@ with tempfile.TemporaryDirectory() as tmp:
                          f"700 bp stretch hidden: {hidden_stretch} (both should be hidden, or the test cannot "
                          "tell the settings apart)")
 
+        # Control: with -x asm5 for the organelle step, the mitochondrion at 10% and the chloroplast at 15%
+        # divergence are missed, which shows that the test can tell the presets apart.
+        saved = M.ORGANELLE_ARGS
+        M.ORGANELLE_ARGS = ["-x", "asm5", "-c", "-p", "0"]
+        code, err = run(work, refdir)
+        M.ORGANELLE_ARGS = saved
+        rows = read(refdir / "overlaps.tsv") if code == 0 else []
+        if code != 0 or any(r["kind"] == "removed_as_organelle" for r in rows):
+            fails.append(f"control with -x asm5: exit {code}; removed as organelle DNA: "
+                         f"{[r['bacterial_contig'] for r in rows if r['kind'] == 'removed_as_organelle']} (none should "
+                         "be, or the test cannot tell the presets apart)")
+
 # A download whose md5 does not match: exit 1, nothing written to refdir.
 BAD_MD5.add(B2)
 with tempfile.TemporaryDirectory() as tmp:
@@ -249,10 +307,27 @@ with tempfile.TemporaryDirectory() as tmp:
             fails.append(f"bad md5: {f} was written anyway")
 BAD_MD5.clear()
 
+# A fungal mitochondrion whose length is not the listed one: exit 1, nothing written to refdir.
+with tempfile.TemporaryDirectory() as tmp:
+    tmp = Path(tmp)
+    refdir, work = tmp / "references", tmp / "work"
+    write_lists(refdir)
+    lst = refdir / "fungal_mitochondria.tsv"
+    lst.write_text(lst.read_text().replace(f"\t{len(MITO)}\t", f"\t{len(MITO) + 1}\t"))
+    code, err = run(work, refdir)
+    if code != 1 or "fungal_mitochondria.tsv says" not in err:
+        fails.append(f"wrong mitochondrion length: exit {code}, message {err!r}")
+    for f in ("overlaps.tsv", "genome_files.tsv", "CLEANING.md"):
+        if (refdir / f).exists():
+            fails.append(f"wrong mitochondrion length: {f} was written anyway")
+
 if fails:
     print("FAIL\n" + "\n".join(fails))
     sys.exit(1)
 print("PASS: bacterial contigs in hosts removed (exact, a second copy at 3% divergence, a contaminant at 3%), "
       "fungal contig in a bacterial genome removed, 800 bp and 700 bp shared stretches kept and listed, 12% "
-      "divergent copy ignored, cleaned files, md5 checks, rerun without new downloads, default -p misses the "
-      "second copy and the 700 bp stretch (control), bad md5 writes nothing")
+      "divergent copy ignored, organelle DNA (mitochondrion at 90% and chloroplast at 85% removed, 1.5 kb stretch "
+      "listed, 70% piece ignored, a contig removed as fungal listed once), cleaned files, md5 checks, rerun "
+      "without new downloads, default -p misses the second copy and the 700 bp stretch (control), -x asm5 misses "
+      "both organelle contigs (control), bad md5 and a "
+      "wrong mitochondrion length write nothing")

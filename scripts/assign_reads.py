@@ -6,8 +6,10 @@ minimap2 keeping up to 50 secondary alignments. Each read then gets one outcome:
 
   counted for a lineage   its best alignments (those with the highest score) all pass the filter,
                           at least 95% identity over at least 80% of the read; all fall in that
-                          lineage; none overlaps a shared stretch listed in references/overlaps.tsv;
-                          and there are fewer than 51 of them
+                          lineage; none overlaps a shared stretch listed in references/overlaps.tsv
+                          (from v0.2 also the organelle stretches in bacterial genomes, PROTOCOL.md
+                          section 10, entry 10; these count under the same reason); and there are
+                          fewer than 51 of them
   counted for none        it has an alignment that passes the filter, but one of the conditions
                           above fails (each reason is counted)
   routed                  no alignment passes the filter: the read goes on to SingleM and SSUplex
@@ -20,6 +22,12 @@ Writes in --out:
   counts.tsv          total reads, reads per lineage, the fungal read count for E2, and the reads
                       counted for none or routed, by reason
   routed.fastq.gz     the routed reads as they were in the input (routed.fasta.gz for FASTA input)
+  spread.tsv          the spread check (v0.2; section 10, entry 10): for each bacterial genome with reads
+                      counted for its lineage in the first input file (mate 1 of a paired run), the
+                      reads, their distinct start positions S, the 1-kb windows they hit, the genome's
+                      windows G, the windows S starts would hit if spread evenly, E = G(1 - e^(-S/G)),
+                      and the ratio of windows hit to E. A read whose best alignments fall on several
+                      genomes of its lineage counts for each.
   assign.json         versions, command, index, input files and counts
 
 Usage (paired runs: give both files; each mate is counted on its own):
@@ -34,6 +42,7 @@ import datetime as dt
 import gzip
 import hashlib
 import json
+import math
 import os
 import subprocess
 import sys
@@ -41,7 +50,7 @@ import threading
 from collections import Counter
 from pathlib import Path
 
-__version__ = "0.1"
+__version__ = "0.2"
 
 MINIMAP2_ARGS = {   # PROTOCOL.md 4.1; -c, --frag=no and --paf-no-hit: section 10, entry 4
     "short": ["-x", "sr", "--secondary=yes", "-N", "50", "-c", "--frag=no", "--paf-no-hit"],
@@ -53,6 +62,10 @@ MIN_ID_PCT, MIN_COV_PCT = 95, 80
 NONE_REASONS = ["best alignment fails the filter", "51 or more equally best alignments",
                 "overlaps a shared stretch", "tied across lineages"]
 ROUTED_REASONS = ["no alignment", "no alignment passes the filter"]
+BACTERIAL_KINDS = ("endosymbiont", "contaminant")
+WINDOW = 1000                     # the spread check (section 10, entry 10)
+SPREAD_COLS = ["lineage", "genome", "reads", "starts", "windows", "genome_windows", "expected", "ratio"]
+ORGANELLE_ID_PCT, ORGANELLE_COV_PCT = 90, 50      # the organelle check on routed reads (entry 10)
 
 
 # ------------------------------------------------------------------ reads ---
@@ -131,6 +144,9 @@ class Bitset:
         j = i >> 3
         return j < len(self.b) and bool(self.b[j] >> (i & 7) & 1)
 
+    def count(self):
+        return bin(int.from_bytes(self.b, "little")).count("1")
+
 
 # --------------------------------------------------------------- the rule ---
 
@@ -206,20 +222,122 @@ def load_index(index_dir):
     return info, lineage_of, order, hosts
 
 
+def load_sequences(index_dir):
+    with open(index_dir / "sequences.tsv", newline="", encoding="utf-8") as fh:
+        return list(csv.DictReader(fh, delimiter="\t"))
+
+
 def load_mask(path):
+    """Stretches whose reads count for none: the shared stretches (both sides) and, from v0.2, the organelle
+    stretches in bacterial genomes (the bacterial side only; entry 10)."""
     mask = {}
     with open(path, newline="", encoding="utf-8") as fh:
         for r in csv.DictReader(fh, delimiter="\t"):
-            if r["kind"] != "shared_stretch":
+            if r["kind"] == "shared_stretch":
+                mask.setdefault(r["host_contig"].encode("ascii"), []).append(
+                    (int(r["host_start"]), int(r["host_end"])))
+            elif r["kind"] != "organelle_stretch":
                 continue
-            mask.setdefault(r["host_contig"].encode("ascii"), []).append((int(r["host_start"]), int(r["host_end"])))
             mask.setdefault(r["bacterial_contig"].encode("ascii"), []).append(
                 (int(r["bacterial_start"]), int(r["bacterial_end"])))
     return mask
 
 
-def assign_file(path, cmd, log_path, lineage_of, hosts, mask, tally):
-    """Map one file and add its reads to tally. Returns (reads, format, routed positions)."""
+class Spread:
+    """The spread check (entry 10): where the reads counted for each bacterial lineage start, per genome."""
+
+    def __init__(self, seq_rows):
+        self.where, self.lineage = {}, {}
+        self.bp, self.windows = Counter(), Counter()
+        for r in seq_rows:
+            if r["kind"] not in BACTERIAL_KINDS:
+                continue
+            acc, n = r["accession"], int(r["length"])
+            self.where[r["sequence"].encode("ascii")] = (acc, self.bp[acc], self.windows[acc])
+            self.lineage[acc] = r["lineage"]
+            self.bp[acc] += n
+            self.windows[acc] += -(-n // WINDOW)
+        self.lineages = set(self.lineage.values())
+        self.starts, self.hit, self.reads = {}, {}, Counter()
+
+    def add(self, alns):
+        """One read counted for a bacterial lineage: its best alignments."""
+        best = max(a[0] for a in alns)
+        seen = set()
+        for a in alns:
+            if a[0] != best:
+                continue
+            acc, bp_off, w_off = self.where[a[6]]
+            self.starts.setdefault(acc, Bitset()).add(bp_off + a[7])
+            self.hit.setdefault(acc, Bitset()).add(w_off + a[7] // WINDOW)
+            seen.add(acc)
+        for acc in seen:
+            self.reads[acc] += 1
+
+    def rows(self):
+        out = []
+        for acc in sorted(self.reads, key=lambda x: (self.lineage[x], x)):
+            s, w, g = self.starts[acc].count(), self.hit[acc].count(), self.windows[acc]
+            e = expected_windows(s, g)
+            out.append({"lineage": self.lineage[acc], "genome": acc, "reads": self.reads[acc], "starts": s,
+                        "windows": w, "genome_windows": g, "expected": f"{e:.1f}",
+                        "ratio": f"{w / e:.4f}" if e else ""})
+        return out
+
+
+def expected_windows(starts, genome_windows):
+    """Windows that this many distinct start positions would hit if spread evenly: G(1 - e^(-S/G))."""
+    g = genome_windows
+    return g * (1 - math.exp(-starts / g)) if g else 0.0
+
+
+def read_spread(path):
+    """{lineage: highest ratio among its genomes} from a spread.tsv."""
+    best = {}
+    with open(path, newline="", encoding="utf-8") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            v = float(r["ratio"]) if r["ratio"] else 0.0
+            best[r["lineage"]] = max(v, best.get(r["lineage"], 0.0))
+    return best
+
+
+def organelle_names(paf_lines):
+    """The reads (names, as str) whose alignments at 90% identity or more (PAF col 10 / col 11) together cover
+    at least half of the read (entry 10). paf_lines: bytes lines of minimap2 PAF output."""
+    covered = {}
+    for line in paf_lines:
+        f = line.rstrip(b"\n").split(b"\t")
+        if len(f) < 12 or f[5] == b"*" or int(f[9]) * 100 < ORGANELLE_ID_PCT * int(f[10]):
+            continue
+        covered.setdefault(f[0].decode("ascii"), (int(f[1]), []))[1].append((int(f[2]), int(f[3])))
+    out = set()
+    for name, (qlen, iv) in covered.items():
+        total, end = 0, 0
+        for s, e in sorted(iv):
+            if e > end:
+                total += e - max(s, end)
+                end = e
+        if total * 100 >= ORGANELLE_COV_PCT * qlen:
+            out.add(name)
+    return out
+
+
+def organelle_reads(reads, organelles_fna, platform, minimap2, threads, log_path):
+    """The organelle check (entry 10): the names of the reads in the FASTQ or FASTA file `reads` that are
+    organelle DNA, by organelle_names, when aligned to the organelle genomes alone with the platform's
+    minimap2 settings."""
+    cmd = [minimap2, *MINIMAP2_ARGS[platform], "-t", str(threads), str(organelles_fna), str(reads)]
+    with open(log_path, "a") as err:
+        p = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=err)
+    if p.returncode != 0:
+        raise RuntimeError(f"minimap2 failed on {reads} against the organelle genomes (exit {p.returncode}); "
+                           f"see {log_path}")
+    return organelle_names(p.stdout.splitlines())
+
+
+def assign_file(path, cmd, log_path, lineage_of, hosts, mask, tally, spread=None):
+    """Map one file and add its reads to tally (and to spread, if given). Returns (reads, format, routed
+    positions)."""
     with open(log_path, "a") as err:
         proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=err, bufsize=1 << 20)
     state = {}
@@ -245,7 +363,10 @@ def assign_file(path, cmd, log_path, lineage_of, hosts, mask, tally):
                 count(expected, "routed", ROUTED_REASONS[0], False)
                 expected += 1
             try:
-                count(pos, *evaluate(alns, lineage_of, hosts, mask))
+                outcome, detail, fungal = evaluate(alns, lineage_of, hosts, mask)
+                count(pos, outcome, detail, fungal)
+                if spread is not None and outcome == "lineage" and detail in spread.lineages:
+                    spread.add(alns)
             except KeyError as e:
                 raise RuntimeError(f"minimap2 aligned a read to {e}, which is not in sequences.tsv: "
                                    "the index and its table do not match") from None
@@ -303,6 +424,7 @@ def main(argv=None):
 
     try:
         info, lineage_of, order, hosts = load_index(index_dir)
+        spread = Spread(load_sequences(index_dir))
         overlaps = Path(args.refdir) / "overlaps.tsv"
         mask = load_mask(overlaps)
         mmi = index_dir / INDEX_FILE[args.platform]
@@ -326,9 +448,10 @@ def main(argv=None):
     tally = {"lineage": Counter(), "none": Counter(), "routed": Counter(), "fungal": 0}
     inputs, routed_sets, formats = [], [], set()
     try:
-        for p in args.reads:
+        for k, p in enumerate(args.reads):
             print(f"aligning {p}", flush=True)
-            n, fmt, routed = assign_file(p, cmd, out / "minimap2.log", lineage_of, hosts, mask, tally)
+            n, fmt, routed = assign_file(p, cmd, out / "minimap2.log", lineage_of, hosts, mask, tally,
+                                         spread if k == 0 else None)
             inputs.append({"path": str(Path(p).resolve()), "bytes": Path(p).stat().st_size, "reads": n})
             routed_sets.append((p, routed))
             if fmt:
@@ -365,8 +488,15 @@ def main(argv=None):
             "index": {"dir": str(index_dir.resolve()), **{k: info[k] for k in ("set", "made_by", "refs_md5", "bp")}},
             "overlaps_md5": md5_of(overlaps), "inputs": inputs,
             "counts": {f"{s}: {n}": r for s, n, r in rows}}
+    meta["spread_from"] = inputs[0]["path"] if inputs else None
+    tmp_spread = out / "spread.tsv.part"
+    with open(tmp_spread, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=SPREAD_COLS, delimiter="\t", lineterminator="\n")
+        w.writeheader()
+        w.writerows(spread.rows())
     tmp_json = out / "assign.json.part"
     tmp_json.write_text(json.dumps(meta, indent=1) + "\n")
+    os.replace(tmp_spread, out / "spread.tsv")
     os.replace(tmp, out / "counts.tsv")
     os.replace(routed_tmp, out / routed_name)
     os.replace(tmp_json, out / "assign.json")
@@ -376,7 +506,7 @@ def main(argv=None):
     for lin in order:
         if tally["lineage"][lin]:
             print(f"  {lin}: {tally['lineage'][lin]}")
-    print(f"-> {out}/counts.tsv, {routed_name}, assign.json")
+    print(f"-> {out}/counts.tsv, {routed_name}, spread.tsv, assign.json")
     return 0
 
 

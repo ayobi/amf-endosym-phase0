@@ -1,27 +1,36 @@
 #!/usr/bin/env python3
-"""Test T1, the paired positive and negative (PROTOCOL.md sections 5 and 6; section 10, entry 9).
+"""Test T1, the paired positive and negative (PROTOCOL.md sections 5 and 6; section 10, entries 9 and 10).
 
-For every run in t1/runs.tsv:
+v0.2 runs T1 again under entry 10: the entry 10 index, t and m measured again with it, and the new route
+rules and spread check. For every run in t1/runs.tsv:
   1. reads and read assignment: the first 20,000,000 spots (the HiFi run: 1,000,000 reads), fetched
-     with fastq-dump and assigned with assign_reads.py against the full index. Runs marked
-     reuse=stage0a use stage 0a's reads and counts (same reads, index and rule).
+     with fastq-dump (reads an earlier T1 run fetched are used again) and assigned with assign_reads.py
+     against the full index. Runs marked reuse=stage0a use stage 0a's reads, and its counts with the
+     entry 10 index (run_stage0a.py --work-name stage0a_entry10).
   2. the route (route = ssu+singlem or ssu): SSUplex, and SingleM for DNA runs, on every read, and the
-     reads they find aligned again as in step 1 (run_stage0a_m.py's functions). Stage 0a runs reuse
-     step 2's files. Runs with route = none (the reported HiFi and JGI runs) are mapped only.
-  3. the routed reads the tools found: SSU pieces placed with entry 8's VSEARCH command and labelled,
-     SingleM reads labelled (DNA runs only); reads that the references explain (alignments of 95%
-     identity or more that together cover 80% of the read) leave the route, as split reads of a
-     bacterial lineage or as host reads.
+     reads they find aligned again as in step 1 (run_stage0a_m.py's functions). The tools' outputs of
+     the entry 9 T1 run, or of stage 0a's step 2 for reuse runs, are used again through links: only the
+     found reads are aligned again, with the entry 10 index. Runs with route = none are mapped only.
+  3. the routed reads the tools found: SSU pieces placed with entry 8's VSEARCH command and labelled
+     (unplaced when the top hits at 94.5% or more lie in several genera, or a novel piece is under 60 bp;
+     entry 10), SingleM reads labelled (DNA runs only). Reads that are organelle DNA (alignments to the
+     organelle genomes alone, at 90% identity or more, together over half the read; entry 10) leave the
+     route, and so do reads that the references explain (alignments of 95% identity or more that
+     together cover 80% of the read), as split reads of a bacterial lineage or as host reads.
   4. sylph against the index's bacteria.syldb (a cross-check: it does not change calls).
-Then levels and calls per line (call_lineages.py), and, only when every run is done, writes to t1/ in
-the repository (commit these):
-  levels.tsv   per run and lineage: n, N, the level, whether the run is informative, cross-talk, sylph
-  calls.tsv    per line (unit) and lineage: the call, its basis and the evidence
-  T1.md        the calls, the confusion table against controls.tsv, and K1 (section 6)
-Work files go to WORKDIR/t1/. Reruns skip what is done.
+Then levels and calls per line (call_lineages.py; entry 10's spread check lowers "present" to "low" for a
+mapped lineage in a DNA run whose reads sit in a few places), and, only when every run is done, writes to
+t1/ in the repository (commit these):
+  levels_entry10.tsv   per run and lineage: n, N, the level, informative, cross-talk, spread, sylph
+  calls_entry10.tsv    per line (unit) and lineage: the call, its basis and the evidence
+  T1_ENTRY10.md        the calls, the confusion table against controls.tsv, and K1 (section 6)
+The entry 9 outputs (levels.tsv, calls.tsv, T1.md) stay as they are. Work files go to WORKDIR/t1_entry10/;
+the reads stay in WORKDIR/t1/reads/, and SSU placements are shared with the entry 9 run in WORKDIR/t1/place/.
+Reruns skip what is done.
 
-Needs entry 8's m (stage0a/marker_share_entry8.tsv), the phase0-reads environment (sra-tools,
-minimap2, SSUplex, VSEARCH, sylph), SingleM in phase0-markers, db/manifest.json and db/silva/.
+Needs t and m measured again under entry 10 (stage0a/fractions_entry10.tsv and
+stage0a/marker_share_entry10.tsv), the phase0-reads environment (sra-tools, minimap2, SSUplex, VSEARCH,
+sylph), SingleM in phase0-markers, db/manifest.json and db/silva/.
 
 Usage:
   conda activate phase0-reads
@@ -53,7 +62,11 @@ import get_silva as GS             # noqa: E402  VSEARCH version
 import rescore_stage0a_m as R      # noqa: E402  entry 8's VSEARCH command, SSU pieces
 import run_stage0a_m as M2         # noqa: E402  step 2's route functions
 
-__version__ = "0.1"
+__version__ = "0.2"
+
+WORK_NAME, STAGE0A_WORK = "t1_entry10", "stage0a_entry10"                 # entry 10
+OUT_LEVELS, OUT_CALLS, OUT_MD = "levels_entry10.tsv", "calls_entry10.tsv", "T1_ENTRY10.md"
+NOT_LINKED = {"found.tsv.gz", "route.json", "tools.log"}                 # made again in the route view
 
 SPOTS = {"short": 20_000_000, "hifi": 1_000_000}            # entries 5 and 9
 FASTQ_DUMP_ARGS = ["--split-files", "--skip-technical", "--gzip"]
@@ -65,7 +78,8 @@ B_PLUS, B_MINUS, PLANT = "BEG34 B+", "BEG34 B-", "Lotus plant-only roots"
 K1_PRESENT = ("GMAR_BEG34_HIC_Bplus", "GMAR_BEG34_GENOME")   # section 6: these runs must be at least present
 CAGG_GENERA = {"Glomeribacter", "Mycoavidus"}                 # entry 9: K1 counts route lineages in either
 LEVEL_COLS = ["run", "unit", "kind", "prep", "bioproject", "lineage", "source", "n", "N", "fraction", "level",
-              "informative", "cross_talk", "reads", "fungal_reads", "split_reads", "sylph_ani"]
+              "informative", "cross_talk", "spread", "spread_cap", "reads", "fungal_reads", "split_reads",
+              "sylph_ani"]
 CALL_COLS = ["unit", "scored", "lineage", "source", "category", "call", "basis", "signal", "informative_runs",
              "present_runs", "low_runs", "e1", "e2", "e5", "members", "placements"]
 
@@ -165,6 +179,8 @@ def assigned(adir, platform, ctx):
     if (a["platform"], a["minimap2"], a["index"]["refs_md5"], a["overlaps_md5"]) != \
             (platform, ctx["minimap2"], ctx["refs_md5"], ctx["overlaps_md5"]):
         raise RuntimeError(f"{adir} was assigned with another platform, minimap2, index or overlaps.tsv")
+    if not (adir / "spread.tsv").exists():
+        raise RuntimeError(f"{adir} has no spread.tsv: it was assigned before entry 10")
     files = []
     for inp in a["inputs"]:
         p = Path(inp["path"])
@@ -205,6 +221,20 @@ def route_new(r, files, rdir, args, db, ctx):
                                                      "singlem": dna, "ssuplex_reads_per_origin": per_origin},
                                                     indent=1) + "\n")
     shutil.rmtree(rdir / "tmp", ignore_errors=True)
+
+
+def route_view(r, files, src, view, args, db, ctx):
+    """The route in `view` (entry 10). When src holds a finished route, its tools' outputs are linked into
+    view, so only the found reads are aligned again, with this index; otherwise the tools run in view."""
+    if (view / "route.json").exists():
+        return
+    view.mkdir(parents=True, exist_ok=True)
+    if src is not None and (src / "route.json").exists():
+        for p in sorted(src.iterdir()):
+            if p.name in NOT_LINKED or p.is_dir() or os.path.lexists(view / p.name):
+                continue
+            (view / p.name).symlink_to(p.resolve())
+    route_new(r, files, view, args, db, ctx)
 
 
 def routed_found(r, rdir):
@@ -341,6 +371,28 @@ def explained_reads(found_fq, positions, args, ctx, log):
     return out
 
 
+def organelle_check(found, rdir, cache, args, ctx):
+    """{(mate, position)} of the routed found reads that are organelle DNA (entry 10); cached."""
+    if cache.exists():
+        return {(m, int(p)) for m, p in (k.rsplit(":", 1) for k in json.loads(cache.read_text()))}
+    by_mate = defaultdict(set)
+    for (mate, _), (pos, _, _) in found.items():
+        by_mate[mate].add(pos)
+    fq = cache.with_suffix(".fq")
+    with open(fq, "wb") as out:
+        for mate, positions in sorted(by_mate.items()):
+            for h, s, q in AR.records(rdir / f"{mate}.found.fastq.gz"):
+                pos = int(M2.first_word(h))
+                if pos in positions:
+                    out.write(b"@%s:%d\n%s\n+\n%s\n" % (mate.encode(), pos, s, q))
+    names = AR.organelle_reads(fq, ctx["organelles"], "short", args.minimap2, args.threads,
+                               cache.with_suffix(".log")) if by_mate else set()
+    fq.unlink()
+    res = {(m, int(p)) for m, p in (n.rsplit(":", 1) for n in names)}
+    M2.write_atomic(cache, json.dumps(sorted(f"{m}:{p}" for m, p in res)) + "\n")
+    return res
+
+
 def split_check(found, rdir, cache, args, ctx):
     """{(mate, position): lineage or ''} for the routed found reads the references explain; cached."""
     if cache.exists():
@@ -421,6 +473,8 @@ def build(runs, data, t, m, ctx):
                          "bioproject": r["bioproject"], "year": r["year"], "lab": r["lab"], "isolate": r["isolate"],
                          "lineage": lin, "source": source, "n": n, "N": N, "reads": d["reads"],
                          "fungal": d["fungal"], "absent_ok": r["kind"] == "DNA" or r["prep"] == "total RNA",
+                         "spread": d["spread"].get(lin, 0.0) if source == "mapped" and d["spread"] is not None
+                         else None,
                          "split_reads": d["split"].get(lin, 0) if source == "mapped" else "",
                          "sylph_ani": d["sylph"].get(lin, "") if source == "mapped" else ""})
         levels += C.run_levels(recs)
@@ -490,11 +544,12 @@ def write_outputs(t1_dir, runs, data, levels, calls, reasons, controls, meta):
 
     def level_row(x):
         v = {**x, "fungal_reads": x["fungal"], "informative": yn(x["informative"]), "cross_talk": yn(x["cross_talk"]),
-             "N": fmt(x["N"]), "fraction": fmt(x["fraction"]), "sylph_ani": fmt(x["sylph_ani"], ".2f")}
+             "N": fmt(x["N"]), "fraction": fmt(x["fraction"]), "sylph_ani": fmt(x["sylph_ani"], ".2f"),
+             "spread": fmt(x["spread"], ".2f"), "spread_cap": yn(x["spread_cap"])}
         return "\t".join(str(v[c]) for c in LEVEL_COLS) + "\n"
 
-    tmp["levels.tsv"] = "\t".join(LEVEL_COLS) + "\n" + "".join(level_row(x) for x in levels)
-    tmp["calls.tsv"] = "\t".join(CALL_COLS) + "\n" + "".join(
+    tmp[OUT_LEVELS] = "\t".join(LEVEL_COLS) + "\n" + "".join(level_row(x) for x in levels)
+    tmp[OUT_CALLS] = "\t".join(CALL_COLS) + "\n" + "".join(
         "\t".join(("yes" if c[k] else "no") if k in ("signal", "e1", "e2", "e5") else str(c[k]) for k in CALL_COLS)
         + "\n" for c in calls)
     units = []
@@ -502,13 +557,14 @@ def write_outputs(t1_dir, runs, data, levels, calls, reasons, controls, meta):
         if r["unit"] not in units:
             units.append(r["unit"])
     by = {(c["unit"], c["lineage"]): c for c in calls}
-    md = ["# Test T1: the paired positive and negative", "",
+    md = ["# Test T1 under entry 10: the paired positive and negative", "",
           f"Made by run_t1.py v{__version__} (call_lineages.py v{C.__version__}) on {meta['made']}, with "
           f"{meta['assign']}, minimap2 {meta['minimap2']} and the full index (refs.fna md5 {meta['refs_md5']}); "
           f"SSUplex, SingleM and HMMER {meta['tools']}; VSEARCH {meta['vsearch']} against SILVA `{meta['silva']}`; "
           f"{meta['sylph']}.",
-          f"Rule: PROTOCOL.md 4.1, section 5 (T1) and section 6 (K1), with section 10, entries 4 to 9. "
-          f"t = {meta['t']:.4g} (entry 5), m = {meta['m']:.4g} (entry 8).", "",
+          f"Rule: PROTOCOL.md 4.1, section 5 (T1) and section 6 (K1), with section 10, entries 4 to 10. "
+          f"t = {meta['t']:.4g} and m = {meta['m']:.4g}, both measured again under entry 10 "
+          "(`stage0a/STAGE0A_ENTRY10.md`, `stage0a/STAGE0A_M_ENTRY10.md`). The entry 9 results are in `T1.md`.", "",
           f"## K1: {'passed' if not reasons else 'FAILED'}", ""]
     md += [f"- {x}" for x in reasons] or ["None of the K1 conditions holds: the B- line is not called resident "
                                           "for CaGg, the plant-only roots are called resident for nothing, and the "
@@ -529,28 +585,39 @@ def write_outputs(t1_dir, runs, data, levels, calls, reasons, controls, meta):
         if c["call"] not in ("absent", "no call"):
             md.append(f"| {c['unit']} | {c['lineage']} | {c['category']} | {c['call']} | {c['basis']} | "
                       f"{c['present_runs']} / {c['low_runs']} | {yn(c['e1'])} | {yn(c['e2'])} | {yn(c['e5'])} |")
-    md += ["", "## CaGg per run", "", "| Run | Line | Kind | Reads | n | N | Level | Informative | sylph ANI |",
-           "|---|---|---|---|---|---|---|---|---|"]
+    md += ["", "## CaGg per run", "",
+           "| Run | Line | Kind | Reads | n | N | Level | Informative | Spread | sylph ANI |",
+           "|---|---|---|---|---|---|---|---|---|---|"]
     for x in levels:
         if x["lineage"] == "CaGg":
+            notes = [w for w, flag in (("cross-talk", x["cross_talk"]), ("spread", x["spread_cap"])) if flag]
             md.append(f"| {x['run']} | {x['unit']} | {x['kind']} {x['prep'] if x['kind'] == 'RNA' else ''} | "
                       f"{x['reads']} | {x['n']} | {x['N']:.4g} | {x['level']}"
-                      f"{' (cross-talk)' if x['cross_talk'] else ''} | {yn(x['informative'])} | "
-                      f"{fmt(x['sylph_ani'], '.2f') or '-'} |")
+                      f"{' (' + ', '.join(notes) + ')' if notes else ''} | {yn(x['informative'])} | "
+                      f"{fmt(x['spread'], '.2f') or '-'} | {fmt(x['sylph_ani'], '.2f') or '-'} |")
+    capped = [x for x in levels if x["spread_cap"]]
+    md += ["", "## Spread check (entry 10)", "",
+           "In DNA runs, a mapped lineage none of whose genomes has a spread ratio of 0.5 or more is at most low: "
+           "its reads sit in a few places, not across a genome (`levels_entry10.tsv`, column spread)."]
+    md += ([f"- {x['run']} ({x['unit']}): {x['lineage']}, n = {x['n']}, spread {x['spread']:.2f}: present "
+            f"lowered to low" for x in capped] or ["", "It lowered no level."])
     md += ["", "## The route per run", "",
-           "| Run | Routed reads found | SSU kept | SSU dropped: outside Bacteria / organelle | SingleM kept | "
-           "Split reads: bacterial / host |", "|---|---|---|---|---|---|"]
+           "| Run | Routed reads found | SSU kept | SSU dropped: outside Bacteria / organelle | "
+           "SSU unplaced: several genera / under 60 bp | SingleM kept | Organelle DNA | "
+           "Split reads: bacterial / host |", "|---|---|---|---|---|---|---|---|"]
     for r in runs:
         d = data[r["run"]]
         if d["route"] is None:
             continue
         s = d["stats"]
         md.append(f"| {r['run']} | {s['found']} | {s['ssu_kept']} | {s['ssu_outside']} / {s['ssu_organelle']} | "
-                  f"{s['sm_kept'] if r['route'] == 'ssu+singlem' else 'n/a'} | {s['split_bact']} / {s['split_host']} |")
-    md += ["", "Reads are counted per read (mates separately). `levels.tsv` gives every lineage in every run; "
-               "`calls.tsv` gives every call with its evidence; novel lineages list their most common placements. "
-               "sylph is a cross-check and does not change calls (4.2)."]
-    tmp["T1.md"] = "\n".join(md) + "\n"
+                  f"{s['ssu_several']} / {s['ssu_short']} | {s['sm_kept'] if r['route'] == 'ssu+singlem' else 'n/a'} | "
+                  f"{s['organelle_dna']} | {s['split_bact']} / {s['split_host']} |")
+    md += ["", f"Reads are counted per read (mates separately). `{OUT_LEVELS}` gives every lineage in every run; "
+               f"`{OUT_CALLS}` gives every call with its evidence; novel lineages list their most common placements. "
+               "SSU columns count the found reads by their SSU label; organelle DNA and split reads are found reads "
+               "with a label that leave the route. sylph is a cross-check and does not change calls (4.2)."]
+    tmp[OUT_MD] = "\n".join(md) + "\n"
     for name, text in tmp.items():
         (t1_dir / (name + ".part")).write_text(text, encoding="utf-8")
     for name in tmp:
@@ -568,12 +635,15 @@ def yn(v):
 # ----------------------------------------------------------------------- main ---
 
 def stage_values(stage_dir):
-    """t (entry 5) and m (entry 8), from the committed stage 0a outputs."""
-    fr = [x for x in M2.read_tsv(stage_dir / "fractions.tsv") if x["sets_t"] == "yes"]
-    e8 = stage_dir / "marker_share_entry8.tsv"
-    if not e8.exists():
-        raise RuntimeError(f"{e8} is missing: entry 8's rescore must finish (and be committed) first")
-    ms = [float(x["share"]) for x in M2.read_tsv(e8) if x["sets_m"] == "yes" and x["share"]]
+    """t and m measured again under entry 10, from the committed stage 0a outputs."""
+    fr10, m10 = stage_dir / "fractions_entry10.tsv", stage_dir / "marker_share_entry10.tsv"
+    if not fr10.exists():
+        raise RuntimeError(f"{fr10} is missing: run run_stage0a.py --work-name {STAGE0A_WORK} --suffix _entry10 "
+                           "first (and commit it)")
+    if not m10.exists():
+        raise RuntimeError(f"{m10} is missing: run rescore_m_entry10.py first (and commit it)")
+    fr = [x for x in M2.read_tsv(fr10) if x["sets_t"] == "yes"]
+    ms = [float(x["share"]) for x in M2.read_tsv(m10) if x["sets_m"] == "yes" and x["share"]]
     if not fr or not ms:
         raise RuntimeError("t or m cannot be read from stage0a/")
     return min(float(x["fraction"]) for x in fr) / 10, min(ms)
@@ -610,6 +680,9 @@ def main(argv=None):
         info, lineage_of, _, hosts = AR.load_index(args.index)
         if info.get("set") != "full":
             raise RuntimeError(f"{args.index} is the {info.get('set')} index; T1 uses the full references")
+        if not (args.index / "organelles.fna").exists():
+            raise RuntimeError(f"{args.index} has no organelles.fna: it was built before entry 10 (make_index.py "
+                               "v0.2)")
         overlaps = Path(args.refdir) / "overlaps.tsv"
         mm2 = subprocess.run([args.minimap2, "--version"], capture_output=True, text=True, check=True).stdout.strip()
         if mm2 != info["minimap2"]:
@@ -624,7 +697,8 @@ def main(argv=None):
         args.silva_fasta = silva["fasta"]
         db = json.loads((work / "db" / "manifest.json").read_text())
         if any(r["route"] != "none" and not r["reuse"] and
-               not (work / "t1" / "route" / r["run"] / "route.json").exists() for r in runs):
+               not (work / "t1" / "route" / r["run"] / "route.json").exists() and
+               not (work / WORK_NAME / "route" / r["run"] / "route.json").exists() for r in runs):
             versions = DB.check_versions(args)
             if versions != db["versions"]:
                 raise RuntimeError(f"the tools here ({versions}) are not those get_marker_databases.py checked "
@@ -639,12 +713,14 @@ def main(argv=None):
     ctx = {"mmi": args.index / AR.INDEX_FILE["short"], "lineage_of": lineage_of, "hosts": hosts,
            "mask": AR.load_mask(overlaps), "minimap2": mm2, "refs_md5": info["refs_md5"],
            "overlaps_md5": AR.md5_of(overlaps), "bacterial": set(bact_kinds), "bacterial_order": order,
-           "syldb": args.index / "bacteria.syldb", "acc_lineage": {x["accession"]: x["lineage"] for x in lin_rows}}
+           "syldb": args.index / "bacteria.syldb", "acc_lineage": {x["accession"]: x["lineage"] for x in lin_rows},
+           "organelles": args.index / "organelles.fna"}
 
-    tw = work / "t1"
-    for sub in ("reads", "assign", "route", "split", "sylph"):
-        (tw / sub).mkdir(parents=True, exist_ok=True)
-    failed, files, counts = [], {}, {}
+    tw, tn = work / "t1", work / WORK_NAME
+    (tw / "reads").mkdir(parents=True, exist_ok=True)
+    for sub in ("assign", "route", "split", "organelle", "sylph"):
+        (tn / sub).mkdir(parents=True, exist_ok=True)
+    failed, files, counts, adirs = [], {}, {}, {}
 
     def one_fetch(r):
         try:
@@ -665,15 +741,19 @@ def main(argv=None):
         run = r["run"]
         try:
             if r["reuse"]:
-                files[run], counts[run] = assigned(work / "stage0a" / "assign" / run, "short", ctx)
+                adirs[run] = work / STAGE0A_WORK / "assign" / run
+                if not (adirs[run] / "assign.json").exists():
+                    raise RuntimeError(f"stage 0a step 1 with the entry 10 index ({STAGE0A_WORK}) did not finish it")
+                files[run], counts[run] = assigned(adirs[run], "short", ctx)
                 continue
             if not (tw / "reads" / run / "fetch.json").exists():
                 continue
             fi = json.loads((tw / "reads" / run / "fetch.json").read_text())
-            if not (tw / "assign" / run / "counts.tsv").exists():
+            adirs[run] = tn / "assign" / run
+            if not (adirs[run] / "counts.tsv").exists():
                 print(f"assigning {run}", flush=True)
-            assign(run, [tw / "reads" / run / f for f in fi["files"]], tw / "assign" / run, r["platform"], args)
-            files[run], counts[run] = assigned(tw / "assign" / run, r["platform"], ctx)
+            assign(run, [tw / "reads" / run / f for f in fi["files"]], adirs[run], r["platform"], args)
+            files[run], counts[run] = assigned(adirs[run], r["platform"], ctx)
         except (OSError, KeyError, RuntimeError, json.JSONDecodeError) as e:
             failed.append(f"{run}: {e}")
             print(f"FAILED: {run}: {e}", flush=True)
@@ -683,15 +763,15 @@ def main(argv=None):
         run = r["run"]
         if r["route"] == "none" or run not in files:
             continue
-        rdirs[run] = work / "stage0a" / "route" / run if r["reuse"] else tw / "route" / run
+        src = work / "stage0a" / "route" / run if r["reuse"] else tw / "route" / run
+        rdirs[run] = tn / "route" / run
         try:
-            if r["reuse"]:
-                if not (rdirs[run] / "route.json").exists():
-                    raise RuntimeError(f"stage 0a step 2 did not finish {run}")
-            else:
-                if not (rdirs[run] / "route.json").exists():
-                    print(f"route: {run}", flush=True)
-                route_new(r, files[run], rdirs[run], args, db, ctx)
+            if r["reuse"] and not (src / "route.json").exists():
+                raise RuntimeError(f"stage 0a step 2 did not finish {run}")
+            if not (rdirs[run] / "route.json").exists():
+                print(f"route: {run}" + (" (the tools' outputs used again)" if (src / "route.json").exists() else ""),
+                      flush=True)
+            route_view(r, files[run], src, rdirs[run], args, db, ctx)
         except (OSError, KeyError, ValueError, RuntimeError) as e:
             failed.append(f"{run}: {e}")
             print(f"FAILED: {run}: {e}", flush=True)
@@ -722,21 +802,30 @@ def main(argv=None):
             run, c = r["run"], counts[r["run"]]
             d = data[run] = {"reads": c[("total", "reads in input")], "fungal": c[("fungal", "fungal reads for E2")],
                              "mapped": {lin: c.get(("lineage", lin), 0) for lin in ctx["bacterial"]},
+                             "spread": AR.read_spread(adirs[run] / "spread.tsv") if r["kind"] == "DNA" else None,
                              "route": None, "split": Counter(), "placements": defaultdict(Counter), "stats": Counter()}
             if run in rdirs:
                 print(f"route reads: {run}", flush=True)
-                split = split_check(found[run], rdirs[run], tw / "split" / f"{run}.json", args, ctx)
+                organelle = organelle_check(found[run], rdirs[run], tn / "organelle" / f"{run}.json", args, ctx)
+                split = split_check(found[run], rdirs[run], tn / "split" / f"{run}.json", args, ctx)
                 d["route"], st = Counter(), d["stats"]
                 for key, (pos, a, b) in found[run].items():
                     st["found"] += 1
-                    ssu = C.ssu_label(hits.get(R.seq_id(pieces[run][key]), []), tax) if a else None
+                    piece = pieces[run][key] if a else None
+                    ssu = C.ssu_label(hits.get(R.seq_id(piece), []), tax, len(piece)) if a else None
                     sml = C.singlem_label(sm_tax[run][key]) if b else None
                     if ssu:
-                        st["ssu_kept" if ssu[0] == "kept" else "ssu_" + ssu[0].split()[0]] += 1
+                        if ssu[0] == C.UNPLACED:
+                            st["ssu_several" if ssu[2] == C.SEVERAL_GENERA else "ssu_short"] += 1
+                        else:
+                            st["ssu_kept" if ssu[0] == "kept" else "ssu_" + ssu[0].split()[0]] += 1
                     if sml and sml[0] == "kept":
                         st["sm_kept"] += 1
                     label = C.read_label(ssu, sml)
                     if label is None:
+                        continue
+                    if (key[0], pos) in organelle:                  # entry 10
+                        st["organelle_dna"] += 1
                         continue
                     if (key[0], pos) in split:
                         lin = split[(key[0], pos)]
@@ -749,13 +838,13 @@ def main(argv=None):
                         lname = C.NOVEL_SSU if label[1] == "SSU" else C.NOVEL_SINGLEM
                         d["placements"][lname][(ssu if ssu and ssu[0] == "kept" else sml)[2]] += 1
             print(f"sylph: {run}", flush=True)
-            d["sylph"] = sylph(files[run], tw / "sylph" / f"{run}.tsv", args, ctx)
+            d["sylph"] = sylph(files[run], tn / "sylph" / f"{run}.tsv", args, ctx)
         levels, calls, _ = build(runs, data, t, m, ctx)
         reasons = k1(calls, levels, runs)
     except (OSError, KeyError, ValueError, RuntimeError) as e:
         print(f"Nothing was written to {t1_dir}/: {e}", file=sys.stderr)
         return 1
-    a1 = json.loads((tw / "assign" / new[0]["run"] / "assign.json").read_text()) if new else {"made_by": "?"}
+    a1 = json.loads((adirs[runs[0]["run"]] / "assign.json").read_text())
     meta = {"made": now(), "assign": a1["made_by"], "minimap2": mm2, "refs_md5": info["refs_md5"],
             "tools": ", ".join(f"{k} {v}" for k, v in sorted(db["versions"].items())), "vsearch": vsearch,
             "silva": silva["file"], "sylph": sylph_v, "t": t, "m": m}
@@ -765,7 +854,7 @@ def main(argv=None):
         c = next((x for x in calls if x["unit"] == u and x["lineage"] == "CaGg"), None)
         if c:
             print(f"  {u}: CaGg {c['call']} ({c['basis']})")
-    print(f"-> {t1_dir}/levels.tsv, {t1_dir}/calls.tsv, {t1_dir}/T1.md")
+    print(f"-> {t1_dir}/{OUT_LEVELS}, {t1_dir}/{OUT_CALLS}, {t1_dir}/{OUT_MD}")
     return 0
 
 

@@ -3,10 +3,12 @@
 
 Run once, after clean_references.py and before stage 0a. Makes two sets in --workdir/index/:
   full/   every cleaned genome: host assemblies, bacterial genomes (endosymbionts and contaminants)
-          and plant organelle genomes
+          and organelle genomes (plant ones, and from v0.2 the fungal mitochondria in
+          fungal_mitochondria.tsv: PROTOCOL.md section 10, entry 10)
   t2/     the same without the 9 genomes marked held_out_in_T2 (test T2)
 Each set holds:
   refs.fna         the genomes in one FASTA, in that order
+  organelles.fna   the organelle genomes alone (v0.2; for the organelle check on routed reads, entry 10)
   sequences.tsv    every sequence in refs.fna with its genome and lineage (read by assign_reads.py)
   refs.sr.mmi      minimap2 index for short reads (-x sr)
   refs.hifi.mmi    minimap2 index for HiFi reads (-x map-hifi)
@@ -17,8 +19,9 @@ Then, only when everything worked, in --refdir (commit these before stage 0a):
   INDEX.md         versions, commands, md5s and counts
 
 Lineages follow PROTOCOL.md 4.1: CaGg (Candidatus Glomeribacter genomes), CaMg/MRE (every genome
-marked held_out_in_T2), Mycoavidus, each contaminant genus, the plant organelles, and each host
-fungus. The settings the protocol leaves open are in PROTOCOL.md section 10, entry 4.
+marked held_out_in_T2), Mycoavidus, each contaminant genus, the organelles (plant and fungal, one
+lineage named "organelles" from v0.2; section 10, entry 10), and each host fungus. The settings the
+protocol leaves open are in PROTOCOL.md section 10, entry 4.
 
 Needs minimap2 and sylph on PATH (activate the phase0-reads environment) and about 15 GB of disk.
 
@@ -38,12 +41,12 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-__version__ = "0.1"
+__version__ = "0.2"
 
 MAX_INDEX_BP = 8_000_000_000   # minimap2 -I default (8G): a bigger set would be split into parts
 SEQ_COLS = ["sequence", "accession", "kind", "lineage", "length"]
 LINEAGE_COLS = ["accession", "organism", "kind", "lineage", "held_out_in_T2", "in_full", "in_t2", "sequences", "bp"]
-ORGANELLES = "plant organelles"
+ORGANELLES = "organelles"                  # section 10, entry 10 (was "plant organelles")
 
 
 def read_tsv(path):
@@ -86,6 +89,9 @@ def genomes_from_lists(refdir, workdir):
     org_file = clean / "organelles.fna"
     for r in read_tsv(refdir / "organelles.tsv"):
         out.append((r["accession"], f"{r['plant']} {r['organelle']}", "organelle", ORGANELLES, False, org_file))
+    if (refdir / "fungal_mitochondria.tsv").exists():                    # entry 10
+        for r in read_tsv(refdir / "fungal_mitochondria.tsv"):
+            out.append((r["accession"], f"{r['fungus']} {r['organelle']}", "organelle", ORGANELLES, False, org_file))
     for acc, _, _, _, _, path in out:
         if not path.exists():
             problems.append(f"{acc}: missing cleaned file {path}")
@@ -143,7 +149,8 @@ def build_set(name, genomes, outdir, args, log):
                 seq_acc = seq.split("|", 1)[0]
                 if kind == "organelle":
                     if seq_acc not in organelle_accs:
-                        raise ValueError(f"{seq} in organelles.fna is not in organelles.tsv")
+                        raise ValueError(f"{seq} in organelles.fna is in neither organelles.tsv nor "
+                                         "fungal_mitochondria.tsv")
                     row_kind, row_lin = "organelle", ORGANELLES
                 else:
                     if seq_acc != acc:
@@ -167,6 +174,14 @@ def build_set(name, genomes, outdir, args, log):
         w.writeheader()
         w.writerows(seq_rows)
     os.replace(tmp, outdir / "sequences.tsv")
+
+    org_src = next((g[5] for g in genomes if g[2] == "organelle"), None)
+    if org_src is None:
+        raise ValueError(f"{name}: no organelle genomes")
+    org_dest = outdir / "organelles.fna"
+    with open(org_src, "rb") as fh, open(org_dest.with_name("organelles.fna.part"), "wb") as out:
+        out.write(fh.read())
+    os.replace(org_dest.with_name("organelles.fna.part"), org_dest)
 
     commands = []
     for preset, fname in (("sr", "refs.sr.mmi"), ("map-hifi", "refs.hifi.mmi")):
@@ -199,6 +214,7 @@ def build_set(name, genomes, outdir, args, log):
             "genomes": len({r["accession"] for r in seq_rows}),
             "lineages": dict(Counter(lin for _, _, _, lin, _, _ in genomes)),
             "syldb_md5": hashlib.md5((outdir / "bacteria.syldb").read_bytes()).hexdigest(),
+            "organelles_md5": hashlib.md5(org_dest.read_bytes()).hexdigest(),
             "commands": commands}
     (outdir / "index.json").write_text(json.dumps(info, indent=1) + "\n")
     return info, per_genome, per_genome_bp
@@ -262,7 +278,9 @@ def main(argv=None):
           f"Made by make_index.py v{__version__} on {infos['full']['made']}, with minimap2 {args.mm2_version} "
           f"and {args.sylph_version}.",
           "From the cleaned genomes (`CLEANING.md`). Lineages: PROTOCOL.md 4.1. Settings the protocol leaves open: "
-          "section 10, entry 4.", "",
+          "section 10, entry 4. The organelle genomes, plant and fungal, form one lineage, \"organelles\" "
+          "(section 10, entry 10); each set also holds them alone in `organelles.fna`, for the organelle check on "
+          "routed reads.", "",
           "| Set | Genomes | Sequences | bp | md5 of refs.fna | md5 of bacteria.syldb |", "|---|---|---|---|---|---|"]
     for name in ("full", "t2"):
         i = infos[name]

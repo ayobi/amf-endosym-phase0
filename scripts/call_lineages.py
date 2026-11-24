@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""The lineage caller (PROTOCOL.md 4.1; section 10, entries 7 to 9). Functions only; run_t1.py uses them.
+"""The lineage caller (PROTOCOL.md 4.1; section 10, entries 7 to 10). Functions only; run_t1.py uses them.
 
 Route reads get a label:
   ssu_label       from a read's top SILVA hits (entry 8's VSEARCH command): dropped if a top hit lies
                   outside Bacteria or in chloroplasts or mitochondria (entry 7); a genus when all top hits
-                  share one at 94.5% identity or more (4.1); otherwise novel, placed at the lowest rank
-                  all top hits share
+                  share one at 94.5% identity or more (4.1); unplaced when the top hits are at 94.5% or
+                  more but in several genera (entry 10); otherwise novel, placed at the lowest rank all top
+                  hits share, if the SSU piece is at least 60 bp, and unplaced if it is shorter (entry 10)
   singlem_label   from SingleM's taxonomy: dropped unless Bacteria (entry 7); a genus if it reaches one;
                   otherwise novel
 Route lineages (entry 9): one per genus, matched across routes (no "Candidatus", no GTDB suffix such as
@@ -15,7 +16,9 @@ novel lineage per route, "novel (SSU)" and "novel (SingleM)".
 Levels per run (4.1): N = t x reads for a mapped lineage, t x m x reads for a route lineage; present if
 n >= N, low if n >= N/10, otherwise absent. A run is informative when N >= 10 and its library can show
 absence (DNA or total RNA; entry 9). Cross-talk only lowers "present" to "low": within one BioProject,
-when the run's fraction is below 2% of the highest fraction in another run of that BioProject.
+when the run's fraction is below 2% of the highest fraction in another run of that BioProject. The
+spread check also only lowers "present" to "low" (entry 10): in DNA runs, a mapped lineage none of whose
+genomes has a spread ratio of 0.5 or more (assign_reads.py's spread.tsv) holds its reads in a few places.
 
 Calls per isolate or line, in order: no call (no informative run and no signal); absent (every informative
 run absent); contaminant (present somewhere and E5 fails, or a kit-contaminant genus without both E1 and
@@ -27,7 +30,7 @@ lineage is present at a read fraction of at least a tenth of the line's own high
 import re
 from itertools import combinations
 
-__version__ = "0.1"
+__version__ = "0.2"
 
 KNOWN_CLADE_GENERA = {"Glomeribacter": "CaGg", "Moeniiplasma": "CaMg/MRE", "Mycoavidus": "Mycoavidus"}
 KNOWN_CLADES = set(KNOWN_CLADE_GENERA.values())       # mapped lineages that are known endosymbiont clades
@@ -41,6 +44,10 @@ SILVA_RANKS = ["domain", "kingdom", "phylum", "class", "order", "family", "genus
 GTDB_RANKS = {"d": "domain", "p": "phylum", "c": "class", "o": "order", "f": "family", "g": "genus", "s": "species"}
 CATEGORIES = ("known endosymbiont clade", "kit-contaminant genus", "other known genus", "novel")
 NOVEL_SSU, NOVEL_SINGLEM = "novel (SSU)", "novel (SingleM)"
+NOVEL_MIN_BP = 60                                      # entry 10: a novel SSU piece is at least 60 bp
+UNPLACED = "unplaced"                                  # entry 10
+SEVERAL_GENERA, TOO_SHORT = "best hits in several genera", "piece under 60 bp"
+SPREAD_MIN = 0.5                                       # entry 10
 
 
 # ------------------------------------------------------------------ names ---
@@ -84,12 +91,14 @@ def category_of_mapped(lineage):
 
 # ----------------------------------------------------------------- labels ---
 
-def ssu_label(hits, tax):
+def ssu_label(hits, tax, piece_len=None):
     """A read's label from its top hits. hits: [(target, identity)], all equally good; tax: target -> the
-    SILVA path as a list (Domain to Genus, then the organism). Returns (status, genus, placement) with
-    status 'kept', 'outside Bacteria' or 'organelle'; genus None means novel."""
+    SILVA path as a list (Domain to Genus, then the organism); piece_len: the SSU piece's length (entry 10;
+    None leaves the length out). Returns (status, genus, placement) with status 'kept', 'outside Bacteria',
+    'organelle' or 'unplaced' (then placement says why); genus None means novel."""
+    short = piece_len is not None and piece_len < NOVEL_MIN_BP
     if not hits:
-        return "kept", None, "no hit"
+        return (UNPLACED, None, TOO_SHORT) if short else ("kept", None, "no hit")
     paths = [tax[t] for t, _ in hits]
     if any(p[0] != "Bacteria" for p in paths):
         return "outside Bacteria", None, None
@@ -108,6 +117,10 @@ def ssu_label(hits, tax):
         if g and top >= GENUS_ID:
             return "kept", g, f"genus {g}"
         shared = shared[:-1]               # below 94.5% the genus is not a placement (4.1)
+    if top >= GENUS_ID and len({tuple(r) for r in ranks}) > 1:
+        return UNPLACED, None, SEVERAL_GENERA                          # entry 10
+    if short:
+        return UNPLACED, None, TOO_SHORT                               # entry 10
     named = [(SILVA_RANKS[i], x) for i, x in enumerate(shared) if not NOT_A_NAME.match(x)]
     rank, name = named[-1] if named else ("domain", "Bacteria")
     return "kept", None, f"{rank} {re.sub(r'--other$', '', name)}"
@@ -191,13 +204,17 @@ def level(n, N):
 
 
 def run_levels(records):
-    """records: dicts with run, bioproject, n, N, reads, absent_ok. Adds fraction, level, informative and
-    cross_talk; returns them. All records must be for one lineage."""
+    """records: dicts with run, bioproject, n, N, reads, absent_ok, and optionally spread (the lineage's highest
+    spread ratio in the run, or None where the check does not apply). Adds fraction, level, informative,
+    spread_cap and cross_talk; returns them. All records must be for one lineage."""
     for x in records:
         x["fraction"] = x["n"] / x["reads"] if x["reads"] else 0.0
         x["level"] = level(x["n"], x["N"])
         x["informative"] = x["absent_ok"] and x["N"] >= 10
         x["cross_talk"] = False
+        x["spread_cap"] = x["level"] == "present" and x.get("spread") is not None and x["spread"] < SPREAD_MIN
+        if x["spread_cap"]:
+            x["level"] = "low"
     for x in records:
         if x["level"] != "present":
             continue

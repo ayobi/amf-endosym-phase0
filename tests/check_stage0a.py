@@ -6,7 +6,10 @@ Checks: only the first SPOTS spots are used; fractions per run; t is the lowest 
 fraction / 10, and an RNA positive with a lower fraction does not set it; single-end and paired
 runs; reruns fetch and assign nothing again; a failed fetch writes no outputs and keeps the
 finished runs; a DNA positive with no symbiont reads stops before t; RNA rows with sets_t = yes
-and the T2 index are refused.
+and the T2 index are refused. Measuring t again (section 10, entry 10: --work-name and --suffix)
+uses the fetched reads, assigns into the new folder, writes the suffixed outputs with the spread of
+the DNA runs and the earlier t, and leaves the earlier outputs alone; --work-name without --suffix
+is refused.
 """
 import contextlib
 import csv
@@ -192,6 +195,31 @@ with tempfile.TemporaryDirectory() as tmp:
         check(all((work / "stage0a" / "assign" / r / "counts.tsv").stat().st_mtime == stamp[r] for r in SPEC),
               "rerun assigned again")
 
+        # Measuring t again (entry 10): the reads are not fetched again; the runs are assigned into the new folder.
+        first_tsv = (sd / "fractions.tsv").read_bytes()
+        code, err = stage(sd, extra=["--work-name", "stage0a_entry10", "--suffix", "_entry10"])
+        check(code == 0, f"entry 10 run failed: {err}")
+        if code == 0:
+            check((tmp / "calls.log").read_text().split() == calls, "entry 10 run fetched again")
+            check(all((work / "stage0a_entry10" / "assign" / r / "counts.tsv").exists() for r in SPEC),
+                  "entry 10 run did not assign into stage0a_entry10/assign")
+            check(all((work / "stage0a" / "assign" / r / "counts.tsv").stat().st_mtime == stamp[r] for r in SPEC),
+                  "entry 10 run touched the earlier assignments")
+            check((sd / "STAGE0A.md").read_text() == first_md and (sd / "fractions.tsv").read_bytes() == first_tsv,
+                  "entry 10 run changed the earlier outputs")
+            fr10 = {r["run"]: r for r in csv.DictReader(open(sd / "fractions_entry10.tsv"), delimiter="\t")}
+            check(all((fr10[r]["reads"], fr10[r]["symbiont_reads"]) == (fr[r]["reads"], fr[r]["symbiont_reads"])
+                      for r in SPEC), "entry 10 run: counts differ with the same index")
+            dna = [r for r in SPEC if r != "SRRT1RNA"]
+            check(all(float(fr10[r]["spread"]) >= 0.5 for r in dna) and fr10["SRRT1RNA"]["spread"] == "",
+                  f"entry 10 run: spread {[(r, fr10[r]['spread']) for r in SPEC]}")
+            md10 = (sd / "STAGE0A_ENTRY10.md").read_text()
+            for w in ("(entry10)", f"**t = {t:.4g}**", f"Before this (`fractions.tsv`): t = {t:.4g}.",
+                      "`stage0a_entry10/assign/`", "`fractions_entry10.tsv`", "| Spread |"):
+                check(w in md10, f"STAGE0A_ENTRY10.md does not have {w!r}")
+        code, err = stage(sd, extra=["--work-name", "stage0a_x"])
+        check(code == 1 and "together" in err, f"--work-name without --suffix: exit {code}, {err!r}")
+
     # A failed fetch: the other runs are done and kept, nothing is written, the partial folder is gone.
     sd2, work2 = tmp / "stage0a_fail", tmp / "work_fail"
     sd2.mkdir()
@@ -233,5 +261,7 @@ if fails:
     print("FAIL\n" + "\n".join(fails))
     sys.exit(1)
 print("PASS: first SPOTS spots only, fractions per run (paired and single-end), t from DNA positives only "
-      "(a lower RNA fraction does not set it), rerun fetches and assigns nothing, failed fetch keeps finished runs "
-      "and writes nothing, zero symbiont reads stops before t, RNA sets_t and the T2 index refused")
+      "(a lower RNA fraction does not set it), rerun fetches and assigns nothing, measuring t again into a new "
+      "folder with suffixed outputs and spread (earlier outputs untouched), failed fetch keeps finished runs "
+      "and writes nothing, zero symbiont reads stops before t, RNA sets_t, the T2 index and a lone --work-name "
+      "refused")

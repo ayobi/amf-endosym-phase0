@@ -6,8 +6,14 @@ For every run in stage0a/runs.tsv (the T1 and T2 positives):
      fastq-dump, gzipped, into --workdir/stage0a/reads/<run>/
   2. assign the reads with assign_reads.py against the full index, into --workdir/stage0a/assign/<run>/
 Then, only when every run is done, write to stage0a/ in the repository (commit these):
-  fractions.tsv   per run: reads, reads of its known symbiont, the fraction, fungal and organelle reads
+  fractions.tsv   per run: reads, reads of its known symbiont, the fraction, fungal and organelle reads,
+                  and (v0.2) the spread of the symbiont's reads in DNA runs
   STAGE0A.md      t = the lowest fraction among the DNA positives (sets_t = yes), divided by 10
+
+To measure t again with a new index (v0.2; PROTOCOL.md section 10, entry 10), give --work-name and
+--suffix: the reads already fetched are used again, the runs are assigned into
+--workdir/<work-name>/assign/<run>/, and the outputs get the suffix (fractions_entry10.tsv and
+STAGE0A_ENTRY10.md for --suffix _entry10), so the earlier ones stay as they are.
 
 The lineage read fraction is the reads counted for the run's known symbiont (CaGg for T1, CaMg/MRE
 for T2) divided by all reads, both counted per read (mates separately). RNA positives are measured
@@ -21,6 +27,7 @@ Needs the phase0-reads environment (sra-tools, minimap2) and the index from make
 Usage:
   conda activate phase0-reads
   python scripts/run_stage0a.py --workdir ~/phase0-data --threads 16
+  python scripts/run_stage0a.py --workdir ~/phase0-data --threads 16 --work-name stage0a_entry10 --suffix _entry10
 """
 
 import argparse
@@ -36,14 +43,15 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-__version__ = "0.1"
+__version__ = "0.2"
 
 SPOTS = 20_000_000                                           # section 10, entry 5
 FASTQ_DUMP_ARGS = ["--split-files", "--skip-technical", "--gzip"]
 SCRIPTS = Path(__file__).resolve().parent
 RUN_COLS = ["run", "test", "kind", "line", "symbiont_lineage", "sets_t", "bioproject", "layout", "note"]
 FRACTION_COLS = ["run", "test", "kind", "line", "symbiont_lineage", "sets_t", "spots", "reads", "symbiont_reads",
-                 "fraction", "fungal_reads", "organelle_reads", "note"]
+                 "fraction", "fungal_reads", "organelle_reads", "spread", "note"]
+ORGANELLE_LINEAGES = ("organelles", "plant organelles")      # the name before section 10, entry 10
 LINEAGES = ("CaGg", "CaMg/MRE")
 
 
@@ -136,6 +144,27 @@ def read_counts(path):
     return {(r["section"], r["name"]): int(r["reads"]) for r in read_tsv(path)}
 
 
+def spread_of(adir, lineage):
+    """The highest spread ratio among the lineage's genomes (section 10, entry 10), or None without spread.tsv."""
+    path = adir / "spread.tsv"
+    if not path.exists():
+        return None
+    best = None
+    for x in read_tsv(path):
+        if x["lineage"] == lineage:
+            v = float(x["ratio"]) if x["ratio"] else 0.0
+            best = v if best is None else max(best, v)
+    return best if best is not None else 0.0
+
+
+def t_of(path):
+    """t from an earlier fractions file, or None."""
+    if not path.exists():
+        return None
+    fr = [float(x["fraction"]) for x in read_tsv(path) if x["sets_t"] == "yes"]
+    return min(fr) / 10 if fr else None
+
+
 def summarize(runs, infos, assign_dir):
     rows = []
     for r in runs:
@@ -149,7 +178,8 @@ def summarize(runs, infos, assign_dir):
         rows.append({**{k: r[k] for k in ("run", "test", "kind", "line", "symbiont_lineage", "sets_t", "note")},
                      "spots": infos[r["run"]]["spots"], "reads": total, "symbiont_reads": n,
                      "fraction": n / total, "fungal_reads": c[("fungal", "fungal reads for E2")],
-                     "organelle_reads": c.get(("lineage", "plant organelles"), 0)})
+                     "organelle_reads": sum(c.get(("lineage", x), 0) for x in ORGANELLE_LINEAGES),
+                     "spread": spread_of(assign_dir / r["run"], r["symbiont_lineage"]) if r["kind"] == "DNA" else None})
     setting = [x for x in rows if x["sets_t"] == "yes"]
     zero = [x["run"] for x in setting if x["symbiont_reads"] == 0]
     if zero:
@@ -159,32 +189,47 @@ def summarize(runs, infos, assign_dir):
     return rows, lowest, lowest["fraction"] / 10
 
 
+def fmt_spread(v):
+    return "" if v is None else f"{v:.2f}"
+
+
 def write_outputs(stage_dir, rows, lowest, t, meta):
-    tmp = stage_dir / "fractions.tsv.part"
+    tsv_name, md_name = f"fractions{meta['suffix']}.tsv", f"STAGE0A{meta['suffix'].upper()}.md"
+    tmp = stage_dir / (tsv_name + ".part")
     with open(tmp, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=FRACTION_COLS, delimiter="\t", lineterminator="\n")
         w.writeheader()
         for x in rows:
-            w.writerow({**x, "fraction": f"{x['fraction']:.10g}"})
-    md = ["# Stage 0a, step 1: reference titer t", "",
+            w.writerow({**x, "fraction": f"{x['fraction']:.10g}",
+                        "spread": "" if x["spread"] is None else f"{x['spread']:.4f}"})
+    title = "# Stage 0a, step 1: reference titer t" + (f" ({meta['suffix'].strip('_')})" if meta["suffix"] else "")
+    md = [title, "",
           f"Made by run_stage0a.py v{__version__} on {meta['made']}, with {meta['assign']} and minimap2 "
           f"{meta['minimap2']}, against the full index (refs.fna md5 {meta['refs_md5']}; `references/INDEX.md`). "
-          f"Reads: the first {SPOTS:,} spots of each run, fetched with {meta['fastq_dump']}.",
+          f"Reads: the first {SPOTS:,} spots of each run, fetched with {meta['fastq_dump']}."
+          + (f" Assignments in the work folder's `{meta['work_name']}/assign/`." if meta["work_name"] != "stage0a"
+             else ""),
           "Rule: PROTOCOL.md 4.1 (reference titer) with section 10, entry 5: t is the lowest lineage read fraction "
           "among the DNA positives, divided by 10. RNA positives are measured and reported; they do not set t.", "",
           f"**t = {t:.4g}**: the lowest DNA-positive fraction is {lowest['fraction']:.4g}, in {lowest['run']} "
-          f"({lowest['line']}, {lowest['note']}).", "",
-          "| Run | Test | Kind | Line | Symbiont | Sets t | Reads | Symbiont reads | Fraction |",
-          "|---|---|---|---|---|---|---|---|---|"]
+          f"({lowest['line']}, {lowest['note']})."]
+    if meta.get("t_before") is not None:
+        md.append(f"Before this (`fractions.tsv`): t = {meta['t_before']:.4g}.")
+    md += ["", "| Run | Test | Kind | Line | Symbiont | Sets t | Reads | Symbiont reads | Fraction | Spread |",
+           "|---|---|---|---|---|---|---|---|---|---|"]
     for x in rows:
         md.append(f"| {x['run']} | {x['test']} | {x['kind']} | {x['line']} | {x['symbiont_lineage']} | {x['sets_t']} | "
-                  f"{x['reads']} | {x['symbiont_reads']} | {x['fraction']:.4g} |")
-    md += ["", "Reads are counted per read (mates separately). Details per run, with fungal and organelle reads: "
-               "`fractions.tsv`. Step 2 measures the marker share m (section 10, entry 6)."]
-    tmp_md = stage_dir / "STAGE0A.md.part"
+                  f"{x['reads']} | {x['symbiont_reads']} | {x['fraction']:.4g} | {fmt_spread(x['spread'])} |")
+    md += ["", f"Reads are counted per read (mates separately). Details per run, with fungal and organelle reads: "
+               f"`{tsv_name}`. Spread (DNA runs; section 10, entry 10): the highest ratio, among the symbiont's "
+               "genomes, of the 1-kb windows its mate-1 reads hit to the windows they would hit if spread evenly; "
+               "a real genome gives about 1, a pile of reads in a few places well under 0.5. Step 2 measures the "
+               "marker share m (section 10, entry 6)."]
+    tmp_md = stage_dir / (md_name + ".part")
     tmp_md.write_text("\n".join(md) + "\n", encoding="utf-8")
-    os.replace(tmp, stage_dir / "fractions.tsv")
-    os.replace(tmp_md, stage_dir / "STAGE0A.md")
+    os.replace(tmp, stage_dir / tsv_name)
+    os.replace(tmp_md, stage_dir / md_name)
+    return tsv_name, md_name
 
 
 def version_of(cmd):
@@ -202,9 +247,20 @@ def main(argv=None):
     ap.add_argument("--jobs", type=int, default=3, help="runs fetched at the same time [3]")
     ap.add_argument("--fastq-dump", default="fastq-dump")
     ap.add_argument("--minimap2", default="minimap2")
+    ap.add_argument("--work-name", default="stage0a",
+                    help="the runs are assigned into WORKDIR/<work-name>/assign/ [stage0a]; the reads always come "
+                         "from WORKDIR/stage0a/reads/")
+    ap.add_argument("--suffix", default="", help="added to the output names, e.g. _entry10 [none]")
     args = ap.parse_args(argv)
     work, stage_dir = Path(args.workdir).expanduser(), Path(args.stage0a_dir)
     args.index = Path(args.index).expanduser() if args.index else work / "index" / "full"
+    if not all(ch.isalnum() or ch in "_-" for ch in args.work_name + args.suffix) or not args.work_name:
+        print("--work-name and --suffix may hold only letters, digits, _ and -", file=sys.stderr)
+        return 1
+    if (args.work_name == "stage0a") != (args.suffix == ""):
+        print("Give --work-name and --suffix together, so a new assignment never overwrites the earlier outputs "
+              "and the earlier assignments are never reused under a new name.", file=sys.stderr)
+        return 1
 
     try:
         runs = read_runs(stage_dir / "runs.tsv")
@@ -216,7 +272,7 @@ def main(argv=None):
         print(f"{args.index} is the {index_info.get('set')} index; stage 0a uses the full references.", file=sys.stderr)
         return 1
 
-    reads_dir, assign_dir = work / "stage0a" / "reads", work / "stage0a" / "assign"
+    reads_dir, assign_dir = work / "stage0a" / "reads", work / args.work_name / "assign"
     reads_dir.mkdir(parents=True, exist_ok=True)
     assign_dir.mkdir(parents=True, exist_ok=True)
 
@@ -264,10 +320,13 @@ def main(argv=None):
     first = json.loads((assign_dir / runs[0]["run"] / "assign.json").read_text())
     meta = {"made": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"), "assign": first["made_by"],
             "minimap2": first["minimap2"], "refs_md5": index_info["refs_md5"],
-            "fastq_dump": version_of([args.fastq_dump, "--version"]).replace(" : ", " ")}
-    write_outputs(stage_dir, rows, lowest, t, meta)
-    print(f"\nt = {t:.4g} (lowest DNA-positive fraction {lowest['fraction']:.4g}, in {lowest['run']})")
-    print(f"-> {stage_dir}/fractions.tsv, {stage_dir}/STAGE0A.md")
+            "fastq_dump": version_of([args.fastq_dump, "--version"]).replace(" : ", " "),
+            "suffix": args.suffix, "work_name": args.work_name,
+            "t_before": t_of(stage_dir / "fractions.tsv") if args.suffix else None}
+    tsv_name, md_name = write_outputs(stage_dir, rows, lowest, t, meta)
+    print(f"\nt = {t:.4g} (lowest DNA-positive fraction {lowest['fraction']:.4g}, in {lowest['run']})"
+          + (f"; before: {meta['t_before']:.4g}" if meta["t_before"] is not None else ""))
+    print(f"-> {stage_dir}/{tsv_name}, {stage_dir}/{md_name}")
     return 0
 
 

@@ -10,21 +10,22 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `inventory/` | The three SRA Run Selector exports of 2026-11-20 and the labelled inventory made from them (`runs_tagged.tsv`, `inventory_summary.md`). |
 | `scripts/tag_runs.py` | Labels SRA runs from metadata and writes the inventory. |
 | `scripts/make_reference_lists.py` | Makes the reference genome lists from NCBI (run on the lock date). |
-| `scripts/clean_references.py` | Stage 0: downloads the reference genomes and cleans them (`PROTOCOL.md` 3.4). |
+| `scripts/clean_references.py` | Stage 0: downloads the reference genomes and cleans them (`PROTOCOL.md` 3.4; from v0.3 also against the organelle genomes, entry 10). |
 | `scripts/make_index.py` | Stage 0: builds the lineage table, the minimap2 indexes and the sylph database from the cleaned genomes (full and T2). |
-| `scripts/run_stage0a.py` | Stage 0a, step 1: fetches the first 20 million spots of each positive run, assigns them and works out the reference titer t. |
+| `scripts/run_stage0a.py` | Stage 0a, step 1: fetches the first 20 million spots of each positive run, assigns them and works out the reference titer t (from v0.2 also again, with a new index). |
 | `scripts/get_marker_databases.py` | Stage 0a, step 2: downloads and checks the SingleM metapackage and SSUplex's profile files. |
 | `scripts/run_stage0a_m.py` | Stage 0a, step 2: runs SSUplex and SingleM on the step 1 reads and works out the marker share m. |
 | `scripts/get_silva.py` | Downloads and checks SILVA 144 SSU Ref NR99 for SSU placement. |
 | `scripts/rescore_stage0a_m.py` | Stage 0a, step 2 rescored under the route rules of entries 7 and 8: places the symbiont's SSU reads with VSEARCH and works out m again. |
-| `scripts/assign_reads.py` | Counts the reads of one run per lineage (`PROTOCOL.md` 4.1) and writes the reads that go on to SingleM and SSUplex. |
-| `scripts/call_lineages.py` | The caller: route-read labels and lineages, levels, cross-talk, evidence and calls (`PROTOCOL.md` 4.1, entries 7 to 9). |
-| `scripts/run_t1.py` | Test T1: fetches and assigns the runs, runs the route, places the SSU reads, runs sylph, makes the calls and checks K1. |
-| `references/` | The reference lists, `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
+| `scripts/rescore_m_entry10.py` | Stage 0a, step 2 under entry 10: aligns step 2's found reads again with the entry 10 index, applies the route rules of entries 7, 8 and 10, and works out m again. |
+| `scripts/assign_reads.py` | Counts the reads of one run per lineage (`PROTOCOL.md` 4.1), writes the reads that go on to SingleM and SSUplex, and (from v0.2) how the mapped reads spread over each bacterial genome. |
+| `scripts/call_lineages.py` | The caller: route-read labels and lineages, levels, cross-talk and the spread check, evidence and calls (`PROTOCOL.md` 4.1, entries 7 to 10). |
+| `scripts/run_t1.py` | Test T1: fetches and assigns the runs, runs the route, places the SSU reads, runs sylph, makes the calls and checks K1 (v0.2: again under entry 10). |
+| `references/` | The reference lists (with the fungal mitochondria of entry 10 in `fungal_mitochondria.tsv`), `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
 | `env/` | Conda environments for the toolchain. |
-| `stage0a/` | Stage 0a: the positive runs (`runs.tsv`), the fractions and t (step 1), and the marker shares and m (step 2). |
-| `t1/` | Test T1: the runs (`runs.tsv`) and, once T1 has run, the levels, the calls and `T1.md`. |
-| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH; `check_caller.py` needs both). |
+| `stage0a/` | Stage 0a: the positive runs (`runs.tsv`), the fractions and t (step 1), and the marker shares and m (step 2); each measured again under later entries (`_entry7`, `_entry8`, `_entry10`). |
+| `t1/` | Test T1: the runs (`runs.tsv`) and, once T1 has run, the levels, the calls and `T1.md`; under entry 10, `levels_entry10.tsv`, `calls_entry10.tsv` and `T1_ENTRY10.md`. |
+| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH; `check_caller.py` and `check_rescore_entry10.py` need both). |
 
 ## Make the inventory
 
@@ -145,6 +146,39 @@ tail -f ~/t1.log
 
 It fetches and assigns the new runs, runs SSUplex (and SingleM, for the B− Hi-C run) on the 14 new scored runs, about an hour each, then places every routed SSU read with VSEARCH (the log prints a time estimate after each batch of 500) and runs sylph on all 43 runs. Expect a day or two. The reported runs (HiFi and JGI) are mapped only. If it stops, run the same command again: finished work is kept. When every run is done it writes `t1/levels.tsv`, `t1/calls.tsv` and `t1/T1.md`, with K1 at the top of `T1.md`; commit all three.
 
+## Entry 10: references, t, m and T1 again
+
+Entry 10 (`PROTOCOL.md` section 10) adds the fungal mitochondria to the references, cleans the bacterial genomes against all organelle genomes, and changes the route and the levels. The references and the index are made again, then t, m and T1. Commit entry 10 and the code first. Then, in the `phase0-reads` environment:
+
+```bash
+conda activate phase0-reads
+python tests/check_clean.py && python tests/check_assign.py && python tests/check_stage0a.py
+python tests/check_rescore_entry10.py && python tests/check_caller.py
+python scripts/clean_references.py --workdir ~/phase0-data --threads 30
+python scripts/make_index.py --workdir ~/phase0-data --threads 30
+```
+
+The cleaning downloads only the 25 mitochondrial genomes (the other genomes are already there) and aligns everything again. It replaces `~/phase0-data/clean/` and the index replaces `~/phase0-data/index/`, so the entry 9 versions are gone afterwards; the committed md5s still describe them. Commit `references/overlaps.tsv`, `genome_files.tsv`, `CLEANING.md`, `lineages.tsv` and `INDEX.md`. Then measure t again, on the reads stage 0a already has (about 8 hours):
+
+```bash
+nohup python scripts/run_stage0a.py --workdir ~/phase0-data --threads 30 \
+    --work-name stage0a_entry10 --suffix _entry10 > ~/stage0a_e10.log 2>&1 &
+```
+
+It assigns the 31 runs into `~/phase0-data/stage0a_entry10/assign/` and writes `stage0a/fractions_entry10.tsv` and `stage0a/STAGE0A_ENTRY10.md`; the earlier outputs stay. Commit both. Then m:
+
+```bash
+nohup python scripts/rescore_m_entry10.py --workdir ~/phase0-data --threads 30 > ~/rescore10.log 2>&1 &
+```
+
+It aligns step 2's found reads again and places only the SSU pieces entry 8 did not place, so it should take well under an hour. It writes `stage0a/marker_share_entry10.tsv` and `stage0a/STAGE0A_M_ENTRY10.md`; commit both. Then T1:
+
+```bash
+nohup python scripts/run_t1.py --workdir ~/phase0-data --threads 30 > ~/t1_e10.log 2>&1 &
+```
+
+It reuses the reads in `~/phase0-data/t1/reads/` and the outputs of SSUplex and SingleM (linked, not copied). The 18 B+ runs take stage 0a's new counts; the others are assigned again, and sylph runs again on all of them. Expect most of a day. Work files go to `~/phase0-data/t1_entry10/`. It writes `t1/levels_entry10.tsv`, `t1/calls_entry10.tsv` and `t1/T1_ENTRY10.md`; the entry 9 results stay. Commit all three. Each script can be run again if it stops: finished work is kept.
+
 ## Software environments
 
 Create them on the Linux machine that will run Phase 0, not on a laptop: lock files are specific to one platform, and some of the tools (GTDB-Tk among them) don't install on macOS.
@@ -195,4 +229,5 @@ python tests/check_stage0a.py  # needs minimap2 too
 python tests/check_stage0a_m.py  # needs minimap2 too
 python tests/check_rescore.py   # needs VSEARCH
 python tests/check_caller.py    # needs minimap2 and VSEARCH
+python tests/check_rescore_entry10.py  # needs minimap2 and VSEARCH
 ```
