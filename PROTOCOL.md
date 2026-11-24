@@ -300,6 +300,11 @@ Not a lock item: confirm with JGI or the authors that the BEG34 metatranscriptom
    - *Reported.* K2 per isolate, as above. For both arms: the calls with their evidence, the levels per run, the route per run, and the runs the spread check lowered. Also the SSU placement counts: pieces placed, derived, searched again and checked.
    - *Why this is not a departure.* These settings fill in what sections 5 and 6 leave open. Each one either follows them or makes T2 stricter: the removal list removes more than the rule's minimum, "no call" fails K2, and the derived placements are checked. T2 has not run.
    - All of this is `scripts/make_t2_silva.py` v0.1 and `scripts/run_t2.py` v0.1, checked on synthetic data (`tests/check_t2.py`, with real minimap2 and VSEARCH). They write `t2/silva_removed.tsv` and `t2/SILVA_T2.md`, then `t2/levels.tsv`, `t2/calls.tsv` and `t2/T2.md`. Each is committed before the next step runs.
+12. **2026-11-24, before T2 runs: the SILVA check of entry 11 (section 5).**
+   - *What the check found.* `make_t2_silva.py` removed 6,604 of SILVA 144's 905,628 sequences (`t2/SILVA_T2.md`). Its check flagged 1,357 kept sequences that name a Mollicutes genus. None of them is a Mollicutes sequence:
+     - 1,340 are in Archaea, in a Thermoplasmatota group that SILVA names *Haloplasma* (`Archaea;Methanobacteriati--other;Thermoplasmatota;Thermoplasmata--other;Incertae Sedis;Incertae Sedis;Haloplasma--other`). Only the name is shared with the bacterium *Haloplasma*, whose 30 sequences (Haloplasmatales) are already removed.
+     - The other 17 are filed in other bacteria (12, for example *Streptococcus*, *Bacillus*, *Pediococcus* and *Mucispirillum*), in chloroplasts (4) or in an animal (1). Only their organism names mention *Phytoplasma* (9), *Mycoplasma* (3), *Metamycoplasma* (2), *Mycoplasmoides*, *Mesomycoplasma* or *Mycoplasmopsis* (1 each).
+   - *Decision.* Nothing is added to the list. SILVA's taxonomy path follows where a sequence sits in its guide tree, while the organism name is the submitter's, so these are not Mollicutes sequences. Section 5's names already take the whole class out. T2 uses the list as made: `t2/silva_removed.tsv`, 6,604 sequences, committed with this entry. T2 has not run.
 
 ## 11. Fixed numbers (agreed 2026-11-20)
 
