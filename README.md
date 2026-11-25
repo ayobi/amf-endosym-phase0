@@ -25,6 +25,7 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `scripts/run_t2.py` | Test T2: calls the MRE positives with the MRE references held out and kept in, and checks K2 (entry 11). |
 | `scripts/run_t3.py` | Test T3: makes kit-contaminant spikes with InSilicoSeq and adds them to the Ottawa runs, calls each spike, the lab kit spike and the outside sets, and checks K3 (entry 13). |
 | `scripts/run_t4.py` | Test T4: downloads Logan's unitigs for the T1 and T2 runs, cuts them into weighted pieces as long as the reads, does T1 and T2 again on them, compares with raw reads, and works out the Logan switch (entry 14). |
+| `scripts/run_t5.py` | Test T5: fetches the *L. elongata* AD073 wild-type and cured runs, processes them as T1 does, and reports the pair against `controls.tsv` (entry 15). |
 | `references/` | The reference lists (with the fungal mitochondria of entry 10 in `fungal_mitochondria.tsv`), `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
 | `env/` | Conda environments for the toolchain. |
 | `stage0a/` | Stage 0a: the positive runs (`runs.tsv`), the fractions and t (step 1), and the marker shares and m (step 2); each measured again under later entries (`_entry7`, `_entry8`, `_entry10`). |
@@ -32,7 +33,8 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `t2/` | Test T2: the runs (`runs.tsv`), the SILVA removal list (`silva_removed.tsv`, `SILVA_T2.md`) and, once T2 has run, the levels, the calls and `T2.md`. |
 | `t3/` | Test T3: the runs (`runs.tsv`) and, once T3 has run, the levels and calls without spikes, each spike's calls (`spikes.tsv`, `lab_spike.tsv`) and `T3.md`. |
 | `t4/` | Test T4, once it has run: which runs Logan holds (`logan.tsv`), the levels and calls on Logan, every comparison with raw reads (`compare.tsv`) and `T4.md`. |
-| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH; `check_caller.py`, `check_rescore_entry10.py`, `check_t2.py` and `check_t3.py` need both; `check_t4.py` needs both and zstd). |
+| `t5/` | Test T5: the runs (`runs.tsv`) and, once T5 has run, the levels, the calls and `T5.md`. |
+| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH; `check_caller.py`, `check_rescore_entry10.py`, `check_t2.py`, `check_t3.py` and `check_t5.py` need both; `check_t4.py` needs both and zstd). |
 
 ## Make the inventory
 
@@ -240,6 +242,18 @@ nohup python scripts/run_t4.py --workdir ~/phase0-data --threads 30 --jobs 4 > ~
 
 It asks Logan which of the 55 short-read runs of T1 and T2 it holds (the two Hi-C runs of PRJNA1364746 came out after Logan's freeze, so they are likely missing), downloads their unitigs, `--jobs` at a time, and cuts each run's unitigs into pieces. A download is deleted once its pieces are made. The pieces stay in `~/phase0-data/t4/`; their size depends on the run, so keep an eye on free disk space. Then it does T1 and T2 again on the pieces, places only the SSU pieces not placed before, and compares with raw reads. It writes `t4/logan.tsv`, `t4/levels.tsv`, `t4/calls.tsv`, `t4/compare.tsv` and `t4/T4.md`; commit all five. If it stops, run the same command again: finished work is kept.
 
+## Test T5 (entry 15)
+
+Entry 15 (`PROTOCOL.md` section 10) sets the T5 runs (`t5/runs.tsv`) and how T5 reads its result. Commit entry 15, `t5/runs.tsv` and the code. T5 needs only t and m of entry 10, so it can run any time; it uses the same CPUs as the other tests, so start it when the server is free, for example after T1. It reuses whatever SSU placements T1 to T4 have made by then.
+
+```bash
+conda activate phase0-reads
+python tests/check_t5.py
+nohup python scripts/run_t5.py --workdir ~/phase0-data --threads 30 > ~/t5.log 2>&1 &
+```
+
+It fetches the seven runs (the first 20,000,000 spots of each) into `~/phase0-data/t5/` and processes them as T1 does. It writes `t5/levels.tsv`, `t5/calls.tsv` and `t5/T5.md`; commit all three. If it stops, run the same command again: finished work is kept.
+
 ## Software environments
 
 Create them on the Linux machine that will run Phase 0, not on a laptop: lock files are specific to one platform, and some of the tools (GTDB-Tk among them) don't install on macOS.
@@ -294,4 +308,5 @@ python tests/check_rescore_entry10.py  # needs minimap2 and VSEARCH
 python tests/check_t2.py        # needs minimap2 and VSEARCH
 python tests/check_t3.py        # needs minimap2 and VSEARCH
 python tests/check_t4.py        # needs minimap2, VSEARCH and zstd
+python tests/check_t5.py        # needs minimap2 and VSEARCH
 ```

@@ -1,0 +1,8 @@
+run	unit	control_id	scored	kind	platform	prep	layout	bioproject	year	lab	isolate	route	reuse	note
+SRR6256860	AD073 wild type	LELO_AD073_WT	yes	RNA	short	unstated	PAIRED	PRJNA368402-PRJNA368407		JGI	AD073	ssu		WT rep-1; BioProject PRJNA368402; JGI metatranscriptome, Regular (RNA)
+SRR6256859	AD073 wild type	LELO_AD073_WT	yes	RNA	short	unstated	PAIRED	PRJNA368402-PRJNA368407		JGI	AD073	ssu		WT rep-2; BioProject PRJNA368403; JGI metatranscriptome, Regular (RNA)
+SRR6256858	AD073 wild type	LELO_AD073_WT	yes	RNA	short	unstated	PAIRED	PRJNA368402-PRJNA368407		JGI	AD073	ssu		WT rep-3; BioProject PRJNA368404; JGI metatranscriptome, Regular (RNA)
+SRR5822802	AD073 wild type	LELO_AD073_WT	yes	DNA	short	dna	PAIRED	PRJNA364919		JGI	AD073	ssu+singlem		WT resequencing metagenome; JGI, Regular (DNA); added by entry 15
+SRR6256857	AD073 cured	LELO_AD073_CURED	yes	RNA	short	unstated	PAIRED	PRJNA368402-PRJNA368407		JGI	AD073	ssu		cured rep-1; BioProject PRJNA368405; JGI metatranscriptome, Regular (RNA)
+SRR6256856	AD073 cured	LELO_AD073_CURED	yes	RNA	short	unstated	PAIRED	PRJNA368402-PRJNA368407		JGI	AD073	ssu		cured rep-2; BioProject PRJNA368406; JGI metatranscriptome, Regular (RNA)
+SRR6256861	AD073 cured	LELO_AD073_CURED	yes	RNA	short	unstated	PAIRED	PRJNA368402-PRJNA368407		JGI	AD073	ssu		cured rep-3; BioProject PRJNA368407; JGI metatranscriptome, Regular (RNA)
