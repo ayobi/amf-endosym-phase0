@@ -376,10 +376,10 @@ with tempfile.TemporaryDirectory() as tmp:
         r_all = tmp / "reads.fq.gz"
         write_fastq(r_all, reads)
 
-        def assign(index_set, platform, files, out, minimap2=MM2):
+        def assign(index_set, platform, files, out, minimap2=MM2, extra=()):
             return quiet(A.main, ["--index", str(work / "index" / index_set), "--platform", platform,
                                   "--reads", *map(str, files), "--out", str(out), "--refdir", str(refdir),
-                                  "--threads", "3", "--minimap2", minimap2])
+                                  "--threads", "3", "--minimap2", minimap2, *extra])
 
         out = tmp / "out_full"
         code, err = assign("full", "short", [r_all], out)
@@ -401,6 +401,26 @@ with tempfile.TemporaryDirectory() as tmp:
                   f"full: spread.tsv {sp_rows}")
             check(A.read_spread(out / "spread.tsv")["CaGg"] == float(sp_rows[B1]["ratio"]),
                   "full: read_spread gives the lineage's highest ratio")
+            # --weights (v0.4, entry 14): weighted_counts.tsv adds up each read's w:f: weight; counts.tsv and the
+            # routed reads stay as they are; a read with no weight stops the run.
+            rw = tmp / "reads_w.fq.gz"
+            with gzip.open(rw, "wt") as fh:
+                for name, sq in reads:
+                    fh.write(f"@{name} w:f:2.5\n{sq}\n+\n{'I' * len(sq)}\n")
+            cw, ew = assign("full", "short", [rw], tmp / "out_w", extra=["--weights"])
+            check(cw == 0, f"assign --weights failed: {ew}")
+            if cw == 0:
+                wrows = {(r["section"], r["name"]): float(r["weight"]) for r in csv.DictReader(
+                    open(tmp / "out_w" / "weighted_counts.tsv"), delimiter="\t")}
+                off = [(k, v, wrows.get(k)) for k, v in got.items() if abs(wrows.get(k, -1) - 2.5 * v) > 1e-6]
+                check(counts(tmp / "out_w") == got and not off and len(routed_names(tmp / "out_w")) == 40 and
+                      json.loads((tmp / "out_w" / "assign.json").read_text())["weights"] is True,
+                      f"--weights: {off}")
+            check(not (out / "weighted_counts.tsv").exists(), "no weighted_counts.tsv without --weights")
+            cw2, ew2 = assign("full", "short", [r_all], tmp / "out_w2", extra=["--weights"])
+            check(cw2 == 1 and "no w:f: weight" in ew2 and not (tmp / "out_w2" / "counts.tsv").exists(),
+                  f"--weights on reads without weights: exit {cw2}, {ew2[-200:]!r}")
+
             # spread_bits.json.gz (v0.3, entry 13): one part gives spread.tsv's ratios; two halves assigned
             # apart and combined give the ratios of the whole; bit sets of another index are refused.
             bits_full = A.read_bits(out / "spread_bits.json.gz")
@@ -530,7 +550,7 @@ if fails:
     sys.exit(1)
 print(f"PASS: {len(unit)} rule checks, PAF parsing, the spread check and organelle check on their own, cleaning -> "
       "index (lineages, full and T2, organelles.fna, sylph stand-in), short reads (every planted case, entry 10's "
-      "included), spread.tsv (mate 1 only), spread bit sets combined across read sets, organelle check end to "
-      "end, T2 index, paired and interleaved mates, "
+      "included), spread.tsv (mate 1 only), spread bit sets combined across read sets, weighted counts, organelle "
+      "check end to end, T2 index, paired and interleaved mates, "
       "HiFi, routed reads, missing output lines, version check, cut-short FASTQ, unknown endosymbiont stops the "
       "index build")

@@ -18,19 +18,21 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `scripts/get_silva.py` | Downloads and checks SILVA 144 SSU Ref NR99 for SSU placement. |
 | `scripts/rescore_stage0a_m.py` | Stage 0a, step 2 rescored under the route rules of entries 7 and 8: places the symbiont's SSU reads with VSEARCH and works out m again. |
 | `scripts/rescore_m_entry10.py` | Stage 0a, step 2 under entry 10: aligns step 2's found reads again with the entry 10 index, applies the route rules of entries 7, 8 and 10, and works out m again. |
-| `scripts/assign_reads.py` | Counts the reads of one run per lineage (`PROTOCOL.md` 4.1), writes the reads that go on to SingleM and SSUplex, and (from v0.2) how the mapped reads spread over each bacterial genome; v0.3 also saves the bit sets behind that, so two read sets can be combined (entry 13). |
+| `scripts/assign_reads.py` | Counts the reads of one run per lineage (`PROTOCOL.md` 4.1), writes the reads that go on to SingleM and SSUplex, and (from v0.2) how the mapped reads spread over each bacterial genome; v0.3 also saves the bit sets behind that, so two read sets can be combined (entry 13); v0.4 can add up weights instead of counting reads, for T4 (entry 14). |
 | `scripts/call_lineages.py` | The caller: route-read labels and lineages, levels, cross-talk and the spread check, evidence and calls (`PROTOCOL.md` 4.1, entries 7 to 10). |
 | `scripts/run_t1.py` | Test T1: fetches and assigns the runs, runs the route, places the SSU reads, runs sylph, makes the calls and checks K1 (v0.2: again under entry 10). |
 | `scripts/make_t2_silva.py` | Test T2: makes the SILVA removal list and the copy of SILVA without those sequences (entry 11). |
 | `scripts/run_t2.py` | Test T2: calls the MRE positives with the MRE references held out and kept in, and checks K2 (entry 11). |
 | `scripts/run_t3.py` | Test T3: makes kit-contaminant spikes with InSilicoSeq and adds them to the Ottawa runs, calls each spike, the lab kit spike and the outside sets, and checks K3 (entry 13). |
+| `scripts/run_t4.py` | Test T4: downloads Logan's unitigs for the T1 and T2 runs, cuts them into weighted pieces as long as the reads, does T1 and T2 again on them, compares with raw reads, and works out the Logan switch (entry 14). |
 | `references/` | The reference lists (with the fungal mitochondria of entry 10 in `fungal_mitochondria.tsv`), `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
 | `env/` | Conda environments for the toolchain. |
 | `stage0a/` | Stage 0a: the positive runs (`runs.tsv`), the fractions and t (step 1), and the marker shares and m (step 2); each measured again under later entries (`_entry7`, `_entry8`, `_entry10`). |
 | `t1/` | Test T1: the runs (`runs.tsv`) and, once T1 has run, the levels, the calls and `T1.md`; under entry 10, `levels_entry10.tsv`, `calls_entry10.tsv` and `T1_ENTRY10.md`. |
 | `t2/` | Test T2: the runs (`runs.tsv`), the SILVA removal list (`silva_removed.tsv`, `SILVA_T2.md`) and, once T2 has run, the levels, the calls and `T2.md`. |
 | `t3/` | Test T3: the runs (`runs.tsv`) and, once T3 has run, the levels and calls without spikes, each spike's calls (`spikes.tsv`, `lab_spike.tsv`) and `T3.md`. |
-| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH; `check_caller.py`, `check_rescore_entry10.py`, `check_t2.py` and `check_t3.py` need both). |
+| `t4/` | Test T4, once it has run: which runs Logan holds (`logan.tsv`), the levels and calls on Logan, every comparison with raw reads (`compare.tsv`) and `T4.md`. |
+| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH; `check_caller.py`, `check_rescore_entry10.py`, `check_t2.py` and `check_t3.py` need both; `check_t4.py` needs both and zstd). |
 
 ## Make the inventory
 
@@ -216,6 +218,28 @@ nohup python scripts/run_t3.py --workdir ~/phase0-data --threads 30 --jobs 8 > ~
 
 It fetches the 108 runs T1 does not have and processes them as T1 does (the B− run reuses T1's files). Then it makes the 924 single-run spikes and the 216 lab kit spikes with InSilicoSeq, `--jobs` at a time, assigns each one, runs the route on the reads they route, and calls the Ottawa set again for each spike. Work files go to `~/phase0-data/t3/`. The spike reads stay there too, a few GB, so a rerun picks up where it stopped. It writes `t3/levels.tsv`, `t3/calls.tsv`, `t3/spikes.tsv`, `t3/lab_spike.tsv` and `t3/T3.md`; commit all five.
 
+## Test T4 (entry 14)
+
+Entry 14 (`PROTOCOL.md` section 10) sets how T4 runs: how Logan's unitigs become weighted pieces, which runs are left out, what is compared, and the switch. It also brings `assign_reads.py` to v0.4, which only adds an option (`--weights`); without it, nothing changes, so the runs going on now are not affected. Commit entry 14 and the code.
+
+T4 also needs `zstd`, only to unpack Logan's files. Check with `zstd --version`. If it is missing, put it in an environment of its own, so the locked ones stay as they are, and point T4 to it:
+
+```bash
+conda create -n phase0-zstd -c conda-forge zstd
+export ZSTD="$(conda info --base)/envs/phase0-zstd/bin/zstd"   # check_t4.py reads this
+# and add --zstd "$ZSTD" to the run_t4.py command below
+```
+
+When T1 under entry 10 and T2 are done and committed, check the scripts and run T4 (it needs the internet):
+
+```bash
+conda activate phase0-reads
+python tests/check_assign.py && python tests/check_t4.py
+nohup python scripts/run_t4.py --workdir ~/phase0-data --threads 30 --jobs 4 > ~/t4.log 2>&1 &
+```
+
+It asks Logan which of the 55 short-read runs of T1 and T2 it holds (the two Hi-C runs of PRJNA1364746 came out after Logan's freeze, so they are likely missing), downloads their unitigs, `--jobs` at a time, and cuts each run's unitigs into pieces. A download is deleted once its pieces are made. The pieces stay in `~/phase0-data/t4/`; their size depends on the run, so keep an eye on free disk space. Then it does T1 and T2 again on the pieces, places only the SSU pieces not placed before, and compares with raw reads. It writes `t4/logan.tsv`, `t4/levels.tsv`, `t4/calls.tsv`, `t4/compare.tsv` and `t4/T4.md`; commit all five. If it stops, run the same command again: finished work is kept.
+
 ## Software environments
 
 Create them on the Linux machine that will run Phase 0, not on a laptop: lock files are specific to one platform, and some of the tools (GTDB-Tk among them) don't install on macOS.
@@ -269,4 +293,5 @@ python tests/check_caller.py    # needs minimap2 and VSEARCH
 python tests/check_rescore_entry10.py  # needs minimap2 and VSEARCH
 python tests/check_t2.py        # needs minimap2 and VSEARCH
 python tests/check_t3.py        # needs minimap2 and VSEARCH
+python tests/check_t4.py        # needs minimap2, VSEARCH and zstd
 ```

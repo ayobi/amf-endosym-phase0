@@ -31,6 +31,9 @@ Writes in --out:
   spread_bits.json.gz the start positions and windows behind spread.tsv, as bit sets (v0.3; section 10,
                       entry 13), so that the spread of two read sets taken together can be worked out
                       exactly (combined_spread), as T3 does for its spikes
+  weighted_counts.tsv only with --weights (v0.4; section 10, entry 14): every read's header carries a
+                      weight (w:f:<number>), and this file has the rows of counts.tsv with the weights
+                      added up instead of the reads counted; T4's pieces of Logan unitigs use it
   assign.json         versions, command, index, input files and counts
 
 Usage (paired runs: give both files; each mate is counted on its own):
@@ -51,10 +54,11 @@ import os
 import subprocess
 import sys
 import threading
+from array import array
 from collections import Counter
 from pathlib import Path
 
-__version__ = "0.3"
+__version__ = "0.4"
 
 MINIMAP2_ARGS = {   # PROTOCOL.md 4.1; -c, --frag=no and --paf-no-hit: section 10, entry 4
     "short": ["-x", "sr", "--secondary=yes", "-N", "50", "-c", "--frag=no", "--paf-no-hit"],
@@ -112,11 +116,25 @@ def records(path):
             raise ValueError(f"{path}: neither FASTQ nor FASTA")
 
 
+def header_weight(h):
+    """The weight a read's header carries as w:f:<number> (--weights, entry 14)."""
+    i = h.find(b" w:f:")
+    if i < 0:
+        raise ValueError(f"no w:f: weight in the header {h[:60]!r}")
+    w = float(h[i + 5:].split(None, 1)[0])
+    if not w >= 0:
+        raise ValueError(f"a weight must be 0 or more: {h[:60]!r}")
+    return w
+
+
 def feed(path, sink, state):
-    """Write every read to minimap2, renamed to its position in the file (0, 1, 2, ...)."""
-    n, kind = 0, None
+    """Write every read to minimap2, renamed to its position in the file (0, 1, 2, ...). With
+    state["weights"] a list, each read's weight is added to it before the read is written."""
+    n, kind, weights = 0, None, state.get("weights")
     try:
-        for _, s, q in records(path):
+        for h, s, q in records(path):
+            if weights is not None:
+                weights.append(header_weight(h))
             if kind is None:
                 kind = "fasta" if q is None else "fastq"
             if q is None:
@@ -378,12 +396,12 @@ def organelle_reads(reads, organelles_fna, platform, minimap2, threads, log_path
     return organelle_names(p.stdout.splitlines())
 
 
-def assign_file(path, cmd, log_path, lineage_of, hosts, mask, tally, spread=None):
-    """Map one file and add its reads to tally (and to spread, if given). Returns (reads, format, routed
-    positions)."""
+def assign_file(path, cmd, log_path, lineage_of, hosts, mask, tally, spread=None, wtally=None):
+    """Map one file and add its reads to tally (and to spread, if given; and their weights to wtally, if
+    given). Returns (reads, format, routed positions)."""
     with open(log_path, "a") as err:
         proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=err, bufsize=1 << 20)
-    state = {}
+    state = {"weights": array("d")} if wtally is not None else {}       # 8 bytes a read
     feeder = threading.Thread(target=feed, args=(path, proc.stdin, state), daemon=True)
     feeder.start()
     routed, expected = Bitset(), 0
@@ -397,6 +415,15 @@ def assign_file(path, cmd, log_path, lineage_of, hosts, mask, tally, spread=None
                 routed.add(pos)
         if fungal:
             tally["fungal"] += 1
+        if wtally is not None:
+            try:
+                w = state["weights"][pos]
+            except IndexError:
+                raise RuntimeError(f"no weight for read {pos} of {path}: {state.get('error')}") from None
+            wtally[outcome][detail] += w
+            wtally["total"] += w
+            if fungal:
+                wtally["fungal"] += w
 
     try:
         for pos, alns in parse_paf(proc.stdout):
@@ -461,6 +488,8 @@ def main(argv=None):
     ap.add_argument("--refdir", default="references", help="holds overlaps.tsv")
     ap.add_argument("--threads", type=int, default=8)
     ap.add_argument("--minimap2", default="minimap2")
+    ap.add_argument("--weights", action="store_true",
+                    help="every read's header carries a weight (w:f:<number>); also write weighted_counts.tsv")
     args = ap.parse_args(argv)
     index_dir, out = Path(args.index).expanduser(), Path(args.out).expanduser()
     started = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
@@ -489,12 +518,14 @@ def main(argv=None):
     out.mkdir(parents=True, exist_ok=True)
     cmd = [args.minimap2, *MINIMAP2_ARGS[args.platform], "-t", str(args.threads), str(mmi), "-"]
     tally = {"lineage": Counter(), "none": Counter(), "routed": Counter(), "fungal": 0}
+    wtally = {"lineage": Counter(), "none": Counter(), "routed": Counter(), "fungal": 0.0, "total": 0.0} \
+        if args.weights else None
     inputs, routed_sets, formats = [], [], set()
     try:
         for k, p in enumerate(args.reads):
             print(f"aligning {p}", flush=True)
             n, fmt, routed = assign_file(p, cmd, out / "minimap2.log", lineage_of, hosts, mask, tally,
-                                         spread if k == 0 else None)
+                                         spread if k == 0 else None, wtally)
             inputs.append({"path": str(Path(p).resolve()), "bytes": Path(p).stat().st_size, "reads": n})
             routed_sets.append((p, routed))
             if fmt:
@@ -524,12 +555,28 @@ def main(argv=None):
         w = csv.writer(fh, delimiter="\t", lineterminator="\n")
         w.writerow(["section", "name", "reads"])
         w.writerows(rows)
+    tmp_w = None
+    if wtally is not None:
+        wsum = sum(sum(wtally[k].values()) for k in ("lineage", "none", "routed"))
+        if abs(wsum - wtally["total"]) > 1e-6 * max(1.0, wtally["total"]):
+            print(f"Internal error: weights {wsum} by outcome, {wtally['total']} in all", file=sys.stderr)
+            return 1
+        wrows = [("total", "reads in input", wtally["total"])]
+        wrows += [("lineage", lin, wtally["lineage"][lin]) for lin in order]
+        wrows += [("fungal", "fungal reads for E2", wtally["fungal"])]
+        wrows += [("none", r, wtally["none"][r]) for r in NONE_REASONS]
+        wrows += [("routed", r, wtally["routed"][r]) for r in ROUTED_REASONS]
+        tmp_w = out / "weighted_counts.tsv.part"
+        with open(tmp_w, "w", newline="", encoding="utf-8") as fh:
+            w = csv.writer(fh, delimiter="\t", lineterminator="\n")
+            w.writerow(["section", "name", "weight"])
+            w.writerows((a, b, f"{v:.4f}") for a, b, v in wrows)
     meta = {"made_by": f"assign_reads.py v{__version__}", "started": started,
             "finished": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
             "platform": args.platform, "minimap2": version,
             "command": " ".join(cmd[:-2] + [f"index/{info['set']}/{INDEX_FILE[args.platform]}", "<reads, renamed>"]),
             "index": {"dir": str(index_dir.resolve()), **{k: info[k] for k in ("set", "made_by", "refs_md5", "bp")}},
-            "overlaps_md5": md5_of(overlaps), "inputs": inputs,
+            "overlaps_md5": md5_of(overlaps), "inputs": inputs, "weights": bool(args.weights),
             "counts": {f"{s}: {n}": r for s, n, r in rows}}
     meta["spread_from"] = inputs[0]["path"] if inputs else None
     tmp_spread = out / "spread.tsv.part"
@@ -547,6 +594,8 @@ def main(argv=None):
     os.replace(tmp_bits, out / "spread_bits.json.gz")
     os.replace(tmp, out / "counts.tsv")
     os.replace(routed_tmp, out / routed_name)
+    if tmp_w is not None:
+        os.replace(tmp_w, out / "weighted_counts.tsv")
     os.replace(tmp_json, out / "assign.json")
 
     print(f"{total} reads: {sum(tally['lineage'].values())} counted for a lineage, "
