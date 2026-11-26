@@ -1,0 +1,362 @@
+unit	scored	lineage	source	category	call	basis	signal	informative_runs	present_runs	low_runs	e1	e2	e5	members	placements
+AD073 wild type	yes	CaGg	mapped	known endosymbiont clade	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+AD073 cured	yes	CaGg	mapped	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+AD073 wild type	yes	CaMg/MRE	mapped	known endosymbiont clade	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+AD073 cured	yes	CaMg/MRE	mapped	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+AD073 wild type	yes	Mycoavidus	mapped	known endosymbiont clade	resident	known endosymbiont clade, present in 4 runs	yes	1	4	0	no	yes	yes		
+AD073 cured	yes	Mycoavidus	mapped	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+AD073 wild type	yes	Bradyrhizobium	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+AD073 cured	yes	Bradyrhizobium	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+AD073 wild type	yes	Burkholderia	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+AD073 cured	yes	Burkholderia	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+AD073 wild type	yes	Herbaspirillum	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+AD073 cured	yes	Herbaspirillum	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+AD073 wild type	yes	Pseudomonas	mapped	kit-contaminant genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes		
+AD073 cured	yes	Pseudomonas	mapped	kit-contaminant genus	contaminant	kit-contaminant genus without both E1 and E2	yes	0	0	1	no	no	yes		
+AD073 wild type	yes	Ralstonia	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+AD073 cured	yes	Ralstonia	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+AD073 wild type	yes	Sphingomonas	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+AD073 cured	yes	Sphingomonas	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+AD073 wild type	yes	Stenotrophomonas	mapped	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes		
+AD073 cured	yes	Stenotrophomonas	mapped	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes		
+AD073 wild type	yes	01-FULL-45-10b (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	1	1	0	no	yes	yes	01-FULL-45-10b	
+AD073 cured	yes	01-FULL-45-10b (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	01-FULL-45-10b	
+AD073 wild type	yes	2-01-FULL-38-21 (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	1	0	1	no	no	yes	2-01-FULL-38-21	
+AD073 cured	yes	2-01-FULL-38-21 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	2-01-FULL-38-21	
+AD073 wild type	yes	Accumulibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Accumulibacter	
+AD073 cured	yes	Accumulibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Accumulibacter	
+AD073 wild type	yes	Achromobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Achromobacter	
+AD073 cured	yes	Achromobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Achromobacter	
+AD073 wild type	yes	Acinetobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Acinetobacter	
+AD073 cured	yes	Acinetobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Acinetobacter	
+AD073 wild type	yes	Aeromonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aeromonas	
+AD073 cured	yes	Aeromonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aeromonas	
+AD073 wild type	yes	Agitococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Agitococcus	
+AD073 cured	yes	Agitococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Agitococcus	
+AD073 wild type	yes	Algicoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Algicoccus	
+AD073 cured	yes	Algicoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Algicoccus	
+AD073 wild type	yes	Alienimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Alienimonas	
+AD073 cured	yes	Alienimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Alienimonas	
+AD073 wild type	yes	Aliineobacillus (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	1	2	no	no	yes	Aliineobacillus	
+AD073 cured	yes	Aliineobacillus (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	1	0	no	no	yes	Aliineobacillus	
+AD073 wild type	yes	Alterirhizorhabdus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Alterirhizorhabdus	
+AD073 cured	yes	Alterirhizorhabdus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Alterirhizorhabdus	
+AD073 wild type	yes	Alteromonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Alteromonas	
+AD073 cured	yes	Alteromonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Alteromonas	
+AD073 wild type	yes	Amaricoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Amaricoccus	
+AD073 cured	yes	Amaricoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Amaricoccus	
+AD073 wild type	yes	Anoxybacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Anoxybacillus	
+AD073 cured	yes	Anoxybacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Anoxybacillus	
+AD073 wild type	yes	Aquella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aquella	
+AD073 cured	yes	Aquella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aquella	
+AD073 wild type	yes	Aquisalimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aquisalimonas	
+AD073 cured	yes	Aquisalimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aquisalimonas	
+AD073 wild type	yes	Aromatoleum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aromatoleum	
+AD073 cured	yes	Aromatoleum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aromatoleum	
+AD073 wild type	yes	Aureliella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Aureliella	
+AD073 cured	yes	Aureliella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Aureliella	
+AD073 wild type	yes	BD1-7 clade (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	BD1-7 clade	
+AD073 cured	yes	BD1-7 clade (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	BD1-7 clade	
+AD073 wild type	yes	Bacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Bacillus	
+AD073 cured	yes	Bacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Bacillus	
+AD073 wild type	yes	Bacteriovorax (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Bacteriovorax	
+AD073 cured	yes	Bacteriovorax (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Bacteriovorax	
+AD073 wild type	yes	Bryobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Bryobacter	
+AD073 cured	yes	Bryobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Bryobacter	
+AD073 wild type	yes	Burkholderia-Caballeronia-Paraburkholderia (route)	route	kit-contaminant genus	absent	all 1 informative runs absent	yes	1	0	3	no	no	yes	Burkholderia-Caballeronia-Paraburkholderia	
+AD073 cured	yes	Burkholderia-Caballeronia-Paraburkholderia (route)	route	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Burkholderia-Caballeronia-Paraburkholderia	
+AD073 wild type	yes	CACPNW01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CACPNW01	
+AD073 cured	yes	CACPNW01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CACPNW01	
+AD073 wild type	yes	CADEGZ01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CADEGZ01	
+AD073 cured	yes	CADEGZ01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CADEGZ01	
+AD073 wild type	yes	CAVSDF01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAVSDF01	
+AD073 cured	yes	CAVSDF01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAVSDF01	
+AD073 wild type	yes	CAWJTN01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAWJTN01	
+AD073 cured	yes	CAWJTN01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAWJTN01	
+AD073 wild type	yes	CAYPFP01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAYPFP01	
+AD073 cured	yes	CAYPFP01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAYPFP01	
+AD073 wild type	yes	CAYYKD01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAYYKD01	
+AD073 cured	yes	CAYYKD01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAYYKD01	
+AD073 wild type	yes	CAYYUT01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAYYUT01	
+AD073 cured	yes	CAYYUT01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAYYUT01	
+AD073 wild type	yes	CAZFZT01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAZFZT01	
+AD073 cured	yes	CAZFZT01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAZFZT01	
+AD073 wild type	yes	CAZZKT01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	CAZZKT01	
+AD073 cured	yes	CAZZKT01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CAZZKT01	
+AD073 wild type	yes	CG2-30-60-27 (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	1	0	1	no	no	yes	CG2-30-60-27	
+AD073 cured	yes	CG2-30-60-27 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CG2-30-60-27	
+AD073 wild type	yes	CGIF01 (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	1	0	1	no	no	yes	CGIF01	
+AD073 cured	yes	CGIF01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	CGIF01	
+AD073 wild type	yes	Castellaniella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Castellaniella	
+AD073 cured	yes	Castellaniella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Castellaniella	
+AD073 wild type	yes	Chitinasiproducens (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Chitinasiproducens	
+AD073 cured	yes	Chitinasiproducens (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Chitinasiproducens	
+AD073 wild type	yes	Citricoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Citricoccus	
+AD073 cured	yes	Citricoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Citricoccus	
+AD073 wild type	yes	Citrobacter (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Citrobacter	
+AD073 cured	yes	Citrobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Citrobacter	
+AD073 wild type	yes	Corynebacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Corynebacterium	
+AD073 cured	yes	Corynebacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Corynebacterium	
+AD073 wild type	yes	Cronobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cronobacter	
+AD073 cured	yes	Cronobacter (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	0	1	no	no	yes	Cronobacter	
+AD073 wild type	yes	Cupriavidus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cupriavidus	
+AD073 cured	yes	Cupriavidus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Cupriavidus	
+AD073 wild type	yes	Cutibacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Cutibacterium	
+AD073 cured	yes	Cutibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Cutibacterium	
+AD073 wild type	yes	DATJTR01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	DATJTR01	
+AD073 cured	yes	DATJTR01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	DATJTR01	
+AD073 wild type	yes	DRYD01 (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	1	1	0	no	yes	yes	DRYD01	
+AD073 cured	yes	DRYD01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	DRYD01	
+AD073 wild type	yes	DTLM01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	DTLM01	
+AD073 cured	yes	DTLM01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	DTLM01	
+AD073 wild type	yes	Delftia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Delftia	
+AD073 cured	yes	Delftia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Delftia	
+AD073 wild type	yes	Desulfatiglans (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Desulfatiglans	
+AD073 cured	yes	Desulfatiglans (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Desulfatiglans	
+AD073 wild type	yes	Desulfobacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Desulfobacillus	
+AD073 cured	yes	Desulfobacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Desulfobacillus	
+AD073 wild type	yes	Desulfocapsa (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Desulfocapsa	
+AD073 cured	yes	Desulfocapsa (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Desulfocapsa	
+AD073 wild type	yes	Desulfomicrobium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Desulfomicrobium	
+AD073 cured	yes	Desulfomicrobium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Desulfomicrobium	
+AD073 wild type	yes	Desulfovibrio (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Desulfovibrio	
+AD073 cured	yes	Desulfovibrio (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Desulfovibrio	
+AD073 wild type	yes	E44-bin32 (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	1	0	1	no	no	yes	E44-bin32	
+AD073 cured	yes	E44-bin32 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	E44-bin32	
+AD073 wild type	yes	Edwardsiella (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Edwardsiella	
+AD073 cured	yes	Edwardsiella (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	0	1	no	no	yes	Edwardsiella	
+AD073 wild type	yes	Enterobacter--other+Klebsiella (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Enterobacter--other+Klebsiella	
+AD073 cured	yes	Enterobacter--other+Klebsiella (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	0	1	no	no	yes	Enterobacter--other+Klebsiella	
+AD073 wild type	yes	Erwinia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Erwinia	
+AD073 cured	yes	Erwinia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Erwinia	
+AD073 wild type	yes	Erysipelothrix (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Erysipelothrix	
+AD073 cured	yes	Erysipelothrix (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Erysipelothrix	
+AD073 wild type	yes	Escherichia-Shigella (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	1	0	no	no	yes	Escherichia-Shigella	
+AD073 cured	yes	Escherichia-Shigella (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	1	0	no	no	yes	Escherichia-Shigella	
+AD073 wild type	yes	Ezakiella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ezakiella	
+AD073 cured	yes	Ezakiella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ezakiella	
+AD073 wild type	yes	Ferrovum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ferrovum	
+AD073 cured	yes	Ferrovum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ferrovum	
+AD073 wild type	yes	Fusicatenibacter (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Fusicatenibacter	
+AD073 cured	yes	Fusicatenibacter (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	0	1	no	no	yes	Fusicatenibacter	
+AD073 wild type	yes	G963667145 (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	1	1	0	no	yes	yes	G963667145	
+AD073 cured	yes	G963667145 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	G963667145	
+AD073 wild type	yes	GCA-2687015 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	GCA-2687015	
+AD073 cured	yes	GCA-2687015 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	GCA-2687015	
+AD073 wild type	yes	GWC1-27-15 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	GWC1-27-15	
+AD073 cured	yes	GWC1-27-15 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	GWC1-27-15	
+AD073 wild type	yes	Geminicoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Geminicoccus	
+AD073 cured	yes	Geminicoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Geminicoccus	
+AD073 wild type	yes	Glutamicibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Glutamicibacter	
+AD073 cured	yes	Glutamicibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Glutamicibacter	
+AD073 wild type	yes	Gordonia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Gordonia	
+AD073 cured	yes	Gordonia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Gordonia	
+AD073 wild type	yes	Gordoniibacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Gordoniibacillus	
+AD073 cured	yes	Gordoniibacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Gordoniibacillus	
+AD073 wild type	yes	Hafnia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Hafnia	
+AD073 cured	yes	Hafnia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Hafnia	
+AD073 wild type	yes	Hepatoplasma (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	3	0	no	no	yes	Hepatoplasma	
+AD073 cured	yes	Hepatoplasma (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Hepatoplasma	
+AD073 wild type	yes	Huaxiibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Huaxiibacter	
+AD073 cured	yes	Huaxiibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Huaxiibacter	
+AD073 wild type	yes	Hydrogenophilus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Hydrogenophilus	
+AD073 cured	yes	Hydrogenophilus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Hydrogenophilus	
+AD073 wild type	yes	Hymenobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Hymenobacter	
+AD073 cured	yes	Hymenobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Hymenobacter	
+AD073 wild type	yes	JACOND01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JACOND01	
+AD073 cured	yes	JACOND01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JACOND01	
+AD073 wild type	yes	JAICLK01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAICLK01	
+AD073 cured	yes	JAICLK01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAICLK01	
+AD073 wild type	yes	JAJFLM01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAJFLM01	
+AD073 cured	yes	JAJFLM01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAJFLM01	
+AD073 wild type	yes	JAJTHC01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAJTHC01	
+AD073 cured	yes	JAJTHC01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAJTHC01	
+AD073 wild type	yes	JASSUD01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JASSUD01	
+AD073 cured	yes	JASSUD01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JASSUD01	
+AD073 wild type	yes	JAUIHN01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAUIHN01	
+AD073 cured	yes	JAUIHN01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAUIHN01	
+AD073 wild type	yes	JAUYJR01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAUYJR01	
+AD073 cured	yes	JAUYJR01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAUYJR01	
+AD073 wild type	yes	JAXGQD01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JAXGQD01	
+AD073 cured	yes	JAXGQD01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JAXGQD01	
+AD073 wild type	yes	JBBIVW01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JBBIVW01	
+AD073 cured	yes	JBBIVW01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JBBIVW01	
+AD073 wild type	yes	JBIOWE01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	JBIOWE01	
+AD073 cured	yes	JBIOWE01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	JBIOWE01	
+AD073 wild type	yes	Janthinobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Janthinobacterium	
+AD073 cured	yes	Janthinobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Janthinobacterium	
+AD073 wild type	yes	Kerstersia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Kerstersia	
+AD073 cured	yes	Kerstersia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Kerstersia	
+AD073 wild type	yes	Klebsiella (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Klebsiella	
+AD073 cured	yes	Klebsiella (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	1	0	no	no	yes	Klebsiella	
+AD073 wild type	yes	Kluyvera (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Kluyvera	
+AD073 cured	yes	Kluyvera (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Kluyvera	
+AD073 wild type	yes	Kosakonia (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Kosakonia	
+AD073 cured	yes	Kosakonia (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	0	1	no	no	yes	Kosakonia	
+AD073 wild type	yes	Lacipirellula (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lacipirellula	
+AD073 cured	yes	Lacipirellula (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lacipirellula	
+AD073 wild type	yes	Latescibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Latescibacter	
+AD073 cured	yes	Latescibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Latescibacter	
+AD073 wild type	yes	Lautropia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lautropia	
+AD073 cured	yes	Lautropia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lautropia	
+AD073 wild type	yes	Leclercia-Silvania-Enterobacter (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	1	0	no	no	yes	Enterobacter, Leclercia-Silvania-Enterobacter	
+AD073 cured	yes	Leclercia-Silvania-Enterobacter (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	1	0	no	no	yes	Enterobacter, Leclercia-Silvania-Enterobacter	
+AD073 wild type	yes	Lelliottia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Lelliottia	
+AD073 cured	yes	Lelliottia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Lelliottia	
+AD073 wild type	yes	Leptospirillum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Leptospirillum	
+AD073 cured	yes	Leptospirillum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Leptospirillum	
+AD073 wild type	yes	Levinea (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Levinea	
+AD073 cured	yes	Levinea (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	0	1	no	no	yes	Levinea	
+AD073 wild type	yes	Marinicellulosiphila (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Marinicellulosiphila	
+AD073 cured	yes	Marinicellulosiphila (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Marinicellulosiphila	
+AD073 wild type	yes	Megasphaera (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Megasphaera	
+AD073 cured	yes	Megasphaera (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Megasphaera	
+AD073 wild type	yes	Methylobacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Methylobacterium	
+AD073 cured	yes	Methylobacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Methylobacterium	
+AD073 wild type	yes	Microbacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Microbacterium	
+AD073 cured	yes	Microbacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Microbacterium	
+AD073 wild type	yes	Micrococcus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Micrococcus	
+AD073 cured	yes	Micrococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Micrococcus	
+AD073 wild type	yes	Midichloria (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Midichloria	
+AD073 cured	yes	Midichloria (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Midichloria	
+AD073 wild type	yes	Mixta (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Mixta	
+AD073 cured	yes	Mixta (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Mixta	
+AD073 wild type	yes	Morganella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Morganella	
+AD073 cured	yes	Morganella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Morganella	
+AD073 wild type	yes	Mycoavidus (route)	route	known endosymbiont clade	absent	all 1 informative runs absent	yes	1	2	1	no	no	yes	Mycoavidus	
+AD073 cured	yes	Mycoavidus (route)	route	known endosymbiont clade	no call	no informative run and no signal	no	0	0	0	no	no	yes	Mycoavidus	
+AD073 wild type	yes	Mycolatisynbacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Mycolatisynbacter	
+AD073 cured	yes	Mycolatisynbacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Mycolatisynbacter	
+AD073 wild type	yes	Mycoplasmopsis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Mycoplasmopsis	
+AD073 cured	yes	Mycoplasmopsis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Mycoplasmopsis	
+AD073 wild type	yes	Nitromaritima (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Nitromaritima	
+AD073 cured	yes	Nitromaritima (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Nitromaritima	
+AD073 wild type	yes	Nitrosomonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Nitrosomonas	
+AD073 cured	yes	Nitrosomonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Nitrosomonas	
+AD073 wild type	yes	Noviherbaspirillum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Noviherbaspirillum	
+AD073 cured	yes	Noviherbaspirillum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Noviherbaspirillum	
+AD073 wild type	yes	Orbus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Orbus	
+AD073 cured	yes	Orbus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Orbus	
+AD073 wild type	yes	Oribaculum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Oribaculum	
+AD073 cured	yes	Oribaculum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Oribaculum	
+AD073 wild type	yes	Orientia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Orientia	
+AD073 cured	yes	Orientia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Orientia	
+AD073 wild type	yes	Ostreibacterium (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ostreibacterium	
+AD073 cured	yes	Ostreibacterium (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ostreibacterium	
+AD073 wild type	yes	Paenalcaligenes (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Paenalcaligenes	
+AD073 cured	yes	Paenalcaligenes (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Paenalcaligenes	
+AD073 wild type	yes	Paenibacillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Paenibacillus	
+AD073 cured	yes	Paenibacillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Paenibacillus	
+AD073 wild type	yes	Palsa-504 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Palsa-504	
+AD073 cured	yes	Palsa-504 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Palsa-504	
+AD073 wild type	yes	Pantoea (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Pantoea	
+AD073 cured	yes	Pantoea (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	0	1	no	no	yes	Pantoea	
+AD073 wild type	yes	Paracoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Paracoccus	
+AD073 cured	yes	Paracoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Paracoccus	
+AD073 wild type	yes	Pararhodospirillum (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pararhodospirillum	
+AD073 cured	yes	Pararhodospirillum (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pararhodospirillum	
+AD073 wild type	yes	Parasulfuritortus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Parasulfuritortus	
+AD073 cured	yes	Parasulfuritortus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Parasulfuritortus	
+AD073 wild type	yes	Pelagilacustribacter (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	1	0	1	no	no	yes	Pelagilacustribacter	
+AD073 cured	yes	Pelagilacustribacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pelagilacustribacter	
+AD073 wild type	yes	Peptoniphilus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Peptoniphilus	
+AD073 cured	yes	Peptoniphilus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Peptoniphilus	
+AD073 wild type	yes	Phytobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Phytobacter	
+AD073 cured	yes	Phytobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Phytobacter	
+AD073 wild type	yes	Pluralibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pluralibacter	
+AD073 cured	yes	Pluralibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pluralibacter	
+AD073 wild type	yes	Proteus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Proteus	
+AD073 cured	yes	Proteus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Proteus	
+AD073 wild type	yes	Pseudarthrobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pseudarthrobacter	
+AD073 cured	yes	Pseudarthrobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pseudarthrobacter	
+AD073 wild type	yes	Pseudolysobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pseudolysobacter	
+AD073 cured	yes	Pseudolysobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pseudolysobacter	
+AD073 wild type	yes	Pseudomonas (route)	route	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Pseudomonas	
+AD073 cured	yes	Pseudomonas (route)	route	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Pseudomonas	
+AD073 wild type	yes	Psychrobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Psychrobacter	
+AD073 cured	yes	Psychrobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Psychrobacter	
+AD073 wild type	yes	RI-211 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	RI-211	
+AD073 cured	yes	RI-211 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	RI-211	
+AD073 wild type	yes	Rahnella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rahnella	
+AD073 cured	yes	Rahnella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rahnella	
+AD073 wild type	yes	Ralstonia (route)	route	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Ralstonia	
+AD073 cured	yes	Ralstonia (route)	route	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ralstonia	
+AD073 wild type	yes	Raoultella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Raoultella	
+AD073 cured	yes	Raoultella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Raoultella	
+AD073 wild type	yes	Rhodanobacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rhodanobacter	
+AD073 cured	yes	Rhodanobacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rhodanobacter	
+AD073 wild type	yes	Rodentibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rodentibacter	
+AD073 cured	yes	Rodentibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rodentibacter	
+AD073 wild type	yes	Rosenbergiella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rosenbergiella	
+AD073 cured	yes	Rosenbergiella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rosenbergiella	
+AD073 wild type	yes	Rothia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Rothia	
+AD073 cured	yes	Rothia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Rothia	
+AD073 wild type	yes	Ruminococcoides (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	1	1	0	no	yes	yes	Ruminococcoides	
+AD073 cured	yes	Ruminococcoides (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Ruminococcoides	
+AD073 wild type	yes	SC-I-84 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	SC-I-84	
+AD073 cured	yes	SC-I-84 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	SC-I-84	
+AD073 wild type	yes	Salinicoccus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Salinicoccus	
+AD073 cured	yes	Salinicoccus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Salinicoccus	
+AD073 wild type	yes	Salmonella (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Salmonella	
+AD073 cured	yes	Salmonella (route)	route	other known genus	unresolved	signal, but no rule above applies	yes	0	0	1	no	no	yes	Salmonella	
+AD073 wild type	yes	Serratia (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Serratia	
+AD073 cured	yes	Serratia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Serratia	
+AD073 wild type	yes	Sideroxydans (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sideroxydans	
+AD073 cured	yes	Sideroxydans (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sideroxydans	
+AD073 wild type	yes	Sodalis (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sodalis	
+AD073 cured	yes	Sodalis (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sodalis	
+AD073 wild type	yes	Sphingomonas (route)	route	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sphingomonas	
+AD073 cured	yes	Sphingomonas (route)	route	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sphingomonas	
+AD073 wild type	yes	Spirochaeta (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Spirochaeta	
+AD073 cured	yes	Spirochaeta (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Spirochaeta	
+AD073 wild type	yes	Spiroplasma--other+Mesoplasma (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Spiroplasma--other+Mesoplasma	
+AD073 cured	yes	Spiroplasma--other+Mesoplasma (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Spiroplasma--other+Mesoplasma	
+AD073 wild type	yes	Staphylococcus (route)	route	other known genus	absent	all 1 informative runs absent	yes	1	0	1	no	no	yes	Staphylococcus	
+AD073 cured	yes	Staphylococcus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Staphylococcus	
+AD073 wild type	yes	Stenotrophomonas (route)	route	kit-contaminant genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Stenotrophomonas	
+AD073 cured	yes	Stenotrophomonas (route)	route	kit-contaminant genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Stenotrophomonas	
+AD073 wild type	yes	Sulfurirhabdus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Sulfurirhabdus	
+AD073 cured	yes	Sulfurirhabdus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Sulfurirhabdus	
+AD073 wild type	yes	Superficieibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Superficieibacter	
+AD073 cured	yes	Superficieibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Superficieibacter	
+AD073 wild type	yes	Tatlockia (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Tatlockia	
+AD073 cured	yes	Tatlockia (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Tatlockia	
+AD073 wild type	yes	Telluria (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Telluria	
+AD073 cured	yes	Telluria (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Telluria	
+AD073 wild type	yes	Tepidimonas (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Tepidimonas	
+AD073 cured	yes	Tepidimonas (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Tepidimonas	
+AD073 wild type	yes	Thauera (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thauera	
+AD073 cured	yes	Thauera (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thauera	
+AD073 wild type	yes	Thiocapsa (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thiocapsa	
+AD073 cured	yes	Thiocapsa (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thiocapsa	
+AD073 wild type	yes	Thiolapillus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thiolapillus	
+AD073 cured	yes	Thiolapillus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thiolapillus	
+AD073 wild type	yes	Thiomicrorhabdus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Thiomicrorhabdus	
+AD073 cured	yes	Thiomicrorhabdus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Thiomicrorhabdus	
+AD073 wild type	yes	Tistrella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Tistrella	
+AD073 cured	yes	Tistrella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Tistrella	
+AD073 wild type	yes	Tyzzerella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Tyzzerella	
+AD073 cured	yes	Tyzzerella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Tyzzerella	
+AD073 wild type	yes	UBA1427 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	UBA1427	
+AD073 cured	yes	UBA1427 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	UBA1427	
+AD073 wild type	yes	UBA1685 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	UBA1685	
+AD073 cured	yes	UBA1685 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	UBA1685	
+AD073 wild type	yes	UBA956 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	UBA956	
+AD073 cured	yes	UBA956 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	UBA956	
+AD073 wild type	yes	VGCF01 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	VGCF01	
+AD073 cured	yes	VGCF01 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	VGCF01	
+AD073 wild type	yes	Vibrio (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Vibrio	
+AD073 cured	yes	Vibrio (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Vibrio	
+AD073 wild type	yes	XYC2-34-220 (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	XYC2-34-220	
+AD073 cured	yes	XYC2-34-220 (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	XYC2-34-220	
+AD073 wild type	yes	Xenorhabdus (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Xenorhabdus	
+AD073 cured	yes	Xenorhabdus (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Xenorhabdus	
+AD073 wild type	yes	Xiphinematincola (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Xiphinematincola	
+AD073 cured	yes	Xiphinematincola (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Xiphinematincola	
+AD073 wild type	yes	Yokenella (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Yokenella	
+AD073 cured	yes	Yokenella (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Yokenella	
+AD073 wild type	yes	Zhuqueibacter (route)	route	other known genus	absent	all 1 informative runs absent	no	1	0	0	no	no	yes	Zhuqueibacter	
+AD073 cured	yes	Zhuqueibacter (route)	route	other known genus	no call	no informative run and no signal	no	0	0	0	no	no	yes	Zhuqueibacter	
+AD073 wild type	yes	novel (SSU)	route	novel	absent	all 1 informative runs absent	yes	1	0	3	no	no	yes		family Burkholderiaceae (55); class Gammaproteobacteria (18); family Enterobacteriaceae (12); domain Bacteria (4); family Odoribacteraceae (3)
+AD073 cured	yes	novel (SSU)	route	novel	unresolved	signal, but no rule above applies	yes	0	0	1	no	no	yes		family Enterobacteriaceae (8); family Pasteurellaceae (4); family Odoribacteraceae (3); class Gammaproteobacteria (2); family Thioalkalispiraceae (1)
+AD073 wild type	yes	novel (SingleM)	route	novel	unresolved	signal, but no rule above applies	yes	1	1	0	no	yes	yes		domain Bacteria (113); family MWDO01 (52); order Rhodothermales (26); family Desulfurobacteriaceae (9); family E44-bin32 (7)

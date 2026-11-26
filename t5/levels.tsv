@@ -1,0 +1,1262 @@
+run	unit	kind	prep	bioproject	lineage	source	n	N	fraction	level	informative	cross_talk	spread	spread_cap	reads	fungal_reads	split_reads	sylph_ani
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CaGg	mapped	284	3.758e+04	7.1e-06	absent	no	no		no	40000000	11227088	0	
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CaGg	mapped	12	3.758e+04	3e-07	absent	no	no		no	40000000	10858173	0	
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CaGg	mapped	7	3.758e+04	1.75e-07	absent	no	no		no	40000000	10967703	0	
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CaGg	mapped	491	3.758e+04	1.228e-05	absent	yes	no	0.92	no	40000000	2992086	0	98.03
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CaGg	mapped	0	3.758e+04	0	absent	no	no		no	40000000	11027686	0	
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CaGg	mapped	224	3.758e+04	5.6e-06	absent	no	no		no	40000000	11319118	0	
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CaGg	mapped	0	3.758e+04	0	absent	no	no		no	40000000	12067444	0	
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CaMg/MRE	mapped	2632	3.758e+04	6.58e-05	absent	no	no		no	40000000	11227088	0	
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CaMg/MRE	mapped	3010	3.758e+04	7.525e-05	absent	no	no		no	40000000	10858173	0	
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CaMg/MRE	mapped	3484	3.758e+04	8.71e-05	absent	no	no		no	40000000	10967703	0	
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CaMg/MRE	mapped	0	3.758e+04	0	absent	yes	no	0.00	no	40000000	2992086	0	
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CaMg/MRE	mapped	0	3.758e+04	0	absent	no	no		no	40000000	11027686	0	
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CaMg/MRE	mapped	0	3.758e+04	0	absent	no	no		no	40000000	11319118	0	
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CaMg/MRE	mapped	1	3.758e+04	2.5e-08	absent	no	no		no	40000000	12067444	0	
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus	mapped	77821	3.758e+04	0.001946	present	no	no		no	40000000	11227088	3	97.89
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus	mapped	174813	3.758e+04	0.00437	present	no	no		no	40000000	10858173	2	99.27
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus	mapped	156433	3.758e+04	0.003911	present	no	no		no	40000000	10967703	2	99.12
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Mycoavidus	mapped	1179399	3.758e+04	0.02948	present	yes	no	1.00	no	40000000	2992086	2	100.00
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus	mapped	19	3.758e+04	4.75e-07	absent	no	no		no	40000000	11027686	0	
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus	mapped	0	3.758e+04	0	absent	no	no		no	40000000	11319118	1	
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus	mapped	4	3.758e+04	1e-07	absent	no	no		no	40000000	12067444	0	
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bradyrhizobium	mapped	0	3.758e+04	0	absent	no	no		no	40000000	11227088	0	
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bradyrhizobium	mapped	0	3.758e+04	0	absent	no	no		no	40000000	10858173	0	
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bradyrhizobium	mapped	2	3.758e+04	5e-08	absent	no	no		no	40000000	10967703	0	
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Bradyrhizobium	mapped	2	3.758e+04	5e-08	absent	yes	no	1.00	no	40000000	2992086	0	
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bradyrhizobium	mapped	3	3.758e+04	7.5e-08	absent	no	no		no	40000000	11027686	0	
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bradyrhizobium	mapped	2	3.758e+04	5e-08	absent	no	no		no	40000000	11319118	0	
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bradyrhizobium	mapped	0	3.758e+04	0	absent	no	no		no	40000000	12067444	0	
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia	mapped	774	3.758e+04	1.935e-05	absent	no	no		no	40000000	11227088	0	
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia	mapped	1	3.758e+04	2.5e-08	absent	no	no		no	40000000	10858173	0	
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia	mapped	0	3.758e+04	0	absent	no	no		no	40000000	10967703	0	
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Burkholderia	mapped	0	3.758e+04	0	absent	yes	no	0.00	no	40000000	2992086	0	
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia	mapped	0	3.758e+04	0	absent	no	no		no	40000000	11027686	0	
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia	mapped	761	3.758e+04	1.903e-05	absent	no	no		no	40000000	11319118	0	
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia	mapped	3	3.758e+04	7.5e-08	absent	no	no		no	40000000	12067444	0	
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Herbaspirillum	mapped	8	3.758e+04	2e-07	absent	no	no		no	40000000	11227088	0	
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Herbaspirillum	mapped	2	3.758e+04	5e-08	absent	no	no		no	40000000	10858173	0	
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Herbaspirillum	mapped	6	3.758e+04	1.5e-07	absent	no	no		no	40000000	10967703	0	
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Herbaspirillum	mapped	0	3.758e+04	0	absent	yes	no	0.00	no	40000000	2992086	0	
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Herbaspirillum	mapped	4	3.758e+04	1e-07	absent	no	no		no	40000000	11027686	0	
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Herbaspirillum	mapped	7	3.758e+04	1.75e-07	absent	no	no		no	40000000	11319118	0	
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Herbaspirillum	mapped	3	3.758e+04	7.5e-08	absent	no	no		no	40000000	12067444	0	
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas	mapped	4332	3.758e+04	0.0001083	low	no	no		no	40000000	11227088	1	
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas	mapped	11	3.758e+04	2.75e-07	absent	no	no		no	40000000	10858173	0	
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas	mapped	31	3.758e+04	7.75e-07	absent	no	no		no	40000000	10967703	0	
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Pseudomonas	mapped	0	3.758e+04	0	absent	yes	no	0.00	no	40000000	2992086	0	
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas	mapped	15	3.758e+04	3.75e-07	absent	no	no		no	40000000	11027686	0	
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas	mapped	3825	3.758e+04	9.562e-05	low	no	no		no	40000000	11319118	0	
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas	mapped	30	3.758e+04	7.5e-07	absent	no	no		no	40000000	12067444	0	
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia	mapped	0	3.758e+04	0	absent	no	no		no	40000000	11227088	0	
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia	mapped	2	3.758e+04	5e-08	absent	no	no		no	40000000	10858173	0	
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia	mapped	0	3.758e+04	0	absent	no	no		no	40000000	10967703	0	
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Ralstonia	mapped	0	3.758e+04	0	absent	yes	no	0.00	no	40000000	2992086	0	
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia	mapped	5	3.758e+04	1.25e-07	absent	no	no		no	40000000	11027686	0	
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia	mapped	0	3.758e+04	0	absent	no	no		no	40000000	11319118	0	
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia	mapped	4	3.758e+04	1e-07	absent	no	no		no	40000000	12067444	0	
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas	mapped	4	3.758e+04	1e-07	absent	no	no		no	40000000	11227088	0	
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas	mapped	4	3.758e+04	1e-07	absent	no	no		no	40000000	10858173	0	
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas	mapped	2	3.758e+04	5e-08	absent	no	no		no	40000000	10967703	0	
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Sphingomonas	mapped	0	3.758e+04	0	absent	yes	no	0.00	no	40000000	2992086	0	
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas	mapped	8	3.758e+04	2e-07	absent	no	no		no	40000000	11027686	0	
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas	mapped	8	3.758e+04	2e-07	absent	no	no		no	40000000	11319118	0	
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas	mapped	10	3.758e+04	2.5e-07	absent	no	no		no	40000000	12067444	0	
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas	mapped	3124	3.758e+04	7.81e-05	absent	no	no		no	40000000	11227088	0	
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas	mapped	6	3.758e+04	1.5e-07	absent	no	no		no	40000000	10858173	0	
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas	mapped	8	3.758e+04	2e-07	absent	no	no		no	40000000	10967703	0	
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Stenotrophomonas	mapped	0	3.758e+04	0	absent	yes	no	0.00	no	40000000	2992086	0	
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas	mapped	1	3.758e+04	2.5e-08	absent	no	no		no	40000000	11027686	0	
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas	mapped	2812	3.758e+04	7.03e-05	absent	no	no		no	40000000	11319118	0	
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas	mapped	2	3.758e+04	5e-08	absent	no	no		no	40000000	12067444	0	
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	01-FULL-45-10b (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	01-FULL-45-10b (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	01-FULL-45-10b (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	01-FULL-45-10b (route)	route	63	52.74	1.575e-06	present	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	01-FULL-45-10b (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	01-FULL-45-10b (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	01-FULL-45-10b (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	2-01-FULL-38-21 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	2-01-FULL-38-21 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	2-01-FULL-38-21 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	2-01-FULL-38-21 (route)	route	8	52.74	2e-07	low	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	2-01-FULL-38-21 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	2-01-FULL-38-21 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	2-01-FULL-38-21 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Accumulibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Accumulibacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Accumulibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Accumulibacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Accumulibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Accumulibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Accumulibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Achromobacter (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Achromobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Achromobacter (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Achromobacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Achromobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Achromobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Achromobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Acinetobacter (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Acinetobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Acinetobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Acinetobacter (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Acinetobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Acinetobacter (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Acinetobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aeromonas (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aeromonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aeromonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Aeromonas (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aeromonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aeromonas (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aeromonas (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Agitococcus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Agitococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Agitococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Agitococcus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Agitococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Agitococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Agitococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Algicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Algicoccus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Algicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Algicoccus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Algicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Algicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Algicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Alienimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Alienimonas (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Alienimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Alienimonas (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Alienimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Alienimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Alienimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aliineobacillus (route)	route	227	52.74	5.675e-06	present	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aliineobacillus (route)	route	18	52.74	4.5e-07	low	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aliineobacillus (route)	route	22	52.74	5.5e-07	low	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Aliineobacillus (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aliineobacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aliineobacillus (route)	route	148	52.74	3.7e-06	present	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aliineobacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Alterirhizorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Alterirhizorhabdus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Alterirhizorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Alterirhizorhabdus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Alterirhizorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Alterirhizorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Alterirhizorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Alteromonas (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Alteromonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Alteromonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Alteromonas (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Alteromonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Alteromonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Alteromonas (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Amaricoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Amaricoccus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Amaricoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Amaricoccus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Amaricoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Amaricoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Amaricoccus (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Anoxybacillus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Anoxybacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Anoxybacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Anoxybacillus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Anoxybacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Anoxybacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Anoxybacillus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aquella (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aquella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aquella (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Aquella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aquella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aquella (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aquella (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aquisalimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aquisalimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aquisalimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Aquisalimonas (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aquisalimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aquisalimonas (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aquisalimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aromatoleum (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aromatoleum (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aromatoleum (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Aromatoleum (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aromatoleum (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aromatoleum (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aromatoleum (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aureliella (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aureliella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Aureliella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Aureliella (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aureliella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aureliella (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Aureliella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	BD1-7 clade (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	BD1-7 clade (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	BD1-7 clade (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	BD1-7 clade (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	BD1-7 clade (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	BD1-7 clade (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	BD1-7 clade (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bacillus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Bacillus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bacillus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bacteriovorax (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bacteriovorax (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bacteriovorax (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Bacteriovorax (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bacteriovorax (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bacteriovorax (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bacteriovorax (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bryobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bryobacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Bryobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Bryobacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bryobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bryobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Bryobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia-Caballeronia-Paraburkholderia (route)	route	11	52.74	2.75e-07	low	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia-Caballeronia-Paraburkholderia (route)	route	13	52.74	3.25e-07	low	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia-Caballeronia-Paraburkholderia (route)	route	7	52.74	1.75e-07	low	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Burkholderia-Caballeronia-Paraburkholderia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia-Caballeronia-Paraburkholderia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia-Caballeronia-Paraburkholderia (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Burkholderia-Caballeronia-Paraburkholderia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CACPNW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CACPNW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CACPNW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CACPNW01 (route)	route	3	52.74	7.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CACPNW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CACPNW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CACPNW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CADEGZ01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CADEGZ01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CADEGZ01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CADEGZ01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CADEGZ01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CADEGZ01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CADEGZ01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAVSDF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAVSDF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAVSDF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CAVSDF01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAVSDF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAVSDF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAVSDF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAWJTN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAWJTN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAWJTN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CAWJTN01 (route)	route	2	52.74	5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAWJTN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAWJTN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAWJTN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAYPFP01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAYPFP01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAYPFP01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CAYPFP01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAYPFP01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAYPFP01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAYPFP01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAYYKD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAYYKD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAYYKD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CAYYKD01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAYYKD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAYYKD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAYYKD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAYYUT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAYYUT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAYYUT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CAYYUT01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAYYUT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAYYUT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAYYUT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAZFZT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAZFZT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAZFZT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CAZFZT01 (route)	route	3	52.74	7.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAZFZT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAZFZT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAZFZT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAZZKT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAZZKT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CAZZKT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CAZZKT01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAZZKT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAZZKT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CAZZKT01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CG2-30-60-27 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CG2-30-60-27 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CG2-30-60-27 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CG2-30-60-27 (route)	route	13	52.74	3.25e-07	low	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CG2-30-60-27 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CG2-30-60-27 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CG2-30-60-27 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CGIF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CGIF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	CGIF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	CGIF01 (route)	route	16	52.74	4e-07	low	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CGIF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CGIF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	CGIF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Castellaniella (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Castellaniella (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Castellaniella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Castellaniella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Castellaniella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Castellaniella (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Castellaniella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Chitinasiproducens (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Chitinasiproducens (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Chitinasiproducens (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Chitinasiproducens (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Chitinasiproducens (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Chitinasiproducens (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Chitinasiproducens (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Citricoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Citricoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Citricoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Citricoccus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Citricoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Citricoccus (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Citricoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Citrobacter (route)	route	12	52.74	3e-07	low	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Citrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Citrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Citrobacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Citrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Citrobacter (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Citrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Corynebacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Corynebacterium (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Corynebacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Corynebacterium (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Corynebacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Corynebacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Corynebacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Cronobacter (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Cronobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Cronobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Cronobacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Cronobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Cronobacter (route)	route	7	52.74	1.75e-07	low	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Cronobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Cupriavidus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Cupriavidus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Cupriavidus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Cupriavidus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Cupriavidus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Cupriavidus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Cupriavidus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Cutibacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Cutibacterium (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Cutibacterium (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Cutibacterium (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Cutibacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Cutibacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Cutibacterium (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	DATJTR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	DATJTR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	DATJTR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	DATJTR01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	DATJTR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	DATJTR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	DATJTR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	DRYD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	DRYD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	DRYD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	DRYD01 (route)	route	67	52.74	1.675e-06	present	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	DRYD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	DRYD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	DRYD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	DTLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	DTLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	DTLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	DTLM01 (route)	route	4	52.74	1e-07	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	DTLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	DTLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	DTLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Delftia (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Delftia (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Delftia (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Delftia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Delftia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Delftia (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Delftia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfatiglans (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfatiglans (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfatiglans (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Desulfatiglans (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfatiglans (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfatiglans (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfatiglans (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfobacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfobacillus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfobacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Desulfobacillus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfobacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfobacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfobacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfocapsa (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfocapsa (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfocapsa (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Desulfocapsa (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfocapsa (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfocapsa (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfocapsa (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfomicrobium (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfomicrobium (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfomicrobium (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Desulfomicrobium (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfomicrobium (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfomicrobium (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfomicrobium (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfovibrio (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfovibrio (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Desulfovibrio (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Desulfovibrio (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfovibrio (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfovibrio (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Desulfovibrio (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	E44-bin32 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	E44-bin32 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	E44-bin32 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	E44-bin32 (route)	route	6	52.74	1.5e-07	low	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	E44-bin32 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	E44-bin32 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	E44-bin32 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Edwardsiella (route)	route	16	52.74	4e-07	low	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Edwardsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Edwardsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Edwardsiella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Edwardsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Edwardsiella (route)	route	9	52.74	2.25e-07	low	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Edwardsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Enterobacter--other+Klebsiella (route)	route	7	52.74	1.75e-07	low	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Enterobacter--other+Klebsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Enterobacter--other+Klebsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Enterobacter--other+Klebsiella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Enterobacter--other+Klebsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Enterobacter--other+Klebsiella (route)	route	6	52.74	1.5e-07	low	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Enterobacter--other+Klebsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Erwinia (route)	route	4	52.74	1e-07	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Erwinia (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Erwinia (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Erwinia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Erwinia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Erwinia (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Erwinia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Erysipelothrix (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Erysipelothrix (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Erysipelothrix (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Erysipelothrix (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Erysipelothrix (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Erysipelothrix (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Erysipelothrix (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Escherichia-Shigella (route)	route	3274	52.74	8.185e-05	present	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Escherichia-Shigella (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Escherichia-Shigella (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Escherichia-Shigella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Escherichia-Shigella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Escherichia-Shigella (route)	route	2682	52.74	6.705e-05	present	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Escherichia-Shigella (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ezakiella (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ezakiella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ezakiella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Ezakiella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ezakiella (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ezakiella (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ezakiella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ferrovum (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ferrovum (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ferrovum (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Ferrovum (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ferrovum (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ferrovum (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ferrovum (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Fusicatenibacter (route)	route	11	52.74	2.75e-07	low	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Fusicatenibacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Fusicatenibacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Fusicatenibacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Fusicatenibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Fusicatenibacter (route)	route	9	52.74	2.25e-07	low	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Fusicatenibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	G963667145 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	G963667145 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	G963667145 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	G963667145 (route)	route	58	52.74	1.45e-06	present	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	G963667145 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	G963667145 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	G963667145 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	GCA-2687015 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	GCA-2687015 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	GCA-2687015 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	GCA-2687015 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	GCA-2687015 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	GCA-2687015 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	GCA-2687015 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	GWC1-27-15 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	GWC1-27-15 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	GWC1-27-15 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	GWC1-27-15 (route)	route	2	52.74	5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	GWC1-27-15 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	GWC1-27-15 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	GWC1-27-15 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Geminicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Geminicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Geminicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Geminicoccus (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Geminicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Geminicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Geminicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Glutamicibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Glutamicibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Glutamicibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Glutamicibacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Glutamicibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Glutamicibacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Glutamicibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Gordonia (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Gordonia (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Gordonia (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Gordonia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Gordonia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Gordonia (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Gordonia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Gordoniibacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Gordoniibacillus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Gordoniibacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Gordoniibacillus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Gordoniibacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Gordoniibacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Gordoniibacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hafnia (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hafnia (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hafnia (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Hafnia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hafnia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hafnia (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hafnia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hepatoplasma (route)	route	4850	52.74	0.0001213	present	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hepatoplasma (route)	route	5289	52.74	0.0001322	present	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hepatoplasma (route)	route	3768	52.74	9.42e-05	present	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Hepatoplasma (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hepatoplasma (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hepatoplasma (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hepatoplasma (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Huaxiibacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Huaxiibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Huaxiibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Huaxiibacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Huaxiibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Huaxiibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Huaxiibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hydrogenophilus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hydrogenophilus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hydrogenophilus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Hydrogenophilus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hydrogenophilus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hydrogenophilus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hydrogenophilus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hymenobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hymenobacter (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Hymenobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Hymenobacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hymenobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hymenobacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Hymenobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JACOND01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JACOND01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JACOND01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	JACOND01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JACOND01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JACOND01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JACOND01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAICLK01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAICLK01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAICLK01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	JAICLK01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAICLK01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAICLK01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAICLK01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAJFLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAJFLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAJFLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	JAJFLM01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAJFLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAJFLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAJFLM01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAJTHC01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAJTHC01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAJTHC01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	JAJTHC01 (route)	route	2	52.74	5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAJTHC01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAJTHC01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAJTHC01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JASSUD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JASSUD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JASSUD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	JASSUD01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JASSUD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JASSUD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JASSUD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAUIHN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAUIHN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAUIHN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	JAUIHN01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAUIHN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAUIHN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAUIHN01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAUYJR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAUYJR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAUYJR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	JAUYJR01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAUYJR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAUYJR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAUYJR01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAXGQD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAXGQD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JAXGQD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	JAXGQD01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAXGQD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAXGQD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JAXGQD01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JBBIVW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JBBIVW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JBBIVW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	JBBIVW01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JBBIVW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JBBIVW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JBBIVW01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JBIOWE01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JBIOWE01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	JBIOWE01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	JBIOWE01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JBIOWE01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JBIOWE01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	JBIOWE01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Janthinobacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Janthinobacterium (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Janthinobacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Janthinobacterium (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Janthinobacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Janthinobacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Janthinobacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Kerstersia (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Kerstersia (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Kerstersia (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Kerstersia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Kerstersia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Kerstersia (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Kerstersia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Klebsiella (route)	route	48	52.74	1.2e-06	low	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Klebsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Klebsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Klebsiella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Klebsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Klebsiella (route)	route	55	52.74	1.375e-06	present	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Klebsiella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Kluyvera (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Kluyvera (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Kluyvera (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Kluyvera (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Kluyvera (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Kluyvera (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Kluyvera (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Kosakonia (route)	route	8	52.74	2e-07	low	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Kosakonia (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Kosakonia (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Kosakonia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Kosakonia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Kosakonia (route)	route	8	52.74	2e-07	low	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Kosakonia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Lacipirellula (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Lacipirellula (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Lacipirellula (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Lacipirellula (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Lacipirellula (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Lacipirellula (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Lacipirellula (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Latescibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Latescibacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Latescibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Latescibacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Latescibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Latescibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Latescibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Lautropia (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Lautropia (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Lautropia (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Lautropia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Lautropia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Lautropia (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Lautropia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Leclercia-Silvania-Enterobacter (route)	route	119	52.74	2.975e-06	present	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Leclercia-Silvania-Enterobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Leclercia-Silvania-Enterobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Leclercia-Silvania-Enterobacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Leclercia-Silvania-Enterobacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Leclercia-Silvania-Enterobacter (route)	route	93	52.74	2.325e-06	present	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Leclercia-Silvania-Enterobacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Lelliottia (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Lelliottia (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Lelliottia (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Lelliottia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Lelliottia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Lelliottia (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Lelliottia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Leptospirillum (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Leptospirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Leptospirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Leptospirillum (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Leptospirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Leptospirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Leptospirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Levinea (route)	route	5	52.74	1.25e-07	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Levinea (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Levinea (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Levinea (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Levinea (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Levinea (route)	route	6	52.74	1.5e-07	low	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Levinea (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Marinicellulosiphila (route)	route	5	52.74	1.25e-07	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Marinicellulosiphila (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Marinicellulosiphila (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Marinicellulosiphila (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Marinicellulosiphila (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Marinicellulosiphila (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Marinicellulosiphila (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Megasphaera (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Megasphaera (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Megasphaera (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Megasphaera (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Megasphaera (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Megasphaera (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Megasphaera (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Methylobacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Methylobacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Methylobacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Methylobacterium (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Methylobacterium (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Methylobacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Methylobacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Microbacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Microbacterium (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Microbacterium (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Microbacterium (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Microbacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Microbacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Microbacterium (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Micrococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Micrococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Micrococcus (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Micrococcus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Micrococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Micrococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Micrococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Midichloria (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Midichloria (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Midichloria (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Midichloria (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Midichloria (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Midichloria (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Midichloria (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mixta (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mixta (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mixta (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Mixta (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mixta (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mixta (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mixta (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Morganella (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Morganella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Morganella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Morganella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Morganella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Morganella (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Morganella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus (route)	route	54	52.74	1.35e-06	present	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus (route)	route	49	52.74	1.225e-06	low	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus (route)	route	81	52.74	2.025e-06	present	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Mycoavidus (route)	route	5	52.74	1.25e-07	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycoavidus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycolatisynbacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycolatisynbacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycolatisynbacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Mycolatisynbacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycolatisynbacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycolatisynbacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycolatisynbacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycoplasmopsis (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycoplasmopsis (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Mycoplasmopsis (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Mycoplasmopsis (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycoplasmopsis (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycoplasmopsis (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Mycoplasmopsis (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Nitromaritima (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Nitromaritima (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Nitromaritima (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Nitromaritima (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Nitromaritima (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Nitromaritima (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Nitromaritima (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Nitrosomonas (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Nitrosomonas (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Nitrosomonas (route)	route	5	52.74	1.25e-07	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Nitrosomonas (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Nitrosomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Nitrosomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Nitrosomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Noviherbaspirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Noviherbaspirillum (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Noviherbaspirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Noviherbaspirillum (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Noviherbaspirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Noviherbaspirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Noviherbaspirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Orbus (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Orbus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Orbus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Orbus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Orbus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Orbus (route)	route	5	52.74	1.25e-07	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Orbus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Oribaculum (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Oribaculum (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Oribaculum (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Oribaculum (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Oribaculum (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Oribaculum (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Oribaculum (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Orientia (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Orientia (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Orientia (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Orientia (route)	route	2	52.74	5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Orientia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Orientia (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Orientia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ostreibacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ostreibacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ostreibacterium (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Ostreibacterium (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ostreibacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ostreibacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ostreibacterium (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Paenalcaligenes (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Paenalcaligenes (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Paenalcaligenes (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Paenalcaligenes (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Paenalcaligenes (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Paenalcaligenes (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Paenalcaligenes (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Paenibacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Paenibacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Paenibacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Paenibacillus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Paenibacillus (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Paenibacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Paenibacillus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Palsa-504 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Palsa-504 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Palsa-504 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Palsa-504 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Palsa-504 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Palsa-504 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Palsa-504 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pantoea (route)	route	7	52.74	1.75e-07	low	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pantoea (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pantoea (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Pantoea (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pantoea (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pantoea (route)	route	6	52.74	1.5e-07	low	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pantoea (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Paracoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Paracoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Paracoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Paracoccus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Paracoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Paracoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Paracoccus (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pararhodospirillum (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pararhodospirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pararhodospirillum (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Pararhodospirillum (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pararhodospirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pararhodospirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pararhodospirillum (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Parasulfuritortus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Parasulfuritortus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Parasulfuritortus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Parasulfuritortus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Parasulfuritortus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Parasulfuritortus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Parasulfuritortus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pelagilacustribacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pelagilacustribacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pelagilacustribacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Pelagilacustribacter (route)	route	20	52.74	5e-07	low	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pelagilacustribacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pelagilacustribacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pelagilacustribacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Peptoniphilus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Peptoniphilus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Peptoniphilus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Peptoniphilus (route)	route	2	52.74	5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Peptoniphilus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Peptoniphilus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Peptoniphilus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Phytobacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Phytobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Phytobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Phytobacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Phytobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Phytobacter (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Phytobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pluralibacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pluralibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pluralibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Pluralibacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pluralibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pluralibacter (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pluralibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Proteus (route)	route	5	52.74	1.25e-07	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Proteus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Proteus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Proteus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Proteus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Proteus (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Proteus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudarthrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudarthrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudarthrobacter (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Pseudarthrobacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudarthrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudarthrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudarthrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudolysobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudolysobacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudolysobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Pseudolysobacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudolysobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudolysobacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudolysobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Pseudomonas (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Pseudomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Psychrobacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Psychrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Psychrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Psychrobacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Psychrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Psychrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Psychrobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	RI-211 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	RI-211 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	RI-211 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	RI-211 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	RI-211 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	RI-211 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	RI-211 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rahnella (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rahnella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rahnella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Rahnella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rahnella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rahnella (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rahnella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Ralstonia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ralstonia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Raoultella (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Raoultella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Raoultella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Raoultella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Raoultella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Raoultella (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Raoultella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rhodanobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rhodanobacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rhodanobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Rhodanobacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rhodanobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rhodanobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rhodanobacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rodentibacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rodentibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rodentibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Rodentibacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rodentibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rodentibacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rodentibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rosenbergiella (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rosenbergiella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rosenbergiella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Rosenbergiella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rosenbergiella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rosenbergiella (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rosenbergiella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rothia (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rothia (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Rothia (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Rothia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rothia (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rothia (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Rothia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ruminococcoides (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ruminococcoides (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Ruminococcoides (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Ruminococcoides (route)	route	79	52.74	1.975e-06	present	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ruminococcoides (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ruminococcoides (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Ruminococcoides (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	SC-I-84 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	SC-I-84 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	SC-I-84 (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	SC-I-84 (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	SC-I-84 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	SC-I-84 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	SC-I-84 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Salinicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Salinicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Salinicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Salinicoccus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Salinicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Salinicoccus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Salinicoccus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Salmonella (route)	route	22	52.74	5.5e-07	low	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Salmonella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Salmonella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Salmonella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Salmonella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Salmonella (route)	route	17	52.74	4.25e-07	low	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Salmonella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Serratia (route)	route	7	52.74	1.75e-07	low	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Serratia (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Serratia (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Serratia (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Serratia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Serratia (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Serratia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sideroxydans (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sideroxydans (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sideroxydans (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Sideroxydans (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sideroxydans (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sideroxydans (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sideroxydans (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sodalis (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sodalis (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sodalis (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Sodalis (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sodalis (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sodalis (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sodalis (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Sphingomonas (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sphingomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Spirochaeta (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Spirochaeta (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Spirochaeta (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Spirochaeta (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Spirochaeta (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Spirochaeta (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Spirochaeta (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Spiroplasma--other+Mesoplasma (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Spiroplasma--other+Mesoplasma (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Spiroplasma--other+Mesoplasma (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Spiroplasma--other+Mesoplasma (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Spiroplasma--other+Mesoplasma (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Spiroplasma--other+Mesoplasma (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Spiroplasma--other+Mesoplasma (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Staphylococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Staphylococcus (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Staphylococcus (route)	route	10	52.74	2.5e-07	low	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Staphylococcus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Staphylococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Staphylococcus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Staphylococcus (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Stenotrophomonas (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas (route)	route	3	52.74	7.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Stenotrophomonas (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sulfurirhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sulfurirhabdus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Sulfurirhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Sulfurirhabdus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sulfurirhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sulfurirhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Sulfurirhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Superficieibacter (route)	route	5	52.74	1.25e-07	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Superficieibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Superficieibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Superficieibacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Superficieibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Superficieibacter (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Superficieibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tatlockia (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tatlockia (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tatlockia (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Tatlockia (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tatlockia (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tatlockia (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tatlockia (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Telluria (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Telluria (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Telluria (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Telluria (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Telluria (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Telluria (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Telluria (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tepidimonas (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tepidimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tepidimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Tepidimonas (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tepidimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tepidimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tepidimonas (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thauera (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thauera (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thauera (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Thauera (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thauera (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thauera (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thauera (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thiocapsa (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thiocapsa (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thiocapsa (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Thiocapsa (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thiocapsa (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thiocapsa (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thiocapsa (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thiolapillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thiolapillus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thiolapillus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Thiolapillus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thiolapillus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thiolapillus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thiolapillus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thiomicrorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thiomicrorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Thiomicrorhabdus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Thiomicrorhabdus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thiomicrorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thiomicrorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Thiomicrorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tistrella (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tistrella (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tistrella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Tistrella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tistrella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tistrella (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tistrella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tyzzerella (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tyzzerella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Tyzzerella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Tyzzerella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tyzzerella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tyzzerella (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Tyzzerella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	UBA1427 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	UBA1427 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	UBA1427 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	UBA1427 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	UBA1427 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	UBA1427 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	UBA1427 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	UBA1685 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	UBA1685 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	UBA1685 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	UBA1685 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	UBA1685 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	UBA1685 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	UBA1685 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	UBA956 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	UBA956 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	UBA956 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	UBA956 (route)	route	2	52.74	5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	UBA956 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	UBA956 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	UBA956 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	VGCF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	VGCF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	VGCF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	VGCF01 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	VGCF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	VGCF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	VGCF01 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Vibrio (route)	route	5	52.74	1.25e-07	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Vibrio (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Vibrio (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Vibrio (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Vibrio (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Vibrio (route)	route	2	52.74	5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Vibrio (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	XYC2-34-220 (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	XYC2-34-220 (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	XYC2-34-220 (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	XYC2-34-220 (route)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	XYC2-34-220 (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	XYC2-34-220 (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	XYC2-34-220 (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Xenorhabdus (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Xenorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Xenorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Xenorhabdus (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Xenorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Xenorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Xenorhabdus (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Xiphinematincola (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Xiphinematincola (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Xiphinematincola (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Xiphinematincola (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Xiphinematincola (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Xiphinematincola (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Xiphinematincola (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Yokenella (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Yokenella (route)	route	0	52.74	0	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Yokenella (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Yokenella (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Yokenella (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Yokenella (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Yokenella (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Zhuqueibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Zhuqueibacter (route)	route	1	52.74	2.5e-08	absent	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	Zhuqueibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	Zhuqueibacter (route)	route	0	52.74	0	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Zhuqueibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Zhuqueibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	Zhuqueibacter (route)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR6256860	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	novel (SSU)	route	40	52.74	1e-06	low	no	no		no	40000000	11227088		
+SRR6256859	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	novel (SSU)	route	33	52.74	8.25e-07	low	no	no		no	40000000	10858173		
+SRR6256858	AD073 wild type	RNA	unstated	PRJNA368402-PRJNA368407	novel (SSU)	route	39	52.74	9.75e-07	low	no	no		no	40000000	10967703		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	novel (SSU)	route	1	52.74	2.5e-08	absent	yes	no		no	40000000	2992086		
+SRR6256857	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	novel (SSU)	route	0	52.74	0	absent	no	no		no	40000000	11027686		
+SRR6256856	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	novel (SSU)	route	20	52.74	5e-07	low	no	no		no	40000000	11319118		
+SRR6256861	AD073 cured	RNA	unstated	PRJNA368402-PRJNA368407	novel (SSU)	route	0	52.74	0	absent	no	no		no	40000000	12067444		
+SRR5822802	AD073 wild type	DNA	dna	PRJNA364919	novel (SingleM)	route	212	52.74	5.3e-06	present	yes	no		no	40000000	2992086		
