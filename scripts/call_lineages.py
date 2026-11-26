@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""The lineage caller (PROTOCOL.md 4.1; section 10, entries 7 to 10). Functions only; run_t1.py uses them.
+"""The lineage caller (PROTOCOL.md 4.1; section 10, entries 7 to 10 and 16). Functions only; run_t1.py uses them.
 
 Route reads get a label:
   ssu_label       from a read's top SILVA hits (entry 8's VSEARCH command): dropped if a top hit lies
@@ -11,7 +11,10 @@ Route reads get a label:
                   otherwise novel
 Route lineages (entry 9): one per genus, matched across routes (no "Candidatus", no GTDB suffix such as
 "_A", no SILVA suffix "--other"; a SILVA name joining genera with hyphens matches each of them), and one
-novel lineage per route, "novel (SSU)" and "novel (SingleM)".
+novel lineage per route, "novel (SSU)" and "novel (SingleM)". A route lineage in Glomeribacter, Moeniiplasma
+or Mycoavidus is a known endosymbiont clade (E6). That is Phase 0's list (KNOWN_CLADE_GENERA, the default).
+The survey's list (SURVEY_CLADE_GENERA, entry 16) adds CGIF01, GTDB's name for the MRE group, as CaMg/MRE;
+category_of_route uses it only when given it.
 
 Levels per run (4.1): N = t x reads for a mapped lineage, t x m x reads for a route lineage; present if
 n >= N, low if n >= N/10, otherwise absent. A run is informative when N >= 10 and its library can show
@@ -30,9 +33,10 @@ lineage is present at a read fraction of at least a tenth of the line's own high
 import re
 from itertools import combinations
 
-__version__ = "0.2"
+__version__ = "0.3"
 
-KNOWN_CLADE_GENERA = {"Glomeribacter": "CaGg", "Moeniiplasma": "CaMg/MRE", "Mycoavidus": "Mycoavidus"}
+KNOWN_CLADE_GENERA = {"Glomeribacter": "CaGg", "Moeniiplasma": "CaMg/MRE", "Mycoavidus": "Mycoavidus"}  # Phase 0
+SURVEY_CLADE_GENERA = {**KNOWN_CLADE_GENERA, "CGIF01": "CaMg/MRE"}  # entry 16: the survey only (GTDB R232's name)
 KNOWN_CLADES = set(KNOWN_CLADE_GENERA.values())       # mapped lineages that are known endosymbiont clades
 KIT_GENERA = {"Bradyrhizobium", "Burkholderia", "Herbaspirillum", "Pseudomonas", "Ralstonia", "Sphingomonas",
               "Stenotrophomonas"}                      # 4.1, E6; one reference genome each (section 3.3)
@@ -73,12 +77,13 @@ def genus_parts(name):
     return [name]
 
 
-def category_of_route(genera):
-    """E6 for a route lineage made of these genus names (None: a novel lineage)."""
+def category_of_route(genera, clades=None):
+    """E6 for a route lineage made of these genus names (None: a novel lineage). clades: the genus names of
+    the known endosymbiont clades; None means Phase 0's, KNOWN_CLADE_GENERA (the survey's: SURVEY_CLADE_GENERA)."""
     if not genera:
         return "novel"
     parts = {p for g in genera for p in genus_parts(g)}
-    if parts & KNOWN_CLADE_GENERA.keys():
+    if parts & (KNOWN_CLADE_GENERA if clades is None else clades).keys():
         return "known endosymbiont clade"
     if parts & KIT_GENERA:
         return "kit-contaminant genus"

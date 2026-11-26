@@ -19,13 +19,14 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `scripts/rescore_stage0a_m.py` | Stage 0a, step 2 rescored under the route rules of entries 7 and 8: places the symbiont's SSU reads with VSEARCH and works out m again. |
 | `scripts/rescore_m_entry10.py` | Stage 0a, step 2 under entry 10: aligns step 2's found reads again with the entry 10 index, applies the route rules of entries 7, 8 and 10, and works out m again. |
 | `scripts/assign_reads.py` | Counts the reads of one run per lineage (`PROTOCOL.md` 4.1), writes the reads that go on to SingleM and SSUplex, and (from v0.2) how the mapped reads spread over each bacterial genome; v0.3 also saves the bit sets behind that, so two read sets can be combined (entry 13); v0.4 can add up weights instead of counting reads, for T4 (entry 14). |
-| `scripts/call_lineages.py` | The caller: route-read labels and lineages, levels, cross-talk and the spread check, evidence and calls (`PROTOCOL.md` 4.1, entries 7 to 10). |
+| `scripts/call_lineages.py` | The caller: route-read labels and lineages, levels, cross-talk and the spread check, evidence and calls (`PROTOCOL.md` 4.1, entries 7 to 10); v0.3 also holds the survey's list of known clades, used only when asked for (entry 16). |
 | `scripts/run_t1.py` | Test T1: fetches and assigns the runs, runs the route, places the SSU reads, runs sylph, makes the calls and checks K1 (v0.2: again under entry 10). |
 | `scripts/make_t2_silva.py` | Test T2: makes the SILVA removal list and the copy of SILVA without those sequences (entry 11). |
 | `scripts/run_t2.py` | Test T2: calls the MRE positives with the MRE references held out and kept in, and checks K2 (entry 11). |
 | `scripts/run_t3.py` | Test T3: makes kit-contaminant spikes with InSilicoSeq and adds them to the Ottawa runs, calls each spike, the lab kit spike and the outside sets, and checks K3 (entry 13). |
 | `scripts/run_t4.py` | Test T4: downloads Logan's unitigs for the T1 and T2 runs, cuts them into weighted pieces as long as the reads, does T1 and T2 again on them, compares with raw reads, and works out the Logan switch (entry 14). |
 | `scripts/run_t5.py` | Test T5: fetches the *L. elongata* AD073 wild-type and cured runs, processes them as T1 does, and reports the pair against `controls.tsv` (entry 15). |
+| `scripts/rescore_entry16.py` | Entry 16: gives Phase 0's calls with both lists of known clades, Phase 0's and the survey's (which counts GTDB's CGIF01 as CaMg/MRE), from the committed tables. |
 | `references/` | The reference lists (with the fungal mitochondria of entry 10 in `fungal_mitochondria.tsv`), `QUERIES.md` (how they were made) and `DATABASES.md` (database releases). |
 | `env/` | Conda environments for the toolchain. |
 | `stage0a/` | Stage 0a: the positive runs (`runs.tsv`), the fractions and t (step 1), and the marker shares and m (step 2); each measured again under later entries (`_entry7`, `_entry8`, `_entry10`). |
@@ -34,7 +35,8 @@ Can we tell real endosymbionts from contaminants in public AMF sequencing data? 
 | `t3/` | Test T3: the runs (`runs.tsv`) and, once T3 has run, the levels and calls without spikes, each spike's calls (`spikes.tsv`, `lab_spike.tsv`) and `T3.md`. |
 | `t4/` | Test T4, once it has run: which runs Logan holds (`logan.tsv`), the levels and calls on Logan, every comparison with raw reads (`compare.tsv`) and `T4.md`. |
 | `t5/` | Test T5: the runs (`runs.tsv`) and, once T5 has run, the levels, the calls and `T5.md`. |
-| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH; `check_caller.py`, `check_rescore_entry10.py`, `check_t2.py`, `check_t3.py` and `check_t5.py` need both; `check_t4.py` needs both and zstd). |
+| `entry16/` | Entry 16, once T5 is done: Phase 0's calls with both lists of known clades (`both_ways.tsv`, `ENTRY16.md`). |
+| `tests/` | Tests for the scripts (`check_clean.py`, `check_assign.py`, `check_stage0a.py` and `check_stage0a_m.py` need minimap2; `check_rescore.py` needs VSEARCH; `check_caller.py`, `check_rescore_entry10.py`, `check_t2.py`, `check_t3.py` and `check_t5.py` need both; `check_t4.py` needs both and zstd; `check_entry16.py` needs only Python). |
 
 ## Make the inventory
 
@@ -254,6 +256,22 @@ nohup python scripts/run_t5.py --workdir ~/phase0-data --threads 30 > ~/t5.log 2
 
 It fetches the seven runs (the first 20,000,000 spots of each) into `~/phase0-data/t5/` and processes them as T1 does. It writes `t5/levels.tsv`, `t5/calls.tsv` and `t5/T5.md`; commit all three. If it stops, run the same command again: finished work is kept.
 
+## Entry 16: GTDB's name for the MRE group
+
+Entry 16 (`PROTOCOL.md` section 10) records that GTDB, and so SingleM, calls the MRE group CGIF01, which the caller files as an other known genus. Phase 0 keeps the locked list; the survey will count CGIF01 as CaMg/MRE. The entry brings `call_lineages.py` to v0.3, which only adds the survey's list: unless a script asks for it, nothing changes, so T3 (running), T4 and T5 are not affected. Commit entry 16 and the code.
+
+```bash
+python tests/check_entry16.py
+```
+
+When T5 is done and committed, give Phase 0's calls both ways:
+
+```bash
+python scripts/rescore_entry16.py
+```
+
+It runs no tools and reads only the committed tables, so it can run at any time; a test that has not run is listed as not run. It writes `entry16/both_ways.tsv` and `entry16/ENTRY16.md`; commit both.
+
 ## Software environments
 
 Create them on the Linux machine that will run Phase 0, not on a laptop: lock files are specific to one platform, and some of the tools (GTDB-Tk among them) don't install on macOS.
@@ -309,4 +327,5 @@ python tests/check_t2.py        # needs minimap2 and VSEARCH
 python tests/check_t3.py        # needs minimap2 and VSEARCH
 python tests/check_t4.py        # needs minimap2, VSEARCH and zstd
 python tests/check_t5.py        # needs minimap2 and VSEARCH
+python tests/check_entry16.py   # needs only Python
 ```
